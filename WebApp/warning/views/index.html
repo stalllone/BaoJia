@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>保险理赔 - 宝驾租车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script src="/js/sea.js"></script>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" charset="utf-8">  
+    <link href="/css/font-awesome.min.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/theme.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/warning.css" rel="stylesheet" charset="utf-8">
+    <script src="/static/seaconfig.js"></script>
+</head>
+
+<body class="ms-controller" ms-controller="bodyCtl" ms-class="closed:!isOpen">
+<div ms-controller="includepublic" ms-include-src="header"></div>
+    <div class="main">
+        <div class="container">
+            <div class="row" ms-controller="pagebody">
+                <div class="container ms-controller" ms-controller="pagebody">
+                    <div class="row" ms-class="closed:!isOpen">
+                        <div class="col-side">
+                            <div class="menu_img_div">
+                                <img ms-click="fold" id="menu_imgAll" src="../images/1.0/iconAll.png" alt="">
+                            </div>
+                            <div class="menu-left">
+                                <div ms-widget="tree,menutree" class="menu-tree"></div>
+                            </div>
+                        </div>
+                        <div class="col-main tabWrap">
+                           <div ms-widget="tab,menutabs"></div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-controller="includepublic" ms-include-src="footer" ms-class="closed:!isOpen"></div>
+    <script type="text/javascript">
+    seajs.use("/static/public/src/main");
+    </script>
+</body>
+
+</html>

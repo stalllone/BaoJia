@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆-企业版-宝驾租车</title>
+	<link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>	
+	<div class="QYlogin">
+		<div class="loginheader"><img src="../image/logo.png"></div>
+		<div class="pleft"><img src="../image/ban11.png"></div>
+		<div class="pmid">
+			<h1 class="logintilte">526工程联盟会员</h1>
+			<div class="divipt user"><input placeholder="用户名" ></div>
+			<div class="divipt pwd"><input placeholder="密码" ></div>
+			<div class="divchk">
+				<span><b class="check check0"></b>地图模式<input type="radio"  value="0" name="showtype" checked></span><span><b class="check check1"></b>列表模式<input type="radio" name="showtype" value="1"></span>
+			</div>
+			<div class="logintip">http://www.vzan.cc/</div>
+			<div class="divbtn"><button>登录</button></div>			
+		</div>
+		<div class="pright"><img src="../image/ban22.png"></div>
+		<div class="loginfooter"><img src="../image/yingyin.png"></div>
+		
+	</div>
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="http://css.baojia.com/s4/c/js/jquery.bj.help.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".divchk span").click(function(event) {
+				$(this).find("input").prop("checked","checked");
+				setShowType();
+			});
+			setShowType();
+			$(".divbtn").click(function(event) {
+				/* Act on the event */
+				showTip("请输入手机号！")
+			});
+		})
+		function setShowType(){
+			$(".check").removeClass('checked');
+			var val=$("input[name='showtype']:checked").val();			
+			$(".check"+val).addClass('checked')
+		}
+		function showTip(msg){
+			$(".logintip").html(msg);
+			$(".logintip").css("display","block");
+			window.setTimeout(function(){$(".logintip").css("display","none");},1000); 
+		}
+	</script>
+
+</body>
+</html>

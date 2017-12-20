@@ -1,0 +1,12 @@
+﻿<div>
+
+    <div class="bar">我的信息</div>
+    <table>
+        <tr ng-repeat="msg in messages | searchForFilter: searchForText | orderBy: orderMsg">
+            <td>{{msg.id}}</td>
+            <td>{{msg.sender}}</td>
+            <td><a href="#/message/{{msg.id}}">{{msg.subject}}</a> </td>
+        </tr>
+    </table>
+</div>
+<script src="app/module/user/data.js"></script>

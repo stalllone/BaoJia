@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>风控系统 - 宝驾租车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="/css/plugin/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/controlSys.css" rel="stylesheet">
+
+    <script src="/js/sea.js"></script>
+    <script src="/js/seaconfig.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <div class="mian_all">
+        <div class="mian_head ms-controller" ms-controller="condition">
+            <div class="search_xilie" >
+                <div class="search_tit">按订单查询</div>
+                <div class="search_control">
+                    <input ms-duplex="searchValue" type="text" class="search_content">
+                </div>
+                <div ms-click="search" class="search_btn">
+                    <img src="../../images/1.0/search.png" alt="">
+                </div>
+            </div>
+            <div class="search_company">
+                <div class="search_fencompany pull-left">分公司</div>
+                <div class="searchByzimuorshuzi pull-right">
+                    <ul class="byzimu">
+                        <li ms-repeat="letter">
+                            <label>
+                                <input ms-duplex-string="letter_btn" type="radio" ms-attr-value="el.value" name="letter_btn">
+                                    <b>{{el.label}}</b>
+                            </label>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="bypos">
+                        <li ms-repeat="city">
+                            <label>
+                                <input ms-duplex-string="city_btn" type="radio" ms-attr-value="el.value" name="city_btn">
+                                    <b>{{el.label}}</b>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="control_mian">
+            <div class="control_main_tit ms-controller" ms-controller="condition">
+                <span ms-repeat="choosetype">
+                    <label>
+                        <input ms-duplex-string="choosetype_btn" type="radio" ms-attr-value="el.value" name="choosetype_btn">
+                        <b>{{el.label}}</b>
+                    </label>
+                </span>
+            </div>
+            <div class="col-xs-12">
+                <div class="row ms-controller" ms-controller="indexList">
+                    <div>
+                        <div ms-widget="smartgrid,sg,sgOpts"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div ms-controller="indexList" class="ms-controller">
+            <div ms-widget="dialog,gb,$guanbiOpts">
+                <div>
+                    你确定关闭事件吗？
+                </div>
+            </div>
+            <div ms-widget="dialog,zl,$zlOpts">
+                <div class="col-xs-12">
+                    <span class="scwd">选择文档</span>
+                    <div class="scxl">
+                        <span class="scms"></span>
+                        <input class="file_btn" type="file">
+                        <input class="sc_btn" type="button" value="浏览" >
+                    </div>
+                </div>
+            </div>
+            <div ms-widget="dialog,yj,$yijiaoOpts">
+                <div class="">
+                    <span>移交分公司</span>
+                    <select ms-widget="dropdown,$,$company">
+                    </select>
+                    <br>
+                    <span class="mar_tp">
+                        <input type="checkbox">是否短信通知
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        seajs.pagejs("/static/controlSys/src/indexList");
+    </script>
+</body>
+
+</html>

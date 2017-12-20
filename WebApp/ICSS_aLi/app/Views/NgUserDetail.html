@@ -1,0 +1,16 @@
+﻿<div>
+    <div>
+        <input type="text" name="abc1" value=" " ng-model="pageHeading" placeholder="Write something" />
+
+        <h1>{{pageHeading | titleCase}}</h1>
+    </div>
+    <input type="text" name="abc" value=" " ng-model="searchForText" placeholder="Search in below list" />
+    <div class="bar">Message list</div>
+    <table>
+        <tr ng-repeat="msg in messages | searchForFilter: searchForText | orderBy: orderMsg">
+            <td>{{msg.id}}</td>
+            <td>{{msg.sender}}</td>
+            <td><a href="#/message/{{msg.id}}">{{msg.subject}}</a> </td>
+        </tr>
+    </table>
+</div>

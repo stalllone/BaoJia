@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆-企业版-宝驾租车</title>
+	<link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+	<link rel="stylesheet" href="http://css.baojia.com/s4/src/fuli/css/main.css">
+</head>
+<body class="Login">	
+	<div class="fl_login">
+		<div class="loginheader"><img src="http://css.baojia.com/s4/src/fuli/image/logo1.png"></div>
+		<div class="pleft"><img src="http://css.baojia.com/s4/src/fuli/image/ban11.png"></div>
+		<div class="pmid">
+			<h1 class="logintilte">今日福利后台</h1>
+			<div class="divipt user"><input placeholder="用户名" ></div>
+			<div class="divipt pwd"><input placeholder="密码" ></div>
+			<div class="divchk">
+				<span><b class="check check0"></b>记住密码<input type="checkbox"  value="0" name="showtype" checked></span>
+			</div>
+			<div class="logintip"></div>
+			<div class="divbtn"><button>登录</button></div>			
+		</div>
+		<div class="pright"><img src="http://css.baojia.com/s4/src/fuli/image/ban22.png"></div>
+		<div class="loginfooter"><img src="http://css.baojia.com/s4/src/fuli/image/yingyin.png"></div>
+		
+	</div>
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="http://css.baojia.com/s4/c/js/jquery.bj.help.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".divchk span").click(function(event) {
+				var chkbox =$(this).find("input");
+				chkbox.prop("checked",!$(this).find("input").prop("checked"));
+				setShowType();
+			});
+			setShowType();
+			$(".divbtn").click(function(event) {
+				showTip("请输入手机号！")
+			});
+		})
+		function setShowType(){
+			$(".check").removeClass('checked');
+			var val=$("input[name='showtype']:checked").val();
+			$(".check"+val).addClass('checked')
+		}
+		function showTip(msg){
+			$(".logintip").html(msg);
+			$(".logintip").css("display","block");
+			window.setTimeout(function(){$(".logintip").css("display","none");},1000); 
+		}
+	</script>
+
+</body>
+</html>

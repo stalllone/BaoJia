@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>宝驾前端示例-首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="/js/sea.js"></script>
+    <script src="/js/seaconfig.js"></script>
+    <script type="text/javascript">
+    seajs.use(["/css/plugin/bootstrap.min.css", "/css/font-awesome.min.css", "/css/theme.css", "/css/custom.css"]);
+    </script>
+</head>
+
+<body>
+    <div class="pagemain">
+        <div class="container">
+            <div class="row">
+                <div class="col-main">
+                    <div class="query-wrap" ms-controller="addMess">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2><i class="icon-tasks"></i>任务基本信息</h2>
+                            </div>
+                            <div class="panel-body no-padding">
+                                <form ms-widget="validation">
+                                    <table class="table no-border table-middle">
+                                        <colgroup>
+                                            <col style="width:120px;">
+                                                <col style="width:200px;">
+                                                    <col style="width:120px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="labelPart t-r">活动名称：</td>
+                                                <td>
+                                                    <div class="inputfield">
+                                                        <input id="activeName" type="text" ms-duplex-required="activeName" placeholder="" class="form-control inline" value="">
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="labelPart t-r">taskID：</td>
+                                                <td>
+                                                    <div class="inputfield">
+                                                        <input ms-duplex-int="taskId" type="text" id="taskId" placeholder="" class="form-control inline" value="">
+                                                    </div>
+                                                </td>
+                                                <td class="labelPart t-r">groupID：</td>
+                                                <td>
+                                                    <div class="inputfield">
+                                                        <input id="groupId" ms-duplex-int="groupId" type="text" placeholder="" class="form-control inline" value="">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="labelPart t-r">排重的groupID：</td>
+                                                <td>
+                                                    <div class="inputfield">
+                                                        <input id="pzId" ms-duplex-int="pzId" type="text" placeholder="" class="form-control inline" value="">
+                                                    </div>
+                                                </td>
+                                                <td class="labelPart t-r">是否每天执行：</td>
+                                                <td>
+                                                    <input ms-duplex-string-norequired="execute" type="radio" placeholder="" value="1" value="">是
+                                                    <input ms-duplex-string-norequired="execute" type="radio" placeholder="" value="0" value="">否
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="labelPart t-r">推送时间：</td>
+                                                <td>
+                                                    <input type="text" id="tsTime" class="form-control inline" data-datepicker-timer="true" ms-widget="datepicker" ms-duplex="tsTime">
+
+                                                </td>
+                                                <td class="labelPart t-r">类型：</td>
+                                                <td>
+                                                    <select id="type" ms-widget="dropdown,$1,$typeOpts" ms-duplex="type">
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="labelPart t-r">短信内容：</td>
+                                                <td colspan="3">
+                                                    <div class="inputfield">
+                                                        <textarea id="messCon" ms-duplex-required="messCon" placeholder="" name="" cols="" rows="" class="form-control" style="height:100px; width:530px;"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="labelPart t-r">sql：</td>
+                                                <td colspan="2">
+                                                    <div class="inputfield">
+                                                        <textarea id="sqlCon1" ms-duplex="sqlCon1" placeholder="" name="" cols="" rows="" class="form-control" style="height:100px; width:530px;"></textarea>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a id="jia">+</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hide" id="sql_hide">
+                                                <td class="labelPart t-r">sql：</td>
+                                                <td colspan="2">
+                                                    <div class="inputfield">
+                                                        <textarea id="sqlCon2" ms-duplex="sqlCon2" placeholder="" name="" cols="" rows="" class="form-control" style="height:100px; width:530px;"></textarea>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a id="jian" href="#">-</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                            <div class="panel-heading">
+                                <h2><i class="icon-tasks"></i><input type="checkbox" >优惠券信息</h2>
+                            </div>
+                            <div class="panel-body no-padding">
+                                <form ms-widget="validation">
+                                    <table class="table no-border table-middle">
+                                        <colgroup>
+                                            <col style="width:120px;">
+                                                <col style="width:200px;">
+                                                    <col style="width:120px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="labelPart t-r">输入优惠劵ID：</td>
+                                                <td>
+                                                    <div class="inputfield">
+                                                        <input id="yhjId" ms-duplex-int="yhjId" type="text" placeholder="" class="form-control inline" value="">
+                                                    </div>
+                                                </td>
+                                                <td class="labelPart t-r">优惠劵金额：</td>
+                                                <td>
+                                                    <div class="inputfield">
+                                                        <input id="yhjMoney" type="text" ms-duplex-money="yhjMoney" class="form-control inline" value="">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="labelPart t-r">开始时间：</td>
+                                                <td>
+                                                    <input type="text" id="startTime" class="form-control inline" data-datepicker-timer="true" ms-widget="datepicker" ms-duplex="startTime">
+                                                </td>
+                                                <td class="labelPart t-r">结束时间：</td>
+                                                <td>
+                                                    <input type="text" id="overTime" class="form-control inline" data-datepicker-timer="true" ms-widget="datepicker" ms-duplex="overTime">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="form-control-part t-c" colspan="4">
+                                                    <br>
+                                                    <input type="submit" class="btn btn-success btn-sm" value="确认提交">
+                                                    <input type="button" class="btn btn-primary btn-sm" ms-click="reset1" value="重置条件">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    seajs.pagejs("/static/pages/src/add");
+    </script>
+    <script src="/js/libs/jquery-2.1.1.min.js"></script>
+    <script>
+        $('#jia').click(function() {
+            $('#sql_hide').removeClass('hide');
+        });
+        $('#jian').click(function() {
+            $('#sql_hide').addClass('hide');
+        });
+    </script>
+</body>
+
+</html>

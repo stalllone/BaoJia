@@ -1,0 +1,559 @@
+/* table按钮样式 */
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background: #14c8cb;
+    border-color: #14c8cb;
+}
+
+
+
+/* 导出按钮 */
+
+.P_body .right .Rcont div.dt-buttons {
+    float: right;
+}
+
+.P_body .right .Rcont div.dt-buttons a,
+.P_body .right .Rcont div.dt-buttons a:hover,
+.P_body .right .Rcont div.dt-buttons a:focus,
+.P_body .right .Rcont div.dt-buttons a:active {
+    background: #14c8cb;
+    border-color: #14c8cb;
+    color: #fff;
+}
+
+
+/* common */
+
+.Continput {
+    width: 1404px;
+    max-width: 1404px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 28px;
+}
+
+.Continput {
+    width: 100%;
+    min-height: 400px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    padding-bottom: 60px;
+}
+
+.Continput h1 {
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.Continput .list_input {
+    margin-top: 30px;
+}
+
+.Continput .first_input {
+    padding-left: 100px;
+}
+
+.Continput .item_input {
+    margin-top: 20px;
+}
+
+.Continput .item_input span {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}
+
+.Continput .item_input input {
+    width: 200px;
+    text-indent: 10px;
+    font-size: 14px;
+}
+
+.Continput .input_radio {
+    padding-left: 100px;
+    margin-top: 20px;
+}
+
+.Continput .input_radio label {
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+.Continput .input_radio p {
+    display: inline-block;
+    width: 135px;
+    text-align: right;
+}
+
+.Continput .input_radio .hidden-input {
+    background: transparent;
+}
+
+.Continput .input_radio .hidden-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.Continput .input_radio input[type=radio]+span {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ccc;
+    position: relative;
+    top: 15px;
+    border-radius: 20px;
+}
+
+.Continput .input_radio input[type=radio]:checked+span {
+    background: none;
+    border-color: #14c8cb;
+}
+
+.Continput .input_radio .circle {
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 50%;
+    margin-left: -7px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 14px;
+}
+
+.Continput .input_radio input[type=radio]:checked+span .circle {
+    background: #14c8cb;
+}
+
+
+/* 头部 */
+
+.P_body .top {
+    width: 100%;
+    height: 80px;
+    background: rgba(81, 126, 77, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+
+/* 左边菜单 */
+
+.P_body .content {
+    margin-top: 80px;
+}
+
+.P_body .left {
+    width: 230px;
+    position: fixed;
+    top: 80px;
+    min-height: 600px;
+    background: rgba(57, 161, 57, 1);
+}
+
+.P_body .left .toggle {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    background: rgba(68, 184, 68, 1);
+    position: relative;
+}
+
+.P_body .left .toggle div {
+    width: 10px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.P_body .left .toggle p {
+    border-top: 1px solid #f8f1f1;
+    margin: 0;
+    margin-top: 3px;
+}
+
+.P_body .left .menuList li {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.P_body .left .menuList li a {
+    color: #fff;
+    padding: 15px 15px;
+    border-radius: 0;
+    background: none;
+    display: block;
+}
+
+.P_body .left .menuList li>a:hover {
+    background: none;
+}
+
+.P_body .left .menuList li>a:visited {
+    background: none;
+}
+
+.P_body .left .menuList li>a:active {
+    background: none;
+}
+
+.P_body .left .menuList .icon {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.P_body .left .menuList .triangle:after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-top: -3px;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    border-bottom: 0;
+    height: 0;
+    width: 0;
+    display: inline-block;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+}
+
+.P_body .left .menuList .triangle.on:after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-top: -3px;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    border-bottom: 0;
+    height: 0;
+    width: 0;
+    display: inline-block;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+}
+
+.P_body .left .menuList .sub-menu-list {
+    // display:none;
+}
+
+.P_body .left .menuList .sub-menu-list a {
+    text-decoration: none;
+}
+
+.P_body .left .menuList .sub-menu-list a .icon {
+    background-image: url(http://css.baojia.com/s4/m/images/icon.png);
+    background-repeat: no-repeat;
+    height: 23px;
+}
+
+.P_body .left .menuList .sub-menu-list a .homediscripe {
+    background-position: 0 -9px;
+}
+
+.P_body .left .menuList .sub-menu-list a:hover {
+    background: rgba(45, 137, 45, 1);
+}
+
+.P_body .left .menuList .sub-menu-list a.on {
+    background: rgba(45, 137, 45, 1);
+}
+
+.P_body .right {
+    margin-left: 230px;
+    padding: 0 39px;
+}
+
+.P_body .right .Rtop {
+    padding: 24px 0;
+    position: relative;
+    border-bottom: 1px solid rgba(170, 170, 170, 1);
+}
+
+.P_body .right .Rtop .breadcrumb {
+    background: none;
+    font-size: 34px;
+    color: rgba(187, 187, 187, 1);
+    margin: 0;
+    padding: 0;
+}
+
+.P_body .right .Rtop .active {
+    color: rgba(38, 38, 38, 1);
+}
+
+.P_body .right .Rtop .btn {
+    width: 135px;
+    height: 51px;
+    font-size: 18px;
+    line-height: 51px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    background: rgba(246, 122, 41, 1);
+    border: none;
+}
+
+.P_body .right .Rcont {
+    margin-top: 31px;
+    font-size: 16px;
+}
+
+.P_body .right .Rcont .title p {
+    display: inline-block;
+    margin-top: -5px;
+}
+
+.P_body .right .Rcont .title p:nth-of-type(2) {
+    margin-left: 20px;
+}
+
+.P_body .right .Rcont .table button {
+    background: rgba(246, 122, 41, 1);
+    border-color: rgba(246, 122, 41, 1);
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+/* 添加新的工作站 */
+
+.P_body .right .Rcont .title1 {
+    width: 1404px;
+    max-width: 1404px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 28px;
+    color: rgba(51, 51, 51, 1);
+}
+
+
+.P_body .right .Rcont .addSiteCont .btn_group {
+    width: 430px;
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.P_body .right .Rcont .addSiteCont .btn_group button {
+    width: 120px;
+    background: rgba(249, 123, 42, 1);
+    color: #fff;
+    font-size: 16px;
+    margin-right: 30px;
+}
+/* 工作站详情 */
+
+.P_body .right .detailSiteCont .detailNav {
+    width: 1404px;
+    max-width: 1404px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.P_body .right .detailSiteCont .detailNav li {
+    float: left;
+    margin-right: 20px;
+}
+
+.P_body .right .detailSiteCont .detailNav a {
+    text-decoration: none;
+    color: rgba(64, 64, 64, 1);
+    padding: 8px 15px;
+    border: 1px solid rgba(199, 199, 199, 1);
+    border-bottom: none;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+
+.P_body .right .detailSiteCont .detailNav a:hover {
+    background: rgba(64, 64, 64, 1);
+    color: #fff;
+    border-color: rgba(64, 64, 64, 1);
+}
+
+.P_body .right .detailSiteCont .detailNav a.on {
+    background: rgba(64, 64, 64, 1);
+    color: #fff;
+    border-color: rgba(64, 64, 64, 1);
+}
+
+.P_body .right .detailSiteCont .detailCont {
+    margin-top: 0;
+}
+
+.P_body .right .detailSiteCont .detailCont>div {
+    display: none;
+}
+
+.P_body .right .detailSiteCont .detailCont .list_input {
+    display: block;
+}
+
+.P_body .right .detailSiteCont .btn_group .btn {
+    width: 120px;
+    background: rgba(249, 123, 42, 1);
+    color: #fff;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+    outline: 0;
+}
+
+.P_body .right .detailSiteCont .manageBox .batteryTit {
+    margin-top: 35px;
+    margin-left: 31px;
+    color: rgba(91, 91, 91, 1);
+}
+
+.P_body .right .detailSiteCont .manageBox .batteryTit span {
+    color: rgba(249, 123, 42, 1);
+}
+
+.P_body .right .detailSiteCont .titleInput {
+    margin-top: 40px;
+}
+
+.P_body .right .detailSiteCont .titleInput label {
+    font-weight: normal;
+    margin-left: 31px;
+    position: relative;
+}
+
+.P_body .right .detailSiteCont .titleInput label ul {
+    position: absolute;
+    right: 0;
+    width: 150px;
+    text-align: center;
+    background: #fff;
+    z-index: 3;
+    display: none;
+}
+
+.P_body .right .detailSiteCont .titleInput label ul li {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.P_body .right .detailSiteCont .titleInput input {
+    width: 150px;
+}
+
+
+/* 工作记录 */
+
+.P_body .right .detailSiteCont .WorkRecord .Flow div {
+    width: 105px;
+    height: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.P_body .right .detailSiteCont .WorkRecord .Flow div:nth-of-type(1) {
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+}
+
+.P_body .right .detailSiteCont .WorkRecord .Flow div:nth-of-type(1) p {
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #fff;
+}
+
+.P_body .right .detailSiteCont .WorkRecord .Flow div:nth-of-type(2) {
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+    margin-top: -1px;
+    margin-left: -10px;
+}
+
+.P_body .right .detailSiteCont .WorkRecord .Flow div:nth-of-type(2) span {
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    padding: 0 3px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 8px;
+    left: 12px;
+}
+
+.P_body .right .detailSiteCont .WorkRecord .Flow div:nth-of-type(2) p {
+    font-size: 12px;
+    position: absolute;
+    bottom: -19px;
+    right: -20px;
+    background: #fff;
+}
+/* 修改工作站 */
+
+.P_body .right .Rcont .modifySiteCont .btn_group {
+    width: 430px;
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.P_body .right .Rcont .modifySiteCont .btn_group .btn {
+    display: inline-block;
+    margin-right: 30;
+}
+
+.P_body .content1 .left {
+    width: 60px;
+}
+
+.P_body .content1 .left span {
+    display: none;
+}
+
+.P_body .content1 .left .sub-menu-list .icon {
+    margin-left: -5px;
+}
+
+.P_body .content1 .left .toggle div {
+    width: 10px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+    -moz-transform: translate(-50%, -50%) rotate(90deg);
+    -ms-transform: translate(-50%, -50%) rotate(90deg);
+}

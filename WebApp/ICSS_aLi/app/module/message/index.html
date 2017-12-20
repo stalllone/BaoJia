@@ -1,0 +1,30 @@
+
+Hello
+<a href="#/user/">User</a>
+<div class="bar">User List</div>
+
+<div ng-repeat="us in users" style="padding: 10px;">
+    <a style="text-decoration: none;" href="#/user/{{us.name}}">
+        <b>{{$index + 1}}. </b>{{us.name}}, {{us.email}}
+    </a>
+</div>
+
+
+<div class="bar">Add A User</div>
+<form name="addUserForm">
+    <input placeholder="username" type="text" name="fullname" value="" ng-model="newUser.name" required />
+    <input placeholder="email" type="email" name="email" value="" ng-model="newUser.email" required />
+    <button ng-click="AddUser()" ng-disabled="!addUserForm.$valid">Click To Add User</button>
+</form>
+
+<div ng-controller="TempController">
+    {{pageMessage}}
+    Test - {{pageHeading}}
+</div>
+<script src="app/module/user/data.js"></script>
+<script>
+    $(function () {
+
+    });
+</script>
+

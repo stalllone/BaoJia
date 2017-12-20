@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>风控系统 - 宝驾租车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script src="/js/sea.js"></script>   
+    <link href="/css/bootstrap.min.css" rel="stylesheet" charset="utf-8">  
+    <link href="/css/font-awesome.min.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/theme.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/warning.css" rel="stylesheet" charset="utf-8">
+    <script src="/static/seaconfig.js"></script>  
+    </script>
+</head>
+
+<body class="bg_write">
+    <div class="main_contant_sgreea">
+            <div class="dxle_tit">
+                短信列表
+            </div>
+            <div class="mian_head clearfix ms-controller" ms-controller="condition">
+                <div style="min-width:1104px;width:80%;" class="pull-left">
+                    <div class="dropSelect dropselectM pull-left">
+                        <span>城市：</span>
+                        <span>
+                        <select ms-duplex="ct" ms-widget="dropdown,$ct,$city">
+                        </select>
+                    </span>
+                        <span>状态：</span>
+                        <span>
+                        <select ms-duplex="sta" ms-widget="dropdown,$sta,$state">
+                        </select>
+                    </span>
+                        <span>日期：</span>
+                        <span class="searchByzimuorshuzi">
+                        <div class="inputfield" style="width:180px;">
+                            <input id="dp1" ms-widget="datepicker,dp1,$dp1Opts" ms-duplex="accTime" />
+                        </div>
+                    </span>
+                    </div>
+                    <div class="search_xilie  pull-right">
+                        <div class="search_control pull-left">
+                            <input ms-duplex="searchValue" type="text" class="search_content search_contentSIM" placeholder="SIM卡号">
+                        </div>
+                        <div ms-click="search" class="search_btn pull-left">
+                            <img src="../../../images/1.0/search.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="fasong pull-right">
+                    <input type="button" value="发送短信" ms-click="guanbi('gb')">
+                </div>
+            </div>
+            <div ms-controller="condition" class="ms-controller">
+                <div class="control_mian">
+                    <div>
+                        <div class="ms-controller" ms-controller="indexList">
+                            <div>
+                                <div ms-widget="smartgrid,sg,sgOpts"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div ms-widget="dialog,gb,$guanbiOpts">
+                        <div class="margin_b_b">
+                            <span>流量卡号：</span>
+                            <input class="carCode" type="text" ms-widget="textbox" ms-duplex="cCode" data-textbox-suggest="test3">
+                            <span class="sapn_red">未入库</span>
+                        </div>
+                        <div class="margin_b_b">
+                            <span>发送指令：</span>
+                            <select ms-duplex="zl" ms-widget="dropdown,$zl,$zhiling">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        seajs.use("/static/stock/src/duanxinpingtai");
+        </script>
+</body>
+
+</html>

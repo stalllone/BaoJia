@@ -1,0 +1,191 @@
+.nav{width: 100%;background-color:#0a1721;height: 68px;}
+.cantainer{width: 1000px;margin: 0 auto;}
+.nav .cantainer img{width: 161px;height: 42px;}
+.nav .cantainer li{float: left;height: 68px;line-height: 68px;}
+.nav .cantainer li>a{font-size: 14px;color: #fff;padding: 0 20px;text-align: center;text-decoration: none;}
+.nav .cantainer li>a:after{content: "";display: inline-block;width: 8px;height:8px;color: #fff;border: 1px solid #fff;border-top: none;border-right: none;transform: rotate(-45deg);-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);margin-left: 5px;position: relative;top: -3px;}
+.nav .cantainer li:hover>a:after{top:0;transform: rotate(135deg);-webkit-transform: rotate(135deg);-moz-transform: rotate(135deg);-ms-transform: rotate(135deg);}
+.nav .cantainer li>a.jt_none:after{content: "";border: none;}
+.nav .cantainer li .dropul{background:rgba(0,0,0,0.8);position: absolute;text-align: center;width: 100px;display: none;top: 68px;}
+.nav .cantainer li .dropul>div{line-height: 25px;position: relative;}
+.nav .cantainer li .dropul>div a{color: #fff;font-size: 15px;text-decoration: none;}
+.nav .cantainer li .dropul>div div{position: absolute;top: 0;right:-220px;display: none;background:rgba(0,0,0,0.8);padding: 1px 5px;}
+.nav .cantainer li .dropul .three:hover div{display: block;}
+.nav .cantainer li .dropul>div div a{display: block;}
+.nav .cantainer li .dropul p{line-height: 25px;}
+.nav .cantainer li .dropul p a{font-size: 15px;color: #fff;text-decoration: none;}
+.nav .cantainer li:hover .dropul{display: block;}
+.ban{width: 100%;}
+.content{width: 100%;}
+.content .cantainer{padding-top: 120px;}
+.content .title{text-align: center;font-size: 24px;color: #2d2d2d;position: relative;height: 90px;}
+.content .title p{height:40px;width: 100%;position:relative;top: 50%;text-align: center;line-height:40px;transform: translateY(-50%);background: #fff;z-index: 1;}
+.content .title .circle{width: 90px;height: 90px;border: 1px solid #d4d4d4;border-radius:100px;position: absolute;left: 50%;margin-left: -45px;top: 0;}
+.content .cont{width: 620px;margin: 0 auto;text-align: center;font-size: 15px;color: #797979;margin-top: 20px;}
+.content .list_cloud{width: 100%;margin-top: 33px;margin-bottom: 175px;}
+.content .list_cloud li{width:135px;float: left;margin-left: 92px;}
+.content .list_cloud li dt{width:108px;margin: 0 auto;}
+.content .list_cloud li h1{font-size: 13px;color: #676767;text-align: center;margin-top: 26px;}
+.content .list_cloud li p{color: #2393e7;margin-top: 20px;font-size: 13px;}
+.content .list_cloud1 img{width: 745px;margin: 0 auto;display: block;}
+.content1{background-color: #f5f8fb;padding-bottom: 137px;}
+.content1 .title p{background: transparent;}
+.content1 .list_cloud{margin-bottom: 0;}
+.content1 .list_cloud li{width: 162px;background: #fff;padding: 25px;margin-left: 70px;}
+.content1 .list_cloud li p{text-align: center;}
+.content2 .list_cloud li{width: 235px;margin-left: 70px;margin-top: 30px;}
+.content2 .list_cloud li dd{padding:19px 16px 16px 16px;border: 1px solid #f3f3f3;border-top: none;height: 190px;}
+.content2 .list_cloud li dt{width: 100%;}
+.content2 .list_cloud li h1.listlogo1{height: 32px;margin-top: 0;}
+.content2 .list_cloud li h1.list_logo1{width: 92px;}
+.content2 .list_cloud li p{margin-top: 15px;color: #707070;font-size: 13px;}
+.content2 .list_cloud li h1.list_logo2{width:73px;}
+.content2 .list_cloud li h1.list_logo3{width:110px;}
+.content2 .list_cloud li h1.listlogo2{height:49px;margin-top: 0;}
+.content2 .list_cloud li h1.list_logo4{width:113px;}
+.content2 .list_cloud li h1.list_logo5{width: 39px;}
+.content2 .list_cloud li h1.list_logo6{width: 44px;}
+.content2 .list_cloud li h1.listlogo3{height:33px;margin-top: 0;}
+.content2 .list_cloud li h1.list_logo7{width: 94px;}
+.content2 .list_cloud li h1.list_logo8{width: 78px;}
+.content2 .list_cloud li h1.list_logo9{width: 111px;}
+.content2 .list_cloud li h1.listlogo4{height:38px;margin-top: 0;}
+.content2 .list_cloud li h1.list_logo10{width: 70px;}
+.content2 .list_cloud li h1.list_logo11{width: 47px;}
+.content2 .list_cloud li h1.list_logo12{width: 32px;}
+.footer{width: 100%;height: 264px;background-color: #1f2533;}
+.footer .title{width: 91px;margin: 0 auto;padding-top:29px;}
+.footer .cont{width: 468px;margin: 0 auto;}
+.footer .cont li{float:left;margin-top: 40px;}
+.footer .cont li a{color: #c3c2c2;font-size: 15px;text-decoration: none;padding: 0 45px;}
+.footer .cont p{color: #c3c2c2;margin-top: 85px;text-align: center;font-size: 15px;}
+.footer .cont p a{display: block;color: #c3c2c2;text-decoration: none;margin-top: 5px;}
+/*首页*/
+.index .content .title p{color: #2792e3;}
+/*盈利模式*/
+.profit .content{padding-bottom: 197px;}
+.profit .list_pro>div{width: 500px;float: left;padding: 0 50px;}
+.profit .list_pro .title{color: #2e2e2e;}
+.profit .content1 .list_pro .title p{background: #f6f9fc;}
+.profit .list_pro .cont{width: 400px;font-size: 20px;color: #474748;}
+/*招商加盟*/
+.joinbuss .title{color: #2d2d2d;}
+.joinbuss .cont{color: #778faa;}
+/*定制PC*/
+.made .cont{color:#5c7b9c;}
+.madePc .list_made{width: 100%;margin-bottom: 178px;}
+.madePc .list_made>div{width: 850px;margin: 0 auto;margin-top: 113px;}
+.madePc .list_made dl{float: left;width: 130px;height: 208px;text-align: center;margin-left: 75px;}
+.madePc .list_made dt{width: 92px;margin: 0 auto;}
+.madePc .list_made dd{margin-top: 60px;font-size: 13px;color: #4d4d4d;}
+/*定制APP*/
+.madeApp .list_made{width: 100%;margin-bottom: 94px;}
+.madeApp .list_made>div{width: 750px;margin: 0 auto;margin-top: 113px;}
+.madeApp .list_made dl{float: left;width: 183px;height: 268px;text-align: center;margin-left: 55px;}
+.madeApp .list_made dt{width: 115px;margin: 0 auto;}
+.madeApp .list_made dd{margin-top: 25px;font-size: 13px;color: #616161;}
+.madeApp .list_made dd h1{margin-bottom: 30px;}
+/*关于我们*/
+.about .explain{padding-top: 0;}
+.about .explain .header{padding: 55px 0;font-size: 28px;font-weight: bold;color: #474747;}
+.about .explain li{font-size: 15px;color: #605f5e;margin-bottom: 25px;}
+/*车载终端*/
+.Carterminal .list_car{width: 1000px;margin: 0 auto;}
+.Carterminal .list_car dl{width: 157px;float: left;margin-left: 124px;padding-bottom: 235px;}
+.Carterminal .list_car dl dd{margin-top: 27px;font-size: 14px;}
+.Carterminal .list_car dl dd h1{text-align: center;font-size: 17px;font-weight: normal;color: #333;margin-bottom: 40px;}
+.Carterminal .Car_list{width: 1000px;margin: 0 auto;}
+.Carterminal .Car_list p{width: 265px;float: left;margin-left:52px;margin-top: 25px;}
+/*门店后台*/
+.store .cantainer{}
+/*解决方案*/
+.solution .list_solu{width: 1000px;margin: 0 auto;}
+.solution .list_solu>div{float: left;width: 251px;margin-left: 80px;margin-top: 113px;}
+/*汽车租赁信息化系统*/
+.carRentSystem .list_car_system .cantainer{padding-top: 75px;}
+.carRentSystem .list_car_system .carSyatem{padding-top: 100px;}
+.carRentSystem .list_car_system .carSyatem>div{width: 50%;float: left;font-size: 16px;color:#5c7b9c;}
+.carRentSystem .list_car_system .carSyatem .carSyatem_left{position: relative;top: 65px;}
+.carRentSystem .list_car_system .carSyatem>div span{font-size:33px;color: #333;display: block;}
+.carRentSystem .list_car_system .cont{margin-top: 0;color: #5c7b9c;}
+.carRentSystem .manage_list {width: 1000px;margin: 0 auto;}
+.carRentSystem .manage_list dl{width: 143px;float: left;text-align: center;margin-left: 50px;margin-bottom: 60px;}
+.carRentSystem .manage_list dl dt{width: 118px;margin: 0 auto;}
+.carRentSystem .manage_list dl dd{font-size: 15px;color: #868484;margin-top: 10px;}
+/*企业顾客会员后台*/
+.consumerBackstage .list_conBackstage{width: 1000px;margin: 0 auto;}
+.consumerBackstage .list_conBackstage>div{float: left;width: 400px;margin-left: 57px;margin-top: 70px;}
+/*分时租赁*/
+.rentTime .cont{color: #5c7b9c;}
+/*门店租赁运营*/
+.storeRent .list_store_character{width: 1000px;margin: 0 auto;}
+.storeRent .list_store_character dl{float: left;width: 206px;margin-left: 58px;}
+.storeRent .list_store_character dl dt{width: 154px;height: 154px;border-radius: 100%;margin: 0 auto;background-color: #72d4d1;}
+.storeRent .list_store_character dl h1{text-align: center;margin-top: 26px;margin-bottom: 53px;font-size: 20px;}
+.storeRent .list_store_character dl p{font-size: 13px;}
+.storeRent .cont{color: #5c7b9c;}
+.storeRent .manage_list {width: 1000px;margin: 0 auto;margin-top: 50px;}
+.storeRent .list_store_rent .cantainer{padding-top: 75px;}
+.storeRent .list_store_rent .storeSyatem{padding-top: 150px;}
+.storeRent .list_store_rent .storeSyatem>div{width: 50%;float: left;font-size: 16px;color:#5c7b9c;}
+.storeRent .list_store_rent .storeSyatem .storeSyatem_left{position: relative;top: 65px;}
+.storeRent .list_store_rent .storeSyatem .storeSyatem_right{margin-bottom: 100px;}
+.storeRent .list_store_rent .storeSyatem>div span{font-size:33px;color: #333;display: block;}
+
+
+
+
+/*手机掌柜*/
+.mobileManager .cont{color: #5c7b9c;}
+/*数据服务*/
+.dataServer .cont{color: #5c7b9c;}
+.dataServer .data_syatem{padding-top: 100px;}
+.dataServer .data_syatem>div{width: 50%;float: left;font-size: 16px;color:#5c7b9c;}
+.dataServer .data_syatem .dataSyatem_left{position: relative;top: 65px;}
+.dataServer .data_syatem .dataSyatem_left p{padding-left: 90px;}
+.dataServer .data_syatem>div span{font-size:33px;color: #333;display: block;margin-bottom: 50px;}
+.dataServer .data_list{padding:100px 0 200px 0;}
+.dataServer .data_list div{width: 170px;height: 224px;background: #5694ea;color: #fff;padding: 30px 30px;font-size: 16px;position: relative;float: left;margin-left: 117px;text-align: center;}
+.dataServer .data_list div:after{content: "";border:85px solid transparent; border-top-color:#5694ea; border-bottom:0; height:0; width:0; display:inline-block;position: absolute;left: 0;bottom:-85px;}
+
+/*微信服务*/
+.weChat .cont{color: #5c7b9c;}
+/*运营模式*/
+.operateMode .list_opearteMode{width: 1000px;margin: 0 auto;padding-bottom: 107px;}
+.operateMode .list_opearteMode dl{width: 133px;float: left;margin-left: 60px;font-size: 14px;}
+.operateMode .list_opearteMode dl dt{width: 110px;margin: 0 auto;}
+.operateMode .list_opearteMode dl h1{text-align: center;font-size: 15px;margin: 20px 0;}
+.operateMode .list_opearteMode1>div{float: left;width: 187px;margin-left: 47px;margin-top: 50px;}
+.operateMode .content1{padding-bottom: 0;}
+.operateMode .list_opearteMode2{width: 887px;margin: 100px auto;}
+.operateMode .list_opearteMode2 dl{float: left;width: 86px;height: 126px;text-align: center;margin-left: 122px;}
+.operateMode .list_opearteMode2 dl dt{width: 86px;margin: 0 auto;}
+.operateMode .list_opearteMode2 dl dd{font-size: 13px;margin-top: 20px;}
+
+/*运营商后台*/
+.OperateMode_backstage .cont{color: #5c7b9c;}
+/*加盟商后台*/
+.store .list_bussStage{width: 1000px;margin: 0 auto;margin-top: 50px;}
+.store .list_bussStage img{display: inline-block;width: 214px;margin-left: 27px;}
+/*经典案例*/
+.Case .list_case{width: 792px;margin: 0 auto;}
+.Case .list_case p{font-size: 18px;width: 694px;color: #5d5d5d;margin-top: 10px;}
+.Case .list_case_bottom{margin-top: 71px;}
+.Case .list_case_bottom div{display: inline-block;}
+.Case .list_case_bottom h1{font-size: 26px;font-weight: normal;width: 325px;text-align: center;}
+.Case .list_case_bottom p{width: 325px;text-align: center;margin: 35px 0;}
+.Case .list_case_bottom li{font-size: 14px;line-height: 30px;}
+/*门店后台*/
+.store .list_store_back{width: 1000px;margin: 0 auto;margin-top: 142px;}
+.store .list_store_back dl{width: 140px;margin-left: 160px;text-align: center;float: left;}
+.store .list_store_back dl dd{font-size: 22px;margin-top: 37px;}
+
+
+
+
+
+
+
+
+
+

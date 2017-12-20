@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <!-- <link rel="stylesheet" href="http://c.ibj.com/c/css/reset.css"> -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/jquery-datetimepicker/2.5.1/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="P_div">
+        <div class="header cl" style="position: fixed;z-index: 1">
+            <div class="logo"><img src="../image/logo.png" alt=""></div>
+            <div class="title cl">
+                 <ul>
+                     <li class="amessage">
+                        <a href="javascript:;"><span class="icon message"></span>消息<b>0</b></a>
+                        <div class="mask">
+                            <div class="pop">
+                                <div class="m_tit">
+                                    站内消息通知
+                                    <span class="close">×</span>
+                                </div>
+                                <div class="m_cont">
+                                    您暂时没有未读消息
+                                </div>
+                                <div class="m_bot">
+                                    <span>查看更多</span>
+                                </div>
+                            </div>
+                        </div>
+                     </li>
+                     <li><a href="javascript:;"><span class="icon homepage"></span>主页</a></li>
+                     <li class="three">
+                        <a href="javascript:;" class="company">北京银建汽车租赁有限公司</a>
+                        <div class="mask">
+                            <div class="pop">
+                                <ul>
+                                    <li>北京银建汽车租赁有限公司</li>
+                                    <li>登录账号:<span>18210101234</span></li>
+                                    <li>
+                                        <strong href="javascript:;">修改密码</strong>
+                                        <strong href="javascript:;">余额提现</strong>
+                                    </li>
+                                </ul>
+                                <div class="m_bot1">
+                                    <span>退出</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+        <div class="cont cl">
+            <div class="left" style="position: fixed;">
+                <div class="togg"></div>
+                <div class="openul">
+                    <div class="op_tit cl">
+                        <div class="back_pos"><span class="icon homediscripe"></span></div>
+                        <p class="tittle">首页概述</p>
+                    </div>
+                   <ul class="dropul">
+                       <li><a href="javascript:void(0);">新增座驾</a></li>
+                       <li><a href="javascript:void(0);">编辑座驾</a></li>
+                       <li><a href="javascript:void(0);">普通派单车辆座驾</a></li>
+                       <li><a href="javascript:void(0);">选单派单车辆</a></li>
+                   </ul>
+                </div>
+               <div class="openul">
+                    <div class="op_tit cl">
+                        <div class="back_pos"><span class="icon netmanage"></span></div>
+                        <p class="tittle">网点管理</p>
+                    </div>
+                   
+                   <ul class="dropul">
+                       <li><a href="javascript:void(0);">新增座驾</a></li>
+                       <li><a href="javascript:void(0);">编辑座驾</a></li>
+                       <li><a href="javascript:void(0);">普通派单车辆</a></li>
+                       <li><a href="javascript:void(0);">选单派单车辆</a></li>
+                   </ul>
+               </div>
+               <div class="openul">
+                   
+                   <div class="op_tit cl">
+                        <div class="back_pos"><span class="icon carmanage"></span></div>
+                        <p class="tittle">车辆管理</p>
+                    </div>
+                   <ul class="dropul">
+                       <li><a href="javascript:void(0);">新增车辆</a></li>
+                       <li><a href="javascript:void(0);">全部车辆</a></li>
+                       <li><a href="javascript:void(0);">缺电缺油</a></li>
+                       <li><a href="javascript:void(0);">无信号</a></li>
+                   </ul>
+               </div>
+               <div class="openul">
+                  
+                   <div class="op_tit cl">
+                        <div class="back_pos"><span class="icon ordermanage"></span></div>
+                        <p class="tittle">订单管理</p>
+                    </div>
+                   <ul class="dropul">
+                       <li><a href="javascript:void(0);">新增车辆</a></li>
+                       <li><a href="javascript:void(0);">全部车辆</a></li>
+                       <li><a href="javascript:void(0);">缺电缺油</a></li>
+                       <li><a href="javascript:void(0);">无信号</a></li>
+                   </ul>
+               </div>
+               <div class="openul">
+                  
+                   <div class="op_tit cl">
+                        <div class="back_pos"><span class="icon pasmanage"></span></div>
+                        <p class="tittle">租客管理</p>
+                    </div>
+                   <ul class="dropul">
+                       <li><a href="javascript:void(0);">新增车辆</a></li>
+                       <li><a href="javascript:void(0);">全部车辆</a></li>
+                       <li><a href="javascript:void(0);">缺电缺油</a></li>
+                       <li><a href="javascript:void(0);">无信号</a></li>
+                   </ul>
+               </div>
+               <div class="openul">
+                   
+                   <div class="op_tit cl">
+                        <div class="back_pos"><span class="icon laymanage"></span></div>
+                        <p class="tittle">员工部门</p>
+                    </div>
+                   <ul class="dropul">
+                       <li><a href="javascript:void(0);">新增车辆</a></li>
+                       <li><a href="javascript:void(0);">全部车辆</a></li>
+                       <li><a href="javascript:void(0);">缺电缺油</a></li>
+                       <li><a href="javascript:void(0);">无信号</a></li>
+                   </ul>
+               </div>
+               <div class="openul">
+                   
+                   <div class="op_tit cl">
+                        <div class="back_pos"><span class="icon reportform"></span></div>
+                        <p class="tittle">报表统计</p>
+                    </div>
+                   <ul class="dropul">
+                       <li><a href="javascript:void(0);">新增车辆</a></li>
+                       <li><a href="javascript:void(0);">全部车辆</a></li>
+                       <li><a href="javascript:void(0);">缺电缺油</a></li>
+                       <li><a href="javascript:void(0);">无信号</a></li>
+                   </ul>
+               </div>
+            </div>
+            <div class="right cl" style="position: absolute;">
+                <div class="R_div cl">
+                    <div class="R_list_div profittotle">
+                        <div class="title cl">
+                            <a href="javascript:;">收益总额</a>
+                            <a href="javascript:;" class="detail">明细</a>
+                        </div>
+                        <div class="title title1 cl">
+                            <a href="javascript:;">6400.<span>00 元</span></a>
+                        </div>
+                        <div class="p_div cl">
+                            <div class="p_div_l">
+                                <p>已提现金额</p>
+                                <p>5200.00元</p>
+                            </div>
+                             <div class="p_div_r">
+                                 <p>冻结金额</p>
+                                 <p>1200.00元</p>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="R_list_div cartotal">
+                        <div class="title cl p_div_l">
+                            <a href="javascript:;">车辆总数</a>
+                            <a href="javascript:;" class="detail">明细</a>
+                        </div>
+                        <div class="title title1 cl">
+                            <a href="javascript:;">25<span>辆</span></a>
+                        </div>
+                        <div class="p_div cl">
+                            <div class="title cl p_div_l">
+                                <a href="javascript:;">缺油缺电</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>198辆</span>
+                            </div>
+                             <div class="p_div_r title cl">
+                                <a href="javascript:;">盒子离线</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>25辆</span>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="R_list_div ordertotal">
+                        <div class="title cl p_div_l">
+                            <a href="javascript:;">车辆总数</a>
+                            <a href="javascript:;" class="detail">明细</a>
+                        </div>
+                        <div class="title title1 cl">
+                            <a href="javascript:;">25<span>辆</span></a>
+                        </div>
+                        <div class="p_div cl">
+                            <div class="title cl p_div_l">
+                                <a href="javascript:;">缺油缺电</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>198辆</span>
+                            </div>
+                             <div class="p_div_r title cl">
+                                <a href="javascript:;">盒子离线</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>25辆</span>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="R_list_div pastotal">
+                        <div class="title cl p_div_l">
+                            <a href="javascript:;">租客总数</a>
+                            <a href="javascript:;" class="detail">明细</a>
+                        </div>
+                        <div class="title title1 cl">
+                            <a href="javascript:;">5000<span>人</span></a>
+                        </div>
+                        <div class="p_div cl">
+                            <div class="title cl p_div_l">
+                                <a href="javascript:;">已认证租客</a>
+                                <!-- <a href="javascript:;" class="detail">查看</a> -->
+                                <span>1198人</span>
+                            </div>
+                             <div class="p_div_r title cl">
+                                <a href="javascript:;">待审核租客</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>12人</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_div">
+                    <div class="title">出租中的订单</div>
+                    <div class="t_div cl">
+                        <p class="time">取车:<span>2016-05-26 13:11:07</span></p>
+                        <p>悦行唐人街门店</p>
+                        <p>日产阳光</p>
+                        <p>京VN6808</p>
+                        <p>租客&nbsp;<span>张圈圈</span></p>
+                        <p>等待取车</p>
+                        <p><a href="javascript:;">查看</a></p>
+                    </div>
+                    <div class="t_div cl">
+                        <p class="time">取车:<span>2016-05-26 13:11:07</span></p>
+                        <p>悦行唐人街南门门店</p>
+                        <p>江淮EV4</p>
+                        <p>京VN0712</p>
+                        <p>租客&nbsp;<span>杜拉拉</span></p>
+                        <p class="accur">用车中</p>
+                        <p><a href="javascript:;">查看</a></p>
+                    </div>
+                    <div class="t_div cl last">
+                        <p class="time">取车:<span>2016-05-26 13:11:07</span></p>
+                        <p>悦行北土城地铁站</p>
+                        <p>北汽EV200</p>
+                        <p>京VN6438</p>
+                        <p>租客&nbsp;<span>杜 拉</span></p>
+                        <p class="finish">已还车待支付</p>
+                        <p><a href="javascript:;">查看</a></p>
+                    </div>
+                </div>
+                 <div class="tab_div tab_div1">
+                    <div class="title">需要关注的车辆</div>
+                    <div class="t_div cl">
+                        <p>悦行唐人街</p>
+                        <p>日产阳光</p>
+                        <p>京VN6808</p>
+                        <p>油量不足</p>
+                        <p>油量剩余9%</p>
+                        <p class="p_btn">
+                            <span>查看车辆</span>
+                            <span>地图监控</span>
+                        </p>
+                    </div>
+                    <div class="t_div cl">
+                        <p>悦行唐人街南门门店</p>
+                        <p>江淮EV4</p>
+                        <p>京VN0712</p>
+                        <p>电量不足</p>
+                        <p>电量剩余9%</p>
+                        <p class="p_btn">
+                            <span>查看车辆</span>
+                            <span>地图监控</span>
+                        </p>
+
+                    </div>
+                    <div class="t_div cl last">
+                        <p>悦行北土城地铁站</p>
+                        <p>北汽EV200</p>
+                        <p>京VN6438</p>
+                        <p>还车超出制定范围</p>
+                        <p>预计还车网点<br>悦行唐人街南门店</p>
+                        <p class="p_btn">
+                            <span>查看车辆</span>
+                            <span>地图监控</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="R_div cl">
+                    <div class="R_list_div profittotle">
+                        <div class="title cl">
+                            <a href="javascript:;">收益总额</a>
+                            <a href="javascript:;" class="detail">明细</a>
+                        </div>
+                        <div class="title title1 cl">
+                            <a href="javascript:;">6400.<span>00 元</span></a>
+                        </div>
+                        <div class="p_div cl">
+                            <div class="p_div_l">
+                                <p>已提现金额</p>
+                                <p>5200.00元</p>
+                            </div>
+                            <div class="p_div_r">
+                                <p>冻结金额</p>
+                                <p>1200.00元</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="R_list_div cartotal">
+                        <div class="title cl p_div_l">
+                            <a href="javascript:;">车辆总数</a>
+                            <a href="javascript:;" class="detail">明细</a>
+                        </div>
+                        <div class="title title1 cl">
+                            <a href="javascript:;">25<span>辆</span></a>
+                        </div>
+                        <div class="p_div cl">
+                            <div class="title cl p_div_l">
+                                <a href="javascript:;">缺油缺电</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>198辆</span>
+                            </div>
+                            <div class="p_div_r title cl">
+                                <a href="javascript:;">盒子离线</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>25辆</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="R_list_div ordertotal">
+                        <div class="title cl p_div_l">
+                            <a href="javascript:;">车辆总数</a>
+                            <a href="javascript:;" class="detail">明细</a>
+                        </div>
+                        <div class="title title1 cl">
+                            <a href="javascript:;">25<span>辆</span></a>
+                        </div>
+                        <div class="p_div cl">
+                            <div class="title cl p_div_l">
+                                <a href="javascript:;">缺油缺电</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>198辆</span>
+                            </div>
+                            <div class="p_div_r title cl">
+                                <a href="javascript:;">盒子离线</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>25辆</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="R_list_div pastotal">
+                        <div class="title cl p_div_l">
+                            <a href="javascript:;">租客总数</a>
+                            <a href="javascript:;" class="detail">明细</a>
+                        </div>
+                        <div class="title title1 cl">
+                            <a href="javascript:;">5000<span>人</span></a>
+                        </div>
+                        <div class="p_div cl">
+                            <div class="title cl p_div_l">
+                                <a href="javascript:;">已认证租客</a>
+                                <!-- <a href="javascript:;" class="detail">查看</a> -->
+                                <span>1198人</span>
+                            </div>
+                            <div class="p_div_r title cl">
+                                <a href="javascript:;">待审核租客</a>
+                                <a href="javascript:;" class="detail">查看</a>
+                                <span>12人</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_div">
+                    <div class="title">出租中的订单</div>
+                    <div class="t_div cl">
+                        <p class="time">取车:<span>2016-05-26 13:11:07</span></p>
+                        <p>悦行唐人街门店</p>
+                        <p>日产阳光</p>
+                        <p>京VN6808</p>
+                        <p>租客&nbsp;<span>张圈圈</span></p>
+                        <p>等待取车</p>
+                        <p><a href="javascript:;">查看</a></p>
+                    </div>
+                    <div class="t_div cl">
+                        <p class="time">取车:<span>2016-05-26 13:11:07</span></p>
+                        <p>悦行唐人街南门门店</p>
+                        <p>江淮EV4</p>
+                        <p>京VN0712</p>
+                        <p>租客&nbsp;<span>杜拉拉</span></p>
+                        <p class="accur">用车中</p>
+                        <p><a href="javascript:;">查看</a></p>
+                    </div>
+                    <div class="t_div cl last">
+                        <p class="time">取车:<span>2016-05-26 13:11:07</span></p>
+                        <p>悦行北土城地铁站</p>
+                        <p>北汽EV200</p>
+                        <p>京VN6438</p>
+                        <p>租客&nbsp;<span>杜 拉</span></p>
+                        <p class="finish">已还车待支付</p>
+                        <p><a href="javascript:;">查看</a></p>
+                    </div>
+                </div>
+                <div class="tab_div tab_div1">
+                    <div class="title">需要关注的车辆</div>
+                    <div class="t_div cl">
+                        <p>悦行唐人街</p>
+                        <p>日产阳光</p>
+                        <p>京VN6808</p>
+                        <p>油量不足</p>
+                        <p>油量剩余9%</p>
+                        <p class="p_btn">
+                            <span>查看车辆</span>
+                            <span>地图监控</span>
+                        </p>
+                    </div>
+                    <div class="t_div cl">
+                        <p>悦行唐人街南门门店</p>
+                        <p>江淮EV4</p>
+                        <p>京VN0712</p>
+                        <p>电量不足</p>
+                        <p>电量剩余9%</p>
+                        <p class="p_btn">
+                            <span>查看车辆</span>
+                            <span>地图监控</span>
+                        </p>
+
+                    </div>
+                    <div class="t_div cl last">
+                        <p>悦行北土城地铁站</p>
+                        <p>北汽EV200</p>
+                        <p>京VN6438</p>
+                        <p>还车超出制定范围</p>
+                        <p>预计还车网点<br>悦行唐人街南门店</p>
+                        <p class="p_btn">
+                            <span>查看车辆</span>
+                            <span>地图监控</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://css.baojia.com/s4/c/js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+<!-- <script src="../js/common.js" type="text/javascript"></script> -->
+<script>
+ var uiopen= $(".left li.on");
+    if(uiopen.length>0) ulopen($(uiopen[0]));
+    $(".openul .op_tit .tittle").click(function() {
+        ulopen($(this));
+    });
+    
+    function ulopen(obj){
+        obj.parents(".openul").siblings().find(".op_tit p").removeClass('on');
+        obj.parents(".openul").find(".op_tit p").addClass('on');
+        //obj.slideToggle().parent().find(".dropul").slideUp(500);
+         // obj.parents(".openul").find('.dropul').slideToggle().parent().siblings().find(".dropul").slideUp(500);
+         obj.parents(".openul").find('.dropul').slideDown().parent().siblings().find(".dropul").slideUp(500);
+    };
+    $(".dropul li").mouseover(function(){
+        $(".dropul li").removeClass('on');
+        $(this).addClass('on')
+    });
+    $(".left").css({"min-height": $(window).height() - $(".header").innerHeight(),"top": $(".header").innerHeight()})
+    $(".right").css({"top": $(".header").innerHeight(),"left":"12%"})
+      
+
+      $(".togg").click(function(){
+        
+        if($(".op_tit .tittle").is(':visible')){
+            $(".left").css("width","3%");
+            $(".back_pos").css("width","100%");
+            $(".op_tit .tittle").css("display","none");
+            $(".dropul").css("display","none");
+            $(".op_tit p").css("display","none");
+            $(this).addClass('on');
+            $(".right").css({"width":"97%","left":"3%"});
+            $(".back_pos").bind("click",function(){               
+                $(".left").css("width","12%");
+                $(".back_pos").css("width","28%");
+                $(".op_tit .tittle").css("display","block");             
+                $(".togg").removeClass('on');
+                $(".right").css({"width":"88%","left":"12%"});
+                $(".back_pos").removeClass('on');
+                $(this).parents(".op_tit").next().slideDown();
+                $(this).parents(".openul").find(".tittle").addClass('on');
+                $(this).parents(".openul").siblings().find(".tittle").removeClass('on');
+                $(this).parents(".openul").siblings().find(".dropul").slideUp();
+            })
+        }else{
+            $(".left").css("width","12%");
+            $(".back_pos").css("width","28%");
+            $(".op_tit .tittle").css("display","block").removeClass('on');
+            $(this).removeClass('on');
+            $(".right").css({"width":"88%","left":"12%"});
+            $(".back_pos").removeClass('on');
+            $(".back_pos").unbind('click');
+        }
+      });
+      $("li a").click(function(){
+        $(this).next().css("display","block");
+      });
+      $(".mask").click(function(e){
+        if($(e.target).is(".close")||$(e.target).is('.mask')){
+            e.preventDefault();
+            $(this).css("display","none");
+        }
+      })
+</script>
+</html>

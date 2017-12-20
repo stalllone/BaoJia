@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>保险理赔 - 宝驾租车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+
+    <script src="/js/sea.js"></script>   
+    <link href="/css/bootstrap.min.css" rel="stylesheet" charset="utf-8">  
+    <link href="/css/font-awesome.min.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/theme.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/warning.css" rel="stylesheet" charset="utf-8">
+    <script src="/static/seaconfig.js"></script>    
+</head>
+
+<body>
+    <div class="main_contant clearfix ms-controller" ms-controller="indexList">
+        <div class="main_contant_title">
+            <div class="main_contant_company pull-left">
+                <select ms-duplex="com" ms-widget="dropdown,$com,$company">
+                </select>
+            </div>
+        </div>
+        <div class="main_contant_choose">
+            <div class="mian_choose_title">
+                <div class="main_choose_car pull-left">
+                    <span ms-repeat="quHuancar">
+                            <label><input ms-click="resetChooseCar(el.value)" ms-duplex-string="quhuan" type="radio" ms-attr-value="el.value" name="quhuan"><b class="quchuPoiner">{{el.label}}</b></label>
+                    </span>
+                </div>
+                <div class="main_choose_btn pull-right">
+                    <div class="main_choose_btn_span pull-left">
+                        <input ms-click="zdUpdate" class="check_btn" type="checkbox">仅显示出租车辆</div>
+                    <div class="pull-left">
+                        <select ms-duplex="typeo" ms-widget="dropdown,$typeo,$typeOpts">
+                        </select>
+                    </div>
+                    <div class="select_car pull-left">
+                        <div class="pull-left">
+                            <select ms-duplex="co" ms-widget="dropdown,$co,$carOpts">
+                            </select>
+                        </div>
+                        <div class="pull-left">
+                            <input type="text" class="select_input" ms-duplex="select_input">
+                        </div>
+                        <div class="pull-right">
+                            <input type="button" class="select_btn" ms-click="select_input_btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show_main_choose clearfix">
+                <div ms-repeat="signInfo">
+                    <label ms-class="bgcolor{{$index}}">
+                        <input ms-duplex-string="choose_type" type="radio" ms-attr-value="el.value" name="choose_type">
+                        <b>
+                            <div class="main_contant_fenxi">{{el.name}}</div>
+                            <div class="main_con_xiangqing">{{el.num}}个</div>
+                            <div class="main_con_xq_small">/{{el.bilv}}%</div>
+                        </b>
+                        <div ms-class="sanjiao{{$index}}">
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="main_contant_sgreea">
+            <div>
+                <div ms-widget="smartgrid,sg2,sgOpts2"></div>
+                <span class="gztip" ms-mouseleave="bbbbb"></span>
+            </div>
+        </div>
+        <div ms-widget="dialog,bb,$bbOpts">
+            <div>
+                <div>
+                    <textarea ms-duplex="guanzhuReason" name="" id="" cols="30" rows="10" placeholder="填写关注原因">
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <div ms-widget="dialog,cc,$ccOpts">
+            <div>
+                <div ms-widget="smartgrid,sg3,sgOpts3"></div>
+            </div>
+        </div>
+        <div ms-widget="dialog,dd,$ddOpts">
+            <div>
+               <textarea ms-duplex="quxiaoguanzhuReason" name="" id="" cols="30" rows="10" placeholder="填写取消关注原因" >
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    seajs.use("/static/carWarn/src/carWarn_yyyc");
+    </script>
+</body>
+
+</html>

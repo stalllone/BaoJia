@@ -1,0 +1,183 @@
+body{background-color: #f6f6f6;}
+.wrap{max-width: 1680px;width: 100%;margin: 0 auto;height: auto;position: relative;overflow: hidden;background-color: #fff;}
+/*.logo{position: relative;width: 100%;}*/
+.nav_box{margin: 0;border: none;padding: 5px 0;}
+.back_img{width:636px;height: 529px;position: absolute;bottom: 0;right: 0;}
+.logo img{position: relative;top: 50%;transform:translate(0,-50%);}
+.navbar-nav>li{padding: 10px 15px;margin-top: 5px;}
+.navbar-nav>li>a{padding: 0;}
+.nav_hover>li>a:hover{color: #fff !important;}
+.nav_hover>li:hover{background: #fc7722;
+    border-radius: 8px;
+    color: #fff;}
+.nav_hover>li:hover a{color: #fff;}
+.nav_hover>li.on{background: #fc7722;
+    border-radius: 8px;
+    color: #fff;}
+    .nav_hover>li.on a{color: #fff;}
+.ban{width: 100%;height: 545px;position: relative;}
+.ban .list{width: 100%;height: 100%;}
+.ban .ban_box{width: 100%;height: 100%;position: absolute;top: 0;left: 0;background-repeat: no-repeat;background-position: center top;background-size: cover;}
+.ban .ban_box1{background-image: url(image/evpop_ban1.jpg);}
+.ban .ban_box2{background-image: url(image/evpop_ban2.jpg);}
+.ban .ban_box3{background-image: url(image/evpop_ban3.jpg);}
+.ban .ban_box4{background-image: url(image/evpop_ban4.jpg);}
+.ban .control{width:100%;height: 100%;position: absolute;top: 0;left: 0;}
+.ban .control>div{width: 50%;height: 100%;position: absolute;top: 0;z-index: 2;}
+.ban .control_right{right: 0;}
+.ban .arrow{position: absolute;width: 41px;height: 87px;top: 50%;margin-top: -35.5px;background-image: url(image/btn_prev_next.png);background-repeat: no-repeat;}
+.ban .arrow-left{left:0;background-position: 0 0;}
+.ban .arrow-right{right:0;background-position: -42px 0;}
+.ban .control_left:hover .arrow-left{background-position: 0 -87px;}
+.ban .control_right:hover .arrow-right{background-position: -42px -87px;}
+.ban .btns{position:absolute;width: 895px;height: 100px;bottom: 30px;top: auto;left: 50%;padding: 0 0 0 65px;margin: 0 0 0 -480px;background-image: url(image/infobar.png);background-repeat: no-repeat;background-position: 0 0;z-index: 3;}
+.ban .btns ul{margin: 0;}
+.ban .btns ul li{position: relative;width: 147px;height: 100px;float: left;cursor: pointer;}
+.ban .btns ul li a{display: block;text-decoration: none;}
+.ban .btns ul li dl{text-align: center;margin: 0;height: 100%;padding-top: 25px;}
+.ban .btns ul li dt{margin:0 auto;background: url(image/evpop_icon.png) no-repeat;width: 40px;height: 50px;}
+.ban .btns ul li dt.icon1{background-position: 0 0;}
+.ban .btns ul li dt.icon2{background-position: -40px 0;}
+.ban .btns ul li dt.icon3{background-position: -80px 0;}
+.ban .btns ul li dt.icon4{background-position: -120px 0;}
+.ban .btns ul li dd{margin-top: -10px;color: #333;}
+.ban .btns ul li a:hover dd{color: #dd551a;}
+.ban .btns ul li a.on dd{color: #dd551a;}
+.ban .btns ul li .btn{background-color:#6bb02e;color: #fff;font-size: 20px;margin-top: 30px;}
+.ban .btns ul li.join_btn{float: right;margin-right: 20px;}
+.cont{max-width: 960px;width:100%;margin: 0 auto;position: relative;z-index: 2;}
+
+.cont .list_img{margin-top: 45px;}
+.cont .img_list{width: 300px;height: 300px;position: relative;overflow: hidden;}
+/*.cont .img_list .img_back{width: 300px;height: 300px;background-image: url(image/Home.jpg);background-repeat: no-repeat;background-size: cover;}*/
+.cont .img_list:after{content: "\e094";position: absolute;bottom:15px;right:15px;font-family: 'Glyphicons Halflings';color: #dc5c25;transform: rotate(180deg);-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);}
+.cont .img_list.on:after{content: "\e094";position: absolute;bottom:15px;right:15px;font-family: 'Glyphicons Halflings';color: #dc5c25;transform: rotate(0deg);-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);}
+.cont .img_link{width: 100%;background: rgba(255,255,255,0.78);position: absolute;bottom:-70px;height: 122px;transition: bottom 1s;padding: 0 20px;}
+.cont .link_title{width: 100%;height: 50px;line-height: 50px;font-size: 20px;color: #dd551a;opacity: 1;}
+.cont .link_title span{font-size: 17px;font-weight: normal;}
+.cont .img_link p{font-size: 16px;color: #7f807f;}
+.cont .img_link:hover{bottom: 0;}
+.cont .cont_bot{padding: 40px 0;margin: 30px 0;border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;font-size: 23px;font-weight: 600;line-height:36px;text-align: center;}
+.cont .cont_bot p{max-width: 690px;margin: 0 auto;width: 100%;}
+
+.index2 .ban{height: 354px;}
+.index2 .cont{background: #fff;position: relative;top: -50px;padding: 30px 30px 10px;}
+.index2 .cont .title{border-bottom: 1px solid #e8e8e8;padding-bottom: 10px;}
+.index2 .cont .title h1{margin-top:0;font-size: 32px;}
+.index2 .cont .title p{font-size:17px;line-height:30px;margin-top: 20px;}
+.index2 .cont .list_img{margin-top: 0;padding: 20px 0;border-bottom: 1px solid #e8e8e8;margin: 0;}
+.index2 .cont .list_img h1{margin-top: 0;font-size: 23px;/*background-image: url(image/evpop_list_icon.png);background-size: cover;*/}
+.index2 .cont .list_img h1 span{display: inline-block;width: 40px;height: 35px;background: url(image/evpop_list_icon.png);background-repeat: no-repeat;position: relative;margin-right: 15px;}
+.index2 .cont .list_img p{font-size: 16px;line-height: 25px;}
+.index2 .footer .cont{padding: 0;top: 0;background: transparent;}
+.index2 .register{max-width: 960px;width: 100%;margin: 0 auto;height: 99px;background: #f6f6f6;margin-top: 55px;}
+.index2 .register p{text-align: center;font-size: 30px;font-weight: 400;height: 97px;line-height: 97px;}
+.index2 .register .reg_arrow{text-align: center;
+    font-size: 23px;
+    background-color: ;
+    padding: 30px 50px 40px 65px;
+    text-shadow: 1px 1px 0 rgba(7,7,7,.15);
+   }
+.index2 .register a{background-color: #6bb02e;color: #fff;padding: 13px 25px;font-size: 18px;}
+.index2 .register a:active{background-color: #6bb02e;color: #fff;}
+.footer{border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;background: #f2f2f2;padding: 38px 0;}
+.footer .cont{height: 100%;}
+.footer ul li{margin-top: 20px;}
+.footer ul li a{font-size: 15px;color:#e57442;text-decoration: none;}
+.footer h2{font-size: 26px;}
+.footer .f_App li{display: inline-block;}
+.footer .return_top{height: 56px;background: #fff;line-height: 56px;margin-top: 80px;}
+.footer .return_top a{font-size: 16px;color: #666666;text-decoration: none;}
+.footer .return_top .right_top{text-align: right;}
+.footer .return_top .right_top span{margin-left: 12px;color: #ccc;}
+/*了解我们*/
+.konwUs .ban_box{background-image: url(image/evpop_ban5.jpg);}
+.konwUs .cont .list_img h1 span.list_icon1{background-position: 0 0;top: 13px;}
+.konwUs .cont .list_img h1 span.list_icon2{background-position: -37px 0;top: 10px;}
+.konwUs .cont .list_img h1 span.list_icon3{background-position: -74px 0;top: 8px;width: 30px;}
+.konwUs .cont .list_img h1 span.list_icon4{background-position: -101px 0;top: 8px;}
+/*使用攻略*/
+.strategy .ban_box{background-image: url(image/evpop_ban6.jpg);}
+.strategy .cont .list_img h1 span.list_icon1{background-position: -137px 0;top: 13px;}
+.strategy .cont .list_img h1 span.list_icon2{background-position: -175px 0;top: 10px;}
+.strategy .cont .list_img h1 span.list_icon3{background-position: -215px 0;top: 8px;}
+.strategy .cont .list_img h1 span.list_icon4{background-position: -250px 0;top: 8px;}
+/*计费规则*/
+.Howcharge .ban_box{background-image: url(image/evpop_ban7.jpg);}
+.Howcharge .cont .list_img h1 span.list_icon1{background-position: 0 -34px;top: 10px;}
+.Howcharge .cont .list_img h1 span.list_icon2{background-position: -37px -34px;top: 8px;}
+.Howcharge .cont .list_img table{width: 100%;border-collapse: collapse;margin: 60px 0;}
+.Howcharge .cont .list_img table td{text-align: center;padding: 20px 0;font-size: 18px;color: #333;width: 50%;}
+/*登录*/
+.login .ban{height: 950px;}
+.login .ban_box{background-image: url(image/login.jpg);height:950px;}
+.login .login_box{max-width: 960px;width: 100%;margin: 0 auto;color: #fff;padding-top: 205px;}
+.login .login_box p{font-size: 22px;}
+.login .login_box .code{width: 150px;}
+/*注册*/
+.register .ban{height: 950px;}
+.register .ban_box{background-image: url(image/login.jpg);height:950px;}
+.register .register_box{max-width: 960px;width: 100%;margin: 0 auto;color: #fff;padding-top: 205px;}
+.register form .title{font-size: 30px;margin-bottom: 23px;color: #fff;}
+.register form>div{margin-bottom: 40px;}
+.register form input{display: inline-block;width: 265px;height: 42px;text-indent: 25px;border: none;color: #999;}
+.register .code>div{width: 223px;height: 42px;display: inline-block;margin: 0 18px 0 36px;}
+.register .code>div img{width: 100%;}
+.register .code a{background:none;text-decoration: none;width: auto;max-width: initial;display:inline-block;    vertical-align: text-top;color: #fff;}
+
+.register .code1>div{width:140px;height: 42px;background: #f05c1b;color: #fff;line-height: 42px;text-align: center;cursor: pointer;}
+.register .code1 a{vertical-align: middle;text-decoration: none;}
+.register .code1 a span{color: #fff;}
+.register .check{margin-top: -10px;}
+.register .check input{width: auto;}
+.register .check em{color: #fff;display: block;}
+.register .check a{display: inline-block;width: auto;background: none;max-width:inherit;font-weight: normal;text-decoration: none;color: #fff;}
+.register .check a span{color: #fff;}
+.register .submit{margin-top: 40px;}
+.register .submit a{width: 142px;height: 42px;background: #f05c1b;border-radius:0;border: none;color: #fff;margin: 0;padding: 0;line-height: 42px;}
+.register .submit a:active{background: #f05c1b;color: #fff;}
+@media (max-width: 768px){
+	.back_img{display: none;}
+	.ban{height: 200px;}
+	.btns{display: none;}
+	.ban .control{display: none;}
+	.img_list{margin: 0 auto;margin-top: 15px;}
+	.index2 .cont .title h1{margin-top:0;font-size:20px;font-weight: bold;}
+	.index2 .ban{height:220px;}
+	.cont .cont_bot{font-size: 15px;}
+	.cont .img_list{height: auto;/*width: auto;*/}
+	.cont .img_list:after{content: "";}
+	.cont .img_list.on:after{content: "";}
+	/*.cont .img_list .img_back{width: 150px;height: 150px;}*/
+	.cont .img_link{position: inherit;bottom: auto;height: auto;}
+	.login .ban{height: 410px;}
+	.login .ban_box{background-image: url(image/login.jpg);height:410px;}
+	.login .login_box{max-width: 960px;width: 100%;margin: 0 auto;color: #fff;padding-top:40px;text-align: center;}
+	.login .login_box h1{font-size:20px;}
+	.login .login_box p{font-size: 18px;}
+	.login .login_box .code{width: 150px;margin: 0 auto;}
+	
+	.register .ban{height: 635px;}
+	.register .ban_box{background-image: url(image/login.jpg);height:635px;}
+	.register .register_box{padding-left:50px ;padding-top: 0;
+    margin: 0 auto;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);}
+	.register form>div{margin-bottom: 15px;}
+	.register .code>div{margin-left: 0;margin-top: 15px;}
+	.register .code a{margin-top: 10px;}
+	.register .submit{margin-top:15px;}
+	.footer>div{padding-left: 20px !important;}
+	.footer .bussiness{padding-left: 15px !important;}
+	.footer .return_top{height:auto;background: #fff;line-height: 56px;margin-top: 80px;}
+	.footer .return_top .right_top{text-align: left;}
+	.index2 .register{height: auto;}
+	.index2 .register p{font-size: 20px;}
+	.index2 .cont .list_img h1{line-height: 35px;font-size: 17px;}
+	.index2 .cont .list_img p{font-size: 14px;}
+	
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>宝驾前端示例-首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script src="/js/sea.js"></script>
+    <script src="/js/seaconfig.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/plugin/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href= "/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <script type="text/javascript">
+    seajs.use(["/css/font-awesome.min.css",]);
+    </script> 
+</head>
+
+<body>
+    <div class="pagemain">
+        <div class="container">
+            <div class="row">
+                <div class="query-wrap ms-controller" ms-controller="dataStaVM">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="icon-tasks"></i>短信营销数据统计</h2>
+                            <div class="panel-actions">
+                                <button type="button" ms-click="claerAllFn" class="btn btn-info btn-sm">清除所选项</button>
+                            </div>
+                        </div>
+                        <div class="panel-body no-padding">
+                            <div class="filter-wrap collapse in">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>GroupID:</th>
+                                            <td>
+                                                <ul>
+                                                    <li>
+                                                        <input id="Groupid" ms-duplex="Groupid" type="text" class="form-control inline" style="vertical-align: middle;height:24px;width:150px;font-size:12px;">
+                                                        <button type="button" class="btn btn-success btn-xs" ms-click="GroupIDAdd">添加</button>
+                                                    </li>
+                                                    <li ms-repeat="GroupAdd" class="filtered_i">
+                                                        <span class="tag" style="margin-left:15px;" ms-click="$remove">
+                                                            <i class="icon-ok-sign"></i>
+                                                            {{el}}
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>时间：</th>
+                                            <td>
+                                                <ul>
+                                                    <li ms-repeat="filterData.sendTimeData">
+                                                        <label>
+                                                            <input id="timetype" ms-duplex-string="sendTime" type="radio" name="status" ms-attr-value="el.value" ms-duplex-string="status">
+                                                            <span class="labelTxt">{{el.label}}</span>
+                                                        </label>
+                                                    </li>
+                                                    <li ms-class="drpSelected:sendTimeS.size()>0" style="vertical-align:middle;">
+                                                        <div ms-widget="daterangepicker, $drp1, $drp1Opts" data-daterangepicker-label="请选择起始日期和结束日期"></div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>短信类型：</th>
+                                            <td>
+                                                <ul>
+                                                    <li ms-repeat="filterData.smsTypeData">
+                                                        <label>
+                                                            <input id="smstype" type="radio" name="smsType" ms-attr-value="el.value" ms-duplex-string="smsType">
+                                                            <span class="labelTxt">{{el.label}}</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>统计方式：</th>
+                                            <td>
+                                                <ul>
+                                                    <li ms-repeat="filterData.totalTypeData">
+                                                        <label>
+                                                            <input id="totaltype" type="radio" name="methods" ms-attr-value="el.value" ms-duplex-string="methods">
+                                                            <span class="labelTxt">{{el.label}}</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="DataTables-wrap ms-controller" ms-controller="gridVM">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="icon-tasks"></i>数据统计结果</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div ms-widget="smartgrid,sg1,$sg1Opts"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        seajs.pagejs("/static/pages/src/dataStatistics");
+        </script>
+</body>
+
+</html>

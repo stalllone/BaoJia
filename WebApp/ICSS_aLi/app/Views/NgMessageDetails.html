@@ -1,0 +1,18 @@
+﻿<div>
+    <input type="text" name="abc" value="" ng-model="searchForText" placeholder="Search in below list" />
+    <div class="bar">All Messages</div>
+    <table>
+        <tr ng-repeat="msg in messages | searchForFilter: searchForText | orderBy: orderMsg">
+            <td>{{msg.id}}</td>
+            <td>{{msg.sender}}</td>
+            <td><a href="#/message/{{msg.id}}">{{msg.subject}}</a> </td>
+        </tr>
+    </table>
+    <div class="bar">Current Message:</div>
+    <div>
+        <b>From: {{message.sender}}</b>
+    </div>
+    <div>
+        {{message.body}}
+    </div>
+</div>

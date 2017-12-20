@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">   
+    <link rel="apple-touch-icon-precomposed" href="http://css.baojia.com/s4/app-icon72x72@2x.png">
+    <meta name="msapplication-TileImage" content="http://css.baojia.com/s4/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="m-style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="foot.css">
+</head>
+<body>
+	<div class="m-strategy">
+		<div class="m-top">
+            
+        </div>
+        <div class="ban">
+        	<img src="img/m-ban.png" alt="">
+        </div>
+        <div class="certical">
+        	<img src="img/m-strategy1.png" alt="">
+        	<img src="img/m-strategy2.png" alt="">
+        </div>
+        <div class="how_vip">
+        	<img src="img/m-strategy3.png" alt="">
+        	<img src="img/m-strategy4.png" alt="">
+        </div>
+        <div class="how_order">
+        	<img src="img/m-strategy5.png" alt="">
+        	<img src="img/m-strategy6.png" alt="">
+        </div>
+        <div class="how_price">
+        	<img src="img/m-strategy7.png" alt="">
+        	<img src="img/m-strategy8.jpg" alt="" style="margin-top:0.8rem;">
+        </div>
+        <div class="how_return">
+        	<img src="img/m-strategy9.png" alt="">
+        	<img src="img/m-strategy10.png" alt="">
+        	<img src="img/m-strategy11.png" alt="">
+        </div>
+        <div class="how_illegal">
+        	<img src="img/m-strategy12.png" alt="">
+        	<img src="img/m-strategy13.png" alt="">
+        	<img src="img/m-strategy14.png" alt="">
+        </div>
+        <div class="how_Coupon">
+        	<img src="img/m-strategy15.png" alt="">
+        </div>
+        <div class="how_start">
+        	<img src="img/m-strategy16.png" alt="">
+        	<img src="img/m-strategy17.png" alt="">
+        	<img src="img/m-strategy18.png" alt="">
+        </div>
+        <div class="how_Charge">
+        	<img src="img/m-strategy19.png" alt="">
+        	<img src="img/m-strategy20.png" alt="">
+        	<img src="img/m-strategy21.png" alt="">
+        	<img src="img/m-strategy22.png" alt="">
+        	<img src="img/m-strategy23.png" alt="">
+        </div>
+        <div class="footer">
+            <div class="content">
+                
+            </div>
+        </div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="nav.js"></script>
+<script src="foot.js"></script>
+<script src="move.js"></script>
+<script>
+	$(function(){
+		$(".nav ul a,.f_nav ul a").click(function(e){
+			$(".visib").css({"display":"block"});
+            $(".close").css({"display":"none"});
+			$(".nav ul").css("display","none");
+			move();
+			if(e.target.className=="home"){
+				window.location.href="m-index.html?"+"txt="+encodeURI("home");
+			}else if(e.target.className=="introduce"){
+				window.location.href="m-index.html?"+"txt="+encodeURI("introduce");
+			}else if(e.target.className=="openCity"){
+				window.location.href="m-index.html?"+"txt="+encodeURI("openCity");
+			}else if(e.target.className=="mediaCoverage"){
+				window.location.href="m-index.html?"+"txt="+encodeURI("mediaCoverage");
+			}else if(e.target.className=="join_bussiness"){
+				window.location.href="m-index.html?"+"txt="+encodeURI("join_bussiness");
+			}else if(e.target.className=="concat_bus"){
+				$("html,body").animate({
+	                scrollTop: $(".footer").offset().top
+	            }, 500)
+			}else if(e.target.className=="question"){
+				window.location.href="question.html"
+			}
+		})
+	})
+</script>
+</html>

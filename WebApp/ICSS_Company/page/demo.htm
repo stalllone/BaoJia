@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>企业会员管理面板</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <!-- <link rel="stylesheet" href="http://c.ibj.com/c/css/reset.css"> -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/jquery-datetimepicker/2.5.1/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body class="back">
+    <div class="p_body">
+        <div class="header">企业会员管理面板</div>
+        <div class="nav">
+            <ul>
+                <li><a href="javascript:void(0);" class="">首页</a></li>
+                <li class="on"><a href="javascript:void(0);">账户设置</a></li>
+            </ul>
+        </div>
+        <div class="c_main">
+            <div class="left">
+                <div class="openul">
+                    <p class="netmanage"><span class="arr">网点管理</span></p>
+                    <ul class="dropul">
+                        <li><a href="javascript:void(0);">新增网点</a></li>
+                        <li><a href="javascript:void(0);">网点变更</a></li>
+                    </ul>
+                </div>
+                <div class="openul">
+                    <p class="carmanagemen"><span class="arr">车辆管理</span></p>
+                    <ul class="dropul">
+                        <li><a href="http://www.baojia.com">跳转百度</a></li>
+                        <li><a href="http://www.baojia.com" target="_blank">新打开跳转宝驾</a></li>
+                        <li><a href="javascript:void(0);">新增车辆</a></li>
+                        <li><a href="javascript:void(0);">车牌管理</a></li>
+                        <li><a href="javascript:void(0);">价格设置</a></li>
+                        <li class="on"><a href="javascript:void(0);">里程限制</a></li>
+                        <li><a href="javascript:void(0);">可租日期</a></li>
+                        <li><a href="javascript:void(0);">特色描述</a></li>
+                    </ul>
+                </div>
+                <div class="openul">
+                    <p><span class="arr">客户管理</span></p>
+                    <ul class="dropul">
+                        <li><a href="javascript:void(0);">新增客户</a></li>
+                        <li><a href="javascript:void(0);">客户变更</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="c_title">
+                    <span>车辆管理＜宜维租车三亚凤凰机场店</span>
+                </div>
+                <div class="condition2">
+                    <ul>
+                        <li>
+                            <input type="text" id="iptname" placeholder="输入门店名称进行搜索" class="input">
+                            <div id="searchname" class="btn_cancel">搜索</div>
+                        </li>
+                        <li>
+                            <input type="text" id="iptnum" placeholder="输入车牌号搜索" class="input">
+                            <div id="searchnum" class="btn_cancel">搜索</div>
+                        </li>
+                        <li>
+                            <input type="text" id="ipttype" placeholder="输入品牌车型搜索" class="input">
+                            <div id="searchtype" class="btn_cancel">搜索</div>
+                        </li>
+                    </ul>
+                    <p>
+                        <a href="javascript:void(0);">精简搜索条件 &#8593;</a>
+                        <a href="javascript:void(0);">更多搜索条件 &#8595;</a>
+                    </p>
+                </div>
+                <table cellpadding="0" cellspacing="0" class="c_table">
+                    <thead>
+                        <tr>
+                            <td style="width:160px;">品牌车型</td>
+                            <td style="width:145px;">网点</td>
+                            <td style="width:193px;">日常租价</td>
+                            <td style="width:105px;">时租价格</td>
+                            <td style="width:114px;">可租车牌数</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>日产阳光 1.5L精英版AT2009款</p>
+                            </td>
+                            <td>宜维租车三亚凤凰机场店</td>
+                            <td>
+                                日常价格    136元/天
+                                <br> 节日价格    166元/天
+                                <br> 周租价格    905元/周
+                                <br> 月租价格    4744元/月
+                                <br>
+                            </td>
+                            <td>
+                                时租价格
+                                <br> 20元/小时
+                            </td>
+                            <td>8辆</td>
+                            <td>
+                                <a href="javascript:void(0);">车牌管理</a>
+                                <a href="javascript:void(0);">车组设置</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>日产阳光 1.5L精英版AT2009款</p>
+                            </td>
+                            <td>宜维租车三亚凤凰机场店</td>
+                            <td>
+                                日常价格    136元/天
+                                <br> 节日价格    166元/天
+                                <br> 周租价格    905元/周
+                                <br> 月租价格    4744元/月
+                                <br>
+                            </td>
+                            <td>
+                                时租价格
+                                <br> 20元/小时
+                            </td>
+                            <td>8辆</td>
+                            <td>
+                                <a href="javascript:void(0);">车牌管理</a>
+                                <a href="javascript:void(0);">车组设置</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cutPage"> </div>
+                <div class="c_title">
+                    <span>网点管理</span>
+                </div>
+                <table cellpadding="0" cellspacing="0" class="c_table">
+                    <thead>
+                        <tr>
+                            <td>网点</td>
+                            <td>城市</td>
+                            <td>区县</td>
+                            <td>网点管理员</td>
+                            <td>车型数</td>
+                            <td>车辆数</td>
+                            <td>状态</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>宜维租车三亚凤凰机场店</td>
+                            <td>三亚</td>
+                            <td>崖州</td>
+                            <td>北京叮叮一位汽车租赁
+                                <br>（18410126778）</td>
+                            <td>5</td>
+                            <td>50</td>
+                            <td>正常
+                                <br>营业</td>
+                            <td>
+                                <a href="javascript:void(0);">信息变更</a>
+                                <a href="javascript:void(0);">车辆管理</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>宜维租车三亚凤凰机场店</td>
+                            <td>三亚</td>
+                            <td>崖州</td>
+                            <td>北京叮叮一位汽车租赁
+                                <br>（18410126778）</td>
+                            <td>5</td>
+                            <td>50</td>
+                            <td>正常
+                                <br>营业</td>
+                            <td>
+                                <a href="javascript:void(0);">信息变更</a>
+                                <a href="javascript:void(0);">车辆管理</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cutPage"></div>
+                <div class="c_title">
+                    <span>新增网点</span>
+                </div>
+                <form action="" class="c_form">
+                    <div class="upload">
+                        <p class="up_name">网点LOGO</p>
+                        <p class="up_img">
+                            <a href="javascript:void(0);">上传图片</a>
+                        </p>
+                        <p class="up_des">
+                            建议上传图片尺寸为960×640像素
+                            <br> 只支持JPG、PNG、GIF，大小不超过5M
+                        </p>
+                    </div>
+                    <div class="condition">
+                        <div class="cond_title">基本信息</div>
+                        <div class="cond_list">
+                            <span>网站名称</span>
+                            <div class="cond_input">
+                                <input type="text" class="input">
+                            </div>
+                        </div>
+                        <div class="cond_list">
+                            <span>网站管理员</span>
+                            <div class="cond_input cond_btn">
+                                <input type="text" class="input">
+                                <input type="button" value="搜索" class="inp_btn">
+                                <!-- <div class="btn">搜索</div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="condition">
+                        <div class="cond_title">基本信息</div>
+                        <div class="cond_list">
+                            <span>车辆信息</span>
+                            <div class="cond_tab">
+                                <input type="hidden" value="2" id="zutype" />
+                                <ul>
+                                    <li rv="1">燃油车</li>
+                                    <li rv="2">电动车</li>
+                                    <li rv="3">气混合车</li>
+                                    <li rv="4">气混合车</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cond_list">
+                            <span>出租类型</span>
+                            <div class="cond_tab">
+                                <input type="hidden" value="1" id="zujin" />
+                                <ul>
+                                    <li rv="1">时租</li>
+                                    <li rv="2"> 日租</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cond_list">
+                            <span>出租时间</span>
+                            <div class="cond_time time_start">
+                                <span>开始时间</span>
+                                <input type="text" class="input" id="begintime">
+                            </div>
+                            <div class="cond_time time_end">
+                                <span>结束时间</span>
+                                <input type="text" class="input" id="endtime">
+                            </div>
+                        </div>
+                        <div class="cond_list">
+                            <span>出租日期</span>
+                            <div class="cond_time time_start">
+                                <span>开始日期</span>
+                                <input type="text" class="input" id="begindate">
+                            </div>
+                            <div class="cond_time time_end">
+                                <span>结束日期</span>
+                                <input type="text" class="input" id="enddate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="condition">
+                        <div class="cond_title">位置信息</div>
+                        <div class="cond_list">
+                            <div class="cond_sel border_r">
+                                <div class="input arr"></div>
+                                <span>省/直辖市</span>
+                                <input type="hidden" value="10032" />
+                                <ul>
+                                    <li rv="10042">北京</li>
+                                    <li rv="10032">上海</li>
+                                    <li rv="10052">广州</li>
+                                </ul>
+                            </div>
+                            <div class="cond_sel">
+                                <div class="input arr"></div>
+                                <span>省/直辖市</span>
+                                <input type="hidden" value="10028" />
+                                <ul>
+                                    <li rv="10021">北京</li>
+                                    <li rv="10022">上海</li>
+                                    <li rv="10025">广州</li>
+                                    <li rv="10026">北京1</li>
+                                    <li rv="10027">上海2</li>
+                                    <li rv="10028">广州3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cond_list">
+                            <span>街道信息</span>
+                            <div class="cond_input">
+                                <input type="text" class="input">
+                            </div>
+                        </div>
+                        <div class="map">
+                            <img src="../image//map.png" alt="">
+                        </div>
+                    </div>
+                    <input type="submit" value="提交网点信息" class="btn_ok">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://css.baojia.com/s4/c/js/jquery.bj.help.js" type="text/javascript"></script>
+<!-- <script src="http://c.ibj.com/c/js/jquery.bj.help.js" type="text/javascript"></script> -->
+<script src="http://css.baojia.com/s4/c/js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+    $("#searchname").click(function() {
+        var v = $("#iptname").val();
+        if (v == undefined || v == "") popTip("车牌号码不能为空")
+    })
+
+    $("#searchnum").click(function() {
+        var v = $("#iptnum").val();
+        if (v == undefined || v == "") popTip("车牌号码不能为空", 500)
+    })
+
+    $("#searchtype").click(function() {
+        var v = $("#ipttype").val();
+        if (v != "宝马") popError("功能测试，只有填写  宝马  才能通过测试")
+    })
+
+    $("#begindate").datetimepicker({
+        minDate: new Date(),
+        timepicker: false,
+        onSelectDate: function(ct, $i) {
+            $i.val(ct.Format('yyyy-MM-dd'));
+            ct = new Date(ct.valueOf() + 86400000);
+            $('#enddate').datetimepicker('setOptions', {
+                minDate: ct,
+                maxDate: ct.valueOf() + 30 * 86400000
+            });
+        }
+    });
+
+
+    $("#begintime").datetimepicker({
+        mask: "",
+        minDate: new Date()
+    });
+    $("#enddate").datetimepicker({
+        minDate: new Date(),
+        timepicker: false,
+        onSelectDate: function(ct, $i) {
+            $i.val(ct.Format('yyyy-MM-dd'));
+        }
+
+    });
+
+    $("#endtime").datetimepicker({
+        mask: "",
+
+    });
+
+
+    $("#begintime").datetimepicker({
+        minDate: new Date(),
+        onSelectDate: function(ct, $i) {
+            //ct = new Date(ct.valueOf()+ 86400000);
+            $('#endtime').datetimepicker('setOptions', {
+                minDate: ct,
+                maxDate: ct.valueOf() + 30 * 86400000
+            });
+        },
+        onSelectTime: function(ct, $i) {
+            //ct = new Date(ct.valueOf()+ 86400000);
+            $('#endtime').datetimepicker('setOptions', {
+                minDate: ct,
+                maxDate: ct.valueOf() + 30 * 86400000
+            });
+        }
+    });
+
+    $("#endtime").datetimepicker({
+        minDate: new Date(),
+        onSelectTime: function(ct, $i) {
+            $i.val(ct.Format('yyyy-MM-dd hh:ss'));
+        }
+    });
+
+});
+</script>
+
+</html>

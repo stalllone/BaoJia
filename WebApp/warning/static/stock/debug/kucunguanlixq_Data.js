@@ -1,0 +1,37 @@
+define(function(require, exports, module) {
+    module.exports = {
+        company:[{  
+            value:"0",
+            label:"北京分公司"
+        },{  
+            value:"1",
+            label:"天津分公司"
+        },{  
+            value:"2",
+            label:"杭州分公司"
+        },{  
+            value:"3",
+            label:"上海分公司"
+        }],
+        supplier:[{
+            value:"0",
+            label:"陈兵"
+        },{
+            value:"1",
+            label:"陈兵1"
+        },{
+            value:"2",
+            label:"陈兵2"
+        }],
+        yunying:[{
+            value:"0",
+            label:"移动"
+        },{
+            value:"1",
+            label:"联通"
+        },{
+            value:"2",
+            label:"电信"
+        }]
+    }
+})

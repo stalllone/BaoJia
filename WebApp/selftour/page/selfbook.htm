@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/js/mobiscroll/ms.android.css">
+</head>
+
+<body>
+    <div class="selfbook">
+        <div class="header">
+            <div class="title">自驾车预订 &nbsp;100%帮您找到车</div>
+        </div>
+        <div class="list1">
+            <div class="div">
+                <div>选择出发时间</div>
+                <div class="time">
+                    <input type="text" value="" readonly class="starttime">
+                </div>
+            </div>
+            <div class="div">
+                <div>用车数量</div>
+                <div class="quantity">
+                    <span class="reduce"></span>
+                    <span class="num">1</span>
+                    <span class="add">＋</span>
+                </div>
+            </div>
+            <div class="div nobor">
+                <p class="carmodel">别克GL8 2011款 豪华商务型</p>
+            </div>
+        </div>
+        <div class="list1 list2 infos">
+            <div class="div">驾驶人信息</div>
+            <div class="inpdiv less">
+                <p>填写第<span>1</span>辆车驾驶人信息</p>
+                <input type="text" id="name1" placeholder="请填写驾驶人姓名" class="input name">
+                <input type="text" id="driver1" placeholder="请填写驾驶证编号" class="input">
+                <input type="text" id="card1" placeholder="请填写驾驶身份证编号" class="input">
+            </div>
+        </div>
+        <div class="more">
+        	<span>展开填写全部信息</span>
+            <div class="jt"></div>
+        </div>
+        <div class="list1 list2">
+            <div class="div">联系人信息</div>
+            <div class="div nobor">
+                <div>
+                    <input type="text" placeholder="请填写一位联系人" class="input input1">
+                </div>
+                <div class="person">
+                    <label class="checked man" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="man" value="5">
+                        <span class="your style about checkbox"><span class="circle"></span></span> 先生
+                    </label>
+                    <label class="checked" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="man" value="5">
+                        <span class="your style about checkbox"><span class="circle"></span></span> 女士
+                    </label>
+                </div>
+            </div>
+            <div class="div nobor">
+                <input type="tel" placeholder="请输入手机号 便于我们及时联系到您" class="input input2">
+            </div>
+        </div>
+        <div class="foot">
+            <span>旅游顾问会在5分钟之内联系您，请保持手机畅通！</span>
+            <a href="javascript:void(0);">提交订单信息</a>
+        </div>
+    </div>
+</body>
+<script src="http://css.baojia.com/s4/c/js/jquery.2.1.1.min.js"></script>
+<script src="http://css.baojia.com/s4/c/js/jquery.mobiscroll.js"></script>
+<script src="http://css.baojia.com/s4/c/js/mobiscroll/ms.datetime.js"></script>
+<script src="http://css.baojia.com/s4/c/js/jquery.bj.help.js"></script>
+<script>
+//初始化 时间
+var currYear = (new Date()).getFullYear();
+var opt ={
+    theme: 'android-ics light', //皮肤样式
+    display: 'modal', //显示方式 
+    mode: 'scroller', //日期选择模式
+    dateFormat: 'yyyy/mm/dd',
+    lang: 'zh',
+    showNow: true,
+    nowText: "今天",
+    startYear: currYear - 10, //开始年份
+    endYear: currYear + 10, //结束年份
+    minDate: new Date(),
+    preset: 'datetime'
+};
+
+function dodom() {
+    var cnt = $(".num").text();
+    if (cnt == $(".inpdiv").length) return;
+    if (cnt > $(".inpdiv").length) {
+        $(".infos").append('<div class="inpdiv '+(parseInt(cnt) == 2 ? "less1" : "more1")+'" style="display:' + (parseInt(cnt) > 2 ? "none" : "") + '"><p>填写第<span>' + (cnt) + '</span>辆车驾驶人信息</p><input type="text" id=name' + (cnt) + ' placeholder="请填写驾驶人姓名" class="input name"><input type="text" id=driver' + (cnt) + ' placeholder="请填写驾驶证编号" class="input"><input type="text" id=card' + (cnt) + ' placeholder="请填写驾驶身份证编号" class="input"></div>');
+    } else {
+        $(".inpdiv:last").remove();
+    }
+    $(".more").css("display", parseInt(cnt) > 2 ? "block" : "none")
+    dodom();
+}
+$(function() {
+
+    $(".starttime").mobiscroll(opt).datetime(opt);
+    var txt = parseInt($(".num").text());
+    $(".add").click(function() {
+        $(".num").text(txt += 1);
+        if (txt > 1) {
+            $(".reduce").text('－')
+        }
+        if (txt >= 10) {
+            $(".num").text(10);
+        }
+        dodom()
+    })
+
+    $(".reduce").click(function() {
+        $(".num").text(txt -= 1);
+        if (txt <= 1) {
+            $(".num").text(1);
+            $(this).text('')
+        }
+        dodom()
+    })
+    $(".more").click(function(event) {
+       if(!$(this).hasClass('showmore')){
+    		$(this).addClass('showmore').find("span").text("向上收起");
+    		$(".more1").css("display",'');
+    		$(this).find('div').removeClass('jt').addClass('jt1');
+    	}else{
+    		$(this).removeClass('showmore').find("span").text("展开填写全部信息");
+    		$(".more1").css("display",'none');
+    		$(this).find('div').removeClass('jt1').addClass('jt');
+    	}
+    });
+    $(".name").blur(function() {
+        popTip("请填写驾驶人姓名")
+    })
+})
+
+</script>
+
+</html>

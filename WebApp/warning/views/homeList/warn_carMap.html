@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>保险理赔 - 宝驾租车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script src="/js/sea.js"></script>   
+    <link href="/css/bootstrap.min.css" rel="stylesheet" charset="utf-8">  
+    <link href="/css/font-awesome.min.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/theme.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/warning.css" rel="stylesheet" charset="utf-8">
+    <script src="/static/seaconfig.js"></script>  
+</head>
+
+<body>
+    <div class="main_contant ms-controller" ms-controller="indexList">
+        <div class="main_contant_title">
+            <div class="main_contant_company pull-left">
+                <select ms-duplex="com" ms-widget="dropdown,$com,$company">
+                </select>
+            </div>
+            <div class="main_contant_map pull-right">
+                <span ms-class="active">列表</span>
+                <span>地图</span>
+            </div>
+        </div>
+        <div class="aaaa" ms-class="closedChoose:!isOpenChoose">
+            <div class="right_btn" ms-click="foldChoose">
+                <i></i>
+            </div>
+            <div class="map_content" ms-class="closed:!isOpen">
+                <img src="../../images/1.0/map1.png" alt="">
+                <div class="map_side">
+                    <div class="layout"></div>
+                    <div class="mar_side_con">
+                        <div class="topOpt">
+                            <div class="search_side clearfix">
+                                <div class="pull-left">
+                                    <select ms-duplex="search" ms-widget="dropdown,$search,$searchOpt">
+                                    </select>
+                                </div>
+                                <div class="putIn pull-left">
+                                    <input type="text" ms-duplex="searchVal">
+                                </div>
+                                <div class="putBtn pull-right" ms-click="searchAll">搜索</div>
+                            </div>
+                            <div class="chooseSort clearfix">
+                                <div>
+                                    <select ms-duplex="ct" ms-widget="dropdown,$ct,$carState">
+                                    </select>
+                                </div>
+                                <div>
+                                    <select ms-duplex="bs" ms-widget="dropdown,$bs,$boxState">
+                                    </select>
+                                </div>
+                                <div>
+                                    <select ms-duplex="bt" ms-widget="dropdown,$bt,$boxType">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="checkBtn">
+                                <input type="checkbox">仅显示出租中车辆
+                            </div>
+                        </div>
+                        <div class="margin_t_bottom">
+                            <!-- <div ms-widget="smartgrid,sg,sgOpts"></div> -->
+                            <div class="show_table">
+                                <div class="show_table_title">
+                                    <span>{{city}}</span>
+                                    <span>{{carHao}}</span>
+                                    <span>{{box}}</span>
+                                    <span>{{state}}</span>
+                                </div>
+                                <div ms-click="addData($index)" class="show_table_con" ms-repeat-el="updatetableData">
+                                    <span>{{el.cityid}}</span>
+                                    <span>{{el.carCode}}</span>
+                                    <span>{{el.children.length}}<i class="shangxia"></i></span>
+                                    <span ms-class="warnRed:isWarn(el.thisState)">{{el.thisState}}</span>
+                                    <div ms-visible-loop="$index===openindex">
+                                        <div class="addshow_table_con" ms-repeat-item="el.children" ms-click="showContent($event,item.boxId)">
+                                            <span>{{el.cityid}}</span>
+                                            <span>{{el.carCode}}</span>
+                                            <span>{{item.boxType}}</span>
+                                            <span ms-class="warnRed:warnRed(item.boxState)">{{item.boxState}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pager_map">
+                                <div ms-widget="pager,$pager,$pagerOpt"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--具体contant-->
+                <div class="conditionfind ms-controller" ms-controller="condition">
+                    <div class="layout"></div>
+                    <div class="selectDiv pull-right clearfix">
+                        <div class="putIn pull-left">
+                            <input type="text" ms-duplex="searchValCar" placeholder="请输入车牌号">
+                        </div>
+                        <div class="putBtn pull-right clearfix" ms-click="searchAllCar">开始追车</div>
+                    </div>
+                </div>
+                <div class="conditionlocation ms-controller" ms-controller="condition">
+                    <div class="layout"></div>
+                    <div class="showlocation pull-left clearfix">
+                        <div class="signInfo_con" ms-duplex="addrInfo">
+                            <span>位置：</span>
+                            <span class="addrCon">{{addrInfo}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carConChoose ms-controller" ms-controller="carInfo">
+                    <div class="layout closedLayout"></div>
+                    <div class="carConAll">
+                        <div class="carplate" ms-click="closedFn">
+                            <span>{{carInfoCon.carNum}}</span>
+                            <i></i>
+                        </div>
+                        <div class="hostInfoALL">
+                            <div class="hostInfo">
+                                <div class="clearfix">
+                                    <span class="pull-left colorSpan">待还车：{{carInfoCon.returnCarTimer}}</span>
+                                    <span class="pull-right colorSpan">车辆状态：{{carInfoCon.carState}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">驾客姓名：{{carInfoCon.drivingName}}</span>
+                                    <span class="locationSpan">平台车主：{{carInfoCon.hit}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">驾客信誉：{{carInfoCon.drivingHonour}}</span>
+                                    <span class="locationSpan">命中规则：{{carInfoCon.isPlatforHost}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">历史订单：{{carInfoCon.historyOrder}}</span>
+                                    <span class="locationSpan">驾驶习惯：{{carInfoCon.drivingHabit}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="opt_btn" ms-click="orderFn">订单</span>
+                                    <span class="opt_btn" ms-click="historyFn">历史</span>
+                                    <span class="opt_btn" ms-click="riskEventFn">风险事件</span>
+                                    <span class="opt_btn" ms-click="removewindFn">解除预警</span>
+                                </div>
+                            </div>
+                            <div class="hostInfo">
+                                <div class="clearfix">
+                                    <span class="pull-left colorSpan">盒子状态：{{carInfoCon.boxState}}&nbsp;&nbsp;&nbsp;{{carInfoCon.boxStateTimer}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">IMEI：{{carInfoCon.IMEI}}</span>
+                                    <span class="locationSpan">速度：{{carInfoCon.hit}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">SIM：{{carInfoCon.SIM}}</span>
+                                    <span class="locationSpan">方向：{{carInfoCon.direction}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">定位：{{carInfoCon.position}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">信号：{{carInfoCon.sign}}</span>
+                                    <span class="locationSpan">网络：{{carInfoCon.network}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">断电：{{carInfoCon.outage}}</span>
+                                    <span class="locationSpan">GRS：{{carInfoCon.GRS}}</span>
+                                </div>
+                            </div>
+                            <div class="hostInfo">
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">车辆性能：{{carInfoCon.carperformance}}</span>
+                                    <span class="locationSpan">电压：{{carInfoCon.voltage}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">剩余油量：{{carInfoCon.remainl}}</span>
+                                    <span class="locationSpan">里程：{{carInfoCon.mileage}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="pull-left widthSpan">平均油耗：{{carInfoCon.averageoil}}</span>
+                                </div>
+                                <div class="clearfix">
+                                    <span class="opt_btn" ms-click="trackFn">轨迹</span>
+                                    <span class="opt_btn" ms-click="instructFn">指令</span>
+                                    <span class="opt_btn" ms-click="boxdetailsFn">盒子详情</span>
+                                    <span class="opt_btn" ms-click="lookAutoFn">查看座驾</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="show_tuli_pos ms-controller" ms-controller="tuliModel" ms-class="closed:!isOpen">
+                    <div class="layout"></div>
+                    <div class="tuli ">
+                        <div ms-click="closedFn">
+                            <span>图例</span>
+                            <i></i>
+                        </div>
+                        <div class="tuli_foldCon">
+                            <div ms-repeat="tuli" ms-click="unusualFn">
+                                <i ms-class="bgimg{{$index}}"></i>
+                                <span>{{el.label}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!--具体contant-->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    seajs.use("/static/homeList/src/warn_carMap");
+    </script>
+</body>
+
+</html>

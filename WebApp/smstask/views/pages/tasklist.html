@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>宝驾前端示例-首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="/js/sea.js"></script>
+    <script src="/js/seaconfig.js"></script>
+    <script type="text/javascript">
+    seajs.use(["/css/plugin/bootstrap.min.css", "/css/font-awesome.min.css", "/css/theme.css", "/css/custom.css"]);
+    </script>
+    <style type="text/css">
+    .extra-buttons {
+        width: 100%;
+        min-height: 30px;
+        padding-left: 2%;
+    }
+    
+    .extra-buttons a {
+        padding: 2px 2px 2px;
+        height: 100%;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        float: left;
+        background-color: #64c2df;
+        margin-left: 4px;
+        margin-right: 1px;
+        min-width: 100px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    .extra-buttons a:hover {
+        background-color: #4ebc74;
+        color: #fff;
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="pageMain">
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="query-wrap ms-controller" ms-controller="taskFilterVM">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2><i class="icon-tasks"></i>查询任务</h2>
+                            </div>
+                            <div class="panel-body no-padding">
+                                <div class="search-wrap">
+                                    <div class="form-inline">
+                                        <input ms-duplex="searchValue" type="search" class="form-control input-lg" style="width:280px;" placeholder="请输入活动名称">
+                                        <button class="btn btn-success btn-lg" ms-click="searchFn"><i class="icon-search"></i>
+                                        </button>
+                                        <a ms-click="filterShowFn" href="javascript:;" class="more">更多条件 
+                                            <i ms-if="filterShow" class="icon-double-angle-up"></i>
+                                            <i ms-if="!filterShow" class="icon-double-angle-down"></i>
+                                        </a>
+                                        <a ms-click="clearAllFn" href="javascript:;" class="clearAll_btn">全部清除</a>
+                                    </div>
+                                </div>
+                                <div ms-visible="filterShow" class="filter-wrap collapse in">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>发送时间</th>
+                                                <td>
+                                                    <ul>
+                                                        <li ms-repeat-el="filterData.sendTimeData">
+                                                            <label>
+                                                                <input ms-duplex-string="sendTime" type="radio" ms-attr-value="el.value" name="sendTime"><span class="labelTxt">{{el.label}}</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <!-- <div class="inputfield" style="margin-bottom:-3px; vertical-align: bottom;">
+                                                                <div ms-widget="daterangepicker, $drp1, $drp1Opts" data-daterangepicker-label="请选择起始日期和结束日期"></div>
+                                                            </div> -->
+                                                            <input type="text" id="startTime" class="form-control inline" ms-widget="datepicker,$startTime, $startDpkOpts" ms-duplex="startTime" placeholder="请选择起始时间">
+                                                            <input type="text" id="endTime" class="form-control inline" ms-widget="datepicker,$endTime, $endDpkOpts" ms-duplex="endTime" placeholder="请选择结束时间">
+                                                            <button type="button" class="oni-btn oni-btn-primary oni-btn-small" ms-click="confirmTime">确定</button>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>状态</th>
+                                                <td>
+                                                    <ul>
+                                                        <li ms-repeat-el="filterData.statusData">
+                                                            <label>
+                                                                <input ms-duplex-string="status" type="radio" ms-attr-value="el.value" name="status"><span class="labelTxt">{{el.label}}</span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DataTables-wrap ms-controller" ms-controller="tasklistVM">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2><i class="icon-tasks"></i>任务列表</h2>
+                            </div>
+                            <div class="panel-body">
+                                <div class="control-part row">
+                                    <button ms-click="stopFn()" type="button" class="btn btn-warning btn-sm">暂停任务</button>
+                                    <button type="button" class="btn btn-danger btn-sm">取消任务</button>
+                                    <button type="button" class="btn btn-info btn-sm">测试</button>
+                                </div>
+                                <div ms-widget="smartgrid,sg1,$sg1Opts"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    seajs.pagejs("/static/public/src/main");
+    seajs.pagejs("/static/pages/src/tasklist");
+    </script>
+</body>
+
+</html>

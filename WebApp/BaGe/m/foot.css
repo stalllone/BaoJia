@@ -1,0 +1,12 @@
+.footer{background-color: #333333;padding-top: 1.75rem;padding-bottom: 1.5rem;}
+.footer .f_nav{display: -webkit-box;-webkit-box-pack:justify;}
+.footer .f_nav li a{color: #fff;text-decoration: none;font-size: 0.625rem;}
+.footer .f_nav li span{color: #fff;display: block;font-size: 0.65rem;}
+.footer .f_nav ul:nth-of-type(1) a{font-size: 0.75rem;}
+.footer .f_nav ul:nth-of-type(1){padding-left: 1.75rem;}
+.footer .f_nav ul li.f_title a{font-size: 0.875rem;}
+.footer .f_nav ul li.f_sectit a{font-size: 0.75rem;}
+.footer .f_foot{width: 56%;margin: 0 auto;margin-top: 4.4rem;}
+.footer .f_foot dt{width: 47%;margin: 0 auto;}
+.footer .f_foot dd{color: #fff;text-align: center;font-size: 0.625rem;}
+.footer .f_foot dd p{margin-top: 0.3rem;}

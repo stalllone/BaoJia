@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div class="selftour">
+		<div class="header">			
+			<div class="location">
+				<span>北京</span><div class="jt location_jt"></div>
+			</div>	
+			<div class="title">有车就去自驾游</div>
+			<div class="jt return_jt"></div>			
+		</div>
+		<div class="main">
+			<div class="list">
+				<div class="list_T">
+					<img src="../image/sel-one.png" alt="">
+					<p><span>共有4款车型可选</span><span>100%有车</span></p>
+				</div>
+				<div class="list_B">
+					<div>
+						<p>古水北镇、司马长城台</p>
+						<p>北京-古北水镇+司马台长城（套票2张）+别克凯越 1辆</p>
+					</div>
+				</div>
+				<div class="list_B list_bot">
+					<div>
+						景区住宿平均价格在1000元左右，肉疼！事实证明，不需要那么长时间，
+						北京自驾可以当天往返。也一定要去司马台长城，两个景区挨在一起，套
+						票也比单买的划算，再配上一辆237元的别克车，包含免赔险...
+					</div>
+				</div>
+			</div>
+			<div class="list sel_div">
+				<div class="list_T">
+					<img src="../image/sel-two.png" alt="">
+					<p><span>共有4款车型可选</span><span>100%有车</span></p>
+				</div>
+				<div class="list_B">
+					<div>
+						<p>古水北镇、司马长城台</p>
+						<p>北京-古北水镇+司马台长城（套票2张）+别克凯越 1辆</p>
+					</div>
+				</div>
+				<div class="list_B list_bot">
+					<div>
+						景区住宿平均价格在1000元左右，肉疼！事实证明，不需要那么长时间，
+						北京自驾可以当天往返。也一定要去司马台长城，两个景区挨在一起，套
+						票也比单买的划算，再配上一辆237元的别克车，包含免赔险...
+					</div>
+				</div>
+			</div>
+			<div class="list sel_div">
+				<div class="list_T">
+					<img src="../image/sel-three.png" alt="">
+					<p><span>共有4款车型可选</span><span>100%有车</span></p>
+				</div>
+				<div class="list_B">
+					<div>
+						<p>古水北镇、司马长城台</p>
+						<p>北京-古北水镇+司马台长城（套票2张）+别克凯越 1辆</p>
+					</div>
+				</div>
+				<div class="list_B list_bot">
+					<div>
+						景区住宿平均价格在1000元左右，肉疼！事实证明，不需要那么长时间，
+						北京自驾可以当天往返。也一定要去司马台长城，两个景区挨在一起，套
+						票也比单买的划算，再配上一辆237元的别克车，包含免赔险...
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="return"><img src="../image/return.png" alt=""></div>
+		<div class="mask">
+			<div class="pop">
+				<img src="../image/rockets.png" alt="">
+				<div class="close">×</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		function forbide(){
+            window.ontouchmove=function(e){
+                e && e.preventDefault();
+                e.returnValue=false;
+                e && e.stopPropagation();
+                return false;
+            }
+            if( $(document).height()  == ($(document).scrollTop()+$(window).height()))
+            {
+                console.log($(document).height());
+                console.log($(document).height()-100);
+                $('body').scrollTop($(document).scrollTop()-1);
+            }
+        }
+        $(window).scroll(function(){
+            if($(window).scrollTop()>50){  
+                    $(".return").fadeIn(400);  
+                }else{  
+                    $(".return").fadeOut(400);  
+                }  
+        });
+        $(".return").click(function(){  
+            $('body,html').animate({scrollTop:0},1000);  
+            return false;  
+        }); 
+        $(".location").click(function(){
+        	$(".mask").css("display","block");
+        	forbide();
+        });
+        $(".close").click(function(){
+        	$(".mask").css("display","none");
+        	window.ontouchmove=function(e){
+	            e && e.preventDefault();
+	            e.returnValue=true;
+	            e && e.stopPropagation();
+	            return true;
+	        }
+        })
+	})
+</script>
+</html>

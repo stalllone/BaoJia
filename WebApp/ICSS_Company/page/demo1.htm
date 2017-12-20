@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>企业会员管理面板</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <!-- <link rel="stylesheet" href="http://c.ibj.com/c/css/reset.css"> -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/jquery-datetimepicker/2.5.1/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body class="b-body">
+    <div class="p_body1">
+        <div class="header">
+            <div class="logo">宝驾租车</div>
+            <div class="mine"><span>张山丰<b class="icon tap"></b></span><span>企业会员<b class="icon vip"></span></b><span>注销<b class="icon cancel"></b></span></div>
+        </div>
+        <div class="left">
+            <div class="title">企业会员管理面板</div>
+            <div class="listimg home">
+                <span></span>
+                <a href="javascript:;">首&nbsp;&nbsp;&nbsp;页</a>
+            </div>
+            <div class="openul">
+                <p class="netmanage"><span>网点管理</span></p>
+                <ul class="dropul">
+                    <li><a href="javascript:void(0);"><b class="icon newnet1"></b>新增座驾</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newnet2"></b>编辑座驾</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newnet3"></b>普通派单车辆</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newnet4"></b>选单派单车辆</a></li>
+                </ul>
+            </div>
+            <div class="openul">
+                <p class="carmanagemen"><span>车辆管理</span></p>
+                <ul class="dropul">
+                    <li><a href="http://www.baojia.com" target="_blank"><b class="icon newcar1"></b>新打开跳转宝驾</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newcar1"></b>待审核会员</a></li>
+                    <li class="on"><a href="javascript:void(0);"><b class="icon newcar2"></b>公司会员</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newcar3"></b>非公司会员</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newcar4"></b>驳回会员</a></li>
+                </ul>
+            </div>
+            <div class="openul">
+                <p><span>客户管理</span></p>
+                <ul class="dropul">
+                    <li><a href="http://www.baojia.com" target="_blank"><b class="icon manage1"></b>新增门店</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon manage2"></b>门店管理</a></li>
+                </ul>
+            </div>
+            <div class="openul">
+                <p class="carmanagemen"><span>新增图标516</span></p>
+                <ul class="dropul">
+                    <li><a href="javascript:void(0);"><b class="icon newicon1"></b>新增图标1</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon2"></b>新增图标2</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon3"></b>新增图标3</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon4"></b>新增图标4</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon5"></b>新增图标5</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon6"></b>新增图标6</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon7"></b>新增图标7</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon1"></b>新增图标1</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon2"></b>新增图标2</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon3"></b>新增图标3</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon4"></b>新增图标4</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon5"></b>新增图标5</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon6"></b>新增图标6</a></li>
+                    <li><a href="javascript:void(0);"><b class="icon newicon7"></b>新增图标7</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="tittle">
+                首页
+            </div>
+            <div class="nav cl">
+                <div>
+                    <p><img src="../image/carowner.png" alt=""></p>
+                    <p>
+                        <span>姓名</span>
+                        <span>张三丰</span>
+                    </p>
+                </div>
+                <div>
+                    <a href="javascript:;">收益总额</a>
+                    <a href="javascript:;" class="profit">10000元</a>
+                </div>
+                <div>
+                    <a href="javascript:;">提现总额</a>
+                    <a href="javascript:;">10000元</a>
+                </div>
+                <div>
+                    <a href="javascript:;">可用余额</a>
+                    <a href="javascript:;">10000元</a>
+                </div>
+            </div>
+            <form action="" class="c_form">
+                <div class="upload">
+                    <p class="up_name">网点LOGO</p>
+                    <p class="up_img">
+                        <a href="javascript:void(0);">上传图片</a>
+                    </p>
+                    <p class="up_des">
+                        建议上传图片尺寸为960×640像素
+                        <br> 只支持JPG、PNG、GIF，大小不超过5M
+                    </p>
+                </div>
+                <div class="condition">
+                    <div class="cond_title">弹窗演示</div>
+                    <div class="cond_list">
+                        <span>查看审核</span>
+                        <div class="cond_input cond_btn">                           
+                            <input type="button" value="查看审核演示" class="inp_btn btntest inp_btnCheck">
+                            <!-- <div class="btn">搜索</div> -->
+                        </div>
+                    </div>
+                    <div class="cond_list">
+                        <span>还车网点</span>
+                        <div class="cond_input cond_btn">
+                            
+                            <input type="button" value="还车网点演示" class="inp_btn btntest inp_btnBack">
+                            <!-- <div class="btn">搜索</div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="condition">
+                    <div class="cond_title">基本信息</div>
+                    <div class="cond_list">
+                        <span>网站名称</span>
+                        <div class="cond_input">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                    <div class="cond_list">
+                        <span>网站管理员</span>
+                        <div class="cond_input cond_btn">
+                            <input type="text" class="input">
+                            <input type="button" value="搜索" class="inp_btn inp_btnSearch">
+                            <!-- <div class="btn">搜索</div> -->
+                        </div>
+                    </div>
+                    <div class="cond_list">
+                        <span>出租时间</span>
+                        <div class="cond_time time_start">
+                            <span>开始时间</span>
+                            <input type="text" class="input" id="begintime">
+                        </div>
+                        <div class="cond_time time_end">
+                            <span>结束时间</span>
+                            <input type="text" class="input" id="endtime">
+                        </div>
+                    </div>
+                    <div class="cond_list">
+                        <span>出租日期</span>
+                        <div class="cond_time time_start">
+                            <span>开始日期</span>
+                            <input type="text" class="input" id="begindate">
+                        </div>
+                        <div class="cond_time time_end">
+                            <span>结束日期</span>
+                            <input type="text" class="input" id="enddate">
+                        </div>
+                    </div>
+                </div>
+                <div class="condition condition1" >
+                    <div class="cond_title">基本信息</div>
+                    <div class="cond_list" style="overflow:hidden;">
+                        <span >车辆信息</span>
+                        <div class="cond_tab" >
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="5">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>燃油车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="6">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>电动车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="7">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>气混合车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="7">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>气混合车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="6">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>气混合车气混合车气混合车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="7">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>气混合车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="7">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>气混合车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="6">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>电动车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="7">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>气混合车</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input cartype" name="car" value="7">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>气混合车</b>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cond_list">
+                        <span>出租类型</span>
+                        <div class="cond_tab">
+                            <label class="checked">
+                                <input type="radio" class="hidden-input renttype" name="rent" value="5">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>日租</b>
+                            </label>
+                            <label class="checked">
+                                <input type="radio" class="hidden-input renttype" name="rent" value="2">
+                                <span class="your style about checkbox"><span class="circle"></span></span><b>时租</b>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cond_list">
+                        <span>可租日期</span>
+                        <div class="cond_tab">
+                            <label class="checked">
+                                <input type="checkbox" class="hidden-input rentweekday" name="rentweekday"  value="day1" checked >
+                                <span class="your style about checkbox"><span class="square"></span></span> 星期一
+                            </label>
+                            <label class="checked">
+                                <input type="checkbox" class="hidden-input rentweekday" name="rentweekday"  value="day2" checked>
+                                <span class="your style about checkbox"><span class="square"></span></span> 星期二
+                            </label>
+                             <label class="checked">
+                                <input type="checkbox" class="hidden-input rentweekday" name="rentweekday"  value="day3" >
+                                <span class="your style about checkbox"><span class="square"></span></span> 星期三
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="condition condition1">
+                    <div class="cond_title">位置信息</div>
+                    <div class="cond_list">
+                        <div class="cond_sel border_r">
+                            <div class="input arr"></div>
+                            <span>省/直辖市</span>
+                            <input type="hidden" value="10032" />
+                            <ul>
+                                <li rv="10042">北京</li>
+                                <li rv="10032">上海</li>
+                                <li rv="10052">广州</li>
+                            </ul>
+                        </div>
+                        <div class="cond_sel">
+                            <div class="input arr"></div>
+                            <span>省/直辖市</span>
+                            <input type="hidden" value="10028" />
+                            <ul>
+                                <li rv="10021">北京</li>
+                                <li rv="10022">上海</li>
+                                <li rv="10025">广州</li>
+                                <li rv="10026">北京1</li>
+                                <li rv="10027">上海2</li>
+                                <li rv="10028">广州3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cond_list">
+                        <span>街道信息</span>
+                        <div class="cond_input">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                    <div class="map">
+                        <img src="../image//map.png" alt="">
+                    </div>
+                </div>
+                <input type="submit" value="提交网点信息" class="btn_ok">
+            </form>
+            <!-- 页面分隔符  无意义 -->
+            <div class="cutPage"></div>
+            <!-- 表格 -->
+            <div class="c_title">
+                <span>网点管理</span>
+            </div>
+            <div id="scroll" class="scrolltable">
+                <table cellpadding="0" cellspacing="0" class="c_table">
+                    <thead>
+                        <tr>
+                            <td>
+                                <div>网点</div>
+                            </td>
+                            <td>
+                                <div style="width:60px">城市</div>
+                            </td>
+                            <td>
+                                <div>区县</div>
+                            </td>
+                            <td>
+                                <div>网点管理员</div>
+                            </td>
+                            <td>
+                                <div>车型数</div>
+                            </td>
+                            <td>
+                                <div>车辆数</div>
+                            </td>
+                            <td>
+                                <div style="width:50px">状态</div>
+                            </td>
+                            <td>
+                                <div>操作</div>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                宜维租车三亚凤凰机场店
+                            </td>
+                            <td>
+                                三亚
+                            </td>
+                            <td>
+                                崖州
+                            </td>
+                            <td>
+                                北京叮叮一位汽车租赁
+                                <br>（18410126778）
+                            </td>
+                            <td>
+                                5
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                正常
+                                <br>营业
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);">信息变更</a>
+                                <a href="javascript:void(0);">车辆管理</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                宜维租车三亚凤凰机场店
+                            </td>
+                            <td>
+                                三亚
+                            </td>
+                            <td>
+                                崖州
+                            </td>
+                            <td>
+                                北京叮叮一位汽车租赁
+                                <br>（18410126778）
+                            </td>
+                            <td>
+                                5
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                正常
+                                <br>营业
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);">信息变更</a>
+                                <a href="javascript:void(0);">车辆管理</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 页面分隔符  无`意义 -->
+            <div class="cutPage"></div>
+            <div id="scroll1" class="scrolltable">
+                <table cellpadding="0" cellspacing="0" class="c_table">
+                    <thead>
+                        <tr>
+                            <td>
+                                <div style="width:100px">网点</div>
+                            </td>
+                            <td>
+                                <div>城市</div>
+                            </td>
+                            <td>
+                                <div>区县</div>
+                            </td>
+                            <td>
+                                <div>网点管理员</div>
+                            </td>
+                            <td>
+                                <div>车型数</div>
+                            </td>
+                            <td>
+                                <div>车辆数</div>
+                            </td>
+                            <td>
+                                <div>状态</div>
+                            </td>
+                            <td>
+                                <div>操作</div>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                宜维租车三亚凤凰机场店
+                            </td>
+                            <td>
+                                三亚
+                            </td>
+                            <td>
+                                崖州
+                            </td>
+                            <td>
+                                北京叮叮一位汽车租赁
+                                <br>（18410126778）
+                            </td>
+                            <td>
+                                5
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                正常
+                                <br>营业
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);">信息变更</a>
+                                <a href="javascript:void(0);">车辆管理</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                宜维租车三亚凤凰机场店
+                            </td>
+                            <td>
+                                三亚
+                            </td>
+                            <td>
+                                崖州
+                            </td>
+                            <td>
+                                北京叮叮一位汽车租赁
+                                <br>（18410126778）
+                            </td>
+                            <td>
+                                5
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                正常
+                                <br>营业
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);">信息变更</a>
+                                <a href="javascript:void(0);">车辆管理</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 页面分隔符  无意义 -->
+            <div class="cutPage"></div>
+            <table cellpadding="0" cellspacing="0" class="c_table">
+                <thead>
+                    <tr>
+                        <td>
+                            网点
+                        </td>
+                        <td>
+                            城市
+                        </td>
+                        <td>
+                            <div style="width:500">区县
+                        </td>
+                        <td>
+                            网点管理员
+                        </td>
+                        <td>
+                            车型数
+                        </td>
+                        <td>
+                            车辆数
+                        </td>
+                        <td>
+                            状态
+                        </td>
+                        <td>
+                            操作
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            宜维租车三亚凤凰机场店
+                        </td>
+                        <td>
+                            三亚
+                        </td>
+                        <td>
+                            崖州
+                        </td>
+                        <td>
+                            北京叮叮一位汽车租赁
+                            <br>（18410126778）
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            50
+                        </td>
+                        <td>
+                            正常
+                            <br>营业
+                        </td>
+                        <td>
+                            <a href="javascript:void(0);">信息变更</a>
+                            <a href="javascript:void(0);">车辆管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            宜维租车三亚凤凰机场店
+                        </td>
+                        <td>
+                            三亚
+                        </td>
+                        <td>
+                            崖州
+                        </td>
+                        <td>
+                            北京叮叮一位汽车租赁
+                            <br>（18410126778）
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            50
+                        </td>
+                        <td>
+                            正常
+                            <br>营业
+                        </td>
+                        <td>
+                            <a href="javascript:void(0);">信息变更</a>
+                            <a href="javascript:void(0);">车辆管理</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 页面分隔符  无意义 -->
+            <div class="cutPage"></div>
+            </div>
+            <div class="footer">
+                <p>2015 宝驾 baojia.com 京ICP证140667号 京ICP备14020297号-1 京公网安备 11010802020227号</p>
+                <p>技术支持teachmaster@baojia.com</p>
+            </div>
+        </div>
+        <div class="pos_f_c pop-window pop-check">
+            <div class="close" onclick="javascript:$ && $(this).parent().css('display','none')">X</div>
+            <div class="title">审核会员身份</div>
+            <ul class="ul">
+                <li>
+                    <label>姓&nbsp;&nbsp;&nbsp;&nbsp;名：</label><span>刘立帅</span></li>
+                <li>
+                    <label>手&nbsp;&nbsp;&nbsp;&nbsp;机：</label><span>15100110011</span></li>
+                <li>
+                    <lab>身份证：</label><span>362427198888880123</span></li>
+            </ul>
+            <div class="act"><span class="btn btnok">确认</span><span class="btn">取消</span></div>
+        </div>
+        <div class="pos_f_c pop-condition pop-back">
+            <div class="close" onclick="javascript:$ && $(this).parent().css('display','none')">&times;</div>
+            <div class="title">选择支持异地还车的网点</div>
+            <div class="cond_list">
+                <span>选择区域</span>
+                <div class="cond_sel">
+                    <div class="input arr"></div>
+                    <input type="hidden" value="10032" />
+                    <ul>
+                        <li rv="10042">北京</li>
+                        <li rv="10032">上海</li>
+                        <li rv="10052">广州</li>
+                    </ul>
+                </div>
+                <div class="cond_tab">
+                   <label class="checked man">
+                        <input type="checkbox" class="hidden-input renttype">
+                        <span class="your style about checkbox"><span class="square"></span></span> 仅筛选公司内网店
+                    </label>                                   
+                </div>
+            </div>
+            <div class="cond_list">
+                <span>选择</span>
+                <div class="cond_tab">
+                   <label class="checked all chkaddress">
+                        <input type="checkbox" class="hidden-input " id="chkAllAddress">
+                        <span class="your style about checkbox"><span class="square"></span></span> 全选
+                    </label>                                   
+                </div>
+            </div>
+             <div class="cond_list">
+                <span></span>
+                <div class="cond_tab cond_tab1">
+                  <label class="checked">
+                        <input type="checkbox" class="hidden-input backaddress">
+                        <span class="your style about checkbox"><span class="square"></span></span> 
+                        <b>唐人街的啊</b>
+                        <i>地址名族源路2好，地下停场阿斯顿</i>
+                    </label> <label class="checked">
+                        <input type="checkbox" class="hidden-input backaddress">
+                        <span class="your style about checkbox"><span class="square"></span></span> 
+                        <b>唐人街的啊</b>
+                        <i>地址名族源路2好，地下停场阿斯顿</i>
+                    </label> <label class="checked">
+                        <input type="checkbox" class="hidden-input backaddress">
+                        <span class="your style about checkbox"><span class="square"></span></span> 
+                        <b>唐人街的唐人街的</b>
+                        <i>地址名族源路2好，地下停场阿斯顿</i>
+                    </label> <label class="checked">
+                        <input type="checkbox" class="hidden-input backaddress">
+                        <span class="your style about checkbox"><span class="square"></span></span> 
+                        <b>唐人街的啊</b>
+                        <i>地址名族源路2好，地下停场阿斯顿</i>
+                    </label> <label class="checked">
+                        <input type="checkbox" class="hidden-input backaddress">
+                        <span class="your style about checkbox"><span class="square"></span></span> 
+                        <b>唐人街的啊</b>
+                        <i>地址名族源路2好，地下停场阿斯顿</i>
+                    </label> <label class="checked">
+                        <input type="checkbox" class="hidden-input backaddress">
+                        <span class="your style about checkbox"><span class="square"></span></span> 
+                        <b>唐人街的啊</b>
+                        <i>地址名族源路2好，地下停场阿斯顿地址名族源路2好，地下停场阿斯顿地址名族源路2好，地下停场阿斯顿地址名族源路2好，地下停场阿斯顿地址名族源路2好，地下停场阿斯顿</i>
+                    </label>                      
+                </div>
+            </div>
+            <div class="act"><span class="btn btnok">确认</span><span class="btn">取消</span></div>
+        </div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://css.baojia.com/s4/c/js/jquery.bj.help.js" type="text/javascript"></script>
+<!-- <script src="http://c.ibj.com/c/js/jquery.bj.help.js" type="text/javascript"></script> -->
+<script src="http://css.baojia.com/s4/c/js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="http://css.baojia.com/s4/c/js/iscroll.js"></script>
+<script src="http://css.baojia.com/s4/c/js/iscroll-probe.js"></script>
+<script>
+$(function() {
+    $(".inp_btnBack").click(function(event) {
+        $(".pop-back").css({
+            display: "block"
+        })
+    });
+
+    $(".chkaddress").click(function(event) {
+        $(".backaddress").prop("checked", $("#chkAllAddress").prop("checked"));
+    });
+
+    $(".inp_btnCheck").click(function(event) {
+        $(".pop-check").css({
+            display: "block"
+        })
+    });
+
+    //单选赋条 件值
+    $(".cartype[value='7']").attr("checked", "true");
+
+
+    //单选取条 件值
+    $(".inp_btnSearch").click(function(event) {
+        /* Act on the event */
+        var a = $(".cartype:checked").val();
+        console.log(a);
+        var days =[]; 
+        $('.rentweekday:checked').each(function(){ 
+          days.push($(this).val()); 
+        }); 
+        
+        console.log(days);
+    });
+
+    //多选赋条 件值
+    $(".rentweekday[value='day2']").attr("checked", "true");
+
+
+    $("#begindate").datetimepicker({
+        minDate: new Date(),
+        value: '2016/05/15',
+        timepicker: false,
+        onSelectDate: function(ct, $i) {
+            $i.val(ct.Format('yyyy-MM-dd'));
+            ct = new Date(ct.valueOf());
+            $('#enddate').datetimepicker('setOptions', {
+                minDate: ct,
+                maxDate: ct.valueOf()
+            });
+        }
+    });
+
+
+    $("#begintime").datetimepicker({
+        value: '2015/04/15 05:03',
+        mask: "",
+        minDate: new Date()
+    });
+    $("#enddate").datetimepicker({
+        minDate: new Date(),
+        timepicker: false,
+        onSelectDate: function(ct, $i) {
+            $i.val(ct.Format('yyyy-MM-dd'));
+        }
+
+    });
+
+    $("#endtime").datetimepicker({
+        mask: "",
+
+    });
+
+
+    $("#begintime").datetimepicker({
+        minDate: new Date(),
+        onSelectDate: function(ct, $i) {
+            //ct = new Date(ct.valueOf()+ 86400000);
+            $('#endtime').datetimepicker('setOptions', {
+                minDate: ct,
+                maxDate: ct.valueOf() + 30 * 86400000
+            });
+        },
+        onSelectTime: function(ct, $i) {
+            //ct = new Date(ct.valueOf()+ 86400000);
+            $('#endtime').datetimepicker('setOptions', {
+                minDate: ct,
+                maxDate: ct.valueOf() + 30 * 86400000
+            });
+        }
+    });
+
+    $("#endtime").datetimepicker({
+        minDate: new Date(),
+        onSelectTime: function(ct, $i) {
+            $i.val(ct.Format('yyyy-MM-dd hh:ss'));
+        }
+    });
+})
+</script>
+<script>
+var myScroll = new IScroll('#scroll', {
+    scrollbars: true,
+    fadeScrollbars: true,
+    //        probeType:2,
+    //        bounce:true,
+    //        eventPassthrough: true,
+    scrollX: true,
+    scrollY: false,
+    shrinkScrollbars: "scale",
+    resizeScrollbars: true,
+    mouseWheel: true,
+    interactiveScrollbars: true,
+    preventDefault: false
+});
+
+var myScroll1 = new IScroll('#scroll1', {
+    scrollbars: true,
+    fadeScrollbars: true,
+    //        probeType:2,
+    //        bounce:true,
+    //        eventPassthrough: true,
+    scrollX: true,
+    scrollY: false,
+    shrinkScrollbars: "scale",
+    resizeScrollbars: true,
+    mouseWheel: true,
+    interactiveScrollbars: true,
+    preventDefault: false
+});
+</script>
+
+</html>

@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>测试选择树</title>
+
+    <script src="../jquery-2.1.1.min.js"></script>
+    <link href="css/zTreeStyle.css" rel="stylesheet" />
+    <script src="jquery.ztree.all.min.js"></script>
+    <script src="jquery.ztree.dropdown.js"></script>
+    <script>
+        var resjson1 = {
+            "colnames": ["REGION_DESC", "REGION_ID"],
+            "rows": [
+                { "name": "江西省", "id": "111" },
+                { "name": "南昌", "id": "1", pId: "111" },
+                { "name": "九江", "id": "2", pId: "111" },
+                { "name": "赣州", "id": "3", pId: "111" },
+                { "name": "吉安", "id": "4", pId: "111" },
+                { "name": "上饶", "id": "5", pId: "111" },
+                { "name": "萍乡", "id": "6", pId: "111" },
+                { "name": "鹰潭", "id": "7", pId: "111" },
+                { "name": "宜春", "id": "8", pId: "111" },
+                { "name": "抚州", "id": "9", pId: "111" },
+                { "name": "景德镇", "id": "10", pId: "111" },
+                { "name": "泰和", "id": "41", pId: "4" },
+                { "name": "万安", "id": "42", pId: "4" },
+                { "name": "遂川", "id": "43", pId: "4" },
+                { "name": "吉水", "id": "44", pId: "4" }
+            ]
+        };
+
+        var resjson2 = {
+            "colnames": ["REGION_DESC", "REGION_ID"],
+            "rows": [
+                { "name": "中国", "id": "999" },
+                { "name": "北京", "id": "1111", pId: "999" },
+                { "name": "美国", "id": "888" },
+                { "name": "日本", "id": "777" },
+                { "name": "德国", "id": "666" }
+            ]
+        };
+
+        var initData = [];
+        $(document).ready(function () {
+
+            $(".testSel1").treeSelect({
+                orgData: resjson2.rows,
+                mustSel: true,
+                float: true,
+                menuHeight: 100,
+                callback: {
+                    onChanged: function (name, id) {
+                        alert(id + "---" + "name");
+                        //$("#testSel1").treeSelect("hide");
+                    }
+                }
+            });
+            $("#testSel1").treeSelect("show");
+
+            $("#testSel").treeSelect({
+                orgData: resjson1.rows,
+                width: 120,
+                height: 20,
+                initData: initData,
+                multiple: true,
+                menuHeight: 200,
+                mustSel: false,
+                canHide: true,
+                callback: {
+                    onChanged: function (name, id) {
+                        //alert(id + "----" + name);
+                        $("#testSel").treeSelect("hide");
+                    }
+                }
+            });
+
+
+
+            $("#btnSel").bind("click", function () {
+                var cke = $("#testSel").treeSelect("getSelNames");
+                alert(cke);
+            });
+            $("#btnSel1").bind("click", function () {
+                var cke = $("#testSel1").treeSelect("getSelNames");
+                var id = $("#testSel1").treeSelect("getSelIds");
+                alert(cke + "|" + id);
+            });
+
+            $("#btntc").bind("click", function () {
+                var obj = $("#divtest2");
+                obj.offset({ top: (obj.offset().top + 2), left: (obj.offset().left + 10) });
+            });
+
+            $("#btngbtc").bind("click", function () {
+                $("#testSel1").treeSelect("destroy");
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div style="width: 500px; margin: 0 100px; border: 1px solid #383838">
+        <div class="divjt" style="width: 50px">测试</div>
+        <div id="testSel" style="margin-left: 10px;">测试</div>
+        <input type="button" id="btnSel" value="查询" />
+        <input type="button" id="btntc" value="弹出层" />
+    </div>
+    <div id="divtest2" style="width: 500px; margin: 100px 200px; border: 1px solid #2f2f2f">
+        <div class="divjt" style="width: 50px">测试</div>
+        <div id="testSel1" class="testSel1" style="margin-left: 10px;">测试</div>
+        <input type="button" id="btnSel1" value="查询2" />
+        <input type="button" id="btngbtc" value="关闭弹出层" />
+    </div>
+
+</body>
+</html>

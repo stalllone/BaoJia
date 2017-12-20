@@ -1,0 +1,41 @@
+<link href="scripts/zTree/css/zTreeStyle.css" rel="stylesheet">
+<script src="scripts/zTree/jquery.ztree.all.js"></script>
+<script src="app/module/menu/data.js"></script>
+<div class="row">
+    <div class="col-lg-3 col-sm-3">
+        <div class="divShow">
+            <ul id="treeDemo" class="ztree"></ul>
+        </div>
+    </div>
+    <div class="col-lg-9 col-sm-9">
+        <section class="panel">
+            <header class="panel-heading">
+                菜单操作
+            </header>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">父级菜单</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="inputEmail1" placeholder="请选择父级菜单">
+                            <div id="treeSelDiv" class="treeSelDiv">
+                                <ul id="treeSel" class="ztree"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">名称</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="inputEmail1" placeholder="请输入名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-primary">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> 宝驾新后台 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="http://css.baojia.com/s4/c/css/reset.css" rel="stylesheet">    
+    <link href="app/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="scripts/datatable/datatables.min.css" />
+    <link href="app/css/main.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/jquery-datetimepicker/2.5.1/jquery.datetimepicker.min.css" rel="stylesheet">
+    <link href="scripts/iCheck/iCheck.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- 独立插件 -->
+    <script src="scripts/iScroll.min.js"></script>
+    <script src="scripts/jquery-2.1.1.min.js"></script>
+    
+    <!-- angular、angular插件 -->
+    <script src="scripts/angular/angular.min.js"></script>
+    <script src="scripts/angular/angular-route.min.js"></script>
+    <script src="scripts/angular/angular-resource.min.js"></script>
+    <!-- 本APP系统 -->
+    <script src="app/js/app.js"></script>
+    <script src="app/js/controllers.js"></script>
+    <script src="app/js/filters.js"></script>
+    <script src="app/js/services.js"></script>
+    <!-- JS补丁 -->
+    <script src="scripts/common.js"></script>
+    
+</head>
+
+<body class="p_body" ng-app="appICSS">
+    <header class="navbar navbar-static-top bs-docs-nav">
+        <div class="container" id="header">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand"><img src="app/image/logo.png" alt=""></a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:;"><span class="glyphicon glyphicon-comment"></span>消息<b>0</b></a></li>
+                    <li><a href="javascript:;"><span class="glyphicon glyphicon-home"></span>主页</a></li>
+                    <li class="dpdCompany"><a href="javascript:;">北京银建汽车租赁有限公司<span class="caret"></span></a>
+                        <ul>
+                            <li><a href="#">个人设置</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>                   
+                </ul>
+            </nav>
+    </header>
+    <div class="cont">
+        <div class="left">
+            <div id="menuWrapper" class="sysScroll">
+                <div id="scroller" class="curscroller">
+                    <div class="menuList" style="height: 100%;">
+                        <div class="togg">
+                            <div class="line">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right on cl">
+            <div class="curMenu">
+                <h1></h1>
+                <ul>
+                </ul>
+                <div class="menuAct"></div>
+            </div>
+            <div class="curCont" id="curCont">
+                <section class="content-wrapper main-content clear-fix" ng-view>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+    <!-- jquery、jquery插件 -->
+    <script src="app/css/bootstrap/bootstrap.min.js"></script>
+    <script src="scripts/datatable/datatables.min.js"></script>
+    <script src="scripts/iCheck/jquery.icheck.min.js"></script>
+    
+
+    <script src="scripts/ckeditor/ckeditor.js"></script>
+    <script src="http://css.baojia.com/s4/c/js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/jquery.nicescroll/3.7.0/jquery.nicescroll.min.js"></script>
+    <!-- 本页面 -->
+    <script src="app/js/index.js"></script>
+    <!-- mock 数据-->
+    <script src="http://mockjs.com/dist/mock-min.js"></script>
+    <script src="indexdata.js"></script>
+</body>
+
+</html>

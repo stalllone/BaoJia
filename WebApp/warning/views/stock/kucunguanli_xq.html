@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>风控系统 - 宝驾租车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script src="/js/sea.js"></script>   
+    <link href="/css/bootstrap.min.css" rel="stylesheet" charset="utf-8">  
+    <link href="/css/font-awesome.min.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/theme.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/warning.css" rel="stylesheet" charset="utf-8">
+    <script src="/static/seaconfig.js"></script>  
+    </script>
+</head>
+
+<body class="bg_write">
+    <div class="main_contant_sgreea">
+        <div class="dxle_tit">
+            <div class="pull-left">基本信息</div>
+            <div class="pull-right"><a class="return" href="kucunguanli.html">返回</a></div>
+        </div>
+        <div class="mian_head ms-controller" ms-controller="condition">
+            <div class="kcglxq">
+                <span>序列号（ICCID）：</span>
+                <input type="text" ms-duplex="imsi">
+            </div>
+            <div class="kcglxq">
+                <span>手机号SIM卡号：</span>
+                <input type="text" ms-duplex="SIM">
+            </div>
+            <div class="kcglxq">
+                <span>盒子号：</span>
+                <input type="text" ms-duplex="boxCode">
+            </div>
+            <div class="kcglxq">
+                <span>分公司：</span>
+                <select ms-duplex="com" ms-widget="dropdown,$com,$company"></select>
+            </div>
+            <div class="kcglxq">
+                <span>供货商：</span>
+                <select ms-duplex="sup" ms-widget="dropdown,$sup,$supplier"></select>
+            </div>
+            <div class="kcglxq">
+                <span>运营商：</span>
+                <i ms-repeat="yunying">
+                    <label>
+                        <input type="radio" ms-duplex-stirng="yunying_default" ms-attr-value="{{el.value}}" name="yy">{{el.label}}
+                    </label>
+                </i>
+            </div>
+            <div class="kcglxq">
+                <span>入库时间：</span>
+                <em>{{rukuTimer}}</em>
+            </div>
+            <div class="kcglxq">
+                <span>入库人：</span>
+                <em>{{rukuPerson}}</em>
+            </div>
+        </div>
+        <div class="dxle_tit">
+            流量卡号状态
+        </div>
+        <div class="mian_head ms-controller" ms-controller="condition">
+            <div class="kcglxq">
+                <span>开关机状态：</span>
+                <em>{{openState}}</em>
+            </div>
+            <div class="kcglxq">
+                <span>网络状态：</span>
+                <em>{{interState}}</em>
+            </div>
+            <div class="kcglxq">
+                <span>用户状态：</span>
+                <em>{{userState}}</em>
+            </div>
+        </div>
+        <div class="dxle_tit">
+            修改记录
+        </div>
+        <div class="mian_head ms-controller " ms-controller="condition">
+            <div class="clearfix">
+                <div class="kcglxq pull-left">
+                    <span>修改时间：</span>
+                    <em>{{editTimer}}</em>
+                </div>
+                <div class="kcglxq pull-left">
+                    <span class="smSpan">修改人：</span>
+                    <em>{{EditPerson}}</em>
+                </div>
+            </div>
+            <div class="kcglxq">
+                <span class="pull-left">修改内容：</span>
+                <div class="texteditcon pull-left" placeholder="">
+                    {{EditCon}}
+                </div>
+            </div>
+        </div>
+        <div class="dxle_tit">
+            备注
+        </div>
+        <div class="mian_head ms-controller" ms-controller="condition">
+            <div class="kcglxq">
+                <textarea class="textbeizhu" ms-duplex="beizhu" placeholder="添加备注">
+                </textarea>
+            </div>
+            <div class="kcglxq">
+                <div class="caozuo">
+                    <a href="#" class="editBtn">修改</a>
+                    <a href="#" class="cancelBtn">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    seajs.use("/static/stock/src/kucunguanli_xq");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application" />
+    <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- <link href="image/favicon.ico" rel="shortcut icon" type="image/x-icon"> -->
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+	<div class="Qestion">
+		<div class="top">
+            <div class="content">
+                <div class="nav cl">
+                  
+                </div>
+            </div>
+        </div>
+        <div class="ban">
+        	常见问题解答
+        </div>
+        <div class="cont">
+        	<div>
+        		<h1>巴歌出行晚间特惠Q&A</h1>
+        		<ul>
+        			<li>
+        				<span>Q：怎样才能享受晚间特惠？</span>
+        				<span>A：只要是巴歌会员即可。</span>
+        			</li>
+        			<li>
+        				<span>Q:怎么成为巴歌会员？</span>
+        				<span>A:注册成功后缴299或成为企业协议会员即可成为会员并下单</span>
+        			</li>
+        			<li>
+        				<span>Q：晚间特惠订单在哪儿下单？</span>
+        				<span>A：只要晚上6点至次日早上9点之间，通过巴歌出行App 取车还车，即可享受晚间特惠。下单后，计费规则由系统自动计费，无需人工核算。</span>
+        			</li>
+        			<li>
+        				<span>Q：如果我的晚间订单时长超过了15小时，怎么计费？</span>
+        				<span>A：超出部分，按照正常分时价格收取。超出一分钟，收取一分钟的费用。</span>
+        			</li>
+        			<li>
+        				<span>Q：如果我晚7点取车，用了2小时还车，怎么收费？</span>
+        				<span>A：这种情况下，如果您的订单不超过3小时，则时长费按照实际使用时间收取。</span>
+        			</li>
+        			<li>
+        				<span>Q：晚间特惠收取公里费吗？</span>
+        				<span>A：晚间特惠套餐，只包时长费，里程费另计。</span>
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+        <div class="footer details">
+            <div class="content cl">
+               
+            </div>
+        </div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="nav.js"></script>
+<script src="footer.js"></script>
+<script>
+	$(function(){
+		$(".question").addClass('on').parent().siblings().find("a").removeClass('on')
+		$(".nav a,.f_left a").click(function(e){
+			if(e.target.className=="home"){
+				window.location.href="index.html?"+"txt="+encodeURI("home");
+			}else if(e.target.className=="introduce"){
+				window.location.href="index.html?"+"txt="+encodeURI("introduce");
+			}else if(e.target.className=="openCity"){
+				window.location.href="index.html?"+"txt="+encodeURI("openCity");
+			}else if(e.target.className=="mediaCoverage"){
+				window.location.href="index.html?"+"txt="+encodeURI("mediaCoverage");
+			}else if(e.target.className=="join_bussiness"){
+				window.location.href="index.html?"+"txt="+encodeURI("join_bussiness");
+			}else if(e.target.className=="concat_bus"){
+				$("html,body").animate({
+                    scrollTop: $(".footer").offset().top
+                }, 500)
+			}else if(e.target.className=="strategy"){
+                window.location.href="strategy.html"
+            }
+		})
+
+	})
+</script>
+</html>

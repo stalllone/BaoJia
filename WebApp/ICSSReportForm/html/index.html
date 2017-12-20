@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="http://css.baojia.com/s4/c/css/reset.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="http://icss.baojia.com/css/3.0/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="http://icss.baojia.com/css/2.0/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="http://icss.baojia.com/css/2.0/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="../font-awesome.min.css">
+    <!-- <link href="../javascript/daterangepicker.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="http://icss.baojia.com/css/2.0/daterangepicker-bs3.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        .seled span{color: #4dbd74}
+        .seled li:hover span{
+            color: #000;
+        }
+        .seled li:hover span i:before{
+            content: "\f057";
+        }
+        .dropUl {
+            position: absolute;
+            top: 50px;
+            background: #fff;
+            border: 1px solid #ccc;
+            display: none;
+        }
+        .dropUl li{
+            padding: 3px 35px;
+            white-space: nowrap;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                    <span>租赁订单销售报表</span>
+                </div>
+                <div class="searchCondition">
+                    <div class="search-wrap" id="search-wrap">
+                        <div class="form-inline">
+                            <label style="color: #555; font-size: 14px; margin-right: 5px;font-weight: normal">快速查找</label>
+                            <div class="btn-group openUL">
+                                <button type="button" id="dropdown-toggle-button" class="btn btn-info btn-lg dropdown-toggle" data-toggle="dropdown">按商家帐号名称 <span class="caret"></span>
+                                </button>
+                                <ul class=" dropUl" role="menu" value="0" id="content_type">
+                                    <li><a href="#">按商家帐号名称</a></li>
+                                    <li><a href="#">按网点名称</a></li>
+                                    <li><a href="#">按商家ID</a></li>
+                                    <li><a href="#">按商家手机号</a> </li>
+                                </ul>
+                            </div>
+                            <input type="search" id="search_input" class="form-control input-lg inptxt" style="width:280px;" placeholder="请输入查询内容">
+                            <button class="btn btn-success btn-lg">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                            <a href="javascript:;" class="more">更多条件 <i class="icon-double-angle-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="selectCondtion">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>下单时间</td>
+                                    <td>
+                                        <ul class="cl">
+                                            <li class="on"><span class="on initial">不限</span></li>
+                                            <li>
+                                                <div class="page-content">
+                                                    <div class="container-fluid">
+                                                        <div class="row-fluid" style="margin-top:5px">
+                                                            <div class="span4">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">
+                                                                        日期：
+                                                                    </label>
+                                                                    <div class="controls">
+                                                                        <div id="reportrange" class="pull-left dateRange" style="width:350px">
+                                                                            <i class="icon-calendar"></i>
+                                                                            <span id="searchDateRange"></span>
+                                                                            <b class="caret"></b>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>城市</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li><span class="on initial">全国</span></li>
+                                            <li><span>北京</span></li>
+                                            <li><span>临沂</span></li>
+                                            <li><span>上海</span></li>
+                                            <li><span>广州</span></li>
+                                            <li><span>深圳</span></li>
+                                            <li><span>杭州</span></li>
+                                            <li><span>南京</span></li>
+                                            <li><span>天津</span></li>
+                                            <li><span>石家庄</span></li>
+                                            <li><span>大连</span></li>
+                                            <li><span>成都</span></li>
+                                            <li><span>重庆</span></li>
+                                            <li><span>西安</span></li>
+                                            <li><span>昆明</span></li>
+                                            <li><span>郑州</span></li>
+                                            <li><span>长沙</span></li>
+                                            <li><span>武汉</span></li>
+                                            <li><span>合肥</span></li>
+                                            <li><span>重庆</span></li>
+                                            <li><span>西安</span></li>
+                                            <li><span>昆明</span></li>
+                                            <li><span>郑州</span></li>
+                                            <li><span>长沙</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>交通工具</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li><span class="on initial">不限</span></li>
+                                            <li><span>燃油汽车</span></li>
+                                            <li><span>电动汽车</span></li>
+                                            <li><span>电动单车</span></li>
+                                            <li><span>自行车</span></li>
+                                            <li><span>低速电动汽车</span></li>
+                                            <li><span>房车</span></li>
+                                            <li><span>物流汽车</span></li>
+                                            <li><span>摩托车</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>商家类型</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li><span class="on initial">不限</span></li>
+                                            <li><span>个人</span></li>
+                                            <li><span>企业</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>商家名称</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li>
+                                                <select class="select select1">
+                                                    <option value="0">全部</option>
+                                                    <option>商家一</option>
+                                                    <option>商家二</option>
+                                                    <option>商家三</option>
+                                                    <option>商家四</option>
+                                                    <option>商家五</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>网点名称</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li>
+                                                <select class="select select2">
+                                                    <option value="0">全部</option>
+                                                    <option>商家六</option>
+                                                    <option>商家七</option>
+                                                    <option>商家八</option>
+                                                    <option>商家九</option>
+                                                    <option>商家十</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>行驶区域</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li>
+                                                <select class="select select3">
+                                                    <option value="0">全部</option>
+                                                    <option>商家十一</option>
+                                                    <option>商家十二</option>
+                                                    <option>商家十三</option>
+                                                    <option>商家十四</option>
+                                                    <option>商家十五</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>业务类型</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li><span class="on initial">不限</span></li>
+                                            <li><span>即时租车</span></li>
+                                            <li><span>预约租车</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>流程类型</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li><span class="on initial">不限</span></li>
+                                            <li><span>双押分付</span></li>
+                                            <li><span>双押合并</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>数据类型</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li><span class="on initial">按单数新增</span></li>
+                                            <li class="person"><span>按人数新增</span></li>
+                                            <li class="money"><span>按金额新增</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>租客类型</td>
+                                    <td>
+                                        <ul class="cl active">
+                                            <li><span class="on initial">不限</span></li>
+                                            <li><span>新注册用户</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>已选条件</td>
+                                    <td>
+                                        <ul class="cl seled">
+                                        </ul>
+                                        <span class="delAll">全部清除</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    <div class="exportForm">
+                    	<div class="title">
+		                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+		                    <span>租赁订单销售报表</span>
+		                </div>
+		                <button class="btn btn-success">导出表格</button>
+                    </div>
+                    <div class="tab">
+
+                        <table>
+                        	<thead>
+                        		<tr>
+                                    <th class="sort sort0" title="此为日期">日期</th>
+                                    <th class="sort sort0">意向单数</th>
+                                    <th class="sort sort0">转换率</th>
+                                    <th class="sort sort1">预定次数/率</th>
+                                    <th class="sort sort1">付订单数/率</th>
+                                    <th class="sort sort1">付订车数/比</th>
+                                    <th class="sort sort1">开锁单数/率</th>
+                                    <th class="sort sort2">同意单数/率</th>
+                                    <th class="sort sort2">失败单数/率</th>
+                                    <th class="sort sort2">付款单数/率</th>
+                                    <th class="sort sort2">违押单数/率</th>
+                                    <th class="sort sort2">退款单数/率</th>
+                                </tr>
+                        	</thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>2017-10-30</td>
+                                    <td>2306</td>
+                                    <td>46.62%</td>
+                                    <td>2,253 / 97.70%</td>
+                                    <td>2,224 / 98.71%</td>
+                                    <td>3021 / 1.95</td>
+                                    <td>1,185 / 53.28%</td>
+                                    <td>2022 / 99.82%</td>
+                                    <td>7 / 0.18%</td>
+                                    <td>1,075 / 48.42%</td>
+                                    <td>2562 / 100.00%</td>
+                                    <td>0/ 0.00%</td>
+                                </tr>
+                                <tr>
+                                    <td>2017-10-24</td>
+                                    <td>4563</td>
+                                    <td>85.62%</td>
+                                    <td>2352 / 97.70%</td>
+                                    <td>2321 / 98.71%</td>
+                                    <td>1,139 / 1.95</td>
+                                    <td>1581 / 53.28%</td>
+                                    <td>2202 / 99.82%</td>
+                                    <td>8 / 0.18%</td>
+                                    <td>1507 / 48.42%</td>
+                                    <td>5515 / 100.00%</td>
+                                    <td>0/ 0.00%</td>
+                                </tr>
+                                <tr>
+                                    <td>2017-10-14</td>
+                                    <td>1123</td>
+                                    <td>96.62%</td>
+                                    <td>3522 / 97.70%</td>
+                                    <td>1224 / 98.71%</td>
+                                    <td>1236 / 1.95</td>
+                                    <td>5811 / 53.28%</td>
+                                    <td>2215 / 99.82%</td>
+                                    <td>5 / 0.18%</td>
+                                    <td>1057 / 48.42%</td>
+                                    <td>7015 / 100.00%</td>
+                                    <td>0/ 0.00%</td>
+                                </tr>
+                                <tr>
+                                    <td>2017-10-26</td>
+                                    <td>1205</td>
+                                    <td>36.62%</td>
+                                    <td>2523 / 97.70%</td>
+                                    <td>4222 / 98.71%</td>
+                                    <td>5632 / 1.95</td>
+                                    <td>8523 / 53.28%</td>
+                                    <td>3220 / 99.82%</td>
+                                    <td>1 / 0.18%</td>
+                                    <td>1705 / 48.42%</td>
+                                    <td>1,075 / 100.00%</td>
+                                    <td>0/ 0.00%</td>
+                                </tr>
+                                <tr>
+                                    <td>2017-10-30</td>
+                                    <td>3205</td>
+                                    <td>40.62%</td>
+                                    <td>3252 / 97.70%</td>
+                                    <td>2242 / 98.71%</td>
+                                    <td>5222 / 1.95</td>
+                                    <td>9635/ 53.28%</td>
+                                    <td>2323 / 99.82%</td>
+                                    <td>4 / 0.18%</td>
+                                    <td>1750 / 48.42%</td>
+                                    <td>5017 / 100.00%</td>
+                                   <!--  <td>0/ 0.00%</td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="http://icss.baojia.com/js/2.0/libs/jquery-1.9.1.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://icss.baojia.com/plugins/moment/moment.min.js"></script>
+<script src="http://icss.baojia.com/js/2.0/libs/daterangepicker.min.js"></script>
+<!-- <script src="http://icss.baojia.com/js/2.0/libs/jquery.mCustomScrollbar.concat.min.js"></script> -->
+<script src="../javascript/jquery.tablesorter.min.js"></script>
+<script>
+	(function($){
+        $(window).load(function(){
+            $(".tab").mCustomScrollbar({
+            	horizontalScroll:true
+            });
+            $(".tab table").tablesorter(); 
+        });
+    })(jQuery);
+</script>
+<script>
+$(function() {
+    $(".active li span").click(function(e) {
+        $(this).addClass("on");
+        $(this).parent().siblings().find("span").removeClass("on");
+        var obj = $(e.target);
+        if (obj.hasClass('initial')) {
+            return;
+        } else {
+            var txt = obj.text();
+            var str = "<li><span><i class='icon-ok-sign'></i>" + txt + "</span></li>";
+            $(".seled").append(str);
+        }
+    });
+    $(".select1").change(function() {
+        var txtVal = $('.select1 option:selected').val();
+        console.log(txtVal);
+        var str = str = "<li><span>" + txtVal + "</span></li>";
+        $(".seled").append(str);
+    });
+    $(".select2").change(function() {
+        var txtVal = $('.select2 option:selected').val();
+        console.log(txtVal);
+        var str = str = "<li><span>" + txtVal + "</span></li>";
+        $(".seled").append(str);
+    });
+    $(".select3").change(function() {
+        var txtVal = $('.select3 option:selected').val();
+        console.log(txtVal);
+        var str = str = "<li><span>" + txtVal + "</span></li>";
+        $(".seled").append(str);
+    });
+    $(".delAll").click(function() {
+        $(this).prev().empty();
+        $(".active li span.initial").parent().siblings().find("span").removeClass("on");
+        $(".select option").each(function() {
+            if ($(this).val() == '0') {
+                $(this).prop('selected', true);
+            }
+        });
+        $(".ranges li:first").click();
+    });
+
+    $(".control-label").remove();
+
+    $(document).on("click",".seled li",function(){
+        $(this).remove();
+        $(".active li span.initial").parent().siblings().find("span").removeClass("on");
+    })
+})
+</script>
+<script>
+$(document).ready(function() {
+    //时间插件  
+    $('#reportrange span').html("请选择日期");
+
+    $('#reportrange').daterangepicker({
+        startDate: moment(),
+        endDate: moment().subtract('days', 1),
+        minDate: '2013/01/01',
+        maxDate: '2022/12/31',
+        dateLimit: { days: 60 },
+        showDropdowns: true,
+        showWeekNumbers: false,
+        timePicker: false,
+        timePickerIncrement: 1,
+        timePicker12Hour: true,
+        buttonClasses: ['btn btn-default'],
+        applyClass: 'btn-small btn-primary',
+        cancelClass: 'btn-small',
+        format: 'YYYY-MM-DD',
+        separator: ' to ',
+        ranges: {
+            '清空': [null,null],
+            '今天': [moment(), moment()],
+            '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
+            '最近7天': [moment().subtract('days', 6), moment()],
+            '最近30天': [moment().subtract('days', 29), moment()],
+            '本月': [moment().startOf('month'), moment().endOf('month')],
+            '上月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+        },
+        locale: {
+            applyLabel: '确定',
+            cancelLabel: '取消',
+            fromLabel: '开始',
+            toLabel: '结束',
+            customRangeLabel: '自定义',
+            daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+            monthNames: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+            firstDay: 1
+        }
+    }, function(start, end, label) { //格式化日期显示框  
+            var s = start.format('YYYY-MM-D');
+            var e = end.format('YYYY-MM-D');
+            var t = s + ' 至 ' + e;
+
+            if (s == false && t == false) {
+                s="";
+                t ="请选择日期范围";
+                t=""
+            }
+
+       $('#reportrange').find('span').html(t);
+       
+        // $('#reportrange span').html(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
+    });
+
+    //设置日期菜单被选项  --开始--  
+    /* 
+                      var dateOption ; 
+                      if("${riqi}"=='day') { 
+                            dateOption = "今日"; 
+                      }else if("${riqi}"=='yday') { 
+                            dateOption = "昨日"; 
+                      }else if("${riqi}"=='week'){ 
+                            dateOption ="最近7日"; 
+                      }else if("${riqi}"=='month'){ 
+                            dateOption ="最近30日"; 
+                      }else if("${riqi}"=='year'){ 
+                            dateOption ="最近一年"; 
+                      }else{ 
+                            dateOption = "自定义"; 
+                      } 
+                       $(".daterangepicker").find("li").each(function (){ 
+                            if($(this).hasClass("active")){ 
+                                $(this).removeClass("active"); 
+                            } 
+                            if(dateOption==$(this).html()){ 
+                                $(this).addClass("active"); 
+                            } 
+                      });*/
+    //设置日期菜单被选项  --结束--  
+    //
+
+})
+</script>
+<script>
+    $(".openUL .btn").click(function(){
+        var opul=$(this).next();
+        if(opul.is(":visible")){
+            opul.css("display","none")
+        }else{
+            opul.css("display","block")
+        }
+    });
+    $(".dropUl li").click(function(){
+        $(this).parent().css("display","none");
+    });
+    $(".more").click(function(){
+        var slideU=$(".selectCondtion");
+        if(slideU.is(":visible")){
+            slideU.css("display","none");
+        }else{
+            slideU.css("display","block");
+        }
+    })
+</script>
+</html>

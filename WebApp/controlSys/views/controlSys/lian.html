@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>风控系统 - 宝驾租车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="/css/plugin/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/controlSys.css" rel="stylesheet">
+    <script src="/js/sea.js"></script>
+    <script src="/js/seaconfig.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <div class="mian_all">
+        <div class="main_le_content pull-left">
+            <div class="main_menu_box margin_b_b ms-controller" ms-controller="condition">
+                <div class="menu_box_tit margin_s_b">短租订单 {{shortorder}}</div>
+                <div class="menu_box_content">
+                    <div class="menu_box_content_tit">
+                        <span class="pull-left">租客：{{customer}}   {{telphone}}</span>
+                        <small class="sjiao pull-left"></small>
+                    </div>
+                    <div class="menu_box_content_sj">
+                        <div>计划用车时间：{{planDate}}</div>
+                        <div>实际用车时间：{{actualDate}}</div>
+                        <div>车辆押金：{{carDeposit}}</div>
+                        <div>违章押金：{{legalDeposit}}</div>
+                    </div>
+                </div>
+                <div class="menu_box_content">
+                    <div class="menu_box_content_tit">
+                        <span class="pull-left">车东：{{rander}}   {{telmobel}}</span>
+                        <small class="sjiao pull-left"></small>
+                    </div>
+                    <div class="menu_box_content_sj">
+                        <div>座驾：{{cartype}} 出厂价：{{factoryPrice}} 残值:{{residual}}</div>
+                        <div>车牌号：{{carCode}}</div>
+                        <div>盒子状态:{{box}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_menu_box ms-controller" ms-controller="follow">
+                <div class="menu_box_tit margin_s_b">跟进记录</div>
+                <div class="menu_box_content margin_s_b">
+                    <div class="menu_box_content_sj">
+                        <div class="tuhua">
+                            <span>风控</span>
+                            <span>追车</span>
+                            <span  class="active">立案</span>
+                            <span class="end_tuhua">关闭事件</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_box_content margin_s_b" ms-repeat="handleData">
+                    <div class="menu_box_content_sj">
+                        <div class="chuliinfo">
+                            <span>处理人:{{el.handlePeo}}</span>
+                            <span>处理操作：{{el.handleOpt}}</span>
+                            <span>车辆状态：{{el.carType}}</span>
+                            <span>风控：{{el.windColor}}</span>
+                            <a href="#">详情</a>
+                            <a href="#">编辑</a>
+                        </div>
+                        <div class="sjxqing">
+                            <span class="pull-left">事件跟进详情：</span>
+                            <span class="pull-right">
+                                <span class="pull-left">是否推送客服记录：<i class="color_red">{{el.isPush}}</i></span>
+                            <span class="pull-right">{{el.handleTimer}}</span>
+                            </span>
+                        </div>
+                        <div class="show_cont">
+                            {{el.detail}}
+                        </div>
+                        <div class="sjxqing">
+                            <span class="pull-left">备注：</span>
+                            <span class="pull-right">
+                                <span class="pull-left">张蕊</span>
+                            <span class="pull-right">{{el.remarksTimer}}</span>
+                            </span>
+                        </div>
+                        <div class="show_cont">
+                            {{el.remarks}}
+                        </div>
+                        <div class="sjxqing">
+                            <span class="pull-left">批注：</span>
+                            <span class="pull-right">
+                                <span class="pull-left">张蕊</span>
+                            <span class="pull-right">{{el.commentTimer}}</span>
+                            </span>
+                        </div>
+                        <div class="show_cont">
+                            {{el.comment}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_ri_content pull-right ms-controller" ms-controller="handelopt">
+            <div class="main_menu_box">
+                <div class="menu_box_btn_xilie margin_s_b">
+                    <span>处理人</span> {{handelPeo}}
+                </div>
+                <div class="margin_s_b">
+                    <b>相关资料</b>
+                </div>
+                <div class="margin_s_b clearfix">
+                	<div class="show_pz pull-left">
+                		<span><a href="#">凭证1</a>{{scTimer}}</span><br>
+                		<span><a href="#">凭证2</a>{{scTimer}}</span>
+                	</div>
+                </div>
+                <div class="margin_s_b">
+                    <b>立案信息</b>
+                </div>
+                <div class="margin_s_b">
+                    负责警官姓名
+                </div>
+                <div class="margin_s_b input_gui">
+                    <input ms-duplex="policeName" type="text">
+                </div>
+                <div class="margin_s_b">
+                    警官联系方式
+                </div>
+                <div class="margin_s_b input_gui">
+                    <input ms-duplex="policeiPhone" type="text" placeholder="手机号码" >
+                    <input ms-duplex="policeTel" type="text" placeholder="座机">
+                </div>
+                 <div class="margin_s_b input_gui">
+                    立案派出所
+                </div>
+                <div class="margin_s_b input_gui">
+                    <input ms-duplex="policeHotel" type="text">
+                </div>
+                <div class="margin_s_b">
+                    <textarea ms-duplex="xxsh" placeholder="详细记录车辆损坏情况" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="menu_box_btn_xilie margin_s_b">
+                    <span>是否推进客服记录</span>
+                    <b ms-repeat="isCustomerService">
+                        <label>
+                        <input type="radio" ms-duplex-string="isCustomerServiceitem" ms-attr-value="el.value" name="isCustomerServiceitem">{{el.label}}
+                    </label>
+                    </b>
+                </div>
+                <div>
+                    <span>相关资料文档：<a href="#">文件.rar</a></span>
+                </div>
+                <div class="sjcl_content_btn">
+                    <button ms-click="sucSub" class="active">报案</button>
+                    <button>取消</button>
+                </div>
+            </div>
+        </div>
+       
+    <script type="text/javascript">
+    seajs.pagejs("/static/controlSys/src/lian");
+    </script>
+</body>
+
+</html>

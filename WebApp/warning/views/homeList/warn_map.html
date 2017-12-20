@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>保险理赔 - 宝驾租车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script src="/js/sea.js"></script>   
+    <link href="/css/bootstrap.min.css" rel="stylesheet" charset="utf-8">  
+    <link href="/css/font-awesome.min.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/theme.css" rel="stylesheet" charset="utf-8">
+    <link href="/css/warning.css" rel="stylesheet" charset="utf-8">
+    <script src="/static/seaconfig.js"></script>  
+</head>
+
+<body>
+    <div class="main_contant ms-controller" ms-controller="indexList">
+        <div class="main_contant_title">
+            <div class="main_contant_company pull-left">
+                <select ms-duplex="com" ms-widget="dropdown,com,$company">
+                </select>
+            </div>
+            <div class="main_contant_map pull-right">
+                <span ms-class="active">列表</span>
+                <span>地图</span>
+            </div>
+        </div>
+        <div class="aaaa" ms-class="closedChoose:!isOpenChoose">
+            <div class="right_btn" ms-click="foldChoose">
+                <i></i>
+            </div>
+            <div class="map_content">
+                <img src="../../images/1.0/map1.png" alt="">
+                <div class="map_side">
+                    <div class="layout"></div>
+                    <div class="mar_side_con">
+                        <div class="topOpt">
+                            <div class="search_side clearfix">
+                                <div class="pull-left">
+                                    <select ms-duplex="search" ms-widget="dropdown,$search,$searchOpt">
+                                    </select>
+                                </div>
+                                <div class="putIn pull-left">
+                                    <input type="text" ms-duplex="searchVal">
+                                </div>
+                                <div class="putBtn pull-right" ms-click="searchAll">搜索</div>
+                            </div>
+                            <div class="chooseSort clearfix">
+                                <div>
+                                    <select ms-duplex="ct" ms-widget="dropdown,$ct,$carState">
+                                    </select>
+                                </div>
+                                <div>
+                                    <select ms-duplex="bs" ms-widget="dropdown,$bs,$boxState">
+                                    </select>
+                                </div>
+                                <div>
+                                    <select ms-duplex="bt" ms-widget="dropdown,$bt,$boxType">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="checkBtn">
+                                <input type="checkbox">仅显示出租中车辆
+                            </div>
+                        </div>
+                        <div class="margin_t_bottom">
+                         <div id="LoadingArea" ms-controller="LoadingArea"><div ms-widget="loading, $loading, $loadOpts"></div></div>
+                            <div class="show_table">
+                                <div class="show_table_title">
+                                    <span>{{city}}</span>
+                                    <span>{{carHao}}</span>
+                                    <span>{{box}}</span>
+                                    <span>{{state}}</span>
+                                </div>
+                                <div  ms-click="addData($index)" class="show_table_con" ms-repeat-el="updatetableData">
+                                    <span>{{el.cityid}}</span>
+                                    <span>{{el.carCode}}</span>
+                                    <span>{{el.children.length}}<i class="shangxia"></i></span>
+                                    <span ms-class="warnRed:isWarn(el.thisState)">{{el.thisState}}</span>
+                                    <div ms-visible-loop="$index===openindex">
+                                        <div class="addshow_table_con" ms-repeat-item="el.children" ms-click="showContent($event,item.boxId)">
+                                            <span>{{el.cityid}}</span>
+                                            <span>{{el.carCode}}</span>
+                                            <span>{{item.boxType}}</span>
+                                            <span ms-class="warnRed:warnRed(item.boxState)">{{item.boxState}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pager_map">
+                                <div ms-widget="pager,$pager,$pagerOpt"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--具体contant-->
+                <div class="conditionChoose ms-controller" ms-controller="condition">
+                    <div class="conditionChoose_tab pull-left clearfix">
+                        <div ms-repeat="signInfo">
+
+                            <label >
+                                <input ms-click="resetChooseCar()"  ms-duplex-string="choose_type" type="radio" ms-attr-value="el.value" name="choose_type">
+                                <b><div class="signInfo_con">{{el.name}}</div></b>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ms-controller" ms-controller="condition">
+                    <div class="conditionChoose_drop">
+                        <select ms-duplex="cf" ms-widget="dropdown,$cf,$chooseFirst">
+                        </select>
+                    </div>
+                </div>
+                <div class="show_tuli_pos ms-controller"  ms-controller="tuliModel" ms-class="tuliclosed:!isOpen">
+                    <div class="layout"></div>
+                    <div class="tuli">
+                    <div ms-click="closedFn">
+                        <span>图例</span>
+                        <i></i>
+                    </div>
+                    <div class="tuli_foldCon">
+                        <div ms-repeat="tuli"  ms-click="unusualFn">
+                            <i ms-class="bgimg{{$index}}"></i>
+                            <span>{{el.label}}</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!--具体contant-->
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <script type="text/javascript">
+    seajs.use("/static/homeList/src/warn_map");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <style>
+    	.btn-groups{
+	border-bottom: 1px solid #ccc;
+}
+.btn-groups ul{
+	text-align: center;
+	padding: 5px 0;
+}
+.btn-groups li{
+	display:inline-block;
+}
+.btn-groups li a{
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 2px 8px;
+	border-radius:5px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.btn-groups li a.active{
+	background: #fc7722;
+	color:#fff;
+}
+    </style>	
+</head>
+<body>
+	<div class="btn-groups">
+		<ul class="cl">
+			<li>品牌列表：</li>
+			<li><a href="javascript:;" class="common active" brandId="100000">小蜜单车</a></li>
+			<li><a href="javascript:;" class="common" brandId="100005">悦行drive24</a></li>
+			<li><a href="javascript:;" class="nocommon" class="common" brandId="100036">小马电单车</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100001">巴歌出行</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100002">途歌TOGO</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100003">壹壹出行</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100004">一度用车</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100004">京鱼出行</a></li>
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100007">新方向</a></li> -->
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100008">测试单车</a></li> -->
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100009">小蜜测试1122</a></li> -->
+			<li><a href="javascript:;" class="nocommon" brandId="100010">小马单车</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100011">蘑菇旅行</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100012">风向标</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100013">纵横出行</a></li>
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100014">众行EVPOP</a></li> -->
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100015">智道出行</a></li> -->
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100016">通利达</a></li> -->
+			<li><a href="javascript:;" class="nocommon" brandId="100017">任性开</a></li>
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100018">蜜卡出行</a></li> -->
+			<li><a href="javascript:;" class="nocommon" brandId="100019">芒果出行</a></li>
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100020">率先出行</a></li> -->
+			<li><a href="javascript:;" class="nocommon" brandId="100021">丽新租车</a></li>
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100022">蓝鸟出行</a></li> -->
+			<li><a href="javascript:;" class="nocommon" brandId="100023">江汉出行</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100024">吉力出行</a></li>
+			<!-- <li><a href="javascript:;" class="nocommon" brandId="100025">公车无忧</a></li> -->
+			<li><a href="javascript:;" class="nocommon" brandId="100026">佰壹出行</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100027">八桂出行</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100028">vgocar</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100029">e流用车</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100030">江铃新能源</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100033">猛狮电单车</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100034">芒果电单车</a></li>
+			<li><a href="javascript:;" class="nocommon" brandId="100035">飞兔共享</a></li>
+		</ul>
+	</div>
+	<div class="switchMap">
+		<iframe src="http://cctvtest.baojia.com/?brandId=100000" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+	</div>	
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		var clientHeight=$(document).innerHeight()-$(".btn-groups").innerHeight();
+		$(".switchMap").css({"width":"100%","height":clientHeight});
+		$(window).resize(function(){
+			var clientHeight=$(document).innerHeight()-$(".btn-groups").innerHeight();
+			$(".switchMap").css({"width":"100%","height":clientHeight});
+			$(".switchMap").css({"width":"100%","height":clientHeight});
+		});
+		$(".btn-groups a").click(function(e){
+			$(".btn-groups a").removeClass("active");
+			$(this).addClass("active");
+			var brandId=$(this).attr("brandId");
+			if($(e.target).hasClass('common')){
+				$(".switchMap iframe").attr("src","http://cctvtest.baojia.com/index.html?brandId="+brandId);
+			}else if($(e.target).hasClass('nocommon')){
+				$(".switchMap iframe").attr("src","http://cctvtest.baojia.com/dataAccessIndex.html?brandId="+brandId);
+			}
+		})
+	})
+</script>
+</html>

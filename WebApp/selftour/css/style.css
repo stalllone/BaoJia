@@ -1,0 +1,124 @@
+base css*/
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}
+/*@media (min-device-width:768px) and (max-device-height:1024px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:20px; width: 900px; margin: 0 auto}  
+}*/
+body{background: #ededed;}
+a:hover{text-decoration: none;}
+.jt{display:inline-block; width: .5rem;height: .5rem;color: #fff;border: 2px solid #fff;border-top: none;border-right: none;-webkit-transform:rotate(45deg);}
+.header{width: 100%;background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#1cc3de), to(#20a5d9));color: #fff;line-height: 2.5rem ;height: 2.5rem}
+.header .title{font-size:0.9rem; text-align: center;width: 100%;}
+.header .location{position: absolute;left: 3.5%; font-size: .8rem;}
+.header .location_jt{-webkit-transform:rotate(-45deg);position: absolute;right:-0.8rem;top: 50%;margin-top: -0.3rem;}
+.list{width: 100%;}
+.list_T{width: 100%;position: relative;}
+.list_T img{width: 100%;display: block;}
+.list_T p{width:34%;height:1.5rem;line-height:1.5rem;text-align:center;position:absolute;top: 0.5rem;right: 0;background: rgba(0,0,0,0.5);color: #fff;font-size: 0.8rem;border-radius: 0.7rem 0 0 0.7rem;}
+.list_B{width: 100%;background: #fff;padding:2% 0 2% 3.5% }
+.list_B p{margin-top: 0.2rem;}
+.list_B p:nth-of-type(1){font-size: 0.875rem;color: #222;}
+.list_B p:nth-of-type(2){font-size: 0.7rem;color: #999;}
+.list1{width: 100%;background: #fff;}
+.div{width: 93%;margin: 0 auto;padding:0.5rem 0;border-bottom:1px solid #ededed;display: -webkit-box;-webkit-box-pack:justify;font-size: 0.7rem;color: #222;}
+.nobor{border: none;}
+.inpdiv{width: 93%;margin: 0 auto;padding-bottom: 0.8rem;border-bottom: 1px solid #ededed;}
+.inpdiv>p{font-size: 0.8rem;padding-top: 0.5rem;}
+.input{width: 100%;display: block;margin-top: 0.5rem;font-size: 0.8rem;padding: 0.4rem 0;border:1px solid #dcdcdc;background: #fafafa;text-indent: 0.3rem;}
+.more{padding: 0.5rem 0;text-align: center;font-size: 0.8rem;color: #222;position: relative;}
+.foot{width: 100%;background: #fff;margin-top: 0.5rem;padding: 0.5rem 0;}
+.foot a{display: block;width: 93%;padding: 0.5rem 0;margin: 0 auto;background: #ff7806;text-align: center;color: #fff;font-size: 0.9rem;border-radius: 5px;-webkit-border-radius: 5px;}
+
+
+/*layout css*/
+
+/*layout header*/
+
+/*layout content*/
+
+/*selftour.htm 自驾游*/
+.sel_div{margin-top: 0.6rem;}
+/*seldetail.htm自驾游详情*/
+.seldetail .ban{-webkit-box-flex: 1;position: relative;overflow: hidden;}
+.seldetail .ban img{width: 100%;margin: 0 auto;display: block;}
+.seldetail .swiper-pagination{bottom: 1% !important;}
+.seldetail .swiper-pagination-bullet{background:#bec1b5!important;opacity:1!important;}
+.seldetail .swiper-pagination-bullet-active{opacity:1;background:#12af16!important;}
+.seldetail .back{display: block;width: 2rem;height: 2rem;line-height: 2rem;background: rgba(0,0,0,0.5);position: absolute;left: 4%;top:0.5rem;border-radius: 100%;-webkit-border-radius: 100%;z-index: 1000;text-align: center;}
+.seldetail .back .jt{position: absolute;top: 50%;left: 50%;margin-top: -0.3rem;margin-left: -0.2rem;}
+.seldetail .det_sel{padding-left: 3.5% !important;}
+.seldetail .list_B p{color: #666;}
+.seldetail .count{background: #fff;margin-top:0.5rem;}
+.seldetail .count1{width: 93%;margin: 0 auto;}
+.seldetail .choose{display: -webkit-box;border-bottom: 1px solid #ededed;}
+.seldetail .choose a{-webkit-box-flex:1;padding: 0.3rem 0;display: block;text-align: center;font-size: 0.875rem;color: #666;}
+.seldetail .choose span{color: #ededed;display: block;padding: 0.3rem 0;}
+.seldetail .choose a.on{color: #fc7722;border-bottom: 2px solid #fc7722;}
+.seldetail .list_B{padding:2% 0 2% 0}
+.seldetail .list_B p{font-size: 0.75rem;}
+.seldetail .list_T p{right: -3.7%;}
+.seldetail .tuniu{width: 100%;border-top: 1px solid #ededed;margin-top: 0.8rem;padding: 0 0 0.8rem 0;}
+.seldetail .tuniu_hol{display: -webkit-box;-webkit-box-pack:justify;margin-top: 0.8rem;}
+.seldetail .tuniu_hol a{font-size: 0.7rem;display: block;color: #666;padding: 0.2rem;}
+.seldetail .tuniu_hol a:nth-of-type(2){font-size: 0.625rem;display: block;color: #fff;background: #fc7722;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;padding: 0.2rem 0.4rem;border-radius: 4px;-webkit-border-radius: 4px;}
+.seldetail .remmondcar{font-size: 0.8rem;color: #666;padding: 3% 0 3% 3.6%;border-bottom:1px solid #ededed;}
+.seldetail .selcar{width: 100%;padding: 0.8rem 0;overflow: hidden;}
+.seldetail .selcar dl{display: -webkit-box;width: 67%;float: left;}
+.seldetail .selcar dl dt{width: 39%;margin-right: 3%;}
+.seldetail .selcar dl dt img{width: 100%;}
+.seldetail .selcar dl dd{font-size: 0.7rem;}
+.seldetail .selcar dl dd p{margin-top: 0.4rem;}
+.seldetail .selcar dl dd p.bk{background: url(../image/bk.png) no-repeat left center ;background-size: 1.1rem 1.1rem;text-indent:1.1rem;}
+.seldetail .selcar dl dd p:nth-of-type(2){background: url(../image/seat.png) no-repeat left center;background-size: 1.1rem 1.1rem;text-indent:1.1rem;}
+.seldetail .selcar dl dd p.ft{background: url(../image/ft.png) no-repeat left center;background-size: 1.2rem 0.75rem;text-indent:1.1rem;}
+.seldetail .selcar .price{font-size: 0.7rem;color: #fc7722;float: right;margin-top: 0.4rem;}
+.seldetail .selcar .price span{font-size: 1.3rem;}
+.seldetail .evaluate{clear: both;border-bottom: 1px solid #ededed;padding-bottom: 0.5rem;}
+.seldetail .evaluate p{font-size: 0.77rem;color: #c8c8c8;display: -webkit-box;}
+.seldetail .evaluate p img{display: block;width: 0.8rem;height: 0.8rem;vertical-align: bottom;margin-top: 0.1rem;}
+.seldetail .more .jt{position: absolute;top:50%;margin-top: -0.4rem;margin-left: 0.3rem;border-color: #999999;-webkit-transform:rotate(-45deg);}
+
+/*selfbook.htm 自驾车预订*/
+.selfbook .time{width: 40%;position: relative;}
+.selfbook .time input{width: 100%;display: block;font-size: 0.8rem;border: none;margin-right: 0.8rem;text-align: center;margin-right: 0.3rem;}
+.selfbook .time:after{content:"";display:inline-block; width: .5rem;height: .5rem;color: #fff;border: 2px solid #ccc;border-top: none;border-right: none;-webkit-transform:rotate(-135deg);position: absolute;right: 0;top: 50%;margin-top: -0.3rem;}
+.selfbook .quantity span{font-size: 0.9rem;}
+.selfbook .reduce,.selfbook .num{margin-right: 0.5rem;}
+.selfbook .num{color: #fc7722;} 
+.selfbook .carmodel{border:1px solid #dcdcdc;padding: 0.3rem 1.5rem 0.3rem 0.3rem;background: #fafafa;font-size: 0.7rem;color: #8b8b8b;position: relative;}
+.selfbook .carmodel:after{content:"";display:inline-block; width: .5rem;height: .5rem;color: #fff;border: 2px solid #ccc;border-top: none;border-right: none;-webkit-transform:rotate(-45deg);position: absolute;right:0.6rem;top: 50%;margin-top: -0.3rem;}
+.selfbook .list2{margin-top: 0.5rem;}
+.selfbook .list2 .div{font-size: 0.875rem;color: #666;}
+.selfbook .list2 .inpdiv span{color: #fc7722; margin: .1rem} 
+.selfbook .hidden-input{background: transparent;}		
+.hidden-input{opacity: 0;position: absolute;z-index: -1;}			
+input[type=radio]+span {/* your style goes here */display: inline-block;height: 0.9rem;width: 0.9rem;border-radius: 100%;border: 2px solid #999;position: relative;top: 0.2rem;}
+input[type=radio]:checked+span{background:#41bb20;border-color:#41bb20; }
+.circle{width: 0.4rem;height: 0.4rem;border-radius: 100%;display: block;position: absolute;top: 50%;margin-top: -0.2rem;left: 50%;margin-left: -0.2rem;border: 2px solid #fff}
+input[type=radio]:checked+span .circle{background: #41bb20;}
+.selfbook .div label{font-size: 0.7rem;}
+.selfbook .div .man{margin-right: 0.6rem;}
+.selfbook .list2 .input1{width: 80%;margin: 0;}
+.selfbook .person{margin-top: 0.4rem;}
+.selfbook .list2 .input2{margin: 0;}
+.selfbook .more{background: #fff;display: none;}
+.selfbook .more .jt{display:inline-block; width: .5rem;height: .5rem;color: #fff;border: 2px solid #999;border-top: none;border-right: none;-webkit-transform:rotate(-45deg);position: absolute;top: 50%;margin-top:-0.3rem;margin-left: 0.2rem;}
+.selfbook .more .jt1{display:inline-block; width: .5rem;height: .5rem;color: #fff;border: 2px solid #999;border-top: none;border-right: none;-webkit-transform:rotate(135deg);position: absolute;top: 50%;margin-top:-0.2rem;margin-left: 0.2rem;}
+.selfbook .foot span{font-size: 0.7rem;text-align: center;display: block;margin-bottom: 0.3rem;color: #222;}
+/*layout footer*/
+
+
+/*layout mask
