@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <title>weixin://private/setresult/SCENE_FETCHQUEUE&amp;eyJmdW5jIjoicHJlVmVyaWZ5SlNBUEkiLCJwYXJhbXMiOnsidmVyaWZ5SnNBcGlMaXN0IjpbImNoZWNrSnNBcGkiLCJtZW51OnNoYXJlOnRpbWVsaW5lIiwibWVudTpzaGFyZTphcHBtZXNzYWdlIiwibWVudTpzaGFyZTpxcSIsIm1lbnU6c2hhcmU6d2VpYm9BcHAiLCJoaWRlTWVudUl0ZW1zIiwic2hvd01lbnVJdGVtcyIsImhpZGVBbGxOb25CYXNlTWVudUl0ZW0iLCJzaG93QWxsTm9uQmFzZU1lbnVJdGVtIiwidHJhbnNsYXRlVm9pY2UiLCJzdGFydFJlY29yZCIsInN0b3BSZWNvcmQiLCJvblJlY29yZEVuZCIsInBsYXlWb2ljZSIsInBhdXNlVm9pY2UiLCJzdG9wVm9pY2UiLCJ1cGxvYWRWb2ljZSIsImRvd25sb2FkVm9pY2UiLCJjaG9vc2VJbWFnZSIsImltYWdlUHJldmlldyIsInVwbG9hZEltYWdlIiwiZG93bmxvYWRJbWFnZSIsImdldE5ldHdvcmtUeXBlIiwib3BlbkxvY2F0aW9uIiwiZ2VvTG9jYXRpb24iLCJoaWRlT3B0aW9uTWVudSIsInNob3dPcHRpb25NZW51IiwiY2xvc2VXaW5kb3ciLCJzY2FuUVJDb2RlIiwiZ2V0QnJhbmRXQ1BheVJlcXVlc3QiLCJvcGVuUHJvZHVjdFZpZXdXaXRoUGlkIiwiYmF0Y2hBZGRDYXJkIiwiY2hvb3NlQ2FyZCIsImJhdGNoVmlld0NhcmQiXSwiYXBwSWQiOiJ3eDgzOTYyZWI3ZTViNzk1MGMiLCJ2ZXJpZnlBcHBJZCI6Ind4ODM5NjJlYjdlNWI3OTUwYyIsInZlcmlmeVNpZ25UeXBlIjoic2hhMSIsInZlcmlmeVRpbWVzdGFtcCI6IjAiLCJ2ZXJpZnlOb25jZVN0ciI6ImExZjBiMWY0LTJlNDktNDdhMi05ODY2LTJlODhmNDI4ODc5OCIsInZlcmlmeVNpZ25hdHVyZSI6ImQ4NzMzOWEyNzc3YWRjYzA3OTI5ZWRiODM5MGIwMTdjNGZmOGU3ZmUifSwiX19tc2dfdHlwZSI6ImNhbGwiLCJfX2NhbGxiYWNrX2lkIjoiMTAwMSJ9</title>
+    <style type="text/css">
+        * {
+            font-family: "Hiragino Sans GB", "Microsoft YaHei", "黑体", Helvetica, Arial, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: none;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            /* Firefox */
+            -webkit-box-sizing: border-box;
+            /* Safari */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        img {
+            width: 100%
+        }
+        
+        .main {
+            text-align: center;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .sometitle {
+            font-size: 1.5rem;
+            margin: .5rem;
+            font-weight: bold;
+        }
+        
+        .inputname {
+            width: 80%;
+            background: rgb(242, 242, 242);
+            height: 3rem;
+            font-size: 1.2rem;
+            text-align: center;
+            border: none;
+        }
+        
+        .howmanydoit {
+            margin: .5rem;
+        }
+        
+        .btncheckresult {
+            font-weight: bold;
+            background: white;
+            width: 80%;
+            color: rgb(117, 117, 255);
+            height: 3rem;
+            border: none;
+            font-size: 1.2rem;
+            border: 2px solid rgb(117, 117, 255);
+        }
+        
+        .share {
+            margin-top: 4px;
+            font-weight: bold;
+            background: white;
+            width: 80%;
+            color: rgb(117, 117, 255);
+            height: 3rem;
+            border: 2px solid rgb(117, 117, 255);
+            font-size: 1.2rem;
+        }
+        
+        .power {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            left: 0
+        }
+        
+        .power > .text {
+            font-size: 13px;
+            color: #666;
+            text-shadow: 0 1px 0 0 rgba(215, 215, 215, .5);
+            margin: 0 auto
+        }
+        /* Large desktop */
+        
+        @media (min-width:980px) {
+            * {
+                font-size: 20px;
+            }
+        }
+        /* Portrait tablet to landscape and desktop */
+        
+        @media (min-width:381px) and (max-width:979px) {
+            * {
+                font-size: 18.4px;
+            }
+        }
+        /* Landscape phone to portrait tablet */
+        
+        @media (max-width:380px) {
+            html {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript">
+    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // // 这里警告框会阻塞当前页面继续加载
+        // alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+        // // 以下代码是用javascript强行关闭当前页面
+        // var opened = window.open('about:blank', '_self');
+        // opened.opener = null;
+        // opened.close();
+    }
+
+    function btnck() {
+        var a = document.getElementById("text");
+        if (a.value == "") {
+            alert("文本框内容不能为空！");
+        } else {
+            alert("提交成功！");
+        }
+    }
+    </script>
+    <script src="http://e.baojia.com/js/m/fitcar/zepto.js"></script>
+    <script type="text/javascript" src="http://ca.cubead.com/cubead_ca.js?seq=75599802"></script>
+</head>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+<body>
+    <div class="main">
+        <div class="picture"> <img src="http://e.baojia.com/images/m/fitcar/bg.jpg"> </div>
+        <div class="dosomething">
+            <div class="sometitle">你开什么车？</div>
+            <input class="inputname" style="text" placeholder="请输入你的姓名" id="name">
+            <div class="howmanydoit">已经有 8621559 人做了這個测试.</div>
+            <button class="btncheckresult">查看报告</button>
+            <button id="share" class="share">分享</button>
+        </div>
+    </div>
+    <div class="power"><a class="text" href="http://e.baojia.com/m/coupon/compaign/17?utm_source=weixin_tuiguang&amp;utm_medium=caiche">© 宝驾租车</a></div>
+    <script src="/js/Weixinshare.js?v=4.2"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js" language="javascript"></script>
+    <script type="text/javascript" src="http://e.baojia.com/js/common/m.ac.min.js"></script>
+    <script>
+        wx.config({
+            debug: false,
+            appId: 'wx83962eb7e5b7950c',
+            timestamp: '0',
+            nonceStr: 'a1f0b1f4-2e49-47a2-9866-2e88f4288798',
+            signature: 'd87339a2777adcc07929edb8390b017c4ff8e7fe',
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo',
+                'hideMenuItems',
+                'showMenuItems',
+                'hideAllNonBaseMenuItem',
+                'showAllNonBaseMenuItem',
+                'translateVoice',
+                'startRecord',
+                'stopRecord',
+                'onRecordEnd',
+                'playVoice',
+                'pauseVoice',
+                'stopVoice',
+                'uploadVoice',
+                'downloadVoice',
+                'chooseImage',
+                'previewImage',
+                'uploadImage',
+                'downloadImage',
+                'getNetworkType',
+                'openLocation',
+                'getLocation',
+                'hideOptionMenu',
+                'showOptionMenu',
+                'closeWindow',
+                'scanQRCode',
+                'chooseWXPay',
+                'openProductSpecificView',
+                'addCard',
+                'chooseCard',
+                'openCard'
+            ]
+        });
+        wx.ready(function() {
+            var activityId = $("#activityId").val();
+            if (!activityId) {
+                activityId = '135';
+                if (!activityId) {
+                    activityId = '';
+                }
+            };
+            wx.onMenuShareTimeline({
+                title: '你的气质适合开什么车？', // 分享标题
+                desc: '你的气质适合开什么车？', // 分享描述
+                link: 'http://e.baojia.com/m/fit/car/index/135', // 分享链接
+                imgUrl: 'http://e.baojia.com/images/m/fitcar/bg.jpg', // 分享图标
+                success: function() {
+                    // 用户确认分享后执行的回调函数
+                    var data = {
+                        "activityId": activityId,
+                        "shareUrl": 'http://e.baojia.com/m/fit/car/index/135',
+                        "shareTitle": '你的气质适合开什么车？',
+                        "shareImg": 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                        "shareDesc": '你的气质适合开什么车？',
+                        "shareBrowser": 'weixinBrowser',
+                        "shareSource": 'onMenuShareTimeline',
+                        "status": "success"
+                    };
+                    shareClickLog(data);
+                },
+                cancel: function() {
+                    // 用户取消分享后执行的回调函数
+                    var data = {
+                        "activityId": activityId,
+                        "shareUrl": 'http://e.baojia.com/m/fit/car/index/135',
+                        "shareTitle": '你的气质适合开什么车？',
+                        "shareImg": 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                        "shareDesc": '你的气质适合开什么车？',
+                        "shareBrowser": 'weixinBrowser',
+                        "shareSource": 'onMenuShareTimeline',
+                        "status": "cancel"
+                    };
+                    shareClickLog(data);
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                title: '你的气质适合开什么车？',
+                desc: '你的气质适合开什么车？',
+                link: 'http://e.baojia.com/m/fit/car/index/135',
+                imgUrl: 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                success: function() {
+                    // 用户确认分享后执行的回调函数
+                    var data = {
+                        "activityId": activityId,
+                        "shareUrl": 'http://e.baojia.com/m/fit/car/index/135',
+                        "shareTitle": '你的气质适合开什么车？',
+                        "shareImg": 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                        "shareDesc": '你的气质适合开什么车？',
+                        "shareBrowser": 'weixinBrowser',
+                        "shareSource": 'onMenuShareAppMessage',
+                        "status": "success"
+                    };
+                    shareClickLog(data);
+                },
+                cancel: function() {
+                    // 用户取消分享后执行的回调函数
+                    var data = {
+                        "activityId": activityId,
+                        "shareUrl": 'http://e.baojia.com/m/fit/car/index/135',
+                        "shareTitle": '你的气质适合开什么车？',
+                        "shareImg": 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                        "shareDesc": '你的气质适合开什么车？',
+                        "shareBrowser": 'weixinBrowser',
+                        "shareSource": 'onMenuShareAppMessage',
+                        "status": "cancel"
+                    };
+                    shareClickLog(data);
+                }
+            });
+
+            wx.onMenuShareQQ({
+                title: '你的气质适合开什么车？',
+                desc: '你的气质适合开什么车？',
+                link: 'http://e.baojia.com/m/fit/car/index/135',
+                imgUrl: 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                success: function() {
+                    // 用户确认分享后执行的回调函数
+                    var data = {
+                        "activityId": activityId,
+                        "shareUrl": 'http://e.baojia.com/m/fit/car/index/135',
+                        "shareTitle": '你的气质适合开什么车？',
+                        "shareImg": 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                        "shareDesc": '你的气质适合开什么车？',
+                        "shareBrowser": 'weixinBrowser',
+                        "shareSource": 'onMenuShareQQ',
+                        "status": "success"
+                    };
+                    shareClickLog(data);
+                },
+                cancel: function() {
+                    // 用户取消分享后执行的回调函数
+                    var data = {
+                        "activityId": activityId,
+                        "shareUrl": 'http://e.baojia.com/m/fit/car/index/135',
+                        "shareTitle": '你的气质适合开什么车？',
+                        "shareImg": 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                        "shareDesc": '你的气质适合开什么车？',
+                        "shareBrowser": 'weixinBrowser',
+                        "shareSource": 'onMenuShareQQ',
+                        "status": "cancel"
+                    };
+                    shareClickLog(data);
+                }
+            });
+
+
+            wx.onMenuShareWeibo({
+                title: '你的气质适合开什么车？',
+                desc: '你的气质适合开什么车？',
+                link: 'http://e.baojia.com/m/fit/car/index/135',
+                imgUrl: 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                success: function() {
+                    // 用户确认分享后执行的回调函数
+                    var data = {
+                        "activityId": activityId,
+                        "shareUrl": 'http://e.baojia.com/m/fit/car/index/135',
+                        "shareTitle": '你的气质适合开什么车？',
+                        "shareImg": 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                        "shareDesc": '你的气质适合开什么车？',
+                        "shareBrowser": 'weixinBrowser',
+                        "shareSource": 'onMenuShareWeibo',
+                        "status": "success"
+                    };
+                    shareClickLog(data);
+                },
+                cancel: function() {
+                    // 用户取消分享后执行的回调函数
+                    var data = {
+                        "activityId": activityId,
+                        "shareUrl": 'http://e.baojia.com/m/fit/car/index/135',
+                        "shareTitle": '你的气质适合开什么车？',
+                        "shareImg": 'http://e.baojia.com/images/m/fitcar/bg.jpg',
+                        "shareDesc": '你的气质适合开什么车？',
+                        "shareBrowser": 'weixinBrowser',
+                        "shareSource": 'onMenuShareWeibo',
+                        "status": "cancel"
+                    };
+                    shareClickLog(data);
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-57064119-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <img src="http://hm.baidu.com/hm.gif?si=2b292654d9f509f7e96d1cdb613579b1&amp;et=0&amp;nv=1&amp;st=1&amp;v=wap-2-0.3&amp;rnd=1467400303" style="display: none" width="0" height="0">
+    <form method="post" action="" id="formId">
+        <input type="hidden" name="nameForm" id="nameForm">
+        <input type="hidden" name="typeForm" id="typeForm">
+        <input type="hidden" name="shareUrlForm" id="shareUrlForm" value="http://e.baojia.com/m/fit/car/index/135">
+        <input type="hidden" name="activityId" id="activityId" value="135">
+    </form>
+    <script src="/js/common/monitor.js" language="javascript"></script>
+    <script src="/js/common/jsanalysis.js" language="javascript"></script>
+    <script type="text/javascript">
+        function checkwx() {
+            var b = false;
+
+            function is_weixin() {
+                var ua = navigator.userAgent.toLowerCase();
+                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 0%; padding:0 2%;}";
+
+            var isWeixin = is_weixin();
+            var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+
+            function loadHtml() {
+                var div = document.createElement('div');
+                div.id = 'weixin-tip';
+                div.style.display = "none";
+                div.innerHTML = '<p><img style="width:100%" src="http://e.baojia.com/images/m/fitcar/wxshare.png" alt="微信打开"/></p>';
+                document.body.appendChild(div);
+                div.onclick = function() {
+                    this.style.display = "none";
+                }
+            }
+
+            function loadStyleText(cssText) {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                style.type = 'text/css';
+                try {
+                    style.appendChild(document.createTextNode(cssText));
+                } catch (e) {
+                    style.styleSheet.cssText = cssText; //ie9以下
+                }
+                var head = document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+                head.appendChild(style);
+            }
+            b = is_weixin();
+            if (b) {
+                loadHtml();
+                loadStyleText(cssText);
+            }
+            return b;
+        }
+        $(document).ready(function() {
+            //解决腾讯内部x5浏览器百分百问题
+            var useragent = navigator.userAgent;
+            if (useragent.indexOf("MQQ") > -1) {
+                $(".hotlist li:nth-child(2)").each(function() {
+                    $(this).css("marginLeft", "1%");
+                });
+            };
+
+            $(".btncheckresult").click(function btnck() {
+                if ($('#name').val() == '') {
+                    alert('请输入您的姓名');
+                    return false;
+                }
+                var name = $("#name").val();
+                if (name.length <= 0) {
+                    //return;
+                    name = "pipyxxx"; //空名字
+                }
+                var index = Math.floor(Math.random() * 33 + 1);
+                $("#nameForm").val(name);
+                $("#typeForm").val(index);
+                $("#formId").attr("action", "/m/fit/car/cam?name=" + encodeURI(name) + "&type=" + (index));
+                $("#formId").submit();
+                //window.location.href = "result.htm?name=" + encodeURI(name) + "&type=" + (index);
+            });
+            $("#share").click(function() {
+                if (checkwx()) {
+                    document.getElementById('weixin-tip').style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

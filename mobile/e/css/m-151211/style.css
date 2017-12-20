@@ -1,0 +1,43 @@
+.wrap{width: 100%;background: #1e1e1c;}
+.header{width: 100%;}
+.header img{width: 100%;display: block;}
+.cont{width: 100%;position: relative;}
+.cont img{width: 100%;display: block;}
+.banner{width: 100%;}
+.banner img{width: 100%;display: block;}
+.footer{width: 100%;position: relative;height: auto;padding-bottom: 10%;background: url(../../images/m-151211/footer.png) no-repeat;
+background-size:100% 100%;padding-top: 3%;
+}
+.footer>img{width: 100%;display: block;}
+.footer h1{width:100%;font-size: 0.875rem;color: #d38c06;text-align: center;}
+.footer1{width: 95%;margin-top: 10%;margin-left: 2.5%;}
+.footer1>div{width: 100%;display: -webkit-box;}
+.left{width: 49%;}
+.left dl:nth-of-type(1){width: 71%;display: -webkit-box;}
+.left dl:nth-of-type(1) dt{width: 32%;}
+.left dl:nth-of-type(1) dt img{width: 100%;display: block;}
+.left dl:nth-of-type(1) dd{background: black;border-radius: 10px;-webkit-border-radius: 10px;
+color: white;height: 25px;line-height: 25px;padding: 0 3%;font-size: 1rem;margin-left: 3%;}
+.left dl:nth-of-type(2){width: 100%;}
+.left dl:nth-of-type(2) dt{width: 100%;}
+.left dl:nth-of-type(2) dt img{width: 100%;display: block;}
+.left dl:nth-of-type(2) dd{width: 99%;background: #383030;padding: 1% 0;padding-left: 1%;}
+.left dl:nth-of-type(2) dd img{width: 63%;display: block;}
+.left dl:nth-of-type(2) dd a{font-size: 0.625rem;color: #d68e0e;display: block;}
+.left dl:nth-of-type(2) dd a:nth-of-type(1){color: white;}
+.left1{margin-left: 2%;}
+.footer2{margin-top: 8%;}
+.tm{width: 100%;display: -webkit-box;padding-bottom: 20%;margin-top: 3%;}
+.tm span{width: 27%;display: block;margin-left: 20%;margin-right: 5%;}
+.tm span img{width: 100%;display: block;}
+
+.btn{width: 93%;background: #f28703;display: block;display: -webkit-box;padding: 2% 0;
+border-radius: 5px;position: fixed;bottom: 0;left:3.5%;
+}
+.btn span{font-size: 1.3rem;color: white;text-align: center;width: 100%;text-align: center;
+display: block;background: url(../../images/m-151211/btn.png) no-repeat right center;
+background-size: 32px 32px;
+}
+
+
+

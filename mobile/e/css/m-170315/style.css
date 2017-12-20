@@ -1,0 +1,68 @@
+.P_body{background: #f0f0f0;}
+
+.p_div{width: 100%;overflow: hidden;position: relative;padding-bottom: 1000px;}
+.aside_top{width: 100%;height: 3.75rem;background-color: #f0f0f0;padding: 0.65rem 2% 0.5rem 2%;}
+.aside_top .close1{width: 1.3rem;height: 1.3rem;font-size: 1rem;color: #fff;display: inline-block;line-height: 1.1rem;text-decoration: none;text-align:center;background-color:#9c9c9c;border-radius: 100%;float: left;}
+.aside_top .aside_logo{width: 13rem;float: left;margin-left: 0.625rem;}
+.aside_top .aside_logo dl{}
+.aside_top .aside_logo dt{width: 2.5rem;float: left;}
+.aside_top .aside_logo dd{margin-left: 0.5rem;float: left;}
+.aside_top .aside_logo dd h1{font-size: 0.75rem;margin-top: 0.2rem;}
+.aside_top .aside_logo dd p{font-size: 0.5rem;margin-top: 0.3rem;}
+.aside_top .aside_logo dd p span{margin-left: 0.5rem;position: relative;top: 0.1rem;}
+.aside_top .aside_logo dd img{width: 0.625rem;display: inline-block;}
+.aside_top .open{width: 3.5rem;text-align:center;font-size: 0.75rem;height: 1.875rem;line-height: 1.875rem;color: #fff;background-color: #00b18e;display: inline-block;text-decoration: none;border-radius: 0.9rem;margin-top: 0.5rem;margin-left: 0.3rem;}
+.top{width: 100%;height: 6.875rem;background-color: #cc0000;position: relative;}
+.top .logo{width: 5rem;height:1.375rem;display: block;position: absolute;top: 0.5rem;right: 0}
+.top .logo1{width: 7rem;height:1.94rem;display: block;position: absolute;top: 1rem;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);}
+.top .txt{width: 100%;position: absolute;top: 3.125rem;font-size: 0.75rem;color: #fff;text-align: center;}
+.center1{width: 93%;margin: 0 auto;height: 21.5rem;background: url(http://css.baojia.com/s4/e/images/m-170217/back.png) no-repeat left center;background-size: 100% 100%;position: relative;top: -0.875rem;padding-top: 1rem;}
+.center1 .cont{width: 90%;margin: 0 auto}
+.center1 .cont .aside{font-size: 0.75rem;margin-left: -5.5%;width: 80%;}
+.center1 .cont .aside p{background-color: #ff4707;border-radius: 0 1rem 1rem 0;padding: 0.3rem 0;text-indent: 5%;color: #fff;margin-top: 0.5rem;}
+.center1 .cont .aside p span{margin-left: -0.6rem;margin-top: -1rem;display: inline-block;}
+.center1 .title{font-size: 0.875rem;color: #333;background: url(http://css.baojia.com/s4/e/images/m-170315/line.jpg) no-repeat left center;background-size: 0.25rem 0.875rem;margin-bottom: 0rem;}
+.center1 .title span{font-size: 0.7rem;}
+.center1 .cont1{width: 100%;height: 2.6rem;font-size: 0.875rem;color: #333;border-bottom: 1px solid #ebebeb}
+.center1 .cont1 .div1{line-height: 2.6rem;display: -webkit-box;-webkit-box-pack:justify;}
+.center1 .cont1 .div1 .txt2{color: #666;}
+.center1 .cont2{height:3.5rem;padding-top:0.4rem;}
+.center1 .cont2 .div1{line-height:inherit;}
+.center1 .cont2 .div2{font-size: 0.65rem;color: #999999;}
+.center1 .bott{height: 3.3rem;border-bottom: 1px solid #ebebeb;font-size: 0.66rem;position: relative;color: #333;}
+.center1 .bott p{position: absolute;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);background: url(http://css.baojia.com/s4/e/images/m-170217/forbid.png) no-repeat left top;background-size: 0.875rem 0.875rem;text-indent: 1.25rem;}
+.center1 .bott p span{display: block;}
+.center1 .bott p a{color: #333;text-decoration: underline;}
+.center1 .bott1{border-bottom: none;}
+
+.center1 .bott1 p{background: url(http://css.baojia.com/s4/e/images/m-170217/gift.png) no-repeat left top;background-size: 0.875rem 0.875rem;text-indent: 1.25rem;}
+
+.bottom{width: 100%;height: 3.4rem;background-color: #fff;position: fixed;bottom: 0}
+.bottom a{width: 91%;height: 2.3rem;background-color: #000;display: block;position: absolute;top: 50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);color: #fff;font-size: 0.875rem;text-align: center;line-height: 2.3rem;border-radius: 8px;text-decoration: none;}
+/*列表*/
+.tab{width: 93%;margin: 0 auto;}
+.tab table{width: 100%;margin-top: 1rem;border-top: 1px solid #ebebeb;border-right:1px solid #ebebeb;}
+.tab table td{width: 50%;text-align:center;padding: 0.3rem;border-bottom: 1px solid #ebebeb;border-left:1px solid #ebebeb;color: #666;font-size: 0.7rem;}
+.tab p{font-size: 0.7rem;color: #666;margin-top: 0.5rem;text-indent: 0.7rem;}
+
+
+
+
+
+
+
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}

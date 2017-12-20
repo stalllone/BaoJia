@@ -1,0 +1,74 @@
+/*common*/
+a:hover{text-decoration: none;}
+.c_div{border-left: 1px solid #ee742a;padding-left:0.8rem;font-size: 0.7rem;padding-bottom: 0.7rem;height: 4rem;}
+.c_div_title{position: relative;color: #ee742a;}
+.c_div_title:after{content: "1";width: 1rem;height: 1rem;line-height: 1rem;border-radius: 1rem;background: #ee742a;display: inline-block;position: absolute;top: 0;left: -1.3rem;text-align: center;color: #fff;}
+.c_div_info{color: #999;}
+
+.mask{position: fixed;top: 0;left: 0;bottom: 0;right: 0;background: rgba(0,0,0,0.5);display: none;}
+.pop{width: 85%;position:absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);background: #fff;min-height: 2rem;}
+
+
+
+
+
+.electricar{width: 100%;overflow: hidden;}
+.top{width: 100%;}
+.top img{width: 100%;display: block;}
+.top p{width: 90%;margin: 0 auto;font-size: 0.7rem;color: #444344;margin-top: 0.3rem;border-bottom: 1px solid #e6e5e5;padding-bottom: 0.5rem;}
+.top p span{display: block;margin-top: 0.5rem;color: #b6b5b6;font-size: 0.625rem;}
+.c_center{width: 90%;margin: 0 auto;margin-top: 1rem;padding-left:0.5rem;}
+.c_div_title_two:after{content: "2";}
+.c_div_title_three:after{content: "3";}
+.c_div_title_four:after{content: "4";}
+.c_div_title_five:after{content: "5";}
+.c_div_title_six:after{content: "6";}
+.c_div_six{border: none;}
+.e_cont{width: 100%;border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;}
+.e_cont .c_center{padding: 0;}
+.e_cont_title{font-size: 0.625rem;color: #999899;}
+.e_cont_dl{width: 100%;display: -webkit-box;border-bottom: 1px solid #e6e5e5;padding: 4% 0;}
+.e_cont_dl dt{width: 32%;margin-right: 2%;}
+.e_cont_dl dt img{width: 100%;}
+.e_cont_dl dd{font-size: 0.6rem;display: -webkit-box;-webkit-box-orient:vertical;-webkit-box-pack:justify;}
+.e_cont_dl dd div{color: #999899;}
+.e_cont_dl dd div span{color: #ee742a;}
+.e_cont_dl:last-child{border: none;}
+.e_cont1{border-top: none;padding-bottom: 4%;}
+.e_cont1 .c_center{margin-top: 0;}
+.e_cont1 .e_cont_title{margin-top: 0.8rem;}
+.e_cont1 .e_cont_title h1{color: #444344;font-size: 0.7rem;margin-bottom: 0.3rem;}
+.footer{border-top: none;padding-bottom: 4%;}
+.footer .e_cont_title{font-size: 0.8rem;color: #444344;font-weight: bold;margin-bottom: 0.5rem;}
+.footer .c_center p{font-size: 0.625rem;color: #999899;line-height: 1.1rem;}
+.btn{width: 90%;margin: 0 auto;padding-bottom: 0.3rem;}
+.btn a{display: block;background: #ee742a;text-align: center;color: #fff;font-size: 0.8rem;border-radius: 0.3rem;padding:3% 0;margin-top: 0.8rem;}
+.btn p{text-align: center;font-size: 0.75rem;margin-top: 0.3rem;}
+.electricar .mask .pop_title{text-align: center;margin-top: 1rem;font-size: 0.758rem;color: #323333;}
+.electricar .mask .pop_info{width: 85%;margin:0 auto;text-align: left;font-size: 0.7rem;color: #000;border-bottom: 1px solid #bbbbbb;padding: 3% 0;}
+.electricar .mask .pop_bot{text-align: center;color: #fc883e;font-size: 0.8rem;margin-top: 0.5rem;padding-bottom: 0.5rem;}
+.electricar .mask .close{width: 1rem;height: 1rem;text-align: center;line-height: 1rem;color: #999899;position: absolute;top: 0.2rem;right: 0.3rem;font-size: 1rem;}
+.electricar .mask1 .pop_info{border: none;}
+.electricar .mask1 .pop_input{width: 85%;margin: 0 auto;}
+.electricar .mask1 .pop_input input{display: block;width: 100%;padding: 3% 0;background: #f7f7f7;border:1px solid #d2d2d2;border-radius: 0.3rem;text-indent: 3%;font-size: 0.7rem;}
+.electricar .mask1 .pop_input a{display: block;background: #ee742a;color: #fff;padding: 2% 0;text-align: center;margin-top: 0.5rem;border-radius: 0.3rem;margin-bottom: 4%;font-size: 0.875rem;}
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+	
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+	
+}
+@media (min-device-width:768px) and (max-device-height:1024px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:20px; width: 900px; margin: 0 auto}  
+}

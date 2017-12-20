@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>轨迹回放</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/js/mobiscroll/ms.android.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/dingwei.css">
+</head>
+<body>
+	<div class="Map playback">
+		<div class="header">
+			<div class="jt"></div>
+			<p>轨迹回放</p>
+			<div class="menu radius">
+				<img src="http://css.baojia.com/s4/m/images/Dingwei/yuan.png" alt="">
+				<ul>
+					<li>今天</li>
+					<li>昨天</li>
+					<li>前天</li>
+					<li class="modify">自定义时间</li>
+				</ul>				
+			</div>
+		</div>
+		<div class="cont">
+			<img src="http://css.baojia.com/s4/m/images/Dingwei/playback.jpg" alt="">
+			 <div class="top">
+				<p>2016-06-15 00:41:31  速度:0km/h  航向:东北  状态:静止</p>
+				<p><img src="http://css.baojia.com/s4/m/images/Dingwei/play.png" alt=""></p>				
+			</div>
+		</div>
+		<div class="time">
+			<div class="title">回放时间段选择</div>
+			<div class="time_div">
+				<span>开始时间:</span>
+				<input type="text" placeholder="选择开始时间" readonly class="regtime">
+			</div>
+			<div class="time_div">
+				<span>结束时间:</span>
+				<input type="text" placeholder="选择结束时间" readonly class="regtime">
+			</div>
+			<div class="time_btn">
+				<a href="javascript:;" class="cancel on">取消</a>
+				<a href="javascript:;" class="conf ">确认</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://css.baojia.com/s4/c/js/jquery.mobiscroll.js"></script>
+<script src="http://css.baojia.com/s4/c/js/mobiscroll/ms.datetime.js"></script>
+<script>
+	$(function(){
+		var height=$(document).height()-$(".header").height();
+		$(".cont,.cont>img").height(height);
+		$(".radius img").click(function(){
+			$(this).parent().find("ul").css("display","block")
+		});
+		$(".radius ul li").click(function(){
+			$(this).parent().css("display","none")
+		});
+		$(document).on("touchstart",function(){
+			if($(event.target).parents(".radius").length==0)
+			$(".radius ul").css("display","none");
+		});
+		$(".modify").click(function(){
+			$(this).parent().css("display","none");
+			$(".time").css("display","block");
+		});
+		$(".time_btn a").click(function(){
+			$(".time_btn a").removeClass('on');
+			$(this).addClass('on');
+		});
+		var opttime={
+	                theme: 'android-ics light', //皮肤样式  (android-ics) / (android-ics light)
+	                display: 'modal', //显示方式  (modal)(bottom) /(top)/(bubble)
+	                mode: 'scroller', //日期选择模式
+	                dateFormat: ' yy-mm-dd',
+	                lang: 'zh',
+	                showNow: true,
+	                nowText: "今天",
+	                startYear: 2005, //开始年份
+	                endYear: 2026, //结束年份
+	                preset:"datetime",
+	                minDate:new Date()
+	            }
+        $(".regtime").mobiscroll(opttime); 
+	})
+</script>
+</html>

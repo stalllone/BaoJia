@@ -1,0 +1,91 @@
+html,body{font-size: 1rem;background-color: #fff}
+a:focus{outline-style:none;-webkit-outline-style:none;}
+.header,.bannner,.main,.footer{text-align:center;/*max-width:960px;*/margin:0 auto;}
+.main>img{margin:0 auto;}
+.main .list{width:90%;margin:0 auto;overflow:hidden;}
+.main .listcar{float:left;width: 31%;margin:1% 1.1%; padding:5% 0 2% 0; background-color: #ccc; border-radius:5%;}
+.main .listcar img{display:block;font-size: 1rem; }
+.main .listcar span{display:block;font-size: 0.5rem;font-weight: bold}
+.main .listcar .carprice1{color:#ff7800;}
+.footer a>img{width: 80%; margin: 5% auto;}
+
+div.fixtop{background:#fff;display:none;position:fixed;top:0;z-index:2;width:100%; }
+.fixtop .bt{float:left;width:33.33%;}
+.fixtop .bt .change{display: none;}
+div.fixbottom{position:fixed;bottom:0;z-index:2;width:100%;padding: 3% 0;background: #19a6cd;color: #fff;font-size: 1rem;font-weight: bold;}
+/**滚屏效果*/
+.main_visual { height: 100%; overflow: hidden; position: relative }
+.main_image { height: 100%; overflow: hidden; position: relative }
+.main_image ul { left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; position: absolute }
+.main_image li { width: 100%; height: 100%; float: left }
+.main_visual .main_image li span { width: 100%; height: 100%; display: block; -webkit-background-size: 100% }
+.main_visual .main_image li span { width: 100%; height: 100%; display: block; -webkit-background-size: 100% }
+.main_image li a { width: 100%; height: 100%; display: block }       
+#btn_prev { top: 50%; width: 73px !important; height: 74px !important; margin-top: -37px; display: none; position: absolute; z-index: 11111 }
+#btn_next { top: 50%; width: 73px !important; height: 74px !important; margin-top: -37px; display: none; position: absolute; z-index: 11111 }
+#btn_prev { background: url("../../images/m-151118/hover_left.png") no-repeat left top; left: 100px }
+#btn_next { background: url("../../images/m-151118/hover_right.png") no-repeat right top; right: 100px }
+div.flicking_con{position:absolute;bottom:3%;left:50%;z-index:1;-webkit-transform:translate(-50%,0);}
+#scroll2 div.flicking_con {bottom:12%;}
+div.flicking_con a {width: 0.5rem;height: 0.5rem;border:1px solid #fff;border-radius: 100%;display: inline-block;}
+div.flicking_con a.on { background:#fff; }
+.more{position:absolute;bottom:1.5%;left:0;}
+.platform{width: 100%;overflow: hidden;}
+.platform>div{display: -webkit-box;margin-top:1.5rem;}
+.platform>div dl{width: 33%;text-align: center;position: relative;}
+.platform>div dl dt{width: 50%;margin: 0 auto;}
+.platform>div dl dd{font-size: 0.7rem;}
+.platform>div dl dd h1{color:#595757;}
+.platform>div dl dd p{color:#959595;}
+.bannner1{margin-top: 1.5rem;}
+/**注册**/
+.divReg{padding:8% 0;  color: #fff;text-align: center;width: 88%;}
+.divReg>div{width: 100%; margin-bottom:2%;}
+.divReg input,.divReg a{width: 100%; padding: 3% 0; border-radius: 5px;font-size: 0.7rem;border:1px solid #a0a0a0;}
+.divReg input{text-indent: 2%;color:#a6a6a6;font-size: 0.7rem;}
+.divReg a{text-decoration: none}
+.chkCode,.smsCode{position: relative;}
+.chkCode a,.smsCode a{position: absolute; display:block; width: 30%; right: 1%; top:50%;-webkit-transform:translate(0,-50%);}
+.chkCode a{border-left: 1px solid #ccc;border-radius: 0px;padding: 3% 0;margin-top: 1% }
+.chkCode a img{width: 80%}
+.smsCode a{line-height: 80%; margin-top:0; background-color: #e1f5f9;color:#45c0dc; font-size: 0.7rem !important; font-weight: 400; border-radius: 5px;border: none;}
+.divReg .btn a{background: #25abc4;color: #fff;width: 100%;display: block;font-size: 0.7rem; padding:4% 1%;border: none;}
+.sex{display: -webkit-box;-webkit-box-pack:justify;}
+.sex input{width: 63%;display: block;}
+.sex>div{width: 32%;background: #fff;border-radius: 5px;border:1px solid #a0a0a0;display: -webkit-box;overflow: hidden;}
+.sex>div a{display: block;border: none;-webkit-box-flex:1;display: -webkit-box;-webkit-box-align:center;-webkit-box-pack:center;color: #a6a6a6;border-radius:0;font-size: 0.875rem !important;}
+.sex>div a.on{background: #30b9d3;color: #fff;}
+.car{position: relative;border: 1px solid #a0a0a0;border-radius: 5px;}
+.car span{display: block;text-align: left;padding: 3% 0;padding-left: 2%;color: #a6a6a6 !important;}
+.car:after{content:"";position:absolute;right:0rem;bottom:.2rem;border:6px solid transparent;border-bottom-color:#ccc;border-top:0;-webkit-transform:rotate(135deg);}
+.year{width: 100%;display: -webkit-box;-webkit-box-pack:justify;background: #fff;}
+.year .pai{width: 60%;display: -webkit-box;border:1px solid #a0a0a0;border-radius: 4px;-webkit-box-align:center;}
+.year .pai p{background:#eeeeee;width:20%;padding: 3% 0;color: #a6a6a6;position: relative;font-size: 0.7rem !important;}
+.year .pai p:after{content:"";position:absolute;right:0rem;bottom:.2rem;border:6px solid transparent;border-bottom-color:#ccc;border-top:0;-webkit-transform:rotate(135deg);}
+.year .pai input{width: 80%;display: block;border: none}
+.year .inputyear{width: 34%;position: relative;border:1px solid #a0a0a0;border-radius: 4px;display: -webkit-box;-webkit-box-align:center;padding-left: 2%}
+.year .inputyear span{width: 100%;display: block;border: none;text-align: left;color: #a6a6a6;padding: 6% 0;}
+
+.year .inputyear:after{content:"";position:absolute;right:0rem;bottom:.2rem;border:6px solid transparent;border-bottom-color:#ccc;border-top:0;-webkit-transform:rotate(135deg);}
+/*a.reChkCode{position: relative;  margin: -15% 2% 0 0;z-index: 99}*/
+.divReg span{font-size: 0.7rem !important;color: #898989;}
+.divReg span span{color: #46bed6;}
+.divReg .f_word{color: #898989;font-size: 0.7rem !important;text-align: left;margin-top: 2%;}
+.divReg .f_word h1{font-size: 0.875rem !important;}
+.divReg .f_word span{color: #000;}
+.divReg .f_word p{font-size: 0.8rem !important;color:#30b9d3;}
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}

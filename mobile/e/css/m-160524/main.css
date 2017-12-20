@@ -1,0 +1,65 @@
+html,body{font-size:1rem;background-color:#fff;}
+a:focus{outline-style:none;-webkit-outline-style:none;}
+.main{width:98%;margin:0 auto;margin-top:.5rem}
+.divhide{display:none;}
+.divShake{}
+.shake_box{margin-top:1.8rem;}
+.shake_box img{display:block;width:60%;margin:0 auto;}
+.shake_box_focus{animation:shakes 1s linear 0s ease-out;-moz-animation:shakes 1s linear 0s ease-out;-webkit-animation:shakes 1s linear 0s ease-out;-ms-animation:shakes 1s linear 0s ease-out;-o-animation:shakes 1s linear 0s ease-out;}
+
+/* 向上拉动画效果 */
+@-webkit-keyframes shakes{
+	0%,10%{-webkit-transform:rotate(5deg);}
+	10%,30%{-webkit-transform:rotate(8deg);}
+	50%{-webkit-transform:rotate(-15deg);}
+	70%,90%{-webkit-transform:rotate(8deg);}
+	90%,100%{-webkit-transform:rotate(5deg);}
+}
+
+/* 向上拉动画效果 */
+@-moz-keyframes shakes{
+	0%,10%{-moz-transform:rotate(5deg);}
+	10%,30%{-moz-transform:rotate(8deg);}
+	50%{-moz-transform:rotate(-15deg);}
+	70%,90%{-moz-transform:rotate(8deg);}
+	90%,100%{-moz-transform:rotate(5deg);}
+}
+
+/* 向上拉动画效果 */
+@-o-keyframes shakes{
+	0%,10%{-o-transform:rotate(5deg);}
+	10%,30%{-o-transform:rotate(8deg);}
+	50%{-o-transform:rotate(-15deg);}
+	70%,90%{-o-transform:rotate(8deg);}
+	90%,100%{-o-transform:rotate(5deg);}
+}
+.divImg{margin-top:.5rem;}
+.divImg img{display:block;width:45%;margin:0 auto;}
+.footer{margin-top:1.5rem;}
+.divWin{width:100%;text-align:center;font-size:1.5rem;margin:4rem 0 8rem 0;}
+.divWin p{color:#2ea238;}
+.divWin p:nth-of-type(1){font-weight:200;}
+.divWin p:nth-of-type(2){font-weight:600;font-size:2.25rem}
+.divWin p:nth-of-type(3){color:#8fc438;font-size:2rem;letter-spacing: .02rem}
+.divWin p:nth-of-type(4){}
+
+/*.footer {position: fixed;bottom: 1rem}*/
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+	.divWin{margin:3rem 0 6.6rem 0;}
+	.footer{margin-top:1.2rem;}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+	.divWin{margin:3rem 0 7.1rem 0;}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+	.divWin{margin:3rem 0 6.6rem 0;}
+}

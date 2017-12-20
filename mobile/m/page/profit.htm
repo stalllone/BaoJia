@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>今日福利</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="服务条款，租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/m1.css">
+    <!-- <link rel="stylesheet" href="../css/m1.css"> -->
+</head>
+<body class="p_body">
+	<div class="profit">
+		<div class="top">
+			<div class="menu">
+				<a href="javascript:;" class="on">精选</a>
+				<a href="javascript:;">汽车养护</a>
+				<a href="javascript:;">汽车美容</a>
+				<a href="javascript:;">租车</a>
+			</div>
+			<div class="jt">
+			</div>
+		</div>
+		<div class="cont">
+			<div class="list">
+				<div class="img">
+					<img src="http://css.baojia.com/s4/m/images/profit/img1.png" alt="">
+					<div>
+						注册用户专项
+					</div>
+					<p>人气:289</p>
+				</div>
+				<div class="bott">
+					<p class="carname">全品类通用券</p>
+					<div>
+						<p>已抢63%</p>
+						<a href="javascript:;">立即领取</a>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="img">
+					<img src="http://css.baojia.com/s4/m/images/profit/img2.png" alt="">
+					<div>
+						每天12点开抢
+					</div>
+					<p>人气:289</p>
+				</div>
+				<div class="bott">
+					<p class="carname">梅西同款吉列手动剃须刀，限量100份</p>
+					<div>
+						<p><span>距开抢</span>10:05:26</p>
+						<a href="javascript:;">
+							<img src="http://css.baojia.com/s4/m/images/profit/clock.png" alt="">
+							提醒我
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="img"><img src="http://css.baojia.com/s4/m/images/profit/img3.png" alt=""></div>
+				<div class="bott">
+					<p class="carname">自营罗技键盘鼠标游戏设备部分商品[618提前购]</p>
+					<div>
+						<p>已领取</p>
+						<a href="javascript:;">立即使用</a>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="img"><img src="http://css.baojia.com/s4/m/images/profit/img4.png" alt=""></div>
+				<div class="bott">
+					<p class="carname">鸿星尔克专卖店  [运动跑鞋599仅限100双］</p>
+					<div>
+						<p>已抢63%</p>
+						<a href="javascript:;">立即领取</a>
+					</div> 
+				</div>
+			</div>
+			<div class="list">
+				<div class="img">
+					<img src="http://css.baojia.com/s4/m/images/profit/img1.png" alt="">
+					<div>
+						注册用户专项
+					</div>
+					<p>人气:289</p>
+				</div>
+				<div class="bott">
+					<p class="carname">全品类通用券</p>
+					<div>
+						<p>已抢63%</p>
+						<a href="javascript:;">立即领取</a>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="img">
+					<img src="http://css.baojia.com/s4/m/images/profit/img2.png" alt="">
+					<div>
+						每天12点开抢
+					</div>
+					<p>人气:289</p>
+				</div>
+				<div class="bott">
+					<p>梅西同款吉列手动剃须刀，限量100份</p>
+					<div>
+						<p><span>距开抢</span>10:05:26</p>
+						<a href="javascript:;">
+							<img src="http://css.baojia.com/s4/m/images/profit/clock.png" alt="">
+							提醒我
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>   
+	</div>
+	
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+	$(function(){		
+		$(".menu a").click(function(){
+			$(".menu a").removeClass('on');
+			$(this).addClass('on');
+		})
+        $("body").bind("touchend",function(event) {
+        	loaddata();
+
+        });              
+	})
+
+	var totalheight = 0;     //定义一个总的高度变量
+	var loadend=true;
+	function loaddata()
+	{ 
+	    totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());     //浏览器的高度加上滚动条的高度 
+
+	    if(loadend && $(document).height() <= totalheight)
+	    {
+	    	//ajax  before send   
+	    	loadend =false;
+		    $(".cont").append($(".cont").html());
+		    //ajax complete           
+		    loadend=true
+		}
+	} 
+
+</script>
+
+</html>

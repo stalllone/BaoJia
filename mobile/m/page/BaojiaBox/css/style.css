@@ -1,0 +1,52 @@
+.B_box{width: 100%;overflow: hidden;}
+.B_box div{width: 100%;}
+.B_box div img{width: 100%;display: block;}
+/*盒子kp*/
+.boxkp{width: 100%;overflow: hidden;padding-bottom: 1.5rem;}
+.boxkp .top{width: 100%;}
+.boxkp .top img{width: 100%;display: block;}
+.boxkp .cont{width: 87%;margin: 0 auto;}
+.boxkp .p_div{width: 100%;margin-top: 2rem;}
+.boxkp .p_div .title p{text-align: center;font-size: 1.2rem;color: #1ea0e4;text-decoration: underline;}
+.boxkp .p_div .count{background: #f6f6f6;margin-top: 1rem;padding: 1rem 1rem;}
+.boxkp .p_div .count>div{display: -webkit-box;font-size: 0.625rem;color: #333;}
+.boxkp .p_div .count>div p{width: 30%;}
+.boxkp .p_div .count>div p:nth-of-type(3){width: 40%;}
+.boxkp .p_div .count>div:nth-of-type(2){margin-top: 0.5rem;}
+.boxkp .p_div1 .title span{display: block;text-align: center;font-size: 0.75rem;}
+.boxkp .p_div1 .count{display: -webkit-box;background: none;padding: 0;-webkit-box-pack:justify;}
+.boxkp .p_div1 .count ul{width: 47%;}
+.boxkp .p_div1 .count ul li{margin-top: 0.3rem;padding: 0.1rem 0;}
+.boxkp .p_div1 .count ul li:nth-of-type(1){background: #f6f6f6;text-align: center;font-size: 0.875rem;color: #333;}
+.boxkp .p_div1 .count ul .type{display: -webkit-box;font-size: 0.625rem;-webkit-box-pack:justify;}
+.boxkp .p_div1 .count ul .type p{background:#f6f6f6;}
+.boxkp .p_div1 .count ul .type p:nth-of-type(1){width: 30%;text-align: center;}
+.boxkp .p_div1 .count ul .type p:nth-of-type(2){width: 68%;display: -webkit-box;-webkit-box-pack:justify;padding: 0 0.1rem;}
+.boxkp .p_div1 .count ul .type p:nth-of-type(2) span{display: block;}
+.boxkp .p_div dl{width: 85%;margin: 0 auto;display: -webkit-box;margin-top: 1rem;}
+.boxkp .p_div dl dt{width: 21%;}
+.boxkp .p_div dl dd{width: 78%;font-size: 0.625rem;color: #999;margin-left: 2%;}
+.boxkp .p_div dl dd h1{font-size: 0.75rem;color: #333;font-weight: normal;}
+.boxkp .p_div .img{margin-top: 1rem;}
+
+
+
+
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}
+@media (min-device-width:768px) and (max-device-height:1024px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:20px; width: 900px; margin: 0 auto}  
+}

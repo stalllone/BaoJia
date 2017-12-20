@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>weixin://private/setresult/SCENE_FETCHQUEUE&amp;eyJmdW5jIjoibG9nIiwicGFyYW1zIjp7Im1zZyI6Il9ydW5PbjNyZEFwaUxpc3QgOiBtZW51OnNoYXJlOnRpbWVsaW5lLG1lbnU6c2hhcmU6YXBwbWVzc2FnZSxvblZvaWNlUmVjb3JkRW5kLG9uVm9pY2VQbGF5QmVnaW4sb25Wb2ljZVBsYXlFbmQsb25Mb2NhbEltYWdlVXBsb2FkUHJvZ3Jlc3Msb25JbWFnZURvd25sb2FkUHJvZ3Jlc3Msb25Wb2ljZVVwbG9hZFByb2dyZXNzLG9uVm9pY2VEb3dubG9hZFByb2dyZXNzLG1lbnU6c2V0Zm9udCxtZW51OnNoYXJlOndlaWJvLG1lbnU6c2hhcmU6ZW1haWwsd3hkb3dubG9hZDpzdGF0ZV9jaGFuZ2UsaGRPbkRldmljZVN0YXRlQ2hhbmdlZCxhY3Rpdml0eTpzdGF0ZV9jaGFuZ2UifSwiX19tc2dfdHlwZSI6ImNhbGwiLCJfX2NhbGxiYWNrX2lkIjoiMTAwMCJ9</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/reset.css">
+    <link rel="stylesheet" href="http://192.168.3.6:8082/css/m.css">
+    <style>
+    @media (device-width:320px) and (-webkit-min-device-pixel-ratio:2) {
+        body,
+        html {
+            font-size: 13px;
+        }
+    }
+    
+    @media (device-width:414px) and (-webkit-min-device-pixel-ratio:2) {
+        .top1>p {
+            width: 72%;
+            left: 15%;
+            bottom: 12%;
+            font-size: 0.75rem;
+        }
+    }
+    
+    #error {
+        color: #F00;
+    }
+    
+    #error img {
+        width: 4%;
+    }
+    
+    .fuceng1 {
+        width: 50%;
+        background: black;
+        opacity: 0.5;
+        position: fixed;
+        left: 25%;
+        display: none;
+        border-radius: 5px;
+    }
+    
+    .fuceng1 p {
+        color: white;
+        font-size: 0.9rem;
+        text-align: center;
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+    
+    .fuceng1 span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .form1 {
+        display: none;
+    }
+    
+    .footer {
+        width: 84%;
+        position: inherit;
+        left: 0;
+        margin: 0 auto;
+    }
+    
+    .cont {
+        width: 100%;
+    }
+    
+    body {
+        width: 100%;
+        background: url(http://css.baojia.com/s4/m/images/question1/backbg.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .cont1 {
+        margin: 0 auto;
+        position: inherit;
+        margin-top: 3%;
+    }
+    
+    .form {
+        margin: 0 auto;
+        position: inherit;
+        width: 100%;
+        left: 0;
+    }
+    
+    .form1 {
+        margin: 0 auto;
+        width: 83%;
+        margin-top: 3%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="quetion">
+        <div class="top top1">
+            <div class="top_one">
+                <img src="http://css.baojia.com/s4/top.png" alt="">
+            </div>
+            <div class="top_two">
+                <h1>春节出租意向调查</h1>
+                <div>
+                    <p>
+                        <span>春节出租调查</span>
+                        <span>宝驾有礼了</span>
+                    </p>
+                    <p>
+                        <span>春节用车高峰 </span>
+                        <span>爱车赚钱多</span>
+                    </p>
+                </div>
+            </div>
+            <p>
+                亲爱的车东小伙伴：
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 告诉我们您的出租意向，以便更准确的向您推荐并匹配租车订单，参与既有机会获得宝驾精心准备的新年小礼物(共送出500套），希望得到您的支持与配合！
+            </p>
+        </div>
+        <div class="cont">
+            <!--<img src="http://css.baojia.com/s4/m/images/question/backbg.png" alt="">-->
+            <form action="" method="post" enctype="multipart/form-data" id="FormAction" class="form">
+                <input type="hidden" name="tokens" value="bcfa85e7b2e9414a27694d4211300ccd">
+                <div class="cont1" style="position:initial;">
+                    <h1 style="font-size:0.875rem;">您目前没有上线车辆可租，请前往 <a href="http://t.cn/R2LVaCu" style="text-decoration:underline; color:#b1080f;">宝驾租车APP</a> 查看具体情况。</h1> </div>
+                <div class="form1 form3" style="margin-top:5px;">
+                    <h1 style="color: #b1080f;font-weight:bold;">爱车不出租原因：</h1>
+                    <label class="checked" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc2" value="1">
+                        <span class="your style about checkbox  on"></span> 车辆保养或维修
+                    </label>
+                    <label class="checked" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc2" value="2">
+                        <span class="your style about checkbox"></span> 自己需要用车
+                    </label>
+                    <label class="checked" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc2" value="3">
+                        <span class="your style about checkbox"></span> 不方便交接车
+                    </label>
+                    <label class="checked" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc2" value="4">
+                        <span class="your style about checkbox"></span> 收益太低
+                    </label>
+                    <label class="checked" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc2" value="5">
+                        <span class="your style about checkbox"></span> 其他
+                    </label>
+                </div>
+                <div class="form1 form2">
+                    <h1 style="color: #b1080f;font-weight:bold;">爱车可出租，您能够接受的出租时间为：</h1>
+                    <label class="checked1" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc3" value="1">
+                        <span class="your style about checkbox"></span> 1天～3天
+                    </label>
+                    <label class="checked1" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc3" value="2">
+                        <span class="your style about checkbox"></span> 4天～7天
+                    </label>
+                    <label class="checked1" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc3" value="3">
+                        <span class="your style about checkbox"></span> 8天～15天
+                    </label>
+                    <label class="checked1" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc3" value="4">
+                        <span class="your style about checkbox"></span> 16天～30天
+                    </label>
+                    <label class="checked1" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc3" value="5">
+                        <span class="your style about checkbox"></span> 1个月以上
+                    </label>
+                </div>
+                <div class="form1 form2">
+                    <h1 style="color: #b1080f;font-weight:bold;">您是否接受爱车出租后跑长途</h1>
+                    <label class="checked2" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc4" value="2">
+                        <span class="your style about checkbox"></span> 愿意
+                    </label>
+                    <label class="checked2" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc4" value="1">
+                        <span class="your style about checkbox"></span> 不愿意
+                    </label>
+                </div>
+                <div class="form1 form2">
+                    <h1 style="color: #b1080f;font-weight:bold;">如果出租，爱车是否设置里程限制</h1>
+                    <label class="checked4" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc5" value="1">
+                        <span class="your style about checkbox"></span> 限200KM/天
+                    </label>
+                    <label class="checked4" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc5" value="2">
+                        <span class="your style about checkbox"></span> 限300KM/天
+                    </label>
+                    <label class="checked4" style="color:#817e75;">
+                        <input type="radio" class="hidden-input" name="sc5" value="3">
+                        <span class="your style about checkbox"></span> 不限里程
+                    </label>
+                </div>
+                <div class="footer footer1">
+                    <p class="submit">提交</p>
+                    <h2>
+                        *提交结果为春节期间可以出租的车辆，平台将做优先推荐并获得更多展示机会；
+                    </h2>
+                    <h2>*无法出租的车辆请提前在APP中设置不可租时间，以免造成误单,拒单情况。</h2>
+                </div>
+            </form>
+        </div>
+        <div class="fuceng1" style="top: 50%;">
+            <p>提交成功！</p>
+            <p>感谢参与！</p>
+            <span class="close">×</span>
+        </div>
+    </div>
+    <div class="fuceng">
+        <p class="bg" style="height: 394px;"></p>
+        <form id="page_login-form" action="http://e.baojia.com/survey/account/login/" method="post">
+            <div class="login">
+                <p>为准确获取调查结果提高订单匹配，请登录</p>
+                <input type="tel" id="page_username" name="username" placeholder="请输入手机号码">
+                <input type="password" id="page_password" name="password" placeholder="请输入数字加字母不小于6位数的密码">
+                <div id="error" style="width: 95%;margin: 0 auto;display: block;margin-top: 3%;"></div>
+                <button class="login1">登录</button>
+            </div>
+        </form>
+    </div>
+    <script src="http://css.baojia.com/s4/c/js/jquery.2.1.1.min.js"></script>
+    <script>
+    /*
+    		var alldatas="";
+    		if(alldatas<1){
+    			$(".fuceng2 p").eq(0).html("您目前没有上线车辆可租，请在宝驾租车APP中查看具体情况。");	
+    			$(".fuceng2").css("display","block");
+    		}*/
+    function CheckUserName(obj) {
+        var v = obj.val();
+        if (v.length <= 0) {
+            ShowError('<img src="http://www.baojia.com/js/1.0/www/images/err.png">请您输入手机号进行登录');
+            return false;
+        }
+        if (/^(((\+86|86)?1[2|3|4|5|7|8][0-9]\d{8})|((\+\d{2})|(\d{2}))\d{11})$/.test(v)) {
+            ClearError();
+            return true;
+        } else {
+            ShowError('<img src="http://www.baojia.com/js/1.0/www/images/err.png">请您输入正确的手机号');
+            return false;
+        }
+    }
+
+    function CheckPassword(obj) {
+        var v = obj.val();
+        if (v.length < 6) {
+            ShowError('<img src="http://www.baojia.com/js/1.0/www/images/err.png">您输入的密码长度过短,必须大于6个字符');
+            return false;
+        } else if (v.length > 18) {
+            ShowError('<img src="http://www.baojia.com/js/1.0/www/images/err.png">您输入的密码长度过长，请控制在18个字符以内');
+            return false;
+        } else if (/[\'\"\\]/.test(v)) {
+            ShowError('<img src="http://www.baojia.com/js/1.0/www/images/err.png">您输入的密码包含非法字符,请重新输入');
+            return false;
+        } else {
+            ClearError();
+            return true;
+        }
+    }
+
+    function ShowError(text) {
+        $("#error").html(text);
+    }
+
+    function ClearError() {
+        $("#error").html("");
+    }
+
+    function ajaxSubmit(frm, fn) {
+        var dataPara = getFormJson(frm);
+        $.ajax({
+            url: frm.action,
+            type: frm.method,
+            data: dataPara,
+            success: fn
+        });
+    }
+
+    function getFormJson(frm) {
+        var o = {};
+        var a = $(frm).serializeArray();
+        $.each(a, function() {
+            if (o[this.name] !== undefined) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
+    }
+
+    function selecbox(obj) {
+        var hp = $(":radio[hp='hp']:checked").length;
+        var hp1 = $(":radio[hp1='hp1']:checked").length;
+        if (hp >= 1) {
+            $(".form2").show();
+        } else {
+            $(".form2").hide();
+            $(".form2 :radio[class='hidden-input']").attr('checked', false);
+        }
+        if (hp1 >= 1) {
+            $(".form3").show();
+        } else {
+            $(".form3").hide();
+            $(".form3 :radio[class='hidden-input']").attr('checked', false);
+        }
+    }
+
+    $(function() {
+        //var height=$(".form").height();
+        //var height1=$(".cont1").height();
+        var height2 = $(".fuceng").height();
+        var height3 = $(".login").height();
+        $(".fuceng1").css("top", '50%');
+        //$(".form").css("top",height1+40);
+        //$(".footer").css("top",height+height1+40);
+        $(".bg").css("height", height2 - height3);
+        /*
+        $(".login1").click(function(){
+        	$(".fuceng").css("display","none");
+        })
+        */
+        $("#page_login-form").submit(function() {
+            var userName = $("#page_username");
+            var password = $("#page_password");
+            if (CheckUserName(userName) && CheckPassword(password)) {
+                var self = $(this);
+                $.post(self.attr("action"), self.serialize(), success, "json");
+            }
+            return false;
+
+            function success(data) {
+                if (data.status == 1) {
+                    window.location.href = window.location.href;
+                } else {
+                    if (data.info == '密码错误！') {
+                        data.info = "密码错误,请通过宝驾租车APP找回密码!";
+                    }
+                    ShowError('<img src="http://www.baojia.com/js/1.0/www/images/err.png">' + data.info);
+                }
+            }
+        });
+
+        //------------------------------------------------------
+        $(".cont1 :radio").click(function() {
+            selecbox($(this));
+        });
+
+        $(".submit").click(function() {
+            var checkinput2 = $(".form2 :radio[class='hidden-input']:checked").length;
+            var checkinput3 = $(".form3 :radio[class='hidden-input']:checked").length;
+            var hp = $(":radio[hp='hp']:checked").length;
+            var hp1 = $(":radio[hp1='hp1']:checked").length;
+            if ((checkinput2 == 3 && hp >= 1) || (checkinput3 == 1 && hp1 >= 1)) {
+                if (hp >= 1 && hp1 >= 1) {
+                    if (checkinput2 == 3 && checkinput3 == 1) {
+                        $('#FormAction').submit();
+                    } else {
+                        $(".fuceng1 p").eq(0).html("提交失败！");
+                        $(".fuceng1 p").eq(1).html("请完整填写本问卷！");
+                        $(".fuceng1").css("display", "block");
+                        return false;
+                    }
+                } else {
+                    $('#FormAction').submit();
+                }
+
+            } else {
+                $(".fuceng1 p").eq(0).html("提交失败！");
+                $(".fuceng1 p").eq(1).html("请完整填写本问卷！");
+                $(".fuceng1").css("display", "block");
+                return false;
+            }
+        })
+        $('#FormAction').bind('submit', function() {
+            ajaxSubmit(this, function(data) {
+                // 可加入自己调用返回后处理代码
+                if (data.status == 2) {
+                    //alert("提交成功，感谢您的参与！");
+                    $(".fuceng1 p").eq(0).html("提交成功！");
+                    $(".fuceng1 p").eq(1).html("感谢参与！");
+                } else {
+                    $(".fuceng1 p").eq(0).html("提交失败！");
+                    $(".fuceng1 p").eq(1).html("请重新进入该页面！");
+                }
+                $(".fuceng1").css("display", "block");
+            });
+            // 防止Form真实提交
+            return false;
+        });
+        $(".close").click(function() {
+            $(".fuceng1").css("display", "none");
+        })
+
+    })
+    </script>
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

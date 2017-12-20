@@ -1,0 +1,56 @@
+body{background: #f5f5f5;}
+a:hover{text-decoration: none;}
+.cardetail{width: 100%;overflow: hidden;}
+.top{width: 100%;position: fixed;bottom: 0;left: 0;background:rgba(255,255,255,0.8);padding: 2% 0;z-index: 10000000;}
+.top dl{width: 93%;display: -webkit-box;margin: 0 auto;}
+.top dl dt{width: 12%;margin-right: 4%;}
+.top dl dt img{width: 100%;display: block;}
+.top dl dd {width: 84%;font-size: 0.8rem;display: -webkit-box;-webkit-box-align:center;-webkit-box-pack:justify;}
+.top dl dd p{color: #000;}
+.top dl dd a{display: block;background: #FB7821;color: #fff;padding:0 2%;border-radius: 4px;}
+.ban{position: relative;}
+.swiper-container-horizontal > .swiper-pagination {bottom: 0;}
+.testdrive{width: 100%;margin: 0 auto;background: #fff;margin-top: 5%;padding: 3% 0;}
+.testdrive div{width: 93%;display: -webkit-box;margin: 0 auto;}
+.testdrive p{-webkit-box-flex:1;font-size: 0.7rem;display: -webkit-box;-webkit-box-align:center;-webkit-box-pack:center;}
+.testdrive p:nth-of-type(1){border-right: 1px solid #F0F0F0;}
+.testdrive p:nth-of-type(2) a{color:#FB7821 }
+.testdrive p:nth-of-type(2) a span{font-size: 0.9rem;}
+.spc{border:1px solid #999999;color: #999999;border-radius: 100%;margin-left:0.5rem;width: 1rem;height: 1rem;text-align: center;line-height: 1rem;display: block;font-size: 0.8rem;}
+.testdrive p:nth-of-type(3){background: #FB7821;color: #fff;font-size: 0.875rem;border-radius: 4px;}
+.detail p{color: #343434 !important;text-align: center;border-right: 1px solid #F0F0F0;}
+.detail p>span:nth-of-type(2){color: #999999 !important;}
+.detail p:nth-of-type(2)>span{color: #343434;border: none;}
+.detail p:nth-of-type(3){font-size: 0.7rem;background: none;border: none;}
+.description{width: 100%;background: #fff;margin-top: 5%;}
+.description>div{width: 93%;margin: 0 auto;border-bottom:1px solid #D7D7D7;padding: 3% 0;}
+.description .title{text-align: center;font-size: 0.875rem;}
+.description .title span{color: #C1C1C1;}
+.count{width: 100%;}
+.count div{display: -webkit-box;}
+.count div p{width: 33%;text-align: center;font-size: 0.75rem;padding: 1% 0;color: #A4A4A4;}
+.foot{width: 100%;background: #fff;}
+.foot div{width: 93%;margin: 0 auto;font-size: 0.75rem;color: #999999;padding: 3% 0;}
+
+
+
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+	
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+	
+}
+@media (min-device-width:768px) and (max-device-height:1024px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:20px; width: 900px; margin: 0 auto}  
+}

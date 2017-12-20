@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Mobiscroll 日期时间选择控件( SnoopyChen修改增加中文支持 ceo@vmeitime.com )</title>
+    <script src="dev/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/js/mobiscroll/ms.android.css">
+    <style type="text/css">
+        body{ background-color: #c2c2c2}
+        .divmain{margin:0 auto;margin-top:50px;width:60%;background-color: #ccc;padding: 50px 0; border-radius: 20px} 
+        .divmain input{border:1px solid green;margin:25px 0 25px 25px;height:50px;border-radius:8px;text-indent:8px;width:200px}
+        button{padding: 5px 10px; margin:  0 2px; border-radius: 5px;}
+    </style>
+</head>
+</head>
+
+<body>
+    <div class="divmain">
+        <input class="input bjprovince" type="text" placeholder="省例子" readonly="readonly">
+        <button >得到省份</button> <button class="getid">得到省份id</button>
+        <input class="input bjcity" type="text" placeholder="市区例子" readonly="readonly">
+        <button >得到市区</button> <button class="getid">得到市区id</button>
+        <input class="input bjarea" type="text" placeholder="县城例子" readonly="readonly">
+        <button >得到省份</button> <button class="getid">得到省份id</button>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://css.baojia.com/s4/c/js/jquery.mobiscroll.js"></script>
+    <script src="ms.list.city.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    var  optprovince = {
+        theme: 'android-ics light', //皮肤样式
+        display: 'bottom', //显示方式 
+        mode: 'scroller', 
+        preset: 'province',
+        lang:"zh"
+    };
+
+    var  optcity = {
+        theme: 'android-ics light', //皮肤样式
+        display: 'bottom', //显示方式 
+        mode: 'scroller', 
+        preset: 'city',
+        lang:"zh"
+    };
+
+    var  optarea = {
+        theme: 'android-ics light', //皮肤样式
+        display: 'bottom', //显示方式 
+        mode: 'scroller', 
+        preset: 'area',
+        lang:"zh"
+    };
+    
+    $(".bjprovince").mobiscroll(optprovince);
+    $(".bjcity").mobiscroll(optcity);
+    $(".bjarea").mobiscroll(optarea);
+
+    $("button").bind("click",function(){
+        var arr = [];        
+       
+        if($(this).hasClass('getid'))
+             arr = $(this).prev().prev(".input").mobiscroll("getID");
+         else
+             arr = $(this).prev(".input").mobiscroll("getName");
+         alert(arr);
+    })
+    
+    </script>
+</body>
+
+</html>

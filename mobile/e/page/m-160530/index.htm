@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>幸运大转盘</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="服务条款，租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/e/css/m-160530/style.css">
+    <style type="text/css">
+      body{background: url(http://css.baojia.com/s4/e/images/m-160530/back.jpg) no-repeat;background-size: 100% 100%;}
+    </style>
+</head>
+
+<body>
+    <div id="turnplatewrapper" class="turnplate pos_f_c">
+        <img class="pos_a_c" src="http://css.baojia.com/s4/e/images/m-160530/back.png" alt="">
+        <div id="point" class="point pos_a_c">
+            <img src="http://css.baojia.com/s4/e/images/m-160530/point.png" alt="">
+        </div>
+        <div id="rotate" class="rotate" style="-webkit-transform: rotate(-40deg);">
+            <img src="http://css.baojia.com/s4/e/images/m-160530/rotate.png" alt="">
+        </div>
+    </div>
+    <div class="input">
+        <div class="inp_div">
+            <input type="tel" placeholder="请输入手机号">
+        </div>
+        <div class="inp_div">
+            <input type="text" placeholder="请输入短信验证码">
+            <span class="code">获取验证码</span>
+        </div>
+        <div class="inp_div btn btnOK">
+            <a href="javascript:;">确定</a>
+        </div>
+        <div class="foot btnTips">
+            <a href="javascript:;">活动说明</a>
+        </div>
+    </div>
+    <div class="pos_f_c popWin activeTips">
+        <div class="pos_a_c close">&times;</div>
+        <header>活动说明</header>
+        <div class="title">活动时间：</div>
+        <ul>
+            <li>2016.5.13-8.24</li>
+        </ul>
+        <div class="title">活动规则：</div>
+        <ul>
+            <li><b>1、</b>
+                <div>本活动适用于宝驾租车所有用户；</div>
+            </li>
+            <li><b>2、</b>
+                <div>每位用户每天1次抽奖机会，中奖后请登录APP 查看奖品；
+                </div>
+            </li>
+            <li><b>3、</b>
+                <div>爱鲜蜂优惠券仅限爱鲜蜂新用户使用，中奖后可 在爱鲜蜂APP中使用；
+                </div>
+            </li>
+            <li><b>4、</b>
+                <div>本次活动宝哥保证每位用户皆有奖品，宝哥就是 这么壕性，请宝亲们多多分享，奔走相告。
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="pos_f_c popWin rewardTips">
+        <div class="pos_a_c close">&times;</div>
+        <header>恭喜宝亲中奖</header>
+        <section>
+            <div class="quan">
+                <img src="http://css.baojia.com/s4/e/images/m-160530/quanbg.png" alt="">
+                <span class="pos_a_c money"><b id="myReward">200</b>元</span>
+            </div>
+            <div class="info">新朋友您好，已放倒您的宝驾账户，请打开宝驾 租车APP查看详情，首次登陆APP再送20元！</div>
+            <div class="btnAct btn1"><a href="javascript:;">领取</a></div>
+            <div id="share" class="btnAct btn2"><a href="javascript:;">分享给小伙伴</a></div>
+        </section>
+    </div>
+    <script type="text/javascript" src="http://css.baojia.com/s4/c/js/jquery.2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://css.baojia.com/s4/c/js/jquery.bj.help.js"></script>
+    <script type="text/javascript" src="http://css.baojia.com/s4/c/js/jquery.awardRotate.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#point,.btnOK').click(function() {
+            doRotate.GO();
+        });
+
+        $('.btnTips').click(function() {
+            $(".activeTips").show();
+        });
+
+        $(".close").click(function(event) {
+          $(".popWin").hide();
+        });
+
+        $("#share").click(function() {
+           WXShare && WXShare.GO()
+        });
+    });
+
+    var doRotate = {
+        isRotating: false,
+        reward: [0, 100, 200, 30, 5, 300, 50, 20, 500, 10],
+        rewardDeg: [0, 20, 60, 100, 140, 180, 220, 260, 300, 340],
+        rewardTip: ["今天的抽奖次数已经用完", "100", "200", "30元爱鲜锋券", "5", "300", "50", "20", "500", "10"],
+        GO: function() {
+            if (doRotate.isRotating) return;
+            var item = doRotate.getTestData(0, 9); //  后台开发只需要把这个换成Ajax后台取数据
+            doRotate.goRotate(item);
+        },
+        getTestData: function(n, m) {
+            if (doRotate.isRotating) return;
+            return Math.floor(Math.random() * (m - n + 1) + n);
+        },
+        goRotate: function(item) {
+            if (doRotate.isRotating) return;
+            if (item == 0 && doRotate.rewardTip && doRotate.rewardTip[0]) {
+                popTip(doRotate.rewardTip[0]);
+                return;
+            }
+            doRotate.rotateFn(item, doRotate.rewardDeg[item], doRotate.reward[item]);
+        },
+        rotateFn: function(awards, angles, txt) {
+            doRotate.isRotating = !doRotate.isRotating;
+            $('#rotate').stopRotate();
+            $('#rotate').rotate({
+                angle: 11,
+                animateTo: angles + 1800,
+                duration: 8000,
+                callback: function() {
+                    if (doRotate.reward[awards] == "30") { // 如果是30直接跳到爱先锋
+                        window.location.href = "http://m.beequick.cn/show/tuiguang?tg=20523";
+                        return;
+                    }
+                    //console.log(doRotate.reward[awards]);
+                    $("#myReward").html(doRotate.reward[awards]);
+                    $(".rewardTips").show();
+                    doRotate.isRotating = !doRotate.isRotating;
+                }
+            })
+        }
+    }
+    </script>
+</body>
+
+</html>

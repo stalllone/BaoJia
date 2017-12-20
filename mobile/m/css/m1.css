@@ -1,0 +1,289 @@
+.mask{position: fixed;top: 0;left: 0;bottom: 0;right: 0;background: rgba(0,0,0,0.6);}
+.pop{width: 80%;position: absolute;top: 50%;left: 50%;-webkit-transform:translate(-50%,-50%);min-height:3rem;background: #fff;}
+
+/*宝驾盒子baojiabox.htm*/
+.bjbox{width: 100%;overflow: hidden;}
+.bjbox .top{width: 100%;position: relative;}
+.bjbox .top img{width: 100%;display: block;}
+.bjbox .top .tittle{width:32%;background: #0db7d6;color: #fff;font-size: 0.875rem;border-radius: 4px;text-align: center;position: absolute;bottom: -1.5rem;left: 50%;-webkit-transform:translate(-50%,0);padding: 0.3rem 0;}
+.bjbox .count{width: 90%;margin: 0 auto;border: 2px solid #0db7d6;border-radius: 5px;margin-top: 1rem;padding-top: 1rem;padding-bottom: 1.5rem;}
+.bjbox .cont{width: 90%;margin: 0 auto;margin-top: 1rem;}
+.bjbox .cont .title{text-align: center;font-size: 0.9rem;color: #0db7d6;}
+.bjbox .cont .title img{width: 1rem;margin-right: 0.2rem;}
+.bjbox .cont .center{font-size: 0.75rem;color: #595757;margin-top: 0.2rem;}
+.bjbox .cont .center span{font-size: 0.875rem;color: #231815;}
+.bjbox .cont .center table{width: 100%;border-bottom:1px solid #656262;border-right:1px solid #656262;}
+.bjbox .cont .center table td{border-top:1px solid #656262;border-left:1px solid #656262;font-size: 0.5rem;padding: 0.2rem 0;}
+.bjbox .cont .center td:nth-of-type(1){color: #595656;}
+.bjbox .foot{width: 90%;margin: 0 auto;display: -webkit-box;margin-top: 1rem;margin-bottom: 2rem;}
+.bjbox .foot p{width: 40%;margin-left: 6%;}
+.bjbox .foot img{width: 100%;display: block;}
+/*弹框*/
+.popup .pop{border-radius: 5px;}
+.popup .pop .title{width: 100%;border-bottom:1px solid #ebebeb;color: #333;text-align: center;padding: 0.5rem 0;font-size: 1rem;}
+.popup .pop .cont{width: 80%;margin: 0 auto;}
+.popup .pop .cont div{font-size: 0.75rem;color: #999999;display: -webkit-box;-webkit-box-pack:justify;margin-top: 0.3rem;}
+.popup .pop .cont .price{color: #fb7722;}
+.popup .pop .cont .btn{display: block;text-align: center;background:#fb7722;color: #fff;font-size: 0.875rem;padding: 0.3rem 0;margin-top: 0.5rem;border-radius: 5px;text-decoration: none;margin-bottom: 0.5rem;}
+/*今日福利profit.htm*/
+.p_body{background: #f0f0f0;}
+.profit .top{width: 100%;background: #fff;padding: 0.5rem 0; display: -webkit-box;}
+.profit .top .menu{width: 88%;border-right: 1px solid #ebebeb;display: -webkit-box;height: 1.3rem;line-height: 1.3rem;}
+.profit .top .menu a{width: 25%;display: block;font-size: 0.75rem;color: #999;text-decoration: none;text-align: center;}
+.profit .top .menu a.on{color: #f23030;}
+.profit .top .jt{width: 12%;position: relative;height: 1.3rem;}
+.profit .top .jt:after{position:absolute;top:50%;left:50%;margin-top:-8px;margin-left: -4px;width:8px;height:8px;border:#9d9d9d solid;border-width:1px 1px 0 0;content:"";-webkit-transform:rotate(135deg);}
+.profit .cont{width: 100%;overflow: hidden;}
+.profit .list{width: 48%;background: #fff;padding-bottom: 0.1rem;float: left;margin-left: 1.3%;margin-top: 0.5rem;}
+.profit .img{width: 100%;overflow: hidden;height: 6.6rem;position: relative;}
+.profit .img img{width: 100%;display: block;}
+.profit .img>div{position: absolute;top: 0.1rem;left: 0;background: #f23030;color: #fff;font-size: 0.625rem;border-radius: 0 0.7rem 0.7rem 0;padding: 0 0.3rem;}
+.profit .img>p{position: absolute;top: 0.1rem;right: 0;background: rgba(0,0,0,0.5);color: #fff;border-radius: 0.5rem;font-size: 0.625rem;padding: 0.05rem 0.3rem;}
+.profit .bott{width: 100%;}
+.profit .bott>p{padding:0 2%;margin-top: 1%;font-size: 0.75rem;color: #222222;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;}
+.profit .bott>div{width:95%;margin:0 auto;font-size: 0.625rem;display: -webkit-box;margin-top: 3%;margin-bottom: 3%;-webkit-box-pack:justify;}
+.profit .bott>div p{display: -webkit-box;-webkit-box-align:center;color: #ff800f;}
+.profit .bott>div p span{color: #3d3d3d;}
+.profit .bott>div a{display: block;color: #fff;background: #f23030;padding: 0.1rem 0.4rem;border-radius: 0.2rem;font-size: 0.625rem;text-decoration: none;}
+.profit .bott>div a img{width: 0.8rem;position: relative;top: -0.1rem;}
+/*下级账号 index1.htm*/
+.account{width: 100%;overflow: hidden;}
+.account .header{width: 3.375rem;height: 3.375rem;margin: 0 auto;margin-top: 3.5rem;}
+.account .cont{width: 64%;margin: 0 auto;margin-top: 3.4rem;}
+.account .cont>p{font-size: 0.75rem;color: #333;/*background: url(http://css.baojia.com/s4/m/images/account/bor.jpg) repeat-x  bottom ;*/padding-bottom: 0.2rem;line-height: 1.5rem;}
+.account .cont>p:nth-of-type(1){text-indent: 1.5rem}
+.account .cont .buttn1{height: 2rem;line-height: 2rem;display: -webkit-box;-webkit-box-pack:justify;margin-top: 2.5rem;}
+.account .cont .buttn1 a{width: 47%;display: block;text-align: center;font-size: 0.75rem;color: #28bcdc;border:1px solid #28bcdc;border-radius: 4px;text-decoration: none;}
+.account .cont .buttn1 a.on{background: #28bcdc;color: #fff;}
+.account .cont .buttn2{margin-top: 2.5rem;display: none;}
+.account .cont .buttn2 p{width: 40%;margin: 0 auto;font-size: 0.75rem;color: #e14942;background: url(../images/account/error.png)no-repeat left center;background-size:1.2rem 1.2rem;text-indent: 1.5rem;}
+.account .cont .buttn2 span{display: block;background: #28bcdc;height: 2rem;line-height: 2rem;text-align: center;color: #fff;font-size: 0.75rem;border-radius: 5px;margin-top: 1.5rem; }
+.account .cont .approve div{font-size: 0.75rem;color: #c2bdb1;text-align: center;margin-top: 0.5rem;}
+.account .cont .approve p{background: url(http://css.baojia.com/s4/m/images/account/agree.png)no-repeat left center;background-size:1.2rem 1.2rem;text-indent: 1.5rem;}
+.account .cont .approve span{margin-top: 0.5rem;}
+.account .cont .invalid p{background: url(http://css.baojia.com/s4/m/images/account/Invalid.png)no-repeat left center;background-size:1.2rem 1.2rem;text-indent: 1.5rem;}
+/*宝驾526 bj526.htm*/
+.B_info{width: 100%;overflow: hidden;}
+.B_info .logo{width: 88%;margin: 0 auto;margin-top: 1.1rem;}
+.B_info .logo>img{width: 100%;display: block;}
+.B_info .ban{width: 100%;margin-top: 0.875rem;}
+.B_info .ban>img{width: 100%;display: block;}
+.B_info .phone{width: 52%;margin: 0 auto;font-size: 0.75rem;color: #727171;border: 1px solid #a0a0a0;text-align: center;margin-top: 0.625rem;border-radius: 5px;padding: 0.2rem 0;}
+.B_info .c_div{width: 88%;margin: 0 auto;}
+.B_info .c_div .title{text-align: center;font-size: 0.75rem;color: #595757;font-weight: bold;margin-top: 1.6rem;}
+.B_info .c_div .list{width: 100%;display: -webkit-box; -webkit-box-pack:justify;text-align: center;margin-top: 0.625rem;}
+.B_info .c_div .list dl{width: 31%;font-size: 0.625rem;}
+.B_info .c_div .list dl dd{margin-top: 0.3rem;}
+.B_info .c_div .list dl dd p{font-weight: bold;color: #1d1e20;}
+.B_info .tit{width: 100%;height: 1.875rem;background: #097fb5;text-align: center;color: #fff;font-size: 1rem;line-height: 1.875rem;margin-top: 1.5rem;}
+.B_info .c_div ul{width: 85%;margin: 0 auto;margin-top: 1.6rem;margin-bottom: 1.6rem;}
+.B_info .c_div ul li{text-align: center;font-size: 0.625rem;color: #595757;}
+.B_info .c_div ul li:nth-of-type(1){width: 30%;margin: 0 auto;font-size: 0.75rem;color: #000;border:1px solid #34b8d5;border-radius: 5px;margin-bottom: 0.5rem;}
+.B_info .c_div1 ul{margin-bottom: 1rem;}
+.B_info .c_div1 ul li:nth-of-type(1){width: 35%;}
+.B_info .c_div2 ul li:nth-of-type(1){width: 40%;}
+.B_info .c_div3 ul li:nth-of-type(1){width: 47%;}
+.B_info .c_div4 ul li:nth-of-type(1){width: 55%;}
+.B_info .c_div .cont>p{font-size: 0.625rem;color:#595757;}
+.B_info .c_div .cont>p:nth-of-type(1){font-size: 0.75rem;color:#000000;}
+.B_info .c_div .cont>p:nth-of-type(2){text-indent: 1.2rem;margin-top: 0.3rem;}
+.B_info .c_div .cont dl{width: 100%;display: -webkit-box;-webkit-box-pack:justify;margin-top: 0.5rem;}
+.B_info .c_div .cont dl dt{width: 44%;margin-top: 0.5rem;}
+.B_info .c_div .cont dl dd{width: 50%;font-size: 0.625rem;color:#595757;text-indent: 1rem;}
+.B_info .c_div .cont1{margin-top: 0.8rem;}
+.B_info .c_div .cont1 dl dt{width: 32%;margin-top: -1.2rem;}
+.B_info .c_div .cont1 dl dd{width: 65%}
+.B_info .word{margin-top: 2rem;}
+.B_info .word .header{font-size: 0.75rem;}
+.B_info .word ol{font-size: 0.625rem;color: #595757;margin-top: 1rem;}
+.B_info .word ol li.first{color: #1f80b3;}
+.B_info .word ol li.sec{color: #19723b;}
+.B_info .word1{margin-top: -1.8rem;}
+.B_info .word1 ol li:nth-of-type(1){font-size: 0.75rem;color: #000000;margin-bottom: 0.3rem;}
+.B_info .c_div5 ol{font-size: 0.625rem;color: #595757;margin-top: 1rem;position: relative;}
+.B_info .c_div5 ol li:nth-of-type(1){font-size: 0.75rem;color: #000000;margin-bottom: 0.3rem;}
+.B_info .c_div5>p{margin-top: -1rem;}
+.B_info .c_div6{display: -webkit-box;-webkit-box-pack:justify;padding: 0 2%}
+.B_info .c_div6 dl{width: 47%;margin-top: 1.5rem;text-align: center;font-size: 0.625rem;color: #595757;}
+.B_info .c_div6 dl dd{margin-top: 0.3rem;}
+.B_info .c_div6 dl dd p:nth-of-type(1){font-size: 0.75rem;color: #000000;}
+.B_info .foot{width: 100%;background: #535353;margin-top: 1.75rem;padding-bottom: 1rem;}
+.B_info .foot .c_div7{display: -webkit-box;}
+.B_info .foot .c_div7 dl{display: -webkit-box;margin-top: 1.4rem;margin-left: 0.2rem;}
+.B_info .foot .c_div7 dl:nth-of-type(1){width: 38%;}
+.B_info .foot .c_div7 dl dt{width: 36%;margin-right: 0.1rem;}
+.B_info .foot .c_div7 dl dd{font-size: 0.625rem;color: #c9caca;}
+.B_info .foot .c_div7 dl dd p{margin-top: 0.15rem;}
+.B_info .foot .c_div7 dl:nth-of-type(2){width: 54%;margin-left: 0.8rem;}
+.B_info .foot .c_div7 dl:nth-of-type(2) dt{width: 28%}
+.B_info .code{width: 100;background: #313131;}
+.B_info .code .c_code{width: 62%;margin: 0 auto;display: -webkit-box;-webkit-box-pack:justify;padding-top: 1.3rem;padding-bottom: 1.3rem;}
+.B_info .code dl{width: 47%;text-align: center;}
+.B_info .code dl dd{font-size: 0.625rem;color: #9fa0a0;}
+/*邀请朋友 Invitefri.htm*/
+.invite{width: 100%;overflow: hidden;}
+.invite .header{width: 100%;height: 2.5rem;background: #1b1b23;text-align: center;font-size: 0.875rem;color: #fff;line-height: 2.5rem;position: relative;}
+.invite .header .jt{display:inline-block; width: .7rem;height: .7rem;color: #fff;border: 2px solid #fff;border-top: none;border-right: none;-webkit-transform:rotate(45deg);position: absolute;top: 50%;margin-top: -0.3rem;left: 4%}
+.invite .header p{position: absolute;top:0;right: 0.5rem;height: 2.5rem;display: -webkit-box;}
+.invite .header p span{width: 0.3rem; height: 0.3rem;background: #fff;border-radius: 100%;display:block;margin-top: 1.1rem;margin-right: 0.3rem;}
+.invite .t_div{width: 100%;height: 7.5rem;background: url(http://css.baojia.com/s4/m/images/invite/back.jpg) no-repeat;background-size:100% 100%;padding-top: 1.2rem;}
+.invite .top{width: 92%;height: 3.75rem;border:1px solid #dfdfdf;border-radius: 5px;margin: 0 auto;background: #fff;display: -webkit-box;-webkit-box-pack:justify;font-size: 0.875rem;padding: 0.75rem 0;}
+.invite .top div{text-align: center;color: #666;width: 50%;}
+.invite .top .left{border-right: 1px solid #dfdfdf;}
+.invite .top div span{color: #fc7722;}
+.invite .top div p{font-size: 0.625rem;}
+.invite .cont{text-align: center;font-size: 0.625rem;color: #fff;margin-top: 0.3rem;}
+.invite .code{width: 75%;margin: 0 auto;margin-top: 1.3rem;font-size: 0.625rem;color: #666;text-align: center;}
+.invite .code dd{margin-top: 0.2rem;}
+.invite .share{width: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,0.7);z-index: 1}
+.invite .share img{position: absolute;top: 0;width: 37%;right: 1rem;}
+.invite .btn{width: 92%;margin: 0 auto;margin-top: 1.5rem;text-align: center;font-size: 0.75rem;}
+.invite .btn a{display: block;color: #fff;text-decoration: none;height: 2.2rem;line-height: 2.2rem;border-radius: 5px;}
+.invite .btn a:nth-of-type(1){background: #fc7722;}
+.invite .btn a:nth-of-type(2){color: #fc7722;border:1px solid #ebebeb;margin-top:1rem;}
+.invite .foot{text-align: center;font-size: 0.75rem;color: #adadad;margin: 0.5rem 0;}
+.invite .foot p{width:60%;margin: 0 auto;position: relative;}
+.invite .foot p:after{position:absolute;top:50%;right:-0.5rem;margin-top:-5px;margin-left:30px;width:10px;height:10px;border:#a9a9a9 solid;border-width:1px 1px 0 0;content:"";-webkit-transform:rotate(45deg);}
+/*登录*/
+.invite  .pop{width: 100%;top: auto;left: 0;-webkit-transform:translate(0,0);padding-bottom: 1rem;}
+.invite  .pop .login{width: 92%;margin: 0 auto;}
+.invite  .pop .title{text-align: center;position: relative;font-size: 0.75rem;color: #666;padding-top: 0.75rem;}
+.invite  .pop .title a{width: 1.2rem;height: 1.2rem;font-size: 1rem;text-align: center;line-height: 1rem;color: #ccc;text-decoration: none;display: block;position: absolute;top: 0.75rem;right: 0;border:1px solid #ebebeb;border-radius: 100%;}
+.invite  .pop .inp input{width: 100%;display: block;height: 2.375rem;border:1px solid #ebebeb;border-radius: 5px;text-indent: 0.5rem;margin-top: 0.75rem;font-size: 0.75rem;color: #ccc;}
+.invite  .pop .inp a{width: 100%;display: block;height: 2.375rem;text-align: center;color: #fff;background: #fc7722;line-height: 2.375rem;text-decoration: none;font-size: 0.75rem;border-radius: 5px;margin-top: 1rem;}
+.invite  .pop .bot{display: -webkit-box;-webkit-box-pack:justify;}
+.invite  .pop .bot a{display: block;text-decoration: none;font-size: 0.75rem;margin-top: 0.5rem;color: #999;}
+.invite  .pop .bot a:nth-of-type(2){color: #fc7722}
+/*我邀请的朋友myfri.htm*/
+.myfri{width: 100%;overflow: hidden;}
+.myfri .header{width: 100%;height: 2.5rem;background: #28bcdc;text-align: center;font-size: 0.875rem;color: #fff;line-height: 2.5rem;position: relative;}
+.myfri .header .jt{display:inline-block; width: .7rem;height: .7rem;color: #fff;border: 2px solid #fff;border-top: none;border-right: none;-webkit-transform:rotate(45deg);position: absolute;top: 50%;margin-top: -0.3rem;left: 4%}
+.myfri .tab{width: 100%;display: -webkit-box;-webkit-box-pack:justify;height: 2.125rem;}
+.myfri .tab a{width: 50%;text-align:center;display: block;text-decoration: none;color: #666;font-size: 0.75rem;height: 2.125rem;line-height: 2.125rem;border-bottom: 1px solid #ebebeb;}
+.myfri .tab a.on{color: #28bcdc;border-bottom:2px solid #28bcdc;}
+.myfri table{width: 92%;margin: 0 auto;margin-top: 1.25rem;border-bottom: none;}
+.myfri table tr{width: 100%;}
+.myfri table td{width: 25%;height: 2rem;text-align: center;line-height: 2rem;border-top: none;border-left: none;border-color: #ebebeb;font-size: 0.7rem;color: #666;}
+.myfri table tr td:last-child{border-right: none;}
+.myfri table thead td{font-weight:600;}
+.myfri table:nth-of-type(2){display: none;}
+.myfri table:nth-of-type(2) td{width: 33%;}
+
+/*小蜜单车车管平台*/
+.Mi_body{background-color: #f0f0f0;}
+.Miplatform{width: 100%;overflow: hidden;}
+.Miplatform .header{width: 100%;height: 2.3rem;border-bottom: 1px solid #ebebeb;text-align: center;font-size: 0.875rem;color: #000;line-height: 2.3rem;background-color: #fff;}
+.Miplatform .BicycleNumber{width: 100%;height: 5.3rem;background-color: #fff;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;}
+.Miplatform .BicycleNumber span{display: block;color: #7b7b7b;font-size: 0.75rem;text-align: center;}
+.Miplatform .BicycleNumber p{color: #000;font-size: 1.3rem;}
+.Miplatform .content{width: 100%;min-height: 2rem;background-color: #fff;margin-top: 0.625rem;}
+.Miplatform .cont{width: 100%;border-bottom: 1px solid #ebebeb;}
+.Miplatform .cont .cont1{width: 90%;margin: 0 auto;display: -webkit-box;height: 5.3rem;padding-top: 0.625rem;}
+.Miplatform .cont .cont2{height: 4.375rem;}
+.Miplatform .cont .cont1 .title{font-size: 0.75rem;color: #333;}
+.Miplatform .cont .cont1 p{font-size: 0.625rem;color: #666;}
+.Miplatform .cont .cont1 .c_left{width: 1.5rem;height: 1.5rem;background-image: url(../images/vehicle_paltform/icon1.png);background-repeat: no-repeat;background-size: 4.25rem 8.5rem;position: relative;top: 0.1rem;}
+.Miplatform .cont .cont1 .c_center{-webkit-box-flex:1;text-indent: 0.75rem;}
+.Miplatform .cont .cont1 .c_left1{background-position: -0.1rem -0.2rem;}
+.Miplatform .cont .cont1 .c_left3{background-position: -0.1rem -2.65rem;}
+.Miplatform .cont .cont1 .c_left2{background-position: -0.1rem -5.2rem;}
+.Miplatform .cont .cont1 .c_right{width: 1.375rem;height: 1.375rem;position: relative;top: 50%;transform:translateY(-90%);}
+.Miplatform .hidden-input{background: transparent;}
+.Miplatform .hidden-input{opacity: 0;position: absolute;z-index: -1;}
+.Miplatform input[type=radio]+span {display: inline-block;height:100%;width: 100%;
+background-image: url(../images/vehicle_paltform/icon1.png);background-repeat: no-repeat;background-size: 4rem 8rem;background-position: -2.1rem 0rem;}
+.Miplatform input[type=radio]:checked+span{background-image: url(../images/vehicle_paltform/icon1.png);background-repeat: no-repeat;background-size: 4rem 8rem;background-position: -2.1rem -2.4rem;}
+.Miplatform label{font-size: 0.7rem;}
+.Miplatform .footer{width: 100%;height: 3.5rem;background-color: #fff;position: fixed;bottom:0;}
+.Miplatform .footer a{display: block;width: 92%;margin: 0 auto;height: 2.375rem;background-color: #00af8b;color: #fff;text-align: center;font-size: 0.75rem;text-decoration: none;border-radius: 5px;line-height: 2.375rem;position: absolute;top: 50%;left:50%;transform:translate(-50%,-50%);}
+.Miplatform .mask{display: none;}
+.Miplatform .pop_cont{width: 90%;margin: 0 auto;padding: 0.5rem 0;}
+.Miplatform .pop_cont p{text-align: center;font-size: 0.75rem;color: #666;}
+.Miplatform .pop_cont .btn{display: -webkit-box;-webkit-box-pack:justify;}
+.Miplatform .pop_cont .btn a{display: block;width: 40%;padding: 0.1rem 0;text-decoration: none;font-size: 0.75rem;text-align: center;color: #333;border:1px solid #666;margin-top: 0.2rem;}
+.Miplatform .pop_cont .btn a:nth-of-type(1){background-color: #fc7722;color: #fff;border-color: #fc7722;}
+/*车管平台1*/
+.Me_body{background-color: #f2f2f2;}
+.Me_body .top{background-color: #fff;width: 100%;height: 3.75rem;border-bottom:1px solid #cecece;line-height: 3.75rem;text-align: center;position: relative;font-size: 1rem;color: #333;}
+.Me_body .top span{position: absolute;top: 0;right: 0.625rem;font-size: 0.625rem;color: #4eab8c;line-height:2rem;}
+.Me_body .content{width: 100%;background-color: #fff;margin-bottom: 0.625rem;}
+.Me_body .cont{width: 92%;margin: 0 auto;padding-bottom: 0.75rem;}
+.Me_body .cont .header{width: 100%;text-align: center;padding-top: 1.375rem;}
+.Me_body .cont .header h1{font-size: 1.125rem;color: #000;}
+.Me_body .cont .header p{font-size: 0.75rem;color: #ff8900;}
+.Me_body .cont .header .district{font-size: 0.625rem;margin-top: 0.2rem;}
+.Me_body .cont .header .district a{width:65%;margin:0 auto;color: #666;text-decoration:none;background-image: url(http://css.baojia.com/s4/m/images/vehicle_paltform1/ditu.png);background-repeat: no-repeat;background-position: left center; background-size: 0.625rem 0.75rem;text-indent: 0.675rem;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.Me_body .cont .disAndhea{width: 100%;display: -webkit-box;-webkit-box-pack:justify;margin-top: 1rem;}
+.Me_body .cont .disAndhea>div{width: 49.5%;background-color: #f0f0f0;font-size: 0.625rem;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;height: 2.75rem;}
+.Me_body .cont .disAndhea>div:nth-of-type(2){font-size: 0.75rem;}
+.Me_body .cont .changeCar{width: 100%;display: block;background-color: #00b18e;color: #fff;text-align: center;text-decoration: none;font-size: 0.875rem;border-radius: 5px;margin-top: 0.625rem;padding: 0.75rem 0;}
+.Me_body .cont .title{font-size: 0.75rem;color: #666;text-align: center;padding-top: 1rem;font-weight: normal;}
+.Me_body .cont1>div{display: -webkit-box;-webkit-box-pack:justify;margin-top: 0.5rem;} 
+.Me_body .cont1>div a{display: block;width: 23%;height: 2.625rem;background-color: #00b18e;color: #fff;text-align: center;line-height: 2.625rem;text-decoration: none;border-radius: 8px;font-size: 0.875rem;}
+.Me_body .content1{margin-bottom: 0;}
+.Me_body .cont .title1{padding-top: 0;padding-bottom: 0.7rem;}
+.Me_body .cont1>div .hidden-input{background: transparent;}
+.Me_body .cont1>div .hidden-input{opacity: 0;position: absolute;z-index: -1;}
+.Me_body .cont1>div input[type=radio]+span {display: inline-block;height: 0.9rem;width: 0.9rem;border: 2px solid #ff8900;position: relative;top: 0.2rem;border-radius: 0.9rem;}
+.Me_body .cont1>div input[type=radio]:checked+span{background:transparent;border-color:#ff8900; }
+.Me_body .cont1>div .circle{width: 0.3rem;height: 0.3rem;display: block;position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);border-radius: 0.3rem;}
+.Me_body .cont1>div input[type=radio]:checked+span .circle{background: #ff8900;}
+.Me_body .cont1>div label{font-size: 0.75rem;color:#333;display: block;}
+.Me_body .cont1>div.radio{width: 82%;margin: 0 auto;}
+.Me_body .subBtn{width: 70%;margin: 0 auto;text-align: center;font-size: 0.875rem;padding-bottom: 1.25rem;}
+.Me_body .subBtn a{color: #fff;text-decoration: none;display: block;height: 2.75rem;line-height: 2.75rem;background-color: #00b18e;border-radius: 5px;}
+.Me_body .mask{background:rgba(0,0,0,0.8);display: none;}
+.Me_body .mask .pop{width: 54%;border-radius: 8px}
+.Me_body .mask .txt{height: 6.625rem;text-align: center;line-height: 6.625rem;}
+.Me_body .mask .btns{display: -webkit-box;-webkit-box-pack:justify;}
+.Me_body .mask .btns a{display: block;background-color: #00b18e;width: 49.8%;height: 2.625rem;color: #fff;text-decoration: none;text-align: center;font-size: 0.875rem;line-height: 2.625rem;}
+.Me_body .mask .btns .confirm{border-radius: 0 0 0 8px;}
+.Me_body .mask .btns .cancel{border-radius: 0 0 8px 0;}
+/*车牌登录1 login1.html*/
+.liscenCar{background: url(http://css.baojia.com/s4/m/images/login1/back.jpg) no-repeat;background-size: 100% 100%;}
+.liscenCar .header{width: 100%;height: 2.75rem;background-color: #fff;display: -webkit-box;}
+.liscenCar .header a{display: block;color: #333;font-size: 0.875rem;text-decoration: none;width: 33.3%;text-align: center;line-height: 2.75rem;}
+.liscenCar .header a.on{border-bottom: 2px solid #39bcda;color: #39bcda;}
+.liscenCar .intDiv{width: 87%;position: absolute;left: 50%;transform:translateX(-50%);bottom:1rem;-webkit-transform:translateX(-50%);}
+.liscenCar .intDiv .intDiv1{display: none;}
+.liscenCar .intDiv .intDiv2{display: block;}
+.liscenCar .intDiv .int_input{width: 100%;height: 2.25rem;background-color: #fff;display: -webkit-box}
+.liscenCar .intDiv .int_input>div{display:block;line-height: 2.25rem;width: 3.75rem;border-right:1px solid #dddddd;text-align: center;color: #cdcdcd;position: relative;}
+.liscenCar .intDiv .int_input>div ul{background: #fff;color: #cdcdcd;display: none;font-size: 0.875rem;position: absolute;width: 100%;}
+.liscenCar .intDiv .int_input>div:after{content:"";position:absolute;right:0.2rem;bottom:0;border:8px solid transparent;border-left-color:#ffe27f;border-right:0;height:0;width:0;display:inline-block;-webkit-transform:rotate(45deg);}
+.liscenCar .intDiv .int_input>div.on:after{-webkit-transform:rotate(90deg);}
+.liscenCar .intDiv .int_input>div input{display: block;width: 100%;height: 2.25rem;border: none;background: no-repeat;font-size: 0.875rem;color: #cdcdcd;}
+.liscenCar .intDiv .int_input>input{display:block;-webkit-box-flex:1;height: 2.25rem;border: none;text-indent: 0.75rem;color: #999;font-size: 0.875rem;}
+.liscenCar .intDiv .error{width: 100%;height: 2.25rem;background-color: #fff;color: red;text-align: center;line-height: 2.25rem;font-size: 0.75rem;display: none;}
+.liscenCar .intDiv .btn{width: 100%;height: 2.25rem;background-color: #fcc32a;color: #fff;font-size: 0.875rem;text-align: center;text-decoration: none;line-height: 2.25rem;display: block;margin-top: 0.5rem;}
+.liscenCar .intDiv h1{font-size: 0.75rem;color: #fff;text-align: center;font-weight: normal;margin-top: 0.3rem}
+.liscenCar .intDiv .code{width: 69%;margin: 0 auto;display: -webkit-box; -webkit-box-pack:justify;margin-top: 0.5rem;}
+.liscenCar .intDiv .code a{display: block;width:41%;text-decoration: none;}
+.liscenCar .intDiv .code a dd{color: #fff;font-size: 0.75rem;text-align: center;margin-top: 0.3rem;}
+.liscenCar .mask{display: none;}
+.liscenCar .mask .pop{width: 100% ;padding-bottom: 0.5rem;bottom: 0;top:auto;left: 0;transform:translate(0,0);-webkit-transform: translate(0%,0%);min-height: auto;}
+.liscenCar .mask .pop li{float:left;width:11%;text-align:center;padding:0.2rem 0;border:1px solid #cfcfcf;background:#eee;border-radius:0.2rem;margin-left:0.55rem;margin-top:0.5rem;color:#424242;font-size:0.875rem;}
+
+
+
+
+
+
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}
+@media (min-device-width:768px) and (max-device-height:1024px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:20px; width: 900px; margin: 0 auto}  
+}

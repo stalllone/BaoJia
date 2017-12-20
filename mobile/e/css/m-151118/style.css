@@ -1,0 +1,47 @@
+html,body{font-size: 1rem;background-color: #fff}
+.header,.bannner,.main,.footer{text-align:center;/*max-width:960px;*/margin:0 auto;}
+.main>img{margin:0 auto;}
+.main .list{width:90%;margin:0 auto;overflow:hidden;}
+.main .listcar{float:left;width: 31%;margin:1% 1.1%; padding:5% 0 2% 0; background-color: #ccc; border-radius:5%;}
+.main .listcar img{display:block;font-size: 1rem; }
+.main .listcar span{display:block;font-size: 0.5rem;font-weight: bold}
+.main .listcar .carprice1{color:#ff7800;}
+.footer a>img{width: 80%; margin: 5% auto;}
+
+div.fixtop{background:#fff;display:none;position:fixed;top:0;z-index:2;width:100%; }
+.fixtop .bt{float:left;width:33.33%;}
+
+div.fixbottom{position:fixed;bottom:0;z-index:2;width:100%;}
+/**滚屏效果*/
+.main_visual { height: 100%; overflow: hidden; position: relative }
+.main_image { height: 100%; overflow: hidden; position: relative }
+.main_image ul { left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; position: absolute }
+.main_image li { width: 100%; height: 100%; float: left }
+.main_visual .main_image li span { width: 100%; height: 100%; display: block; -webkit-background-size: 100% }
+.main_visual .main_image li span { width: 100%; height: 100%; display: block; -webkit-background-size: 100% }
+.main_image li a { width: 100%; height: 100%; display: block }       
+#btn_prev { top: 50%; width: 73px !important; height: 74px !important; margin-top: -37px; display: none; position: absolute; z-index: 11111 }
+#btn_next { top: 50%; width: 73px !important; height: 74px !important; margin-top: -37px; display: none; position: absolute; z-index: 11111 }
+#btn_prev { background: url("../../images/m-151118/hover_left.png") no-repeat left top; left: 100px }
+#btn_next { background: url("../../images/m-151118/hover_right.png") no-repeat right top; right: 100px }
+div.flicking_con{position:absolute;bottom:3%;left:55%;z-index:1;width:300px;height:21px;margin:0 0 0 -50px;}
+#scroll2 div.flicking_con {bottom:12%;}
+div.flicking_con a { background: url("../../images/m-151118/btn_main_img.png") no-repeat 0px 0px; margin: 0px; padding: 0px; width: 21px; height: 21px; text-indent: -1000px; float: left; display: block }
+div.flicking_con a.on { background-position: 0px -21px }
+.more{position:absolute;bottom:1.5%;left:0;}
+
+/**注册**/
+.divReg{padding:8% 0; background: #009cc7; color: #fff;text-align: center; }
+.divReg>div{width: 88%;margin: 0 auto; margin-bottom:2%; }
+.divReg input,.divReg a{width: 100%; padding: 4% 0; border-radius: 8px;font-size: 1em;}
+.divReg input{text-indent: 2%}
+.divReg a{text-decoration: none}
+.chkCode,.smsCode{position: relative;}
+.chkCode a,.smsCode a{position: absolute; display:block; width: 30%; right: 1%; top:0;}
+.chkCode a{border-left: 1px solid #ccc;border-radius: 0px;padding: 3% 0;margin-top: 1% }
+.chkCode a img{width: 80%}
+.smsCode a{line-height: 80%; margin-top: 1.8%; background-color: #e1f5f9;color:#45c0dc; font-size: 1em; font-weight: 400; border-radius: 5px;  }
+.divReg .btn a{background: #f7ca2e;color: #295293;width: 100%;display: block;font-size: 1em; padding:4% 1%; }
+/*a.reChkCode{position: relative;  margin: -15% 2% 0 0;z-index: 99}*/
+.divReg span{font-size: 0.8em;}
+.divReg>p{width: 88%;margin: 0 auto;font-size: 0.8em;text-align: left;}

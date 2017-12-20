@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="服务条款，租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/renttime.css"/>
+    <!-- <link rel="stylesheet" href="../../css/renttime.css"/> -->
+</head>
+<body>
+	<div class="R_car">
+		 <div class="header">
+            <div class="jt"></div>
+            <p>订单详情</p>
+        </div>
+        <div class="s_div">
+            <dl>
+                <dt><img src="http://css.baojia.com/s4/m/images/renttime/s_top.jpg" alt=""/></dt>
+                <dd>
+                    <h1>郑州日产NV200 <span>自动挡</span> <span>续航716km</span></h1>
+                    <p>预计租车：04/21 18:14</p>
+                    <p>待支付押金</p>
+                </dd>
+            </dl>
+            <div class="process">
+                <p></p>
+                <p></p>
+                <p class="on"></p>
+                <p></p>
+            </div>
+            <div class="process1">
+                <p>提交订单</p>
+                <p>押金充值</p>
+                <p class="on"><span>取</span>取车<span>取</span></p>
+                <p><span>取</span>还车<span>取</span></p>
+            </div>
+        </div>
+        <div class="l_div">
+	        <div class="d_div">
+	            <div>
+	                <p>京Q6KK29</p>
+	                <p>朝阳区朝阳公园</p>
+	            </div>
+	        </div>
+    	</div>
+    	<div class="R_bot">
+    		<p>计费：0小时0分钟</p>
+    		<p><span>¥</span>0.00<span>元</span></p>
+    	</div>
+    	<div class="R_fun">
+    		<div>
+    			<dl>
+					<dt><img src="http://css.baojia.com/s4/m/images/renttime/horn.jpg" alt=""></dt>
+					<dd>寻车</dd>
+    			</dl>
+    			<dl>
+    				<dt><img src="http://css.baojia.com/s4/m/images/renttime/unlock.jpg" alt=""></dt>
+					<dd>开门取车</dd>
+    			</dl>
+    			<dl>
+    				<dt><img src="http://css.baojia.com/s4/m/images/renttime/lock.jpg" alt=""></dt>
+					<dd>锁车门</dd>
+    			</dl>
+    		</div>
+    	</div>
+    	<div class="foot">
+            <a href="javascript:;" class="btn">我要还车</a>
+        </div>
+        <div class="s_div">
+           <div>
+                <p>联系客服<span>（周一至周六9:00-21:00）</span></p>
+               <p><img src="http://css.baojia.com/s4/m/images/renttime/phone.jpg" alt=""></p>
+           </div>
+        </div>
+        <div class="mask">
+        	<div class="pop">
+        		<div class="title">
+        			还车确认
+        		</div>
+        		<div class="title title1">
+        			请检查好车内无个人物品，并确认已关好车门、
+        					车窗，把钥匙放回固定位置了。
+        		</div>
+        		<div class="R_btn">
+        			<a href="javascript:;">继续用车</a>
+        			<a href="javascript:;" class="on confirm">确认还车</a>
+        		</div>
+        	</div>
+        </div> 
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$(".foot a").click(function(){
+			$(".mask").css("display","block");
+		});
+		$(".confirm").click(function(){
+			$(".mask").css("display","none");
+		})
+	})
+</script>
+</html>

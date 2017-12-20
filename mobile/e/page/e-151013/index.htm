@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-itunes-app" content="app-id=983467128">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>你的气质适合开什么车？</title>
+    <style type="text/css">
+		*{font-family:"Hiragino Sans GB","Microsoft YaHei","黑体",Helvetica,Arial,Tahoma,sans-serif;margin:0;padding:0;-webkit-text-size-adjust:none;box-sizing:border-box;-moz-box-sizing:border-box;        /* Firefox */-webkit-box-sizing:border-box;        /* Safari */-webkit-font-smoothing:antialiased;}
+		img{width:100%}
+		.main{text-align:center;max-width:960px;margin:0 auto;}
+		.sometitle{font-size:1.5rem;margin:.5rem;font-weight:bold;}
+		.inputname{width:80%;background:rgb(242,242,242);height:3rem;font-size:1.2rem;text-align:center;border:none;}
+		.howmanydoit{margin:.5rem;}
+		.btncheckresult{font-weight:bold;background:white;width:80%;color:rgb(117,117,255);height:3rem;border:none;font-size:1.2rem;border:2px solid rgb(117,117,255);}
+		.share{margin-top:4px;font-weight:bold;background:white;width:80%;color:rgb(117,117,255);height:3rem;border:2px solid rgb(117,117,255);font-size:1.2rem;}
+		.power{width:100%;text-align:center;padding:10px 0;bottom:0;left:0}
+		.power > .text{font-size:13px;color:#666;text-shadow:0 1px 0 0 rgba(215,215,215,.5);margin:0 auto}
+
+		/* Large desktop */
+		@media (min-width:980px){
+			*{font-size:20px;}
+		}
+
+		/* Portrait tablet to landscape and desktop */
+		@media (min-width:381px) and (max-width:979px){
+			*{font-size:18.4px;}
+		}
+
+		/* Landscape phone to portrait tablet */
+		@media (max-width:380px){
+			html{font-size:16px;}
+		}
+    </style>
+    <script type="text/javascript">
+	    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+	    var useragent = navigator.userAgent;
+	    // if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+	    //     // 这里警告框会阻塞当前页面继续加载
+	    //     alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+	    //     // 以下代码是用javascript强行关闭当前页面
+	    //     var opened = window.open('about:blank', '_self');
+	    //     opened.opener = null;
+	    //     opened.close();
+	    // }
+
+	    function btnck() {
+	        var a = document.getElementById("text");
+	        if (a.value == "") {
+	            alert("文本框内容不能为空！");
+	        } else {
+	            alert("提交成功！");
+	        }
+	    }
+    </script>
+    <script src="/js/zepto.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="picture"> <img src="/images/e-151013/bg.jpg"> </div>
+        <div class="dosomething">
+            <div class="sometitle">你开什么车？</div>
+            <input class="inputname" style="text" placeholder="请输入你的姓名" id="name">
+            <div class="howmanydoit">已经有 86215599 人做了這個测试.</div>
+            <button class="btncheckresult">查看报告</button>
+            <button id="share" class="share">分享</button>
+        </div>
+    </div>
+    <div class="power"><a class="text" href="http://e.baojia.com/m/coupon/compaign/17?utm_source=weixin_tuiguang&utm_medium=caiche">© 宝驾租车</a></div>
+
+
+    <script type="text/javascript">
+	    function checkwx() {
+	        var b = false;
+
+	        function is_weixin() {
+	            var ua = navigator.userAgent.toLowerCase();
+	            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+	                return true;
+	            } else {
+	                return false;
+	            }
+	        }
+	        var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 0%; padding:0 2%;}";
+
+	        var isWeixin = is_weixin();
+	        var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+
+	        function loadHtml() {
+	            var div = document.createElement('div');
+	            div.id = 'weixin-tip';
+	            div.style.display = "none";
+	            div.innerHTML = '<p><img style="width:100%" src="/images/e-151013/wxshare.png" alt="微信打开"/></p>';
+	            document.body.appendChild(div);
+	            div.onclick = function() {
+	                this.style.display = "none";
+	            }
+	        }
+
+	        function loadStyleText(cssText) {
+	            var style = document.createElement('style');
+	            style.rel = 'stylesheet';
+	            style.type = 'text/css';
+	            try {
+	                style.appendChild(document.createTextNode(cssText));
+	            } catch (e) {
+	                style.styleSheet.cssText = cssText; //ie9以下
+	            }
+	            var head = document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+	            head.appendChild(style);
+	        }
+
+	        b = is_weixin();
+
+	        if (b) {
+	            loadHtml();
+	            loadStyleText(cssText);
+	        }
+
+	        return b;
+	    }
+
+
+
+	    $(document).ready(function() {
+	        //解决腾讯内部x5浏览器百分百问题
+	        var useragent = navigator.userAgent;
+	        if (useragent.indexOf("MQQ") > -1) {
+	            $(".hotlist li:nth-child(2)").each(function() {
+	                $(this).css("marginLeft", "1%");
+	            });
+	        };
+
+	        $(".btncheckresult").click(function btnck() {
+	            if ($('#name').val() == '') {
+	                alert('请输入您的姓名');
+	                return false;
+	            }
+	            var name = $("#name").val();
+	            if (name.length <= 0) {
+	                //return;
+	                name = "pipyxxx"; //空名字
+	            }
+	            var index = Math.floor(Math.random() * 33 + 1);
+	            window.location.href = "result.htm?name=" + encodeURI(name) + "&type=" + (index);
+	        });
+
+
+	        $("#share").click(function() {
+	            if (checkwx()) {
+	                document.getElementById('weixin-tip').style.display = "block";
+	            }
+	        });
+	    });
+    </script>
+</body>
+
+</html>

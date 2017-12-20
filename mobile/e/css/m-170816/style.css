@@ -1,0 +1,277 @@
+body {
+    background: rgb(242, 242, 242);
+    font-family: "PingFangSC-Regular"
+}
+ .Coupon {
+    width: 8.9rem;
+    height: 3.2rem;
+    background: url(http://css.baojia.com/s4/e/images/m-170816/moneyback.png) no-repeat;
+    margin: 0 auto;
+    margin-top: 0.4rem;
+    background-size: 100% 100%;
+    padding: 0.32rem 0.53rem 0.61rem 0.4rem;
+    display: -webkit-box;
+    -webkit-box-pack:justify;
+}
+.Coupon h1{
+	font-size: 0.43rem;
+	color:rgb(102,102,102);
+	font-weight: normal;
+}
+.Coupon h2{
+	font-size: 0.34rem;
+	color:rgb(51,51,51);
+	font-weight: normal;
+	margin-top:0.27rem;
+}
+.Coupon h3{
+	font-size: 0.37rem;
+	color:rgb(153,153,153);
+	font-weight: normal;
+	margin-top:0.3rem;
+}
+.Coupon .right{
+	color:rgb(51,51,51);
+	font-size: 0.37rem;
+}
+.Coupon .right span{
+	font-size: 1.06rem;
+}
+.rule .rule_box {
+    width: 9.2rem;
+    margin: 0 auto;
+    margin-top: 0.67rem;
+}
+
+.rule .rule_box .title {
+    width: 3.2rem;
+    height: 0.64rem;
+    background: rgb(254, 209, 48);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0.64rem;
+    border-radius: 0.45rem;
+    font-size: 0.37rem;
+    color: rgb(39, 24, 24);
+    position: relative;
+    margin-bottom: 0.4rem;
+}
+
+.rule .rule_box .title:after {
+    content: "";
+    position: absolute;
+    left: -0.35rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.21rem;
+    height: 0.21rem;
+    background: url(http://css.baojia.com/s4/e/images/m-170816/increase.png) no-repeat center center;
+}
+
+.rule .rule_box .title:before {
+    content: "";
+    position: absolute;
+    right: -0.35rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.48rem;
+    width: 0.21rem;
+    height: 0.21rem;
+    background: url(http://css.baojia.com/s4/e/images/m-170816/increase.png) no-repeat center center;
+}
+
+.rule .rule_box p {
+    font-size: 0.37rem;
+    color: rgb(51, 51, 51);
+    line-height: 0.6rem;
+}
+
+.rule .rule_box p span {
+    color: rgb(246, 164, 21);
+}
+.rule .Coupon{
+	margin-top: 0.8rem;
+}
+
+
+
+.invite .logo{
+	width: 5.39rem;
+	height: 0.57rem;
+	margin: 0 auto;
+	margin-top:1rem;
+}
+.invite .logo img{
+	display: block;
+	width: 100%;
+}
+.invite .txt{
+	width: 6.64rem;
+	height:1rem;
+	margin: 0 auto;
+	text-align:center;
+	line-height: 1rem;
+	font-size: 0.5rem;
+	color:rgb(51,51,51);
+	margin-top:0.43rem;
+}
+.invite .txt span{
+	font-size: 0.67rem;
+	color: rgb(246,164,21);
+}
+.invite .backimg{
+	width: 100%;
+}
+.invite .backimg img{
+	display:block;
+	width: 100%;
+}
+.invite .input_box{
+	width: 8rem;
+	border-bottom:2px solid rgb(151,151,151);
+	margin:0 auto;
+	margin-top:0.78rem;
+}
+.invite .input_box input{
+	width: 2.8rem;
+	margin:0 auto;
+	display: block;
+	height: 0.56rem;
+	border:none;
+	background:none;
+	outline: 0; 
+	font-size: 0.4rem;
+	margin-bottom: 0.4rem;
+	color: #333;
+}
+
+.invite .btn{
+	width: 8rem;
+	height: 1.06rem;
+	text-align:center;
+	line-height: 1.06rem;
+	font-size: 0.43rem;
+	color:rgb(39,24,24);
+	background: rgb(254,209,48);
+	border-radius: 10px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 0.4rem;
+	text-decoration: none;
+}
+.invite .mask{
+	background:rgba(0,0,0,0.7);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+
+}
+.invite .mask .pop{
+	width: 6.67rem;
+	height: 5.25rem;
+	background: #fff;
+	border-radius: 0.13rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+.invite .mask .pop_tit{
+	width: 5.33rem;
+	margin: 0 auto;
+	margin-top:0.67rem;
+	text-align:center;
+}
+.invite .mask .pop_tit h1{
+	font-size:0.45rem;
+	color: rgb(51,51,51); 
+}
+.invite .mask .pop_tit p{
+	font-size:0.37rem;
+	color: rgb(51,51,51);
+	margin-top:0.4rem;
+}
+.invite .mask .download{
+	width: 5.33rem;
+	height: 1.06rem;
+	background: rgb(254,209,48);
+	font-size:0.4rem;
+	line-height: 1.06rem;
+	display: block;
+	margin: 0 auto;	
+	text-align: center;
+	text-decoration:none;
+	color: rgb(39,24,24);
+	margin-top:0.67rem;
+	border-radius: 0.13rem;
+}
+
+.code .codetxt{
+	width: 6.15rem;
+	margin: 0 auto;
+	font-size: 0.4rem;
+	color: rgb(153,153,153);
+	margin-top:1rem;
+	text-align: center;
+}
+.code .codetxt span{
+	color: rgb(83,83,83);
+}
+.code .code_input{
+	
+	margin: 0 auto;
+	margin-top: 0.5rem;
+	padding-bottom: 0.4rem;
+}
+.code .code_input input{
+	margin-bottom:0;
+
+}
+/* 提示 */
+.bj_tip{
+	background:rgba(0,0,0,0.8);
+}
+.bj_warn{
+	width: 5rem !important;
+	top:50% !important;
+	left: 50% !important;
+	transform:translate(-50%,-50%);
+	border-radius: 10px;
+	
+}
+.bj_tip_content{
+	font-size: 0.36rem !important;
+}
+.bj_tip .bj_tip_content{
+	padding: 15px 15px 15px;
+	color: #fff !important;
+}
+
+/* 优惠券列表 */
+.coupon_box .down_box{
+	position: fixed;
+	bottom:0;
+	width: 100%;
+	height: 2.16rem;
+	background:#fff;
+	border-top:1px solid rgba(0,0,0,0.2);
+
+}
+.coupon_box .down_box a{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	width: 8rem;
+	height: 1.07rem;
+	text-align: center;
+	line-height: 1.07rem;
+	font-size:0.43rem;
+	color: rgb(39,24,24);
+	text-decoration:none;
+	background: rgb(254,209,48);
+	border-radius: 0.13rem;
+}

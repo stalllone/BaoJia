@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>设备详情</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/dingwei.css">
+    <!-- <link rel="stylesheet" href="../../css/dingwei.css"> -->
+</head>
+<body>
+	<div class="detail">
+		<div class="header">
+			<div class="jt"></div>
+			<p>设备详情</p>
+		</div>
+		<div class="list">
+			<div class="list_div">
+				<p>车牌号</p>
+				<div>京NA0U10</div>				
+			</div>
+			<div class="list_div">
+				<p>品牌车型</p>	
+				<div>郑州日产NV200</div>			
+			</div>
+			<div class="list_div ">
+				<p>归属网点</p>	
+				<div>
+					悦行民族园月福店站
+				</div>			
+			</div>
+			<div class="list_div">
+				<p>盒子状态</p>	
+				<div>静止<span>(定位未变2天18小时)</span></div>			
+			</div>
+			<div class="list_div">
+				<p>信号时间</p>	
+				<div>2016-06-14 15:32:57</div>			
+			</div>
+			<div class="list_div">
+				<p>定位时间</p>	
+				<div>2016-06-11 21:24:19</div>			
+			</div>
+			<div class="list_div dis">
+				<p>最后位置</p>	
+				<div>北京市，朝阳区，安定路，海淀区，北京市，朝阳区，安定路，海淀区，</div>			
+			</div>
+			<div class="list_div">
+				<p>电子钥匙</p>	
+				<div>未安装
+					<div class="instal">去安装</div>
+				</div>			
+			</div>
+			<div class="list_div">
+				<p>剩余油量</p>	
+				<div>47.2L</div>			
+			</div>
+			<div class="list_div">
+				<p>预计续航</p>	
+				<div>726.15公里</div>			
+			</div>
+		</div>
+		<div class="foot">
+			<p class="on">实时追踪</p>
+			<p>轨迹回放</p>
+			<p>发送指令</p>
+		</div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$(".foot p").click(function(){
+			$(this).addClass('on').siblings().removeClass('on');
+		})
+	})
+</script>
+</html>

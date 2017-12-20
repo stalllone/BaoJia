@@ -1,0 +1,51 @@
+body,html{width: 100%;height:100%;}
+a:hover{text-decoration: none;}
+.turnplate{width: 72%;position: absolute;-webkit-transform: translate(-50%,-55%);}
+.rotate{width: 96%;position: relative;margin: 0 auto;}
+.point{width: 45%;position: absolute;z-index: 1;-webkit-transform: translate(-50%,-55%);}
+.input{width: 89%;position: absolute;bottom:0;left: 50%;-webkit-transform:translate(-50%,0);}
+.inp_div{width: 100%;background: #fff;border: 0.15rem solid #1b1b1b;border-radius:1rem;font-size: 0.75rem;margin-top: 0.5rem;position: relative;}
+.inp_div input{width: 100%;display: block;padding: 0.4rem 0;border: none;background: transparent;color: #666;text-indent: 0.7rem;font-size: 0.75rem;}
+.inp_div .code{display:block;position: absolute;top: 50%;-webkit-transform:translate(0,-50%);right: 0.5rem;background: #da4e16;padding: 0.1rem 0.3rem;border-radius: 0.2rem;color: #fff;}
+.btn{background: #1b1b1b;border: none;}
+.inp_div a{display: block;padding: 0.4rem 0;text-align: center;color: #fff;font-size: 0.75rem;}
+.foot{text-align: center;}
+.foot a{font-size: 0.75rem;color: #1b1b1b;}
+
+.popWin{display: none;background: #fff;width: 90%;border-radius: 10px;padding: .5rem 0;}
+.popWin .close{top:5%; left: 95%; font-size: 1.5rem}
+.popWin header{font-size: 1.125rem;text-align: center; }
+.activeTips{top:48%;}
+.activeTips .title{ width:95%;margin:0 auto;margin-top:.2rem;font-size: .875rem}
+.activeTips ul{width:95%;margin:0 auto;margin-top:.1rem;font-size: .75rem}
+.activeTips li{margin-top:0.05rem;line-height:1.125rem; display:-webkit-box}
+.activeTips li b,.popWin li span,.popWin li div{display:block;color:#666;}
+.activeTips li b{width:90%;width:1.5rem;text-align:center; font-weight: 200}
+.activeTips li div{text-align:left;width:90%}
+
+.rewardTips section{width:80%;margin:0 auto;margin-top:.2rem;}
+.rewardTips .quan{ position: relative; }
+.rewardTips .quan .money{color: #ffe400;font-size: 1.25rem;}
+.rewardTips .quan .money b{font-size: 2.5rem;margin-right:.2rem;font-weight: 200 }
+.rewardTips .info{font-size: .75rem;line-height: 1rem;margin: .5rem 0}
+.rewardTips .btnAct{text-align: center;margin-bottom: .5rem;border-radius: .5rem}
+.rewardTips .btn1{background: #ef3d3d;color: #fff;line-height: 2rem}
+.rewardTips .btn1 a{color: #fff}
+.rewardTips .btn2{background: #fff;color: #ef3d3d;border: 1px solid  #ef3d3d}
+.rewardTips .btn2 a{color: #ef3d3d}
+
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}

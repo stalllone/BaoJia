@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>路线详情</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/js/mobiscroll/ms.android.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/pinj.css">
+</head>
+<body>
+	<div class="Rdetail1">
+		<div class="header">                       
+            <div class="jt"></div>
+            <div class="title">路线详情</div>
+            <div class="explain">计价说明</div>
+        </div>
+        <div class="Rd_top">
+        	<div class="C_cont_title"><input type="text" class="input regtime" readonly placeholder="出发时间"></div>
+        	<div class="M_title M_locat">
+				<a href="javascript:;"><span class="locat1"></span><input type="text" placeholder="时代国际嘉园"></a>
+				<a href="javascript:;"><span class="locat2"></span><input type="text" placeholder="唐人街大厦停车场入口"></a>
+			</div>
+        </div>
+        <div class="P_list">
+        	<div class="P_list_div P_list_div1 P_list_div_one">
+                <div>
+                    <a href="javascript:;">可乘坐人数</a>
+                    <div>
+                        <p>
+	                        <span class="reduce" style="visibility:hidden";>&#8211;</span>
+	                        <span class="num">1</span>
+	                        <span class="addper">＋</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="P_list_div P_list_div2">
+                <div>
+                    <a href="javascript:;">服务车型</a>
+                    <div>
+                        <a href="O_Releasecar.htm">
+                            <p>请选择</p>
+                            <div class="jt jt135"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="P_list_div P_list_div3">
+                <div>
+                    <a href="javascript:;">驾驶要求</a>
+                    <div class="require">
+                        <a href="javascript:;">手动</a>
+                        <a href="javascript:;" class="on">自动</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="choosecity">
+	        <div>
+	        	<ul>
+	        		<li><input type="text" placeholder="北京"></li>
+	        		<li><input type="text" placeholder="上海"></li>
+	        		<li><input type="text" placeholder="广州"></li>
+	        		<li class="add">添加+</li>
+	        	</ul>
+	        	<p>途经城市：如北京市，填写北京即可</p>
+	        </div>      	
+        </div>
+        <div class="choosecity">
+	        <div>
+	        	<p><span>加价费</span>若觉得行程费用太低，可适当增加，将直接计入总费用</p>
+	        	<ul class="C_price">
+	        		<li class="accur">5元</li>
+	        		<li>10元</li>
+	        		<li>15元</li>
+	        		<li class="other">其他<div class="jt jt135"></div></li>
+	        	</ul>
+	        	
+	        </div>      	
+        </div>
+        <div class="Rd_price">
+        	<div>约<a><span>129</span>元</a><div class="jt jt135"></div></div>
+        	<p>车费200元 + 同行1人200元 + 加价10元</p>
+        </div>
+        <div class="Rd_foot">
+        	<p><input type="checkbox">同意<a href="javascript:;">拼驾协议及风险提示</a></p>
+        	<a href="O_Releaseroute.htm" class="btn">发布路线</a>
+        </div>
+        <div class="bj_mask">
+            <div class="pop">
+                <input type="tel" placeholder="请输入金额">
+                <div class="confirm">
+                    <a href="javascript:;" class="dete on">确定</a>
+                    <a href="javascript:;" class="cancel">取消</a>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://css.baojia.com/s4/c/js/jquery.mobiscroll.js"></script>
+<script src="http://css.baojia.com/s4/c/js/mobiscroll/ms.datetime.js"></script>
+
+<script>
+    $(function(){
+        $(".require a").click(function(){
+            $(".require a").removeClass('on');
+            $(this).addClass('on');
+        });
+        $(".C_price li").click(function(){
+            $(".C_price li").removeClass('accur');
+            $(this).addClass('accur');
+        });
+        $(".confirm a").click(function(){
+            $(".confirm a").removeClass('on');
+            $(this).addClass('on');
+        });
+        $(".other").click(function(){
+            $(".bj_mask").css("display","block");
+        });
+        $(".cancel").click(function(){
+            $(".bj_mask").css("display","none");
+        });
+        $(".add").click(function(){
+            var str='<li><input type="text" ></li>';
+            $(this).before(str);
+        });
+        $(".addper").click(function(){
+            var txt=parseInt($(".num").text());
+            $(".num").text(txt+=1);
+            if(txt>1){
+                $(".reduce").css("visibility","visible");
+            }
+            if(txt>=5){
+                $(this).css("visibility","hidden");
+            }
+        });
+        $(".reduce").click(function(){
+            var txt=parseInt($(".num").text());
+            $(".num").text(txt-=1);
+            if(txt<=1){
+                $(this).css("visibility","hidden");
+            }
+            if(txt<=5){
+                $(".addper").css("visibility","visible");
+            }
+        })
+        var opttime={
+                 theme: 'android-ics light', //皮肤样式  (android-ics) / (android-ics light)
+                display: 'modal', //显示方式  (modal)(bottom) /(top)/(bubble)
+                mode: 'scroller', //日期选择模式
+                dateFormat: ' yy-mm-dd',
+                lang: 'zh',
+                showNow: true,
+                nowText: "今天",
+                startYear: 2005, //开始年份
+                endYear: 2026, //结束年份
+                preset:"datetime"
+            }
+        $(".regtime").mobiscroll(opttime);
+    })
+</script>
+</html>

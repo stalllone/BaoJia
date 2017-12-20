@@ -1,0 +1,28 @@
+html,body{background-color:#fff;font-size:16px}
+.split:after{display:block;width:100%;content:"";border-bottom:1px solid #bfbfbf;}
+.oneline{display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:85%}
+
+.info{width:90%;margin:0 auto;margin-top:.2rem;}
+.header{height:3rem;background:url(http://css.baojia.com/s4/e/images/m-160112/car.png)no-repeat left center;background-size:2.81rem 2.81rem;color:#f9752b;}
+.header span:nth-of-type(1){margin:0 .5rem 0 3rem;font-size:1rem;line-height:3rem;}
+.header span:nth-of-type(2){font-size:.8rem;line-height:2rem;}
+
+.car{margin-top:.2rem;font-size:0.8rem;}
+.car li{width:100%;margin-bottom:.5rem;height:1.75rem;line-height:1.75rem}
+.car .icon{display:inline-block;height:1.75rem;width:1.75rem;margin-right:.5rem;text-align:center;border-radius:50%;color:#fff;font-size:1rem; }
+.car .from .icon{background-color:#17bede;}
+.car .to .icon{background-color:#f9752b;}
+.car img{height:1.75rem;width:1.75rem;}
+.car .price{height: 1.8rem}
+.car .price b:nth-of-type(1){font-size:.8rem;margin-left:2rem;display:inline-block;-webkit-transform:rotate(90deg)}
+.car .price b:nth-of-type(2){font-size:1.6rem;color:#f9752b;float:right;font-weight: normal;}
+.car .price b:nth-of-type(2):first-letter{font-size:1rem;margin-right:.5rem}
+.cost {font-size: .8rem}
+.cost li{margin-top: .2rem}
+.cost span{float: right;text-align: right;}
+.map{background-color: #f5f5f5;}
+.map>div{margin:0 auto; width: 90%;}
+.map>div.kb{height: .2rem;}
+.map #thismap{height: 20rem;}
+.down{position:fixed;bottom: .2rem;left:5%;color: #fff;font-weight: 600;line-height: 3rem; width: 90%;}
+.down a{display: inline-block; width: 100%;text-align: center; border-radius: .5rem; background-color: #f9752b;}

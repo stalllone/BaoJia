@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>分享行程</title>
+    <meta name="keywords" content="服务条款，租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">      
+    <meta name="browsermode" content="application" />
+    <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/e/css/m-160112/style.css" />
+    <style>
+    @media (device-width:320px) and (-webkit-min-device-pixel-ratio:2) {
+        html, body {font-size: 14px}
+    }
+    @media (device-width:414px) and (-webkit-min-device-pixel-ratio:3) {
+        html, body {font-size: 18px}
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <section class="info">
+            <div class="header split"><span>服务已结束</span> <span>2016.1.5行驶1000公里</span></div>
+            <ul class="car split">
+                <li>
+                    <div class="icon"><img src="http://css.baojia.com/s4/e/images/m-160112/person.png"></div>
+                    <span>车主：葛大妮  158***1234</span></li>
+                <li class="from">
+                    <div class="icon">从</div><span class="oneline">北京市－北京嘉富龙房地产开发有限公司富龙房地产开发有限公司富龙房地产开发有限公司富龙房地产开发有限公司</span></li>
+                <li class="price"><span><b>........</b><b>&yen;855</b><span></li>
+                <li class="to"><div class="icon">到</div><span class="oneline">天津市－懿德园</span></li>
+                <li class="time">
+                    <div class="icon"><img src="http://css.baojia.com/s4/e/images/m-160112/time.png"></div>出发时间：2016.1.5 10:00</li>
+            </ul>
+            <ul class="cost">
+                <li>车费<span>33.0元</span></li>
+                <li>随行人员费用（1人）<span>33.0元</span></li>
+            </ul>
+        </section>
+        <section class="map">
+          <div class="kb"></div>
+            <div>
+                <div id="thismap"></div>
+            </div>
+          <div class="kb"></div>
+        </section>
+        <div class="down">
+            <a>体验拼驾 下载宝驾租车APP</a>
+        </div>
+    </div>
+    <script src="http://css.baojia.com/s4/c/js/jquery.2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=1.5&ak=xe6ZbrhlbpfGEquLsfglpDAO&services=&t=20150522094656"></script>
+    <script type="text/javascript">
+    var map = new BMap.Map("thismap");
+    var start = "天安门";
+    var end = "吉安";
+    var driving = new BMap.DrivingRoute(map, {
+        renderOptions: {
+            map: map,
+            autoViewport: true
+        },
+        policy: BMAP_DRIVING_POLICY_LEAST_DISTANCE
+    });
+    driving.search(start, end);
+    </script>
+</body>
+
+</html>

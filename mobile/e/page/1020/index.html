@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"> 
+    <meta http-equiv= "X-UA-Compatible" content = "IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝驾租车-长租</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+ 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="http://css.baojia.com/js/1.0/common/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+
+<body>
+    <input type="hidden" id="login" value="0">
+    <!--公用 header-->
+    <div class="header" style="padding-top: 0px; padding-bottom: 0px;">
+        <div class="header_content">
+            <div class="logo">
+                <a href=""></a>
+            </div>
+            <div class="header_changecity">
+                <span class="currcity">北京站</span>
+                <div class="changecity cut_handdler Left">
+                    <a class="selector" href="javascript:void(0);">切换城市</a>
+                    <div class="cities">                      
+                        <a href="/beijing/" data-pinyin="beijing" data-region_id="35">北京</a>
+                        <a href="/shanghai/" data-pinyin="shanghai" data-region_id="110">上海</a>
+                        <a href="/guangzhou/" data-pinyin="guangzhou" data-region_id="233">广州</a>
+                        <a href="/shenzhen/" data-pinyin="shenzhen" data-region_id="234">深圳</a>
+                        <a href="/chengdu/" data-pinyin="chengdu" data-region_id="272">成都</a>
+                        <a href="/xian/" data-pinyin="xian" data-region_id="325">西安</a>
+                        <a href="/tianjin/" data-pinyin="tianjin" data-region_id="36">天津</a>
+                        <a href="/nanchang/" data-pinyin="nanchang" data-region_id="206">南昌</a>
+                        <a href="/wuhan/" data-pinyin="wuhan" data-region_id="206">武汉</a>
+                        <a href="/chongqing/" data-pinyin="chongqing" data-region_id="271">重庆</a>
+                        <a href="/nanjing/" data-pinyin="nanjing" data-region_id="111">南京</a>
+                        <a href="/nanjing/" data-pinyin="nanjing" data-region_id="111">杭州</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="javascript:void(0)" onclick="location.href=&#39;http://www.baojia.com&#39;">首页</a>
+                <a href="#user_question" class="on" id="myorder">长租预定</a>
+                <a href="javascript:void(0)" onclick="location.href=&#39;http://e.baojia.com/pc/suba/page2/131?utm_source=baidu&utm_medium=sem_pinzhuan_pc_zuke200&utm_term=%E5%93%81%E4%B8%93&utm_content=%E5%93%81%E4%B8%93&utm_campaign=%E5%93%81%E4%B8%93.com&#39;">短租预定</a>
+                <a href="javascript:void(0)" onclick="location.href=&#39;http://www.baojia.com/about/&#39;">关于我们</a>
+            </div>
+            <div class="header_loginbox">
+                <!--未登录-->
+                <!--  <div class="nologin_box" style="display: block">登录/注册</div> -->
+                <!--已登录-->
+            </div>
+        </div>
+    </div>
+    <!--公用 header end-->
+    <div class="main">
+        <!--banner -->
+        <div class="banner">
+            <div class="bd">
+                <ul class="picList">
+                    <li style="z-index: 1; display: block;">
+                        <a href="javascript:void(0)"><img src="image/index/banner.jpg"></a>
+                    </li>
+                </ul>                
+            </div>           
+        </div>
+        
+        <!--banner end-->
+        <!--服务-->
+        <div class="title-yh">
+        </div>
+        <div class="iconbox" style="display:none">
+            <div class="iconbox_content">
+                <div class="iconboxlist">
+                    <b><img src="image/index/i1.png"> </b>
+                    <label>靠谱车源</label>
+                    <p>正品一手车源，保证全网性价比最高</p>
+                </div>
+                <div class="iconboxlist">
+                    <b><img src="image/index/i2.png"> </b>
+                    <label>全国质保</label>
+                    <p>各地均可享受周到可靠的质保服务</p>
+                </div>
+                <div class="iconboxlist">
+                    <b><img src="image/index/i3.png" style="margin-top: 22px;"> </b>
+                    <label>上牌无忧</label>
+                    <p>提供上牌和交税所需手续，也可代办</p>
+                </div>
+                <div class="iconboxlist">
+                    <b><img src="image/index/i4.png" style="margin-top: 17px;"> </b>
+                    <label>送车上门</label>
+                    <p>支持送车上门和服务点提车</p>
+                </div>
+            </div>
+        </div>
+        <!--服务 end-->
+        <!--经济车型-->
+        <div class="hotsale">
+            <div class="title-jj"></div>
+            <div class="hotsale_listbox">
+                <!--box-->
+                <div class="hotsale_list">
+                    <strong></strong>
+                    <div class="hotsale_name">别克&nbsp;&nbsp;&nbsp;凯越</div>
+                    <div class="hotsale_alt"><span>现车</span><span>完美车型</span><span>车源紧俏</span></div>
+                    <div class="hotsale_imgbox"><img src="image/index/jj-ky.jpg" alt="别克 凯越"></div>
+                    <label>经得起时间的考验 经典实用</label>
+                    <span>别克凯越  不同年款、不同型号</span>
+                    <p>宝驾月租价<b>¥2200</b></p>
+                    <font>*还有更多配置套餐</font>
+                    <a href="#user_question" >立即预定</a>
+                </div>
+                <!--box-->
+                <div class="hotsale_list">
+                    <strong></strong>
+                    <div class="hotsale_name">福特&nbsp;&nbsp;&nbsp;福克斯</div>
+                    <div class="hotsale_alt"><span>现车</span></div>
+                    <div class="hotsale_imgbox"><img src="image/index/jj-fks.jpg" alt="福特 福克斯"></div>
+                    <label>风靡全球15年</label>
+                    <span>福特福克斯  不同年款、不同型号</span>
+                    <p>宝驾季租价<b>¥5000</b></p>
+                    <font>*还有更多配置套餐</font>
+                    <a href="#user_question">立即预定</a>
+                </div>
+                <!--box-->
+                <div class="hotsale_list">
+                    <strong></strong>
+                    <div class="hotsale_name">日产&nbsp;&nbsp;&nbsp;逸轩</div>
+                    <div class="hotsale_alt"><span>现车</span><span>实惠</span></div>
+                    <div class="hotsale_imgbox"><img src="image/index/jj-yx.jpg" alt="日产 逸轩"></div>
+                    <label>行政级后排空间</label>
+                    <span>日产逸轩  不同年款、不同型号</span>
+                    <p>宝驾半年租价<b>¥20000</b></p>
+                    <font>*还有更多配置套餐</font>
+                    <a href="#user_question">立即预定</a>
+                </div>
+                <!--box end-->
+            </div>
+        </div>
+        <!--舒适车型-->
+        <div class="hotsale">
+            <div class="title-ss"></div>
+            <div class="hotsale_listbox">
+                <!--box-->
+                <div class="hotsale_list">
+                    <strong></strong>
+                    <div class="hotsale_name">丰田 凯美瑞</div>
+                    <div class="hotsale_alt"><span>现车</span><span>舒适</span><span>实惠</span></div>
+                    <div class="hotsale_imgbox"><img src="image/index/ss-kmr.jpg" alt="好车驾到"></div>
+                    <label>最受欢迎舒适车型</label>
+                    <span>丰田凯美瑞 不同年款、不同型号</span>
+                    <p>宝驾月租价<b>¥6000</b></p>
+                    <font>*还有更多配置套餐</font>
+                    <a href="#user_question">立即预定</a>
+                </div>
+                <!--box-->
+                <div class="hotsale_list">
+                    <strong></strong>
+                    <div class="hotsale_name">大众 迈腾</div>
+                    <div class="hotsale_alt"><span>现车</span><span>舒适</span><span>实惠</span></div>
+                    <div class="hotsale_imgbox"><img src="image/index/ss-mt.jpg" alt="好车驾到"></div>
+                    <label>经得起挑剔的眼光</label>
+                    <span>大众迈腾 不同年款、不同型号</span>
+                    <p>宝驾月租价<b>¥6000</b></p>
+                   <font>*还有更多配置套餐</font>
+                    <a href="#user_question">立即预定</a>
+                </div>
+                <!--box-->
+                <div class="hotsale_list">
+                    <strong></strong>
+                    <div class="hotsale_name">本田 雅阁</div>
+                    <div class="hotsale_alt"><span>现车</span><span>舒适</span></div>
+                    <div class="hotsale_imgbox"><img src="image/index/ss-yg.jpg" alt="好车驾到"></div>
+                    <label>操控与空间完美结合</label>
+                    <span>本田雅阁 不同年款、不同型号</span>
+                    <p>宝驾季租价<b>¥10000</b></p>
+                    <font>*还有更多配置套餐</font>
+                   <a href="#user_question">立即预定</a>
+                </div>
+                <!--box end-->
+            </div>
+        </div>
+        <!--商务车型-->
+        <div class="hotsale">
+          <div class="title-sw"></div>
+          <div class="hotsale_listbox">
+            <!--list-->
+            <div class="tj_boxlist">
+                <div class="tj_price">
+                   别克   GL8
+                </div>
+                <img src="image/index/sw-bk.jpg" alt="好车驾到">
+                <p><span>现车</span></p>
+                <font>最受欢迎的商务车</font>
+                <div class="tit">别克GL8 不同年款、不同型号</div>
+                 <font>宝驾月租价<b>¥8000</b></font>
+                <div class="tit1">*还有更多配置套餐</div>
+                <a href="#user_question">立即预定</a>
+            </div>
+                <div class="tj_boxlist">
+                <div class="tj_price">
+                     奥迪   A6L
+                </div>
+                <img src="image/index/sw-ad.jpg" alt="好车驾到">
+                <p><span>现车</span><span>商务标配</span></p>
+                <font>世界厚爱 无限机遇</font>
+                <div class="tit">奥迪A6L 不同年款、不同型号</div>
+                 <font>宝驾周租价<b>¥2800</b></font>
+                <div class="tit1">*还有更多配置套餐</div>
+                <a href="#user_question">立即预定</a>
+            </div>
+            <!--list end-->
+          </div>
+        </div>
+        <!--豪华车型-->
+        <div class="hotsale">
+          <div class="title-hh"></div>
+          <div class="hotsale_listbox">
+            <!--list-->
+            <div class="tj_boxlist">
+                <div class="tj_price">
+                    宝马 5系
+                </div>
+                <img src="image/index/hh-bm.jpg" alt="好车驾到">
+                <p><span>现车</span></p>
+                <font>最受年轻成功者的青睐</font>
+                <div class="tit">宝马5系 不同年款、不同型号</div>
+                 <font>宝驾周租价<b>¥2800</b></font>
+                <div class="tit1">*还有更多配置套餐</div>
+                <a href="#user_question">立即预定</a>
+            </div>
+                <div class="tj_boxlist">
+                <div class="tj_price">
+                    凯迪拉克 CTS
+                </div>
+                <img src="image/index/hh-kdlk.jpg" alt="好车驾到">
+                <p><span>现车</span></p>
+                <font>钻石质感的运动型豪华车型</font>
+                <div class="tit">凯迪拉克CTS 不同年款、不同型号</div>
+                 <font>宝驾周租价<b>¥9000</b></font>
+                <div class="tit1">*还有更多配置套餐</div>
+                <a href="#user_question">立即预定</a>
+            </div>
+            <!--list end-->
+          </div>
+        </div>
+        <!--信息提交-->
+        <div class="index_userquestion" id="user_question">
+            <div class="question_content">
+               <div class="q_content">
+                <h2>长租限<span class="days">15天</span>以上租期</h2>
+                <div class="question_box on">
+                    <input type="text" class="halfinput" name="user_name" id="user_name" placeholder="怎么称呼您？">
+                    <b class="sex sexon">先生</b> <b class="sex">女士</b>
+                </div>
+                <div class="question_box">
+                    <input type="text" name="mobile" id="mobile" placeholder="请输入手机号">
+                </div>
+                <div class="question_box citybox">
+                    <input type="text" name="city" id="city" placeholder="请选择用车城市">                    
+                    <div class="cityul">
+                        <ul>
+                            <li>北京</li>
+                            <li>上海</li>
+                            <li>天津</li>
+                            <li>重庆</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="question_box">
+                    <input type="text" class="halfinput" name="minprice" id="minprice" placeholder="期望最低价格">
+                    <span class="halfspan">~</span>
+                    <input type="text" class="halfinput" name="maxprice" id="maxprice" placeholder="期望最高价格">
+                </div>
+                <div class="question_box">
+                    <input type="text" class="halfinput" name="begintime" id="begintime" placeholder="开始用车时间">
+                    <span class="halfspan">~</span>
+                    <input type="text" class="halfinput" name="endtime" id="endtime" placeholder="结束用车时间">
+                </div>
+                <a href="javscript:void(0)" id="intentionSubmit"  style="margin-top:10px">提交并预约专业顾问免费服务</a>
+                <span>不满意不签约，请放心填写，5分钟响应</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--index content end-->
+    <!--公用 footer -->
+    <div class="footer">
+        <div class="footerbox">
+            <div class="footer_content">
+                <div class="footer_left">
+                    <label>客服热线</label>
+                    <span>400-808-1661</span>
+                    <p>周一至周日（9：00-22：00）</p>
+                </div>
+                <div class="footer_mid">
+                    <label>友情链接</label>
+                    <ul class="links">
+                        <li><a title="" href="http://www.baojia.com/" target="_blank">北京长租</a></li>
+                        <li><a title="" href="http://www.ganji.com/audi-r8/" target="_blank">深圳长租</a></li>
+                        <li><a title="" href="http://www.nanrenwo.net/auto/" target="_blank">广州长租</a></li>
+                        <li><a title="宝驾租车官网" href="http://www.baojia.com/about/" target="_blank">上海长租</a></li>
+                        <li><a title="P2P租车" href="http://www.baojia.com/p2p/" target="_blank">武汉长租</a></li>
+                        <li><a title="" href="http://www.huiche.com" target="_blank">杭州长租</a></li>
+                        <li><a title="" href="http://www.17.com/" target="_blank">成都长租</a></li>
+                        <li><a title="" href="http://mall.zhigou.com/" target="_blank">天津长租</a></li>
+                    </ul>
+                </div>
+                <div class="footer_right">
+                    <label>宝驾之家</label>
+                    <div class="wxboxleft">
+                        <img src="image/bj-wx.jpg">
+                        <span>扫码关注微信订阅号</span>
+                    </div>
+                    <div class="wxboxright">
+                        <img src="image/bj-fw.jpg">
+                        <span>点击关注微信服务号</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>CopyRight © 2015 版权所有&nbsp;宝驾 baojia.com&nbsp;京ICP证140667号&nbsp;京ICP备14020297号-1&nbsp;京公网安备11010802016850号</p>
+        </div>
+    </div>
+    <!--公用 footer end-->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+</body>
+
+</html>

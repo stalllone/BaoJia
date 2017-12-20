@@ -1,0 +1,2946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="http://css.baojia.com/s4/c/css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://icss.baojia.com/css/2.0/jquery.mCustomScrollbar.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <link href="https://cdn.bootcss.com/bootstrap-daterangepicker/2.1.25/daterangepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://icss.baojia.com/css/2.0/daterangepicker-bs3.css">
+    <link rel="stylesheet" type="text/css" href="http://css.baojia.com/s4/e/css/icssForm/reservion/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="http://css.baojia.com/s4/e/css/icssForm/reservion/font/fontawesome-webfont.woff">-->
+    
+    <script src="http://icss.baojia.com/js/2.0/libs/jquery-1.9.1.min.js"></script>
+    <script src="http://icss.baojia.com/js/2.0/libs/bootstrap.min.js"></script>
+    <script src="http://icss.baojia.com/plugins/moment/moment.min.js"></script>
+    <script src="http://icss.baojia.com/js/2.0/libs/daterangepicker.min.js"></script>
+    <script src="http://icss.baojia.com/js/2.0/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+    <style>
+        .mask{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            ;
+        }
+        .mask .pop{
+            width: 50px;height: 50px;
+            background: #fff;
+            text-align: center;
+            line-height: 300px;
+            font-size:15px;
+            color: #000; 
+            border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            -webkit-transform:translate(-50%,-50%);
+        }
+         td{border-bottom:0.1px solid #f0f0f0;}
+        .container .tab td {  padding: 0; }
+         #data_table td span{min-width:120px;white-space: nowrap;display: block;padding:10px 0;}
+         /* .seled li span:hover{
+            color:#000 !important;
+         }
+         .seled li span:hover i:before{
+            content: "\f057";
+         } */
+    </style>
+</head>
+
+<body style="background: #e4e5e6">
+    <div class="container" style="background: white">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                    <span>租赁订单销售报表</span>
+                </div>
+                <div class="searchCondition">
+                    <div class="search-wrap" id="search-wrap">
+                        <div class="form-inline">
+                            <label style="color: #555; font-size: 14px; margin-right: 5px;font-weight: normal">快速查找</label>
+                            <div class="btn-group">
+                                <button type="button" id="dropdown-toggle-button" class="btn btn-info btn-lg dropdown-toggle" data-toggle="dropdown"><span id="search_Span">按商家帐号名称</span><span class="caret" ></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu"  id="content_type">
+                                    <li value="1"><a href="#">按商家帐号名称</a></li>
+                                    <li value="2"><a href="#">按网点名称</a></li>
+                                    <li value="3"><a href="#">按商家ID</a></li>
+                                    <li value="4"><a href="#">按商家手机号</a></li>
+                                </ul>
+                            </div>
+                            <input type="search" id="search_input" class="form-control input-lg inptxt" style="width:280px;" placeholder="请输入查询内容">
+                            <button class="btn btn-success btn-lg" onclick="search();">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                            <a href="javascript:;" class="more" data-toggle="collapse" data-target=".selectCondtion">更多条件 <i class="icon-double-angle-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="selectCondtion collapse in">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>下单时间</td>
+                                    <td>
+                                        <ul class="cl">
+                                            <li class="on"><span class="on initial">不限</span></li>
+                                            <li>
+                                                <div class="page-content">
+                                                    <div class="container-fluid">
+                                                        <div class="row-fluid" style="margin-top:5px">
+                                                            <div class="span4">
+                                                                <div class="control-group">
+                                                                    <label class="control-label"> 日期：
+                                                                    </label>
+                                                                    <div class="controls">
+                                                                        <div id="reportrange" class="pull-left dateRange" style="width:370px">
+                                                                            <i class="icon-calendar"></i>
+                                                                            <span id="searchDateRange"></span>
+                                                                            <b class="caret"></b>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>城市</td>
+                                    <td>
+                                        <ul class="cl city_s" id="cityS">
+                                            <li value="0"><span class="on initial">全国</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>交通工具</td>
+                                    <td>
+                                        <ul class="cl active_car_type" id ="car_type">
+                                            <li value="0"><span class="on initial">不限</span></li>
+                                            <li value="1"><span>燃油汽车</span></li>
+                                            <li value="2"><span>电动汽车</span></li>
+                                            <li value="3"><span>电动单车</span></li>
+                                            <li value="4"><span>自行车</span></li>
+                                            <li value="5"><span>低速电动汽车</span></li>
+                                            <li value="6"><span>房车</span></li>
+                                            <li value="7"><span>物流汽车</span></li>
+                                            <li value="8"><span>摩托车</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>商家类型</td>
+                                    <td>
+                                        <ul class="cl active_corpation_type" id="company_type">
+                                            <li value="0"><span class="on initial">不限</span></li>
+                                            <li value="1"><span>企业</span></li>
+                                            <li value="2"><span>个人</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>商家名称</td>
+                                    <td>
+                                        <ul class="cl active_company_id" id ="company_select">
+                                            <li>
+                                                <select class="select select1" id="companSelect" onChange="companyChange(this.options[this.options.selectedIndex].value)">
+                                                    <option value="0" select="selected">全部</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>网点名称</td>
+                                    <td>
+                                        <ul class="cl active_position_select" id ="position_select">
+                                            <li>
+                                                <select class="select select2" id="positionSelect" onChange="positionChange(this.options[this.options.selectedIndex].value)">
+                                                    <option value="0" select="selected">全部</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>行驶区域</td>
+                                    <td>
+                                        <ul class="cl active_area_select" id="area_select">
+                                            <li>
+                                                <select class="select select3" id="driverAreaSelect" onChange="driverAreaChange(this.options[this.options.selectedIndex].value)">
+                                                    <option value="0" select="selected">全部</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>业务类型</td>
+                                    <td>
+                                        <ul class="cl active_bussiness_type" id="bussiness_type">
+                                            <li value="0"><span class="on initial">不限</span></li>
+                                            <li value="1"><span>即时租车</span></li>
+                                            <li value="2"><span>预约租车</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>流程类型</td>
+                                    <td>
+                                        <ul class="cl active_process_type" id="process_type">
+                                            <li value="0"><span class="on initial">不限</span></li>
+                                            <li value="1"><span>双押分付</span></li>
+                                            <li value="2"><span>双押合并</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>数据类型</td>
+                                    <td>
+                                        <ul class="cl active_data_type" id="data_type">
+                                            <li value="0"><span class="on initial">按单数新增</span></li>
+                                            <li value="1"><span>按人数新增</span></li>
+                                            <li value="2"><span>按金额新增</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>租客类型</td>
+                                    <td>
+                                        <ul class="cl active_renter_type"  id="renter_type">
+                                            <li value="0"><span class="on initial">不限</span></li>
+                                            <li value="1"><span>新注册用户</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>已选条件</td>
+                                    <td>
+                                        <ul class="cl seled">
+                                             <li>
+                                               <span id="searchType" value="" style="color: #4dbd74">
+                                               </span>
+                                            </li>
+                                            <li>
+                                               <span id="dateSelect" value="" style="color: #4dbd74">
+                                               </span>
+                                            </li>
+                                            <li>
+                                                <span id="citySelect" value="" style="color: #4dbd74">
+                                                </span>
+                                            </li>
+                                            <li>
+                                               <span id="carTypeSelect" value="" style="color: #4dbd74">
+                                               </span>
+                                            </li>
+                                            <li>
+                                                <span id="companyTypeSelect" value="" style="color: #4dbd74">
+                                                </span>
+                                            </li>
+                                            <li>
+                                               <span id="companySelect" value="" style="color: #4dbd74">
+                                               </span>
+                                            </li>
+                                            <li>
+                                                <span id="positionSelect" value="" style="color: #4dbd74">
+                                                </span>
+                                            </li>
+                                            <li>
+                                              <span id="areaSelect" value="" style="color: #4dbd74">
+                                              </span>
+                                            </li>
+                                            <li>
+                                               <span id="bussinessTypeSelect" value="" style="color: #4dbd74">
+                                               </span>
+                                            </li>
+                                            <li>
+                                                <span id="processTypeSelect" value="" style="color: #4dbd74">
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span id="dataTypeSelect" value="" style="color: #4dbd74">
+                                                </span>
+                                            </li>
+                                            <li>
+                                               <span id="renterTypeSelect" value="" style="color: #4dbd74">
+                                               </span>
+                                            </li>
+                                        </ul>
+                                        <span class="delAll">全部清除</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    <div class="exportForm">
+                    	<div class="title">
+		                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+		                    <span>租赁订单销售报表</span>
+		                </div>
+                        <button class="btn btn-success" onclick="exportToExcel()">导出表格</button>
+                           
+		                
+                    </div>
+                    <div class="tab" id="dataFiled">
+                        <!-- <div id="page_div" class="pagination-wrap center" style="padding-left: 300px;"> 
+                               <center id="page_div" style="width:120px;height:40px">
+                                 <span>正在加载数据......</span>
+                              </center>
+                         </div> -->
+                        <table id="data_table" style="text-align:center">
+                            <thead>
+                                <tr id="head_tr_0" class="orderType0">
+                                    <td class="sort" title="日期"><span>日期</span></td>
+                                    <td class="sort"  title="意向单数=基数"><span>意向单数</span></td>
+                                    <td class="sort" title="转化率=（付款单数-退款单数）/意向单数"><span>转化率</span></td>
+                                    <td class="sort" title="预订次数/率=预订次数÷意向单数"><span>预定次数/率</span></td>
+                                    <td class="sort" title="付订单数/率=付订单数÷预订次数"><span>付订单数/率</span></td>
+                                    <td class="sort" title="付订车数/比=付订单数÷付订车数，不乘100%"><span>付订车数/比</span></td>
+                                    <td class="sort" title="取车单数/率=用户操作取车单数÷付订单数"><span>取车单数/率</span></td>
+                                    <td class="sort" title="行驶率 =行程大于200米的订单数/用户操作取车的总订单数"><span>行驶单数/行驶率</span></td>
+                                    <td class="sort" title="同意单数/率=同意单数÷付订单数"><span>同意单数/率</span></td>
+                                    <td class="sort" title="付款单数/率=付款单数÷同意单数"><span>付款单数/率</span></td>
+                                    <td class="sort" title="违押单数/率=违押单数÷付款单数"><span>违押单数/率</span></td>
+                                     <td class="sort" title="失败单数/率=失败单数÷付订单数"><span>失败单数/率</span></td>
+                                    <td class="sort" title="退款单数/率=退款单数÷付款单数"><span>退款单数/率</span></td>
+                                    <!-- <td class="sort" title="车辆总数=截止到24点本地区投放车辆总数">车辆总数</td> -->
+                                   <!--  <td class="sort" title="上架率 =运营车辆数(待出租和已出租/本区域投放车辆总数)">最大上架率</td>
+                                   <td class="sort" title="上架率 =运营车辆数（待出租和已出租/本区域投放车辆总数">最小上架率</td> -->
+                                    <!-- <td class="sort" title="日均出租率=正常行驶订单(超过200米的车辆数/运营车辆数的平均值">日均出租率</td> -->
+                                    <!-- <td class="sort" title="日均行驶率 =程大于200米的订单数/用户操作取车的总订单数">日均行驶率</td> -->
+                                    
+                                    <td class="sort" title="日车均订单数 =每日生成正常行驶订单（超过200米）数/当日有出租纪录的车辆数"><span>日车均订单数</span></td>
+                                    <td class="sort" title="日车均收入=每日生成非0计数订单的费用的总和/当日成非0计费订单的车辆数"><span>日车均收入(出租)</span></td>
+                                    <!--  <td class="sort" title="日车均收入=每日生成非0计费订单的费用总和/当日运营车辆数">日车均收入(运营)</td>  -->
+                                </tr> 
+                                <tr id="head_tr_1" class="orderType1" style="display:none;">
+                                    <td class="sort" title="日期"><span>日期</span></td>
+                                    <td class="sort" title="意向人数=基数"><span>意向人数</span></td>
+                                    <td class="sort" title="转化率=付款人数-退款人数/意向人数"><span>转化率</span> </td>
+                                    <td class="sort" title="预订人数/率=预订人数÷意向人数"><span>预订人数/率</span></td>
+                                    <td class="sort" title="付订人数/率=付订人数÷预订人数"><span>付订人数/率</span></td>
+                                    <td class="sort" title="同意人数/率=同意人数÷付订人数"><span>同意人数/率</span></td>
+                                    
+                                    <td class="sort" title="付款人数/率=付款人数÷同意人数"><span>付款人数/率</span></td>
+                                    <td class="sort" title="违押人数/率=违押人数÷付款人数"><span>违押人数/率</span></td>
+                                    <td class="sort" title="失败人数/率=失败人数÷付订人数"><span>失败人数/率</span></td>
+                                    <td class="sort" title="退款人数/率=退款人数÷付款人数"><span>退款人数/率</span></td>
+                                </tr>
+                                <tr id="head_tr_2" class="orderType2" style="display:none;">
+                                  <td class="sort" title="日期"><span>日期</span></td>
+                                  <td class="sort" title="预订总额=基数"><span>预订总额</span></td>
+                                  <td class="sort" title="付订总额/率=付订总额÷预定总额"><span>付订总额/率</span></td>
+                                  <td class="sort" title="同意总额/率=同意总额÷付订总额"><span>同意总额/率</span></td>
+                                  
+                                  <td class="sort" title="付款总额/率=付款总额÷同意总额"><span>付款总额/率</span></td>
+                                  <td class="sort" title="违押总额/率=违押总额÷付款总额"><span>违押总额/率</span></td>
+                                  <td class="sort" title="失败总额/率=失败总额÷付订总额"><span>失败总额/率</span></td>
+                                  <td class="sort" title="退款总额/率=退款总额÷付款总额"><span>退款总额/率</span></td>   
+                                </tr>
+                            </thead>
+                            <tbody id="data_table_body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:none;">
+            <form id="info_export" action="http://192.168.3.169:8080/report/finance/businessExport/"
+                  style="display:none" method="post">
+              <!-- <input id="exportDataList" name="exportDataList" type="hidden" value="">  --> 
+            </form>
+
+        </div>
+    <div class="mask" id="page_div">
+        <!-- <div class="pop">
+            正在加载数据......
+        </div> -->
+        <img class="pop" src="http://icss.baojia.com/images/2.0/loading.gif">
+    </div>
+</body>
+
+<script>
+	(function($){
+        $(window).load(function(){
+            $(".tab").mCustomScrollbar({
+            	horizontalScroll:true
+            });
+        });
+    })(jQuery);
+</script>
+<script>
+$(function() {
+    //综合查询
+    $(".dropdown-menu li a").click(function(e){
+        var obj = $(e.target);
+       var txt =obj.text();
+       var searchType=$(this).parent().attr("value");
+       $("#search_Span").empty();
+       $("#search_Span").append(txt);
+       $("#search_input").val("");
+       window.searchTypeId=searchType;
+    });
+    
+   //车型  交通工具
+    $(".active_car_type li span").click(function(e) {
+        $(this).addClass("on");
+        $(this).parent().siblings().find("span").removeClass("on");
+        var obj = $(e.target);
+        if (obj.hasClass('initial')) {
+            $("#carTypeSelect").empty();
+            window.carType=null;
+            queryDataInfo();
+            return;
+        } else {
+           var txt = obj.text();
+           var carType= $(this).parent().attr("value");
+           //console("carType:"+carType);
+            $("#carTypeSelect").empty();
+            /*$("#carTypeSelect").append("<i class='icon-ok-sign'></i>");*/
+            $("#carTypeSelect").append(txt);
+            window.carType=carType;
+            queryDataInfo();
+        }
+    });
+    //商家类型
+    $(".active_corpation_type li span").click(function(e){
+        $(this).addClass("on");
+        $(this).parent().siblings().find("span").removeClass("on");
+        var obj = $(e.target);
+        if (obj.hasClass('initial')) {
+            $("#companyTypeSelect").empty();
+            window.copationType=null;
+            queryDataInfo();
+           return;
+        }else {
+           var txt = obj.text();
+           var carType= $(this).parent().attr("value");
+           $("#companyTypeSelect").empty();
+           /*$("#companyTypeSelect").append("<i class='icon-ok-sign'></i>");*/
+           $("#companyTypeSelect").append(txt);
+           window.copationType=carType;
+           queryDataInfo();
+        }
+
+    });
+    //业务类型
+    $(".active_bussiness_type li span").click(function(e){
+        $(this).addClass("on");
+        $(this).parent().siblings().find("span").removeClass("on");
+        var obj = $(e.target);
+        if (obj.hasClass('initial')) {
+            $("#bussinessTypeSelect").empty();
+            window.bussinessType=null;
+            queryDataInfo();
+           return;
+        }else {
+           var txt = obj.text();
+           var busType= $(this).parent().attr("value");
+           $("#bussinessTypeSelect").empty();
+          /* $("#bussinessTypeSelect").append("<i class='icon-ok-sign'></i>");*/
+           $("#bussinessTypeSelect").append(txt);
+           window.bussinessType=busType;
+           queryDataInfo();
+        }
+    });
+
+    //流程类型
+     $(".active_process_type li span").click(function(e){
+        $(this).addClass("on");
+        $(this).parent().siblings().find("span").removeClass("on");
+        var obj = $(e.target);
+        if (obj.hasClass('initial')) {
+            $("#processTypeSelect").empty();
+            window.processType=null;
+            queryDataInfo();
+           return;
+        }else {
+           var txt = obj.text();
+           var processType= $(this).parent().attr("value");
+           $("#processTypeSelect").empty();
+           /*$("#processTypeSelect").append("<i class='icon-ok-sign'></i>");*/
+           $("#processTypeSelect").append(txt);
+           window.processType=processType;
+           queryDataInfo();
+        }
+     });
+      var  widthLength;
+    //数据类型筛选
+    $(".active_data_type li span").click(function(e) {
+        $(this).addClass("on");
+        $(this).parent().siblings().find("span").removeClass("on");
+        var obj = $(e.target);
+       
+        if (obj.hasClass('initial')) {
+              $("#head_tr_0").show();
+              $("#head_tr_1").hide();
+              $("#head_tr_2").hide();
+              $("#data_table_body").empty();
+              $("#dataTypeSelect").empty();
+              window.dataType=null;
+              if(window.queryDataList){
+                loadDataTypeZero(window.queryDataList);
+              }
+              widthLength= $("#head_tr_0").width();
+              $(".mCSB_container").width(widthLength);
+              return;
+        }else{
+           var txt = obj.text();
+           var dataType= $(this).parent().attr("value");
+           $("#dataTypeSelect").empty();
+           /*$("#dataTypeSelect").append("<i class='icon-ok-sign'></i>");*/
+           $("#dataTypeSelect").append(txt);
+           window.dataType=null;
+           
+           if(dataType==1){
+            window.dataType=1;
+              $("#head_tr_0").hide();
+              $("#head_tr_1").show();
+              $("#head_tr_2").hide();
+
+               widthLength= $("#head_tr_1").width();
+              $(".mCSB_container").width(widthLength);
+
+              $("#data_table_body").empty();
+              if(window.queryDataList){
+                loadDataTypeFirst(window.queryDataList);
+              }
+           }else{
+            window.dataType=2;
+             $("#head_tr_0").hide();
+              $("#head_tr_1").hide();
+              $("#head_tr_2").show();
+
+              widthLength= $("#head_tr_2").width();
+              $(".mCSB_container").width(widthLength);
+              $("#data_table_body").empty();
+              if(window.queryDataList){
+                loadDataTypeSecond(window.queryDataList);
+              }
+           }
+        }
+    });
+    //租客类型
+      $(".active_renter_type li span").click(function(e) {
+       $(this).addClass("on");
+        $(this).parent().siblings().find("span").removeClass("on");
+        var obj = $(e.target);
+        if (obj.hasClass('initial')) {
+            $("#renterTypeSelect").empty();
+            window.renterType=null;
+            queryDataInfo();
+           return;
+        }else {
+           var txt = obj.text();
+           var renterType= $(this).parent().attr("value");
+           $("#renterTypeSelect").empty();
+           /*$("#renterTypeSelect").append("<i class='icon-ok-sign'></i>");*/
+           $("#renterTypeSelect").append(txt);
+           window.renterType=renterType;
+           queryDataInfo();
+        }
+
+      });
+    //全部清除
+     $(".delAll").click(function() {
+        window.beginTime=null;
+        window.endTime=null;
+        window.cityId=null;
+        window.carType=null;
+        window.companyId =null;
+        window.positionId =null;
+        window.areaId =null;
+        window.copationType=null;
+        window.bussinessType=null;
+        window.processType=null;
+        window.renterType=null;
+        window.searchValue=null;
+        window.searchTypeId=null;
+        window.queryDataList=null;
+        window.dataType=null;
+        //查询选项
+        $("#search_Span").empty();
+        $("#search_Span").append("按商家帐号名称");
+        $("#search_input").val("");
+        $('#reportrange span').html("请选择日期");
+        $("#dateSelect").empty();
+        $("#citySelect").empty();
+        $("#carTypeSelect").empty();
+        $("#companyTypeSelect").empty();
+        $("#companySelect").empty();
+        $("#positionSelect").empty();
+        $("#areaSelect").empty();
+        $("#bussinessTypeSelect").empty();
+        $("#processTypeSelect").empty();
+        $("#dataTypeSelect").empty();
+        $("#renterTypeSelect").empty();
+        //城市清空
+         $(".city_s li").each(function(){
+          if($(this).attr("value") == 0){
+              $(this).children().addClass("on");
+           }else{
+              $(this).children().removeClass("on");
+           }
+           changeByCity(0);
+         });
+        
+        //交通工具类型
+        $(".active_car_type li").each(function(){
+           if($(this).attr("value") == 0){
+              $(this).children().addClass("on");
+           }else{
+              $(this).children().removeClass("on");
+           }
+        });
+        //商家类型
+        $(".active_corpation_type li").each(function(){
+            if($(this).attr("value") == 0){
+               $(this).children().addClass("on");
+            }else{
+               $(this).children().removeClass("on");
+            }
+        });
+        //业务类型
+        $(".active_bussiness_type li").each(function(){
+           if($(this).attr("value") == 0){
+               $(this).children().addClass("on");
+            }else{
+               $(this).children().removeClass("on");
+            }
+        });
+        //流程类型
+        $(".active_process_type li").each(function(){
+           if($(this).attr("value") == 0){
+               $(this).children().addClass("on");
+            }else{
+               $(this).children().removeClass("on");
+            }
+        });
+        //数据类型
+        $(".active_data_type li").each(function(){
+           if($(this).attr("value") == 0){
+               $(this).children().addClass("on");
+            }else{
+               $(this).children().removeClass("on");
+            }
+        });
+        //租客类型
+         $(".active_renter_type li").each(function(){
+           if($(this).attr("value") == 0){
+               $(this).children().addClass("on");
+            }else{
+               $(this).children().removeClass("on");
+            }
+        });
+        //已选条件清空
+       $(".seled").each(function(){
+           $(this).next().find("span").empty();
+        });
+
+        // $(this).prev().empty();
+        // $(".active li span.initial").parent().siblings().find("span").removeClass("on");
+        // $(".select option").each(function() {
+        //     if ($(this).val() == '0') {
+        //         $(this).prop('selected', true);
+        //     }
+        // });
+        queryDataInfo();
+    });
+    //
+     
+    $(".control-label").remove();
+    
+})
+</script>
+<script type="text/javascript">
+//预加载
+  $(function(){
+      queryCompanyInfo();//加载查询项
+      queryDataInfo();//加载查询内容
+      
+      //城市筛选
+     $(".city_s li span").click(function(e) {
+        $(this).addClass("on");
+        $(this).parent().siblings().find("span").removeClass("on");
+        var obj = $(e.target);
+        if (obj.hasClass('initial')) {
+             $("#citySelect").empty();
+             changeByCity(0);
+             window.cityId=null;
+             window.companyId=null;
+             window.positionId=null;
+             window.areaId=null;
+             queryDataInfo();
+            return;
+        } else {
+            var txt = obj.text();
+            var id = $(this).parent().attr("id");
+            //console.info("value:"+id+",name:"+txt);
+           $("#citySelect").empty();
+           /*$("#citySelect").append("<i class='icon-ok-sign'></i>");*/
+           $("#citySelect").attr("value",id);
+           $("#citySelect").append(txt);
+           window.cityId=id;
+           //城市、商家、行驶区域联动
+           changeByCity(id);
+           //条件查询
+           queryDataInfo();
+           
+        }
+    });
+
+  });
+
+   //点击查询
+   function search(){
+    var searchValue=$("#search_input").val();
+    window.searchValue=searchValue;
+     queryDataInfo();
+   };
+   //报表导出
+   function exportToExcel(){
+    $("#info_export").empty();
+    if(!confirm("是否确定导出excel")){
+            return ;
+     }
+     if(!window.queryDataList){
+            if(!confirm("数据异常!")){
+              return ;
+            }
+     }
+     if(window.beginTime){
+    	var inputTime=$("<input name='beginTime'/>"); 
+    	inputTime.attr("value",null);
+    	inputTime.attr("value",window.beginTime);
+    	$("#info_export").append(inputTime);  
+     }
+     if(window.endTime){
+    	var inputTime=$("<input name='endTime'/>");
+    	inputTime.attr("value",null);
+        inputTime.attr("value",window.endTime);
+        $("#info_export").append(inputTime);  
+     }
+     if(window.cityId){
+       var input =$("<input name='city'/>"); 
+       input.attr("value",null);
+       input.attr("value",window.cityId);
+        $("#info_export").append(input);  
+     }
+     if(window.carType){
+        var input =$("<input name='carType'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.carType);
+        $("#info_export").append(input);  
+     }
+     if(window.companyId){
+        var input =$("<input name='companyId'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.companyId);
+        $("#info_export").append(input);  
+     }
+     if(window.positionId){
+        var input =$("<input name='positionId'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.positionId);
+        $("#info_export").append(input);  
+     }
+     if(window.areaId){
+        var input =$("<input name='areaId'/>");
+        input.attr("value",null);
+        input.attr("value",window.areaId);
+        $("#info_export").append(input);  
+     }
+     if(window.copationType){
+        var input =$("<input name='copationType'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.copationType);
+        $("#info_export").append(input);  
+     }
+     if(window.bussinessType){
+        var input =$("<input name='rentType'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.bussinessType);
+        $("#info_export").append(input);  
+     }
+     if(window.processType){
+        var input =$("<input name='processType'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.processType);
+        $("#info_export").append(input);  
+     }
+     if(window.renterType){
+        var input =$("<input name='renterType'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.renterType);
+        $("#info_export").append(input);  
+     }
+     if(window.searchValue){
+        var input =$("<input name='searchValue'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.searchValue);
+        $("#info_export").append(input);  
+     }
+     if(window.searchTypeId){
+        var input =$("<input name='searchType'/>");
+        input.attr("value",null);
+        input.attr("value",window.searchTypeId);
+        $("#info_export").append(input);  
+     }
+     /*if(window.queryDataList){
+        var input =$("<input name='beginTime'/>"); 
+        input.attr("value",window.beginTime);
+        form.append(input);  
+     }*/
+     if(window.dataType){
+        var input =$("<input name='dataType'/>"); 
+        input.attr("value",null);
+        input.attr("value",window.dataType);
+        $("#info_export").append(input);  
+     }
+    
+     //console.info(JSON.stringify(window.queryDataList));
+     //$("#exportDataList").val(JSON.stringify(window.queryDataList));
+     $("#info_export").submit();
+   }
+
+   //点击城市联动
+   function changeByCity(id){
+     var select =$("#companSelect");
+      select.empty();
+      var opt=$("<option value='0' select='selected'>全部</option>");
+      select.append(opt);
+     var companyList = window.corpationList;
+     if(id!=0){
+      for(var i=0;i<companyList.length;i++){
+          if(companyList[i].city_id==id){
+              var copName= companyList[i].company_name;
+              var copId= companyList[i].company_id; 
+              var option=$("<option value='"+copId+"'>"+copName+"</option>"); 
+              select.append(option); 
+           }
+      }
+     }else{
+        for(var i=0;i<companyList.length;i++){
+        var copName= companyList[i].company_name;
+        var copId= companyList[i].company_id; 
+        var option=$("<option value='"+copId+"'>"+copName+"</option>"); 
+        select.append(option); 
+      }
+     }
+     
+     var areaselect =$("#driverAreaSelect");
+     areaselect.empty();
+     var areaopt=$("<option value='0' select='selected'>全部</option>");
+     areaselect.append(areaopt);
+     var driverAreaInfos= window.driverAreas;
+     if(id!=0){
+       for(var i=0;i<driverAreaInfos.length;i++){
+         if(driverAreaInfos[i].city_id==id){
+            var groupId=driverAreaInfos[i].group_id;
+            var groupName=driverAreaInfos[i].group_name;
+            var areaCityId=driverAreaInfos[i].city_id;
+            var areaOption= $("<option id='"+groupId+"' value='"+groupId+"'>"+groupName+"</option>");
+            areaselect.append(areaOption);
+         }
+       }
+     }else{
+       for(var i=0;i<driverAreaInfos.length;i++){
+        var groupId=driverAreaInfos[i].group_id;
+        var groupName=driverAreaInfos[i].group_name;
+        var areaCityId=driverAreaInfos[i].city_id;
+        var areaOption= $("<option id='"+groupId+"' value='"+areaCityId+"'>"+groupName+"</option>");
+        areaselect.append(areaOption);
+       }
+     }
+     var y=$("#positionSelect");
+     y.find("option").remove(); 
+     y.append("<option id ='0' value='' select='selected'>全部</option>");
+   }
+
+  function queryCompanyInfo(){
+    
+    $.ajax({
+          url:"http://192.168.3.169:8080/report/finance/queryParamInfo/",
+          type:"POST",
+          async:false,
+          success:function(data){
+              //console.info(data);
+              var cityDatas = data.cityList;
+              //console.info(cityDatas.length);
+              var ul=$("#cityS");
+              for(var i=0;i<cityDatas.length;i++){
+                var liNew=$("<li id='"+cityDatas[i].id+"'></li>");
+                var span=$("<span >"+cityDatas[i].name+"</span>");
+                liNew.append(span);
+                ul.append(liNew);
+              }
+             
+              //网点
+              var position= data.position;
+              //行驶区域
+              var driverArea= data.driverArea;
+              //测试数据正式去掉
+              // var driverArea=[
+              //    {"group_id":"1","group_name":"那就","city_id":"1"},
+              //    {"group_id":"8","group_name":"打听","city_id":"1"},
+              //    {"group_id":"13","group_name":"新","city_id":"2"}
+              //    ];
+              
+              window.postions= position;
+              window.driverAreas=driverArea;
+              window.companyInfos=companyList;
+              //商家名称加载
+              var companyList = data.company;
+              window.corpationList= companyList;
+              var select =$("#companSelect");
+              for(var i =0;i<companyList.length;i++){
+                var copName= companyList[i].company_name;
+                var copId= companyList[i].company_id; 
+                var option=$("<option value='"+copId+"'>"+copName+"</option>"); 
+                select.append(option); 
+              }
+              var selectArea=$("#driverAreaSelect");
+              for(var i=0;i<driverArea.length;i++){
+                var groupId=driverArea[i].group_id;
+                var groupName=driverArea[i].group_name;
+                var areaCityId=driverArea[i].city_id;
+                var areaOption= $("<option id='"+groupId+"' value='"+groupId+"'>"+groupName+"</option>");
+                selectArea.append(areaOption);
+              }
+          }
+      }); 
+  }
+  //商家，网点联动
+  function companyChange(obj){
+
+    var x =$("#companSelect");
+    var y =$("#positionSelect");
+    y.find("option").remove(); 
+    y.append("<option id ='0' value='' select='selected'>全部</option>");
+    var companyId= obj;
+    var positionList=window.postions;
+    window.companyId=obj;
+    window.positionId=null;
+    window.areaId=null;
+    var companyPosition=positionList[obj];
+    //console.info(companyPosition);
+    if(obj==0){
+        window.companyId=null;
+        window.positionId=null;
+        queryDataInfo();
+        return;
+    }
+    if(companyPosition){
+        for(var i=0;i<companyPosition.length;i++){
+          var pId=companyPosition[i].position_id;
+          var pName=companyPosition[i].position_name; 
+          var option=$("<option  id='"+pId+"' value='"+pId+"'>"+pName+"</option>");
+          y.append(option);
+        }
+    }
+    queryDataInfo();
+  }
+
+//网点选择
+  function positionChange(obj){
+    if(obj==0){
+        window.positionId=null;
+    }else{
+         window.positionId=obj;
+    }
+    queryDataInfo();
+  }
+
+  //行驶区域选择
+  function driverAreaChange(obj){
+    window.areaId=null;
+    if(obj&&obj>0){
+      window.areaId=obj;
+    }
+    queryDataInfo();
+  }
+
+  //数据加载
+  function queryDataInfo(){
+    $("#data_table_body").empty();
+    //$("#data_table").hide();
+    $("#page_div").show();
+    var beginDate= window.beginTime;
+    var endDate= window.endTime;
+    var cityId= window.cityId;
+    var cartype=window.carType;
+    var companyId=window.companyId ;
+    var positionId=window.positionId ;
+    var areaId=window.areaId ;
+    var copationId= window.copationType;
+    var rentType=window.bussinessType;
+    var processType=window.processType;
+    var renterType =window.renterType;
+    var searchValue=window.searchValue;
+    var searchType= window.searchTypeId;
+    if(searchValue!=null&&searchType==null){
+        searchType=1;
+    }
+    var datas={
+        beginTime:beginDate, endTime:endDate, city:cityId,
+        carType:cartype, companyId:companyId, positionId:positionId,  areaId:areaId,
+        copationType:copationId, rentType:rentType, processType:processType,
+        renterType:renterType,searchType:searchType,searchValue:searchValue
+      };
+    
+     $.ajax({
+          url:"http://192.168.3.169:8080/report/finance/businessInfo/",
+          type:"POST",
+          async:true,
+          data:datas,
+          success:function(rst){
+           $("#page_div").hide();
+           
+           window.queryDataList=null;//查询数据 
+           window.queryDataList=rst;
+           var dataType=window.dataType;
+           if(!dataType||dataType==0){
+              $("#head_tr_0").show();
+              $("#head_tr_1").hide();
+              $("#head_tr_2").hide();
+              loadDataTypeZero(rst);
+          }else if(dataType==1){
+             $("#head_tr_0").hide();
+              $("#head_tr_1").show();
+              $("#head_tr_2").hide();
+              loadDataTypeFirst( rst);
+          }else{
+             $("#head_tr_0").hide();
+             $("#head_tr_1").hide();
+             $("#head_tr_2").show();
+             loadDataTypeSecond(rst);
+          }
+         }
+
+     });
+  }
+
+  function loadDataTypeSecond(rst){
+     var datas= rst.data;
+     var sum= rst.sumMap;
+     var average= rst.averageMap;
+     if(datas){
+     for(var i= 0;i<datas.length;i++){
+        var data=datas[i];
+       //日期
+        var tr=$("<tr></tr>");
+        var td=$("<td></td>");
+        var td_span=$("<span></span>");
+        td_span.append(data.date);
+        td.append(td_span);
+        tr.append(td);
+       // 预订总额=基数
+       var tentionTd=$("<td></td>");
+       var tentiontd_span=$("<span></span>");
+       var sumb_all_money=data.sumb_all_money; 
+       if(data.sumb_all_money==0||!sumb_all_money||sumb_all_money==''||sumb_all_money==null){
+          tentiontd_span.append(0);
+       }else{
+        tentiontd_span.append(sumb_all_money);
+       }
+       tentionTd.append(tentiontd_span);
+       tr.append(tentionTd);
+       // 付订总额/率=付订总额÷预定总额
+       var pay_sub_money =data.pay_sub_money;
+       var pay_sub_money_td=$("<td></td>");
+       var pay_sub_money_span=$("<span></span>");
+       if(sumb_all_money==0){
+        sumb_all_money=1;
+       }
+       var paySumRate=(Math.round(pay_sub_money/sumb_all_money *10000)/100.00 +"%");
+       if(data.pay_sub_money==0||!paySumRate||!pay_sub_money){
+         pay_sub_money_span.append(0);
+       }else{
+        pay_sub_money_span.append(pay_sub_money+"/"+paySumRate);
+       }
+       pay_sub_money_td.append(pay_sub_money_span);
+       tr.append(pay_sub_money_td);
+       // 同意总额/率=同意总额÷付订总额
+       var argree_all_money= data.argree_all_money;
+       var argree_all_money_td=$("<td></td>");
+       var argree_all_money_span=$("<span></span>");
+       if(pay_sub_money==0){
+            pay_sub_money=1;
+       }
+       var argreeMoneyRate=(Math.round(argree_all_money/pay_sub_money *10000)/100.00 +"%");
+       if(argree_all_money==0||!argree_all_money||!argree_all_money||!argreeMoneyRate){
+            argree_all_money_span.append(0);
+       }else{
+        argree_all_money_span.append(argree_all_money+"/"+argreeMoneyRate);
+       }
+       argree_all_money_td.append(argree_all_money_span);
+       tr.append(argree_all_money_td);
+       
+       // 付款总额/率=付款总额÷同意总额
+       var pay_mony_all=data.pay_mony_all;
+       var pay_mony_all_td=$("<td></td>");
+       var pay_mony_all_span=$("<span></span>");
+       if(argree_all_money==0){
+         argree_all_money=1;
+       }
+       var payMoneyRate=(Math.round(pay_mony_all/argree_all_money *10000)/100.00 +"%");
+       //pay_mony_all_td.append(pay_mony_all+"/"+payMoneyRate);
+       if(pay_mony_all==0||!payMoneyRate||!pay_mony_all||!argree_all_money){
+            pay_mony_all_span.append(0);
+       }else{
+        pay_mony_all_span.append(pay_mony_all+"/"+payMoneyRate);
+       }
+       pay_mony_all_td.append(pay_mony_all_span);
+       tr.append(pay_mony_all_td);
+       // 违押总额/率=违押总额÷付款总额
+       var deposit_all_money=data.deposit_all_money;
+       var deposit_all_money_td=$("<td></td>");
+       var deposit_all_money_span=$("<span></span>");
+       if(pay_mony_all==0){
+        pay_mony_all=1;
+       }
+       var depositAllRate=(Math.round(deposit_all_money/pay_mony_all *10000)/100.00 +"%");
+       if(deposit_all_money==0||!depositAllRate||!deposit_all_money||!deposit_all_money){
+            deposit_all_money_span.append(0);
+       }else{
+        deposit_all_money_span.append(deposit_all_money+"/"+depositAllRate);
+       }
+       deposit_all_money_td.append(deposit_all_money_span);
+       tr.append(deposit_all_money_td);
+       // 失败总额/率=失败总额÷付订总额
+       var lose_all_money= data.lose_all_money;
+       var loseMoneyRate=(Math.round(lose_all_money/pay_sub_money *10000)/100.00 +"%");
+       var lose_all_money_td= $("<td></td>");
+       var lose_all_money_span=$("<span></span>");
+       if(data.lose_all_money==0||!loseMoneyRate||!lose_all_money){
+            lose_all_money_span.append(0);
+       }else{
+        lose_all_money_span.append(lose_all_money+"/"+loseMoneyRate);
+       }
+       lose_all_money_td.append(lose_all_money_span);
+       tr.append(lose_all_money_td);
+
+       // 退款总额/率=退款总额÷付款总额
+       var return_all_money=data.return_all_money;
+       var return_all_money_td=$("<td></td>");
+       var return_all_money_span=$("<span></span>");
+       var returnAllMoneyRate=(Math.round(return_all_money/pay_mony_all *10000)/100.00 +"%");
+       if(return_all_money==0||!return_all_money||!pay_mony_all||!returnAllMoneyRate){
+        return_all_money_span.append(0);
+       }else{
+        return_all_money_span.append(return_all_money+"/"+returnAllMoneyRate);
+       }
+        return_all_money_td.append (return_all_money_span);
+       tr.append(return_all_money_td);
+       $("#data_table_body").append(tr);
+     }
+     }
+     if(sum){
+        var data=sum;
+        var tr=$("<tr></tr>");
+        var td=$("<td></td>");
+        var td_span=$("<span></span>");
+        td_span.append("合计");
+        td.append(td_span);
+        tr.append(td);
+       // 预订总额=基数
+       var sum_tentionTd=$("<td></td>");
+       var sum_tention_span=$("<span></span>");
+       var sum_sumb_all_money=data.sum_sumb_all_money; 
+       if(!sum_sumb_all_money||sum_sumb_all_money==0.00){
+        sum_sumb_all_money=0;
+       }
+       sum_tention_span.append(sum_sumb_all_money);
+       sum_tentionTd.append(sum_tention_span);
+       tr.append(sum_tentionTd);
+       // 付订总额/率=付订总额÷预定总额
+       var sum_pay_sub_money =data.sum_pay_sub_money;
+       var sum_pay_sub_money_td=$("<td></td>");
+       var sum_pay_sub_money_span=$("<span></span>");
+       if(sum_sumb_all_money==0){
+        sum_sumb_all_money=1;
+       }
+       var sum_paySumRate=(Math.round(sum_pay_sub_money/sum_sumb_all_money *10000)/100.00 +"%");
+       if(sum_pay_sub_money==0){
+         sum_pay_sub_money_span.append(0);
+       }else{
+         sum_pay_sub_money_span.append(sum_pay_sub_money+"/"+sum_paySumRate);
+       }
+       sum_pay_sub_money_td.append(sum_pay_sub_money_span);
+       tr.append(sum_pay_sub_money_td);
+       // 同意总额/率=同意总额÷付订总额
+       var sum_argree_all_money= data.sum_argree_all_money;
+       var sum_argree_all_money_td=$("<td></td>");
+       var sum_argree_all_money_span=$("<span></span>");
+       if(sum_pay_sub_money==0){
+            sum_pay_sub_money=1;
+       }
+
+       var sum_argreeMoneyRate=(Math.round(sum_argree_all_money/sum_pay_sub_money *10000)/100.00 +"%");
+       if(sum_argree_all_money==0){
+            sum_argree_all_money_span.append(0);
+       }else{
+        sum_argree_all_money_span.append(sum_argree_all_money+"/"+sum_argreeMoneyRate);       
+        }
+       sum_argree_all_money_td.append(sum_argree_all_money_span);
+       tr.append(sum_argree_all_money_td);
+      
+       // 付款总额/率=付款总额÷同意总额
+       var sum_pay_mony_all=data.sum_pay_mony_all;
+       var sum_pay_mony_all_td=$("<td></td>");
+       var sum_pay_mony_all_span=$("<span></span>");
+       if(sum_argree_all_money==0){
+         sum_argree_all_money=1;
+       }
+       var sum_payMoneyRate=(Math.round(sum_pay_mony_all/sum_argree_all_money *10000)/100.00 +"%");
+       if(sum_pay_mony_all==0){
+         sum_pay_mony_all_span.append(0);
+       }else{
+          sum_pay_mony_all_span.append(sum_pay_mony_all+"/"+sum_payMoneyRate);
+       }
+       sum_pay_mony_all_td.append(sum_pay_mony_all_span);
+       tr.append(sum_pay_mony_all_td);
+       // 违押总额/率=违押总额÷付款总额
+       var sum_deposit_all_money=data.sum_deposit_all_money;
+       var sum_deposit_all_money_td=$("<td></td>");
+       var sum_deposit_all_money_span=$("<span></span>");
+       if(sum_pay_mony_all==0){
+        sum_pay_mony_all=1;
+       }
+       var sum_depositAllRate=(Math.round(sum_deposit_all_money/sum_pay_mony_all *10000)/100.00 +"%");
+       if(sum_deposit_all_money==0){
+         sum_deposit_all_money_span.append(0);
+       }else{
+        sum_deposit_all_money_span.append(sum_deposit_all_money+"/"+sum_depositAllRate);
+       }
+       sum_deposit_all_money_td.append(sum_deposit_all_money_span);
+       tr.append(sum_deposit_all_money_td);
+        // 失败总额/率=失败总额÷付订总额
+       var sum_lose_all_money= data.sum_lose_all_money;
+       var sum_loseMoneyRate=(Math.round(sum_lose_all_money/sum_pay_sub_money *10000)/100.00 +"%");
+      
+       var sum_lose_all_money_td= $("<td></td>");
+       var sum_lose_all_money_span=$("<span></span>");
+        if(sum_lose_all_money==0){
+         sum_lose_all_money_span.append(0);
+       }else{
+         sum_lose_all_money_span.append(sum_lose_all_money+"/"+sum_loseMoneyRate);
+       }
+       sum_lose_all_money_td.append(sum_lose_all_money_span);
+       tr.append(sum_lose_all_money_td);
+
+       // 退款总额/率=退款总额÷付款总额
+       var sum_return_all_money=data.sum_return_all_money;
+       var sum_return_all_money_td=$("<td></td>");
+       var sum_return_all_money_span=$("<span></span>");
+       var sum_returnAllMoneyRate=(Math.round(sum_return_all_money/sum_pay_mony_all *10000)/100.00 +"%");
+       
+       if(sum_return_all_money==0){
+         sum_return_all_money_span.append(0);
+       }else{
+            sum_return_all_money_span.append(sum_return_all_money+"/"+sum_returnAllMoneyRate);
+       }
+       sum_return_all_money_td.append(sum_return_all_money_span);
+       tr.append(sum_return_all_money_td);
+       $("#data_table_body").append(tr);
+
+     }
+     if(average){
+        var data=average;
+        var tr=$("<tr></tr>");
+        var td=$("<td></td>");
+        var span_td=$("<span></span>");
+        span_td.append("平均");
+        td.append(span_td);
+        tr.append(td);
+       // 预订总额=基数
+       var sum_tentionTd=$("<td></td>");
+       var sum_tentionTd_span=$("<span></span>");
+       var sum_sumb_all_money=data.sum_sumb_all_money; 
+       if(!sum_sumb_all_money||sum_sumb_all_money==0.00){
+        sum_sumb_all_money=0;
+       }
+       sum_tentionTd_span.append(sum_sumb_all_money);
+       sum_tentionTd.append(sum_tentionTd_span);
+       tr.append(sum_tentionTd);
+       // 付订总额/率=付订总额÷预定总额
+       var sum_pay_sub_money =data.sum_pay_sub_money;
+       var sum_pay_sub_money_td=$("<td></td>");
+       var sum_pay_sub_money_span=$("<span></span>");
+       if(sum_sumb_all_money==0){
+        sum_sumb_all_money=1;
+       }
+       var sum_paySumRate=(Math.round(sum_pay_sub_money/sum_sumb_all_money *10000)/100.00 +"%");
+       
+       if(sum_pay_sub_money==0){
+            sum_pay_sub_money_span.append(0);
+       }else{
+         sum_pay_sub_money_span.append(sum_pay_sub_money+"/"+sum_paySumRate);
+       }
+       sum_pay_sub_money_td.append(sum_pay_sub_money_span);
+       tr.append(sum_pay_sub_money_td);
+       // 同意总额/率=同意总额÷付订总额
+       var sum_argree_all_money= data.sum_argree_all_money;
+       var sum_argree_all_money_td=$("<td></td>");
+       var sum_argree_all_money_span=$("<span></span>");
+       if(sum_pay_sub_money==0){
+            sum_pay_sub_money=1;
+       }
+       var sum_argreeMoneyRate=(Math.round(sum_argree_all_money/sum_pay_sub_money *10000)/100.00 +"%");
+       
+       if(sum_argree_all_money==0){
+          sum_argree_all_money_span.append(0);
+       }else{
+            sum_argree_all_money_span.append(sum_argree_all_money+"/"+sum_argreeMoneyRate);
+       }
+       sum_argree_all_money_td.append(sum_argree_all_money_span);
+       tr.append(sum_argree_all_money_td);
+       
+       // 付款总额/率=付款总额÷同意总额
+       var sum_pay_mony_all=data.sum_pay_mony_all;
+       var sum_pay_mony_all_td=$("<td></td>");
+       var sum_pay_mony_all__span=$("<span></span>");
+       if(sum_argree_all_money==0){
+         sum_argree_all_money=1;
+       }
+       var sum_payMoneyRate=(Math.round(sum_pay_mony_all/sum_argree_all_money *10000)/100.00 +"%");
+       
+       if(sum_pay_mony_all==0){
+          sum_pay_mony_all__span.append(0);
+       }else{
+           sum_pay_mony_all__span.append(sum_pay_mony_all+"/"+sum_payMoneyRate); 
+       }
+       sum_pay_mony_all_td.append(sum_pay_mony_all__span);
+       tr.append(sum_pay_mony_all_td);
+       // 违押总额/率=违押总额÷付款总额
+       var sum_deposit_all_money=data.sum_deposit_all_money;
+       var sum_deposit_all_money_td=$("<td></td>");
+       var sum_deposit_all_money_span=$("<span></span>");
+       if(sum_pay_mony_all==0){
+        sum_pay_mony_all=1;
+       }
+       var sum_depositAllRate=(Math.round(sum_deposit_all_money/sum_pay_mony_all *10000)/100.00 +"%");
+       
+       if(sum_deposit_all_money==0){
+            sum_deposit_all_money_span.append(0);
+       }else{
+           sum_deposit_all_money_span.append(sum_deposit_all_money+"/"+sum_depositAllRate); 
+       }
+       sum_deposit_all_money_td.append(sum_deposit_all_money_span);
+       tr.append(sum_deposit_all_money_td);
+       // 失败总额/率=失败总额÷付订总额
+       var sum_lose_all_money= data.sum_lose_all_money;
+       var sum_loseMoneyRate=(Math.round(sum_lose_all_money/sum_pay_sub_money *10000)/100.00 +"%");
+       var sum_lose_all_money_td= $("<td></td>");
+       var sum_lose_all_money_span=$("<span></span>");
+       if(sum_lose_all_money==0){
+            sum_lose_all_money_span.append(0);
+       }else{
+            sum_lose_all_money_span.append(sum_lose_all_money+"/"+sum_loseMoneyRate);
+       }
+       sum_lose_all_money_td.append(sum_lose_all_money_span);
+       tr.append(sum_lose_all_money_td);
+
+       // 退款总额/率=退款总额÷付款总额
+       var sum_return_all_money=data.sum_return_all_money;
+       var sum_return_all_money_td=$("<td></td>");
+       var sum_return_all_money_span=$("<span></span>");
+       var sum_returnAllMoneyRate=(Math.round(sum_return_all_money/sum_pay_mony_all *10000)/100.00 +"%");
+       
+       if(sum_return_all_money==0){
+            sum_return_all_money_span.append(0);
+       }else{
+            sum_return_all_money_span.append(sum_return_all_money+"/"+sum_returnAllMoneyRate);
+       }
+       sum_return_all_money_td.append(sum_return_all_money_span);
+       tr.append(sum_return_all_money_td);
+       $("#data_table_body").append(tr);
+
+     }
+  }
+  function loadDataTypeFirst(rst){
+     var datas= rst.data;
+     var sum= rst.sumMap;
+     var average= rst.averageMap;
+     if(datas){
+     for(var i= 0;i<datas.length;i++){
+        var data= datas[i];
+        var tr=$("<tr></tr>");
+        var td=$("<td></td>");
+        var span_d=$("<span></span>");
+        span_d.append(data.date);
+        td.append(span_d);
+        tr.append(td);
+       //意向人数=基数
+       var tentionTd=$("<td></td>");
+       var intention_user_num=data.intention_user_num; 
+       tentionTd.append(intention_user_num);
+       tr.append(tentionTd);
+       // 转化率=付款人数-退款人数/意向人数
+        var transTateTd=$("<td></td>");
+        var transTateTd_span=$("<span></span>");
+         //付款人数
+         var  payMoneyNum=data.pay_mony_user_num;
+         //退款人数
+        var returnMoneyNum= data.return_user_num;
+        if(intention_user_num==0){
+            intention_user_num=1;
+        }
+        var transRate=(Math.round((payMoneyNum-returnMoneyNum)/intention_user_num *10000)/100.00 +"%");
+          if((payMoneyNum-returnMoneyNum)==0){
+            transTateTd_span.append(0);
+          }else{
+            transTateTd_span.append(transRate);
+          }
+        transTateTd.append(transTateTd_span);
+        tr.append(transTateTd);
+        //预订人数/率=预订人数÷意向人数
+         var subUserNum= data.sumb_user_num;
+         var subUserNum_td=$("<td></td>");
+         var subUserNum_td_span=$("<span></span>");
+         var subRate=(Math.round(subUserNum/intention_user_num *10000)/100.00 +"%");
+         
+          if(subUserNum==0){
+            subUserNum_td_span.append(0);
+          }else{
+            subUserNum_td_span.append(subUserNum+"/"+subRate);
+          }
+          subUserNum_td.append(subUserNum_td_span);
+         tr.append(subUserNum_td);
+       // 付订人数/率=付订人数÷预订人数
+       var paysubUserNum= data.pay_sub_user_num
+       var paysubUserNum_td=$("<td></td>");
+       var paysubUserNum_td_span=$("<span></span>");
+       if(subUserNum==0){
+            subUserNum=1;
+       }
+       var paySubRate=(Math.round(paysubUserNum/subUserNum *10000)/100.00 +"%");
+       
+        if(paysubUserNum==0){
+            paysubUserNum_td_span.append(0);
+          }else{
+            paysubUserNum_td_span.append(paysubUserNum+"/"+paySubRate);
+          }
+          paysubUserNum_td.append(paysubUserNum_td_span);
+       tr.append(paysubUserNum_td);
+       // 同意人数/率=同意人数÷付订人数
+       var agreeUserNum=data.argree_user_num
+       var agreeUserNum_td=$("<td></td>");
+       var agreeUserNum_td_span=$("<span></span>");
+       if(paysubUserNum==0){
+        paysubUserNum=1;
+       }
+       var agreeUserNumRate=(Math.round(agreeUserNum/paysubUserNum *10000)/100.00 +"%");
+       
+        if(agreeUserNum==0){
+                agreeUserNum_td_span.append(0);
+          }else{
+            agreeUserNum_td_span.append(agreeUserNum+"/"+agreeUserNumRate);
+          }
+          agreeUserNum_td.append(agreeUserNum_td_span);
+       tr.append(agreeUserNum_td);
+
+       // 付款人数/率=付款人数÷同意人数
+       var payMoneyUserNum= data.pay_mony_user_num;
+       if(agreeUserNum==0){
+        agreeUserNum=1;
+       }
+       var payMoneyUserRate= (Math.round(payMoneyUserNum/agreeUserNum *10000)/100.00 +"%");
+       var payMoneyUser_td=$("<td></td>");
+       var payMoneyUser_td_span=$("<span></span>");
+       
+        if(payMoneyUserNum==0){
+            payMoneyUser_td_span.append(0);
+          }else{
+            payMoneyUser_td_span.append(payMoneyUserNum+"/"+payMoneyUserRate);
+          }
+       //data.pay_mony_user_num;
+       payMoneyUser_td.append(payMoneyUser_td_span);
+        tr.append(payMoneyUser_td);
+       // 违押人数/率=违押人数÷付款人数
+       var volienctUserNum= data.pay_mony_user_num;
+       if(payMoneyUserNum==0){
+         payMoneyUserNum=1;
+       }
+       var volienceRate=(Math.round(volienctUserNum/payMoneyUserNum *10000)/100.00 +"%");
+       var volienct_td=$("<td></td>");
+       var volienct_td_span=$("<span></span>");
+       
+        if(volienctUserNum==0){
+            volienct_td_span.append(0);
+          }else{
+            volienct_td_span.append(volienctUserNum+"/"+volienceRate);
+          }
+          volienct_td.append(volienct_td_span);
+       tr.append(volienct_td);
+       // 失败人数/率=失败人数÷付订人数
+       var lose_user_num= data.loseUserNum;
+       var loseUserNumRate= (Math.round(lose_user_num/paysubUserNum *10000)/100.00 +"%");
+       var loseUserNum_td=$("<td></td>");
+       var loseUserNum_td_span=$("<span></span>");
+        if(lose_user_num==0){
+            loseUserNum_td_span.append(0);
+          }else{
+            loseUserNum_td_span.append(lose_user_num+"/"+loseUserNumRate);
+          }
+          loseUserNum_td.append(loseUserNum_td_span);
+       tr.append(loseUserNum_td);
+
+      //  退款人数/率=退款人数÷付款人数
+      var returnUserNum=data.return_user_num;
+
+      var returnCar_rate=(Math.round(returnUserNum/payMoneyUserNum *10000)/100.00 +"%");
+      var returnUser_td=$("<td></td>");
+      var returnUser_td_span=$("<span></span>");
+     
+       if(returnUserNum==0){
+          returnUser_td_span.append(0);
+          }else{
+             returnUser_td_span.append(returnUserNum+"/"+returnCar_rate);
+          }
+         returnUser_td.append(returnUser_td_span) ;
+      tr.append(returnUser_td);
+      $("#data_table_body").append(tr);
+     }
+    }
+     if(sum){
+        var data= sum;
+        var tr=$("<tr></tr>");
+        var td=$("<td></td>");
+        var sum_span=$("<span></span>");
+        sum_span.append("合计");
+        td.append(sum_span);
+        tr.append(td);
+       //意向人数=基数
+       var tentionTd=$("<td></td>");
+       var tentionTd_sum_span=$("<span></span>");
+       var intention_user_num=data.sum_intention_user_num; 
+       tentionTd_sum_span.append(intention_user_num);
+       tentionTd.append(tentionTd_sum_span);
+       tr.append(tentionTd);
+       // 转化率=付款人数-退款人数/意向人数
+        var transTateTd=$("<td></td>");
+        var transTateTd_span=$("<span></span>");
+         //付款人数
+         var  payMoneyNum=data.sum_pay_mony_user_num;
+         //退款人数
+        var returnMoneyNum= data.sum_return_user_num;
+        if(intention_user_num==0){
+            intention_user_num=1;
+        }
+        var transRate=(Math.round((payMoneyNum-returnMoneyNum)/intention_user_num *10000)/100.00 +"%");
+        if((payMoneyNum-returnMoneyNum)==0){
+            transTateTd_span.append(0);
+        }else{
+            transTateTd_span.append(transRate);
+        }
+        transTateTd.append(transTateTd_span);
+        tr.append(transTateTd);
+        //预订人数/率=预订人数÷意向人数
+         var subUserNum= data.sum_sumb_user_num;
+         var subUserNum_td=$("<td></td>");
+         var subUserNum_td_span=$("<span></span>");
+         var subRate=(Math.round(subUserNum/intention_user_num *10000)/100.00 +"%");
+         if(subUserNum==0){
+            subUserNum_td_span.append(0);
+         }else{
+            subUserNum_td_span.append(subUserNum+"/"+subRate);
+         }
+         subUserNum_td.append(subUserNum_td_span);
+         tr.append(subUserNum_td);
+       // 付订人数/率=付订人数÷预订人数
+       var paysubUserNum= data.sum_pay_sub_user_num
+       var paysubUserNum_td=$("<td></td>");
+       var paysubUserNum_span=$("<span></span>");
+       if(subUserNum==0){
+            subUserNum=1;
+       }
+       var paySubRate=(Math.round(paysubUserNum/subUserNum *10000)/100.00 +"%");
+       
+       if(paysubUserNum==0){
+            paysubUserNum_span.append(0);
+         }else{
+            paysubUserNum_span.append(paysubUserNum+"/"+paySubRate);
+         }
+         paysubUserNum_td.append(paysubUserNum_span);
+       tr.append(paysubUserNum_td);
+       // 同意人数/率=同意人数÷付订人数
+       var agreeUserNum=data.sum_argree_user_num
+       var agreeUserNum_td=$("<td></td>");
+       var agreeUserNum_td_span=$("<span></span>");
+       if(paysubUserNum==0){
+        paysubUserNum=1;
+       }
+       var agreeUserNumRate=(Math.round(agreeUserNum/paysubUserNum *10000)/100.00 +"%");
+       
+       if(agreeUserNum==0){
+            agreeUserNum_td_span.append(0);
+         }else{
+            agreeUserNum_td_span.append(agreeUserNum+"/"+agreeUserNumRate);
+         }
+         agreeUserNum_td.append(agreeUserNum_td_span);
+       tr.append(agreeUserNum_td);
+
+      
+       // 付款人数/率=付款人数÷同意人数
+       var payMoneyUserNum= data.sum_pay_mony_user_num;
+       if(agreeUserNum==0){
+        agreeUserNum=1;
+       }
+       var payMoneyUserRate= (Math.round(payMoneyUserNum/agreeUserNum *10000)/100.00 +"%");
+       var payMoneyUser_td=$("<td></td>");
+       var payMoneyUser_td_span=$("<span></span>");
+       
+       if(payMoneyUserNum==0){
+        payMoneyUser_td_span.append(0);
+         }else{
+            payMoneyUser_td_span.append(payMoneyUserNum+"/"+payMoneyUserRate);
+         }
+         payMoneyUser_td.append(payMoneyUser_td_span);
+       //data.pay_mony_user_num;
+        tr.append(payMoneyUser_td);
+
+         // 失败人数/率=失败人数÷付订人数
+       var lose_user_num= data.sum_lose_user_num;
+       var loseUserNumRate= (Math.round(lose_user_num/paysubUserNum *10000)/100.00 +"%");
+       var loseUserNum_td=$("<td></td>");
+       var loseUserNum_span=$("<span></span>");
+       
+       if(lose_user_num==0){
+            loseUserNum_span.append(0);
+         }else{
+            loseUserNum_span.append(lose_user_num+"/"+loseUserNumRate);
+         }
+         loseUserNum_td.append(loseUserNum_span);
+       tr.append(loseUserNum_td);
+
+       // 违押人数/率=违押人数÷付款人数
+       var volienctUserNum= data.sum_pay_mony_user_num;
+       if(payMoneyUserNum==0){
+         payMoneyUserNum=1;
+       }
+       var volienceRate=(Math.round(volienctUserNum/payMoneyUserNum *10000)/100.00 +"%");
+       var volienct_td=$("<td></td>");
+       var volienct_td_span=$("<span></span>");
+       
+       if(volienctUserNum==0){
+          volienct_td_span.append(0);
+         }else{
+          volienct_td_span.append(volienctUserNum+"/"+volienceRate);      
+         }
+         volienct_td.append(volienct_td_span);
+       tr.append(volienct_td);
+      //  退款人数/率=退款人数÷付款人数
+      var returnUserNum=data.sum_return_user_num;
+
+      var returnCar_rate=(Math.round(returnUserNum/payMoneyUserNum *10000)/100.00 +"%");
+      var returnUser_td=$("<td></td>");
+      var returnUser_td_span=$("<span></span>");
+      
+      if(returnUserNum==0){
+            returnUser_td_span.append(0);
+         }else{
+            returnUser_td_span.append(returnUserNum+"/"+returnCar_rate);
+         }
+         returnUser_td.append(returnUser_td_span);
+      tr.append(returnUser_td);
+      $("#data_table_body").append(tr);
+
+     }
+     if(average){
+        var data= average;
+        var tr=$("<tr></tr>");
+        var td=$("<td></td>");
+        var average_span=$("<span></span>");
+        average_span.append("平均");
+        td.append(average_span);
+        tr.append(td);
+       //意向人数=基数
+       var tentionTd=$("<td></td>");
+       var tentionTd_span=$("<span></span>");
+       var intention_user_num=data.sum_intention_user_num; 
+       tentionTd_span.append(intention_user_num);
+       tentionTd.append(tentionTd_span);
+       tr.append(tentionTd);
+       // 转化率=付款人数-退款人数/意向人数
+        var transTateTd=$("<td></td>");
+        var transTateTd_span=$("<span></span>");
+         //付款人数
+         var  payMoneyNum=data.sum_pay_mony_user_num;
+         //退款人数
+        var returnMoneyNum= data.sum_return_user_num;
+        /*if(intention_user_num==0){
+            intention_user_num=1;
+        }*/
+        var transRate=(Math.round((payMoneyNum-returnMoneyNum)/intention_user_num *10000)/100.00 +"%");
+         if((payMoneyNum-returnMoneyNum)==0){
+            transTateTd_span.append(0);
+         }else{
+            transTateTd_span.append(transRate);
+         }
+        transTateTd.append(transTateTd_span);
+        tr.append(transTateTd);
+        //预订人数/率=预订人数÷意向人数
+         var subUserNum= data.sum_sumb_user_num;
+         var subUserNum_td=$("<td></td>");
+         var subUserNum_span=$("<span></span>");
+         var subRate=(Math.round(subUserNum/intention_user_num *10000)/100.00 +"%");
+         
+         if(subUserNum==0||!subUserNum){
+            subUserNum_span.append(0);  
+         }else{
+            subUserNum_span.append(subUserNum+"/"+subRate);
+         }
+         subUserNum_td.append(subUserNum_span);
+         tr.append(subUserNum_td);
+       // 付订人数/率=付订人数÷预订人数
+       var paysubUserNum= data.sum_pay_sub_user_num
+       var paysubUserNum_td=$("<td></td>");
+       var paysubUserNum_span=$("<span></span>");
+       if(subUserNum==0){
+            subUserNum=1;
+       }
+       var paySubRate=(Math.round(paysubUserNum/subUserNum *10000)/100.00 +"%");
+       
+        if(paysubUserNum==0){
+            paysubUserNum_span.append(0);
+         }else{
+            paysubUserNum_span.append(paysubUserNum+"/"+paySubRate);
+         }
+         paysubUserNum_td.append(paysubUserNum_span);
+       tr.append(paysubUserNum_td);
+       // 同意人数/率=同意人数÷付订人数
+       var agreeUserNum=data.sum_argree_user_num
+       var agreeUserNum_td=$("<td></td>");
+       var agreeUserNum_span=$("<span></span>");
+       if(paysubUserNum==0){
+        paysubUserNum=1;
+       }
+       var agreeUserNumRate=(Math.round(agreeUserNum/paysubUserNum *10000)/100.00 +"%");
+       
+       if(agreeUserNum==0){
+            agreeUserNum_span.append(0);
+         }else{
+            agreeUserNum_span.append(agreeUserNum+"/"+agreeUserNumRate);
+         }
+         agreeUserNum_td.append(agreeUserNum_span);
+       tr.append(agreeUserNum_td);
+
+       
+       // 付款人数/率=付款人数÷同意人数
+       var payMoneyUserNum= data.sum_pay_mony_user_num;
+       if(agreeUserNum==0){
+        agreeUserNum=1;
+       }
+       var payMoneyUserRate= (Math.round(payMoneyUserNum/agreeUserNum *10000)/100.00 +"%");
+       var payMoneyUser_td=$("<td></td>");
+       var payMoneyUser_span=$("<span></span>");
+       
+        if(payMoneyUserNum==0){
+            payMoneyUser_span.append(0);
+         }else{
+            payMoneyUser_span.append(payMoneyUserNum+"/"+payMoneyUserRate);
+         }
+         payMoneyUser_td.append(payMoneyUser_span);
+       //data.pay_mony_user_num;
+        tr.append(payMoneyUser_td);
+       // 违押人数/率=违押人数÷付款人数
+       var volienctUserNum= data.sum_pay_mony_user_num;
+       if(payMoneyUserNum==0){
+         payMoneyUserNum=1;
+       }
+       var volienceRate=(Math.round(volienctUserNum/payMoneyUserNum *10000)/100.00 +"%");
+       var volienct_td=$("<td></td>");
+       var volienct_span=$("<span></span>");
+       if(volienctUserNum==0){
+            volienct_span.append(0);
+         }else{
+            volienct_span.append(volienctUserNum+"/"+volienceRate);
+         }
+         volienct_td.append(volienct_span);
+       tr.append(volienct_td);
+
+       // 失败人数/率=失败人数÷付订人数
+       var lose_user_num= data.sum_lose_user_num;
+       var loseUserNumRate= (Math.round(lose_user_num/paysubUserNum *10000)/100.00 +"%");
+       var loseUserNum_td=$("<td></td>");
+       var loseUserNum_span=$("<span></span>");
+       
+       if(lose_user_num==0){
+            loseUserNum_span.append(0);
+         }else{
+            loseUserNum_span.append(lose_user_num+"/"+loseUserNumRate);
+         }
+         loseUserNum_td.append(loseUserNum_span);
+       tr.append(loseUserNum_td);
+
+      //  退款人数/率=退款人数÷付款人数
+      var returnUserNum=data.sum_return_user_num;
+
+      var returnCar_rate=(Math.round(returnUserNum/payMoneyUserNum *10000)/100.00 +"%");
+      var returnUser_td=$("<td></td>");
+      var returnUser_span=$("<span></span>");
+       
+         if(returnUserNum==0){
+            returnUser_span.append(0);    
+         }else{
+            returnUser_span.append(returnUserNum+"/"+returnCar_rate);
+         }
+         returnUser_td.append(returnUser_span);
+       tr.append(returnUser_td);
+      $("#data_table_body").append(tr);
+     }
+
+  }
+
+  function loadDataTypeZero(rst){
+              var datas= rst.data;
+              var sum= rst.sumMap;
+              var average= rst.averageMap;
+              if(datas){
+               for(var i= 0;i<datas.length;i++){
+                 var data=datas[i];
+                 var tr=$("<tr></tr>");
+                 var td=$("<td></td>");
+                 var spandata=$("<span></span>");
+                 spandata.append(data.date);
+                 td.append(spandata);
+                 tr.append(td);
+                 //$("#data_table_body").append(tr);
+                 //意向订单
+                 var tentionTd=$("<td></td>");
+                 var tention_span=$("<span></span>");
+                 var intention_num=data.intention_num; 
+                 if(!intention_num){
+                     intention_num=0
+                 }
+                 tention_span.append(intention_num);
+                 tentionTd.append(tention_span);
+                 tr.append(tentionTd);
+                 //$("#data_table_body").append(tr);
+                 
+                //付款单数
+                var pay_mony_num=data.pay_mony_num;
+                 if(!pay_mony_num){
+                     pay_mony_num=0;
+                 }
+                //退款单数
+                var return_num=data.return_num;
+                if(!return_num){
+                    return_num=0;
+                }
+                //转换率  付款单数-退款单数/意向订单数
+                var transRate= (Math.round((data.pay_mony_num-data.return_num)/data.intention_num  * 10000) / 100.00 + "%");
+                
+                var transTd=$("<td></td>");
+                var trans_span=$("<span></span>");
+                if(intention_num==0||(data.pay_mony_num-data.return_num)==0||!(data.pay_mony_num-data.return_num)||!transRate){
+                    trans_span.append(0);
+                }else{
+                    trans_span.append(transRate);
+                }
+                transTd.append(trans_span);
+                tr.append(transTd);
+
+                //预定次数、 率=预定次数/意向单数
+                //var submitNumTd=$("<td></td>");
+                var submitNum=data.submit_num;
+                if(!submitNum){
+                    submitNum=0;
+                }
+                var  submit_td=$("<td></td>");
+                var  submit_span=$("<span></span>");
+                submit_span.append(submitNum);
+                var sumbmit_rate=(Math.round(submitNum/intention_num * 10000) / 100.00 + "%");
+                if(submitNum==0||intention_num==0){
+                    submit_span.append();
+                }else{
+                    submit_span.append("/"+sumbmit_rate);
+                }
+                submit_td.append(submit_span);
+                tr.append(submit_td);
+
+               
+                //付订单数/率 = 付订单数/预定次数
+                var pay_sub_num=data.pay_sub_num;
+                if(!pay_sub_num){
+                  pay_sub_num=0;
+                }
+                var pay_sub_num_td=$("<td></td>");
+                var pay_sub_num_span=$("<span></span>");
+                pay_sub_num_span.append(pay_sub_num);
+                var pay_sub_rate=(Math.round(pay_sub_num/submitNum * 10000) / 100.00 + "%");
+                if(pay_sub_num==0||submitNum==0){
+                    pay_sub_num_span.append();
+                }else{
+                    pay_sub_num_span.append("/"+pay_sub_rate);
+                }
+                pay_sub_num_td.append(pay_sub_num_span);
+                tr.append(pay_sub_num_td);
+
+                //付订车数/比=  付订单数/付订车数
+                var pay_car_num= data.pay_car_num;
+                if(!pay_car_num){
+                  pay_car_num=0;
+                }
+                var pay_car_num_td=$("<td></td>");
+                var pay_car_num_span=$("<span></span>");
+                pay_car_num_span.append(pay_car_num);
+                
+                var pay_car_num_rate=(Math.round(pay_sub_num/pay_car_num * 100) / 100.00 );
+                if(pay_sub_num==0||pay_car_num==0){
+                    pay_car_num_span.append();
+                }else{
+                    pay_car_num_span.append("/"+pay_car_num_rate);
+                }
+                pay_car_num_td.append(pay_car_num_span);
+                tr.append(pay_car_num_td);
+                //取车单数、取车率=取车单数÷付订单数
+                var renterTakeCarNum= data.take_car_order_num;
+                if(!renterTakeCarNum){
+                   renterTakeCarNum=0;
+                }
+                var renterTakeCarRate=(Math.round(renterTakeCarNum/pay_sub_num * 10000) / 100.00 + "%");
+                var takeCarOrderNum_td=$("<td></td>");
+                var takeCarOrderNum_span=$("<span></span>");
+                if(!renterTakeCarNum){
+                   takeCarOrderNum_span.append(0);
+                }else{
+                   takeCarOrderNum_span.append(renterTakeCarNum);   
+                }
+                if(pay_sub_num==0||!pay_sub_num||!renterTakeCarRate||renterTakeCarNum==0||!renterTakeCarNum){
+                    takeCarOrderNum_span.append()
+                }else{
+                    takeCarOrderNum_span.append("/"+renterTakeCarRate);
+                }
+                takeCarOrderNum_td.append(takeCarOrderNum_span);
+                tr.append(takeCarOrderNum_td);
+
+                //开锁单数/率 =行程大于200米的订单数/用户操作取车的总订单数  开锁单数
+                var overTwoMileNum= data.over_two_num;
+                if(!overTwoMileNum){
+                    overTwoMileNum=0;
+                }
+                var dayTrvelRate=(Math.round(overTwoMileNum/renterTakeCarNum * 10000) / 100.00 + "%");
+                var dayTravelRateTd=$("<td></td>");
+               var dayTravelRate_span= $("<span></span>");
+                if(overTwoMileNum==0|| renterTakeCarNum==0){
+                    dayTravelRate_span.append(0);
+                }else{
+                    dayTravelRate_span.append(overTwoMileNum);
+                }
+                if(overTwoMileNum==0||!overTwoMileNum||!dayTrvelRate||renterTakeCarNum==0){
+                    dayTravelRate_span.append(); 
+                }else{
+                    dayTravelRate_span.append("/"+dayTrvelRate); 
+                }
+                dayTravelRateTd.append(dayTravelRate_span);
+                tr.append(dayTravelRateTd);
+
+                //同意单数/率= 同意单数/付订单数 
+                var argree_num = data.argree_num;
+                if(!argree_num){
+                  argree_num=0;
+                }
+                var argree_num_td=$("<td></td>");
+                var argree_num_span=$("<span></span>");
+                argree_num_span.append(argree_num);
+                var argree_num_rate=(Math.round(argree_num/pay_sub_num * 10000) / 100.00 + "%");
+                if(argree_num==0||pay_sub_num==0){
+                    argree_num_span.append();
+                }else{
+                    argree_num_span.append("/"+argree_num_rate);
+                }
+                argree_num_td.append(argree_num_span);
+                tr.append(argree_num_td);
+                
+                //付款单数/率= 付款单数/同意单数
+                var pay_mony_num=data.pay_mony_num;
+                if(!pay_mony_num){
+                  pay_mony_num=0;
+                }
+                var pay_mony_num_td=$("<td></td>");
+                var pay_mony_num_span=$("<span></span>");
+                if(pay_mony_num==0){
+                    pay_mony_num_span.append(0);
+                }else{
+                    pay_mony_num_span.append(pay_mony_num);
+                }
+                
+               /* if(argree_num==0){
+                    argree_num=1;
+                }*/
+                var pay_mony_num_rate=(Math.round(pay_mony_num/argree_num * 10000) / 100.00 + "%");
+                if(pay_mony_num==0||!pay_mony_num||argree_num==0){
+                    pay_mony_num_span.append();
+                }else{
+                    pay_mony_num_span.append("/"+pay_mony_num_rate);
+                }
+                pay_mony_num_td.append(pay_mony_num_span);
+                tr.append(pay_mony_num_td);
+                //违押单数/率= 违押单数/付款单数
+                var voilence_mony_num =data.pay_mony_num;
+                if(!voilence_mony_num){
+                  voilence_mony_num=0;
+                }
+                var voilence_mony_num_td=$("<td></td>");
+                var voilence_mony_num_span=$("<span></span>");
+                if(voilence_mony_num==0){
+                    voilence_mony_num_span.append(0);
+                }else{
+                    voilence_mony_num_span.append(voilence_mony_num);
+                }
+                
+                /*if(pay_mony_num==0){
+                    pay_mony_num=1;
+                }*/
+                var voilence_mony_num_rate=(Math.round(voilence_mony_num/pay_mony_num * 10000) / 100.00 + "%");
+                if(voilence_mony_num==0 ||pay_mony_num==0){
+                    voilence_mony_num_span.append();
+                }else{
+                    voilence_mony_num_span.append("/"+voilence_mony_num_rate);
+                }
+                voilence_mony_num_td.append(voilence_mony_num_span);
+                tr.append(voilence_mony_num_td);
+
+
+                //失败单数/率= 失败单数/付订单数
+                var lose_num=data.lose_num;
+                 if(!lose_num){
+                  lose_num=0;
+                }
+                var lose_num_td=$("<td></td>");
+                var lose_num_span=$("<span></span>");
+                if(lose_num==0){
+                    lose_num_span.append(0);
+                }else{
+                    lose_num_span.append(lose_num);
+                }
+
+                var lose_num_rate=(Math.round(lose_num/pay_sub_num * 10000) / 100.00 + "%");
+                if(lose_num==0||pay_sub_num==0){
+                    lose_num_span.append("");
+                }else{
+                    lose_num_span.append("/"+lose_num_rate);
+                }
+                lose_num_td.append(lose_num_span);
+                tr.append(lose_num_td);
+               
+
+                //退款单数/率= 退款单数/付款单数
+                var return_num=data.return_num;
+                if(!return_num){
+                  return_num=0;
+                }
+                var return_num_td=$("<td></td>");
+                var return_num_span=$("<span></span>");
+                if(return_num==0){
+                    return_num_span.append(0);
+                }else{
+                    return_num_span.append(return_num);
+                }
+                
+                var return_num_rate=(Math.round(return_num/pay_mony_num * 10000) / 100.00 + "%"); 
+                if(return_num==0||pay_mony_num==0){
+                    return_num_span.append();
+                }else{
+                    return_num_span.append("/"+return_num_rate);
+                }
+                return_num_td.append(return_num_span);
+                tr.append(return_num_td);
+                /*//车辆总数
+                var allCarNum= data.car_num;
+                var allCar_td=$("<td></td>");
+                if(!allCarNum){
+                    allCar_td.append(0);
+                }else{
+                    allCar_td.append(allCarNum);
+                }*/
+                
+                //allCar_td.append(allCar_td);
+                // tr.append(allCar_td);
+
+                //上架率 最大
+                /*var sellMaxRate= data.maxRate;
+                var sellMaxRate_td=$("<td></td>");
+                if(!sellMaxRate){
+                    sellMaxRate_td.append(0);
+                }else{
+                    sellMaxRate_td.append(sellMaxRate+"%");
+                }
+                
+                tr.append(sellMaxRate_td);*/
+                //上架率 最小
+                /*var sellMInRate= data.minRate;
+                var sellMInRate_td=$("<td></td>");
+                if(sellMInRate&&sellMInRate!=0){
+                   sellMInRate_td.append(sellMInRate+"%");
+                }else{
+                    sellMInRate_td.append(0);
+                }
+                
+                tr.append(sellMInRate_td);*/
+                //出租率  日均出租率   每日至少生成一个正常行驶订单（超过200米）的车辆数/运营车辆数的一周平均值；
+                //正常行驶车辆数
+                /*var nomalOrderNum=data.effective_order_car;
+                if(!nomalOrderNum){
+                    nomalOrderNum==0;
+                }
+                //运营车辆数
+                var operateCarNum=data.avg_week_num;
+                //
+                if(operateCarNum==0){
+                  operateCarNum=1;
+                }
+                var day_rent_rate=(Math.round(nomalOrderNum/operateCarNum * 10000) / 100.00 + "%");*/
+                /*ar dayRentRate_td=$("<td></td>");
+                if(nomalOrderNum==0||!day_rent_rate){
+                    dayRentRate_td.append(0);
+                }else{
+                    dayRentRate_td.append(day_rent_rate);
+                }
+                
+                tr.append(dayRentRate_td);*/
+
+                
+
+                //日车均订单数 =每日生成正常行驶订单（超过200米）数/当日有出租纪录的车辆数
+                var nomalOrderNum=data.effective_order_car;
+                if(!nomalOrderNum){
+                    nomalOrderNum=0;
+                }
+                var effectiveOrderNum= data.over_two_num;
+                var everDayOrderNum  =(Math.round(effectiveOrderNum/nomalOrderNum)); 
+                var effectiveOrderNumTd= $("<td></td>");
+                 var effectiveOrderNum_span=$("<span></span>");
+                if(effectiveOrderNum==0||!effectiveOrderNum||nomalOrderNum==0){
+                    effectiveOrderNum_span.append(0);
+                }else{
+                    effectiveOrderNum_span.append(everDayOrderNum);
+                }
+                effectiveOrderNumTd.append(effectiveOrderNum_span);
+                tr.append(effectiveOrderNumTd);
+                //日车均收入（出租）=每日生成非0计数订单的费用的总和/当日成非0计费订单的车辆数
+                var overZeroOrderFee= data.fee;
+                var overZeroOrderCarNum= data.fee_car_num;
+                if(!overZeroOrderCarNum){
+                    overZeroOrderCarNum=0;
+                }
+                var everyDayIncome=(Math.round(overZeroOrderFee/overZeroOrderCarNum * 100)/100.00 ); 
+                var overZeroOrderFee_td= $("<td></td>");
+                var overZeroOrderFee_span=$("<span></span>");
+                if(overZeroOrderFee==0||!overZeroOrderFee||overZeroOrderCarNum==0){
+                    overZeroOrderFee_span.append(0);
+                }else{
+                    overZeroOrderFee_span.append(everyDayIncome);
+                }
+                overZeroOrderFee_td.append(overZeroOrderFee_span);
+                tr.append(overZeroOrderFee_td);
+                
+                //日车均收入运营 =每日生成非0计费订单的费用总和/当日运营车辆数
+                /*var sellNewCarNum= data.avg_week_num;
+                if(sellNewCarNum==0){
+                    sellNewCarNum=1;
+                }
+                var everyDayNewCarIncome=(Math.round(overZeroOrderFee/sellNewCarNum * 100)/100.00 ); 
+                var everyDayNewCarIncome_td= $("<td></td>");
+                if(overZeroOrderFee==0||!overZeroOrderFee){
+                    everyDayNewCarIncome_td.append(0);
+                }else{
+                    everyDayNewCarIncome_td.append(everyDayNewCarIncome);
+                }
+
+                tr.append(everyDayNewCarIncome_td);*/
+                $("#data_table_body").append(tr);
+
+              }
+           }
+           if(sum){
+             var tr=$("<tr></tr>");
+                //var data= sum;
+                 var td=$("<td></td>");
+                 var sum_span=$("<span></span>");
+                 sum_span.append("合计");
+                 td.append(sum_span);
+                 tr.append(td);
+                 //$("#data_table_body").append(tr);
+                 //意向订单
+                 var tentionTd=$("<td></td>");
+                 var sum_tention_span=$("<span></span>");
+                 var sum_intention_num=sum.sum_intention_num; 
+                 if(!sum_intention_num){
+                     sum_intention_num=0
+                 }
+                 sum_tention_span.append(sum_intention_num);
+                 tentionTd.append(sum_tention_span);
+                 tr.append(tentionTd);
+                 //$("#data_table_body").append(tr);
+                 
+                //付款单数
+                var sum_pay_mony_num=sum.sum_pay_mony_num;
+                 if(!sum_pay_mony_num){
+                     sum_pay_mony_num=0;
+                 }
+                //退款单数
+                var sum_return_num=sum.sum_return_num;
+                if(!sum_return_num){
+                    sum_return_num=0;
+                }
+                //转换率  付款单数-退款单数/意向订单数
+                /*if(sum_intention_num==0){
+                    sum_intention_num=1
+                }*/
+                var transRate= (Math.round((sum_pay_mony_num-sum_return_num)/sum_intention_num * 10000) / 100.00 + "%");
+                var transTd=$("<td></td>");
+                var sum_trans_span=$("<span></span>");
+                if((sum_pay_mony_num-sum_return_num)==0||sum_intention_num==0){
+                    sum_trans_span.append(0);
+                }else{
+                    sum_trans_span.append(transRate);
+                }
+                transTd.append(sum_trans_span);
+                tr.append(transTd);
+
+                //预定次数、 率=预定次数/意向单数
+                //var submitNumTd=$("<td></td>");
+                var sum_submitNum=sum.sum_submit_num;
+                if(!sum_submitNum){
+                    sum_submitNum=0;
+                }
+                var  submit_td=$("<td></td>");
+                var submit_span=$("<span></span>");
+                submit_span.append(sum_submitNum);
+                var sumbmit_rate=(Math.round(sum_submitNum/sum_intention_num * 10000) / 100.00 + "%");
+                if(sum_submitNum==0||sum_intention_num==0){
+                    submit_span.append();
+                }else{
+                    submit_span.append("/"+sumbmit_rate);
+                }
+                submit_td.append(submit_span);
+                tr.append(submit_td);
+
+               
+                //付订单数/率 = 付订单数/意向单数
+                var sum_pay_sub_num=sum.sum_pay_sub_num;
+                if(!sum_pay_sub_num){
+                  sum_pay_sub_num=0;
+                }
+                var pay_sub_num_td=$("<td></td>");
+                var pay_sub_num_span=$("<span></span>");
+                pay_sub_num_span.append(sum_pay_sub_num);
+                var pay_sub_rate=(Math.round(sum_pay_sub_num/sum_submitNum * 10000) / 100.00 + "%");
+                if(sum_pay_sub_num==0||sum_submitNum==0){
+                    pay_sub_num_span.append();
+                }else{
+                    pay_sub_num_span.append("/"+pay_sub_rate);
+                }
+                pay_sub_num_td.append(pay_sub_num_span);
+                tr.append(pay_sub_num_td);
+
+                //付订车数/比=  付订单数/付订车数
+                var sum_pay_car_num= sum.sum_pay_car_num;
+                if(!sum_pay_car_num){
+                  sum_pay_car_num=0;
+                }
+                var pay_car_num_td=$("<td></td>");
+                var pay_car_num_span=$("<span></span>");
+                pay_car_num_span.append(sum_pay_car_num);
+                /*if(sum_pay_car_num==0){
+                    sum_pay_car_num=1;
+                }*/
+                var pay_car_num_rate=(Math.round(sum_pay_sub_num/sum_pay_car_num * 100) / 100.00 );
+                if(sum_pay_sub_num==0||sum_pay_car_num==0){
+                    pay_car_num_span.append();
+                }else{
+                    pay_car_num_span.append("/"+pay_car_num_rate);
+                }
+                pay_car_num_td.append(pay_car_num_span);
+                tr.append(pay_car_num_td);
+
+                //取车单数、取车率=取车单数÷付订单数
+                var renterTakeCarNum= sum.sum_take_car_order_num;
+                if(!renterTakeCarNum){
+                   renterTakeCarNum=0;
+                }
+                var renterTakeCarRate=(Math.round(renterTakeCarNum/sum_pay_sub_num * 10000) / 100.00 + "%");
+                var takeCarOrderNum_td=$("<td></td>");
+                var take_car_order_num_span=$("<span></span>");
+                if(!renterTakeCarNum){
+                   take_car_order_num_span.append(0);
+                }else{
+                   take_car_order_num_span.append(renterTakeCarNum);   
+                }
+                if(sum_pay_sub_num==0||!sum_pay_sub_num||!renterTakeCarRate||renterTakeCarNum==0||!renterTakeCarNum){
+                    take_car_order_num_span.append()
+                }else{
+                    take_car_order_num_span.append("/"+renterTakeCarRate);
+                }
+                takeCarOrderNum_td.append(take_car_order_num_span);
+                tr.append(takeCarOrderNum_td);
+
+
+
+                //开锁单数/率 =行程大于200米的订单数/用户操作取车的总订单数 
+                var overTwoMileNum= sum.sum_over_two_num;
+                if(!overTwoMileNum){
+                    overTwoMileNum==0;
+                }
+                
+                /*var opendOrderNum_td=$("<td></td>");
+                opendOrderNum_td.append(overTwoMileNum);*/
+                var dayTrvelRate=(Math.round(overTwoMileNum/renterTakeCarNum * 10000) / 100.00 + "%");
+                var dayTravelRateTd=$("<td></td>");
+                var dayTrvelRate_span=$("<span></span>");
+                 dayTrvelRate_span.append(overTwoMileNum);
+                if(overTwoMileNum==0||!dayTrvelRate||renterTakeCarNum==0){
+                    dayTrvelRate_span.append();
+                }else{
+                    dayTrvelRate_span.append("/"+dayTrvelRate);    
+                }
+                dayTravelRateTd.append( dayTrvelRate_span);
+                tr.append(dayTravelRateTd);
+
+
+                //同意单数/率= 同意单数/付订单数 
+                var sum_argree_num = sum.sum_argree_num;
+                if(!sum_argree_num){
+                  sum_argree_num=0;
+                }
+                var argree_num_td=$("<td></td>");
+                var argree_num_span=$("<span></span>");
+                argree_num_span.append(sum_argree_num);
+                var argree_num_rate=(Math.round(sum_argree_num/sum_pay_sub_num * 10000) / 100.00 + "%");
+                if(sum_argree_num==0||sum_pay_sub_num==0){
+                    argree_num_span.append();
+                }else{
+                    argree_num_span.append("/"+argree_num_rate);
+                }
+                argree_num_td.append(argree_num_span);
+                tr.append(argree_num_td);
+               
+                //付款单数/率= 付款单数/同意单数
+                var sum_pay_mony_num=sum.sum_pay_mony_num;
+                if(!sum_pay_mony_num){
+                  sum_pay_mony_num=0;
+                }
+                var pay_mony_num_td=$("<td></td>");
+                var pay_mony_num_span=$("<span></span>");
+                pay_mony_num_span.append(sum_pay_mony_num);
+                /*if(sum_argree_num==0){
+                    sum_argree_num=1;
+                }*/
+                var pay_mony_num_rate=(Math.round(sum_pay_mony_num/sum_argree_num * 10000) / 100.00 + "%");
+                if(sum_pay_mony_num==0||sum_argree_num==0){
+                    pay_mony_num_span.append();
+                }else{
+                    pay_mony_num_span.append("/"+pay_mony_num_rate);
+                }
+                pay_mony_num_td.append(pay_mony_num_span);
+                tr.append(pay_mony_num_td);
+                //违押单数/率= 违押单数/付款单数
+                var sum_voilence_mony_num =sum.sum_pay_mony_num;
+                if(!sum_voilence_mony_num){
+                  sum_voilence_mony_num=0;
+                }
+                var voilence_mony_num_td=$("<td></td>");
+                var voilence_mony_num_sum=$("<span></span>");
+                voilence_mony_num_sum.append(sum_voilence_mony_num);
+                /*if(pay_mony_num==0){
+                    pay_mony_num=1;
+                }*/
+                var voilence_mony_num_rate=(Math.round(sum_voilence_mony_num/sum_pay_mony_num * 10000) / 100.00 + "%");
+                if(sum_voilence_mony_num==0||sum_pay_mony_num==0){
+                    voilence_mony_num_sum.append();    
+                }else{
+                    voilence_mony_num_sum.append("/"+voilence_mony_num_rate);
+                }
+                voilence_mony_num_td.append( voilence_mony_num_sum);
+                tr.append(voilence_mony_num_td);
+
+                 //失败单数/率= 失败单数/付订单数
+                var sum_lose_num=sum.sum_lose_num;
+                 if(!sum_lose_num){
+                  sum_lose_num=0;
+                }
+                var lose_num_td=$("<td></td>");
+                var lose_num_span=$("<span></span>");
+                lose_num_span.append(sum_lose_num);
+
+                var lose_num_rate=(Math.round(sum_lose_num/sum_pay_sub_num * 10000) / 100.00 + "%");
+                if(sum_lose_num==0||sum_pay_sub_num==0){
+                    lose_num_span.append();
+                }else{
+                    lose_num_span.append("/"+lose_num_rate);
+                }
+                lose_num_td.append(lose_num_span);
+                tr.append(lose_num_td);
+                //退款单数/率= 退款单数/付款单数
+                var sum_return_num=sum.sum_return_num;
+                if(!sum_return_num){
+                  sum_return_num=0;
+                }
+                var return_num_td=$("<td></td>");
+                var return_num_span=$("<span></span>");
+                return_num_span.append(sum_return_num);
+                var return_num_rate=(Math.round(sum_return_num/sum_pay_mony_num * 10000) / 100.00 + "%"); 
+                if(sum_return_num==0||sum_pay_mony_num==0){
+                    return_num_span.append();
+                }else{
+                    return_num_span.append("/"+return_num_rate);
+                }
+                return_num_td.append(return_num_span);
+                tr.append(return_num_td);
+                
+                /*//车辆总数
+                var allCarNum= sum.sum_car_num;
+                var allCar_td=$("<td></td>");
+                allCar_td.append(allCarNum);
+                //allCar_td.append(allCar_td);
+                tr.append(allCar_td);*/
+
+                //上架率 最大
+                /*var sum_max_sell= sum.sum_max_sell;
+                var sum_max_all_count=sum.sum_max_all_count;
+                var sellMaxRate= (Math.round(sum_max_sell/sum_max_all_count * 10000) / 100.00 +"%");
+                var sellMaxRate_td=$("<td></td>");
+                if(sum_max_sell==0){
+                    sellMaxRate_td.append(0 );
+                }else{
+                    sellMaxRate_td.append(sellMaxRate );
+                }
+                
+                tr.append(sellMaxRate_td);*/
+                //上架率 最小
+                /*var sum_min_sell= sum.sum_min_sell;
+                var sum_min_all_count=sum.sum_min_all_count;
+                if(sum_min_all_count==0){
+                    sum_min_all_count=1;
+                }
+                var sellMInRate= (Math.round(sum_min_sell/sum_min_all_count * 10000) / 100.00);*/
+                //var sellMInRate= sum.minRate;
+                /*var sellMInRate_td=$("<td></td>");
+                if(sellMInRate&&sellMInRate!=0){
+                   sellMInRate_td.append(sellMInRate);
+                }else{
+                    sellMInRate_td.append(0);
+                }
+                
+                tr.append(sellMInRate_td);*/
+                //出租率  日均出租率   每日至少生成一个正常行驶订单（超过200米）的车辆数/运营车辆数的一周平均值；
+                //正常行驶车辆数
+                var nomalOrderNum=sum.sum_effective_order_car;
+                //运营车辆数
+                var operateCarNum=sum.sum_avg_week_num;
+                //
+                if(!operateCarNum){
+                  operateCarNum=0;
+                }
+                var day_rent_rate=(Math.round(nomalOrderNum/operateCarNum * 10000) / 100.00 + "%");
+                //var dayRentRate_td=$("<td></td>");
+                /*if(nomalOrderNum==0){
+                    dayRentRate_td.append(0);
+                }else{
+                    dayRentRate_td.append(day_rent_rate);
+                }
+                
+                tr.append(dayRentRate_td);*/
+
+                
+
+                //日车均订单数 =每日生成正常行驶订单（超过200米）数/当日有出租纪录的车辆数
+                var effectiveOrderNum= sum.sum_over_two_num;
+                var everDayOrderNum  =(Math.round(effectiveOrderNum/nomalOrderNum)); 
+                var effectiveOrderNumTd= $("<td></td>");
+                var effectiveOrder_span=$("<span></span>");
+                if(effectiveOrderNum==0){
+                    effectiveOrder_span.append(0);
+                }else{
+                  effectiveOrder_span.append(everDayOrderNum);    
+                }
+               effectiveOrderNumTd.append(effectiveOrder_span); 
+                tr.append(effectiveOrderNumTd);
+                //日车均收入（出租）=每日生成非0计数订单的费用的总和/当日成非0计费订单的车辆数
+                var overZeroOrderFee= sum.sum_fee;
+                /*var overZeroOrderCarNum= data.sum_fee_num;*/
+                 var overZeroOrderCarNum= sum.sum_fee_car_num;
+                if(overZeroOrderCarNum==0){
+                    overZeroOrderCarNum=1;
+                }
+                var everyDayIncome=(Math.round(overZeroOrderFee/overZeroOrderCarNum * 100)/100.00 ); 
+                var overZeroOrderFee_td= $("<td></td>");
+                var overZeroOrderFee_span=$("<span></span>");
+                if(overZeroOrderFee==0){
+                    overZeroOrderFee_span.append(0);
+                }else{
+                    overZeroOrderFee_span.append(everyDayIncome);
+                }
+                overZeroOrderFee_td.append(overZeroOrderFee_span);
+                tr.append(overZeroOrderFee_td);
+                
+                //日车均收入运营 =每日生成非0计费订单的费用总和/当日运营车辆数
+                /*var sellNewCarNum= sum.sum_avg_week_num;
+                if(sellNewCarNum==0){
+                    sellNewCarNum=1;
+                }
+                var everyDayNewCarIncome=(Math.round(overZeroOrderFee/sellNewCarNum * 100)/100.00 ); 
+                var everyDayNewCarIncome_td= $("<td></td>");
+                if(overZeroOrderFee==0){
+                    everyDayNewCarIncome_td.append(0);
+                }else{
+                    everyDayNewCarIncome_td.append(everyDayNewCarIncome);
+                }
+                tr.append(everyDayNewCarIncome_td);*/
+                $("#data_table_body").append(tr);
+           }
+
+           if(average){
+                
+                var tr=$("<tr></tr>");
+                var data= average;
+                 var td=$("<td></td>");
+                 var aberage_span=$("<span></span>");
+                 aberage_span.append("平均");
+                 td.append(aberage_span);
+                 tr.append(td);
+                 //$("#data_table_body").append(tr);
+                 //意向订单
+                 var tentionTd=$("<td></td>");
+                 var tention_span=$("<span></span>");
+                 var average_intention_num=data.sum_intention_num; 
+                 if(!average_intention_num){
+                     average_intention_num=0
+                 }
+                 tention_span.append(average_intention_num);
+                 tentionTd.append(tention_span);
+                 tr.append(tentionTd);
+                 //$("#data_table_body").append(tr);
+                 
+                //付款单数
+                var average_pay_mony_num=data.sum_pay_mony_num;
+                 if(!average_pay_mony_num){
+                     average_pay_mony_num=0;
+                 }
+                //退款单数
+                var average_return_num=data.sum_return_num;
+                if(!average_return_num){
+                    average_return_num=0;
+                }
+                //转换率  付款单数-退款单数/意向订单数
+                if(average_intention_num==0){
+                    average_intention_num=1
+                }
+                var transRate= (Math.round((average_pay_mony_num-average_return_num)/average_intention_num  * 10000) / 100.00 + "%");
+                var transTd=$("<td></td>");
+                var trans_span=$("<span></span>");
+                if((average_pay_mony_num-average_return_num)==0){
+                    trans_span.append(0);
+                }else{
+                   trans_span.append(transRate); 
+                }
+                transTd.append(trans_span);
+                tr.append(transTd);
+
+                //预定次数、 率=预定次数/意向单数
+                //var submitNumTd=$("<td></td>");
+                var average_submitNum=data.sum_submit_num;
+                if(!average_submitNum){
+                    average_submitNum=0;
+                }
+                var  submit_td=$("<td></td>");
+                var  submit_span=$("<span></span>");
+                submit_span.append(average_submitNum);
+                var sumbmit_rate=(Math.round(average_submitNum/average_intention_num * 10000) / 100.00 + "%");
+                if(average_submitNum==0){
+                    submit_span.append();
+                }else{
+                    submit_span.append("/"+sumbmit_rate);
+                }
+                submit_td.append(submit_span);
+                tr.append(submit_td);
+
+               
+                //付订单数/率 = 付订单数/意向单数
+                var average_pay_sub_num=data.sum_pay_sub_num;
+                if(!average_pay_sub_num){
+                  average_pay_sub_num=0;
+                }
+                var pay_sub_num_td=$("<td></td>");
+                var pay_sub_num_span= $("<span></span>");
+                pay_sub_num_span.append(average_pay_sub_num);
+                var pay_sub_rate=(Math.round(average_pay_sub_num/average_submitNum * 10000) / 100.00 + "%");
+                if(average_pay_sub_num==0){
+                    pay_sub_num_span.append();
+                }else{
+                    pay_sub_num_span.append("/"+pay_sub_rate);
+                }
+                pay_sub_num_td.append(pay_sub_num_span);
+                tr.append(pay_sub_num_td);
+
+                //付订车数/比=  付订单数/付订车数
+                var average_pay_car_num= data.sum_pay_car_num;
+                if(!sum_pay_car_num){
+                  sum_pay_car_num=0;
+                }
+                var pay_car_num_td=$("<td></td>");
+                var pay_car_num_span=$("<span></span>");
+                //pay_car_num_td.append(average_pay_car_num);
+                if(sum_pay_car_num==0){
+                    sum_pay_car_num=1;
+                }
+                var pay_car_num_rate=(Math.round(average_pay_sub_num/average_pay_car_num * 100) / 100.00 );
+                if(average_pay_sub_num==0||average_pay_car_num==0||!average_pay_car_num){
+                    pay_car_num_span.append(0);
+                }else{
+                    pay_car_num_span.append(average_pay_car_num+"/"+pay_car_num_rate);
+                }
+                pay_car_num_td.append(pay_car_num_span);
+                tr.append(pay_car_num_td);
+
+                //取车单数、取车率=取车单数÷付订单数
+                var renterTakeCarNum= data.sum_take_car_order_num;
+                if(!renterTakeCarNum){
+                   renterTakeCarNum=0;
+                }
+                var renterTakeCarRate=(Math.round(renterTakeCarNum/average_pay_sub_num * 10000) / 100.00 + "%");
+                var takeCarOrderNum_td=$("<td></td>");
+                var takeCarOrderNum_span=$("<span></span>");
+                if(!renterTakeCarNum){
+                   takeCarOrderNum_span.append(0);
+                }else{
+                   takeCarOrderNum_span.append(renterTakeCarNum);   
+                }
+                if(sum_pay_sub_num==0||!sum_pay_sub_num||!renterTakeCarRate||renterTakeCarNum==0||!renterTakeCarNum){
+                    takeCarOrderNum_span.append()
+                }else{
+                    takeCarOrderNum_span.append("/"+renterTakeCarRate);
+                }
+                takeCarOrderNum_td.append(takeCarOrderNum_span);
+                tr.append(takeCarOrderNum_td);
+
+
+                //开锁单数/率 =行程大于200米的订单数/用户操作取车的总订单数 开锁单数
+                var overTwoMileNum= data.sum_over_two_num;
+                if(!overTwoMileNum){
+                    overTwoMileNum=0;
+                }
+               /* var renterTakeCarNum= data.sum_take_car_order_num;
+                if(renterTakeCarNum==0){
+                   renterTakeCarNum=1;
+                }*/
+
+                
+                var dayTrvelRate=(Math.round(overTwoMileNum/renterTakeCarNum * 10000) / 100.00 + "%");
+                var dayTravelRateTd=$("<td></td>");
+                var dayTravelRate_span=$("<span></span>");
+                dayTravelRate_span.append(overTwoMileNum);
+                if(overTwoMileNum==0||!dayTrvelRate||renterTakeCarNum==0){
+                 dayTravelRate_span.append(); 
+                }else{
+                dayTravelRate_span.append("/"+dayTrvelRate);   
+                }
+                dayTravelRateTd.append(dayTravelRate_span);
+                tr.append(dayTravelRateTd);
+
+                //同意单数/率= 同意单数/付订单数 
+                var sum_argree_num = data.sum_argree_num;
+                if(!sum_argree_num){
+                  sum_argree_num=0;
+                }
+                var argree_num_td=$("<td></td>");
+                 var argree_num_span=$("<span></span>");
+                argree_num_span.append(sum_argree_num);
+                var argree_num_rate=(Math.round(sum_argree_num/average_pay_sub_num * 10000) / 100.00 + "%");
+                if(sum_argree_num==0){
+                    argree_num_span.append();
+                }else{
+                    argree_num_span.append("/"+argree_num_rate);
+                }
+                argree_num_td.append(argree_num_span);
+                tr.append(argree_num_td);
+                
+                //付款单数/率= 付款单数/同意单数
+                var sum_pay_mony_num=data.sum_pay_mony_num;
+                if(!sum_pay_mony_num){
+                  sum_pay_mony_num=0;
+                }
+                var pay_mony_num_td=$("<td></td>");
+               var pay_mony_num_span= $("<span></span>");
+                pay_mony_num_span.append(sum_pay_mony_num);
+                if(sum_argree_num==0){
+                    sum_argree_num=1;
+                }
+                var pay_mony_num_rate=(Math.round(sum_pay_mony_num/sum_argree_num * 10000) / 100.00 + "%");
+                if(sum_pay_mony_num==0){
+                    pay_mony_num_span.append();
+                }else{
+                    pay_mony_num_span.append("/"+pay_mony_num_rate);    
+                }
+                pay_mony_num_td.append(pay_mony_num_span);
+                tr.append(pay_mony_num_td);
+
+
+                //违押单数/率= 违押单数/付款单数
+                var sum_voilence_mony_num =data.sum_pay_mony_num;
+                if(!sum_voilence_mony_num){
+                  sum_voilence_mony_num=0;
+                }
+                var voilence_mony_num_td=$("<td></td>");
+                var voilence_mony_num_span=$("<span></span>");
+                voilence_mony_num_span.append(sum_voilence_mony_num);
+                if(pay_mony_num==0){
+                    pay_mony_num=1;
+                }
+                var voilence_mony_num_rate=(Math.round(sum_voilence_mony_num/sum_pay_mony_num * 10000) / 100.00 + "%");
+                if(sum_voilence_mony_num==0){
+                    voilence_mony_num_span.append();
+                }else{
+                    voilence_mony_num_span.append("/"+voilence_mony_num_rate);
+                }
+                voilence_mony_num_td.append(voilence_mony_num_span);
+                tr.append(voilence_mony_num_td);
+                
+                //失败单数/率= 失败单数/付订单数
+               var sum_lose_num=data.sum_lose_num;
+                 if(!sum_lose_num){
+                  sum_lose_num=0;
+                }
+                if(sum_pay_sub_num==0){
+                    sum_pay_sub_num=1;
+                }
+                var lose_num_td=$("<td></td>");
+                var lose_num_span=$("<span></span>");
+                lose_num_span.append(sum_lose_num);
+
+                var lose_num_rate=(Math.round(sum_lose_num/average_pay_sub_num * 10000) / 100.00 + "%");
+                if(sum_lose_num==0||average_pay_sub_num==0){
+                    lose_num_span.append();
+                }else{
+                   lose_num_span.append("/"+lose_num_rate); 
+                }
+                lose_num_td.append(lose_num_span);
+                tr.append(lose_num_td);
+
+                /*
+
+                         var sum_lose_num=sum.sum_lose_num;
+                 if(!sum_lose_num){
+                  sum_lose_num=0;
+                }
+                var lose_num_td=$("<td></td>");
+                var lose_num_span=$("<span></span>");
+                lose_num_span.append(sum_lose_num);
+
+                var lose_num_rate=(Math.round(sum_lose_num/sum_pay_sub_num * 10000) / 100.00 + "%");
+                if(sum_lose_num==0||sum_pay_sub_num==0){
+                    lose_num_span.append();
+                }else{
+                    lose_num_span.append("/"+lose_num_rate);
+                }
+                lose_num_td.append(lose_num_span);
+                tr.append(lose_num_td);
+
+                */
+
+                //退款单数/率= 退款单数/付款单数
+                var sum_return_num=data.sum_return_num;
+                if(!sum_return_num){
+                  sum_return_num=0;
+                }
+                var return_num_td=$("<td></td>");
+                var return_num_span=$("<span></span>");
+                    return_num_span.append(sum_return_num);
+
+                var return_num_rate=(Math.round(sum_return_num/sum_pay_mony_num * 10000) / 100.00 + "%"); 
+                if(sum_return_num==0){
+                    return_num_span.append();
+                }else{
+                  return_num_span.append("/"+return_num_rate);      
+                }
+                return_num_td.append(return_num_span);
+                tr.append(return_num_td);
+                //车辆总数
+                var allCarNum= data.sum_car_num;
+                var allCar_td=$("<td></td>"); 
+                /*allCar_td.append(allCarNum);
+                tr.append(allCar_td);*/
+
+                //上架率 最大
+               /* var sum_max_sell= data.sum_max_sell;
+                var sum_max_all_count=data.sum_max_all_count;
+                var sellMaxRate= (Math.round(sum_max_sell/sum_max_all_count * 10000) / 100.00 +"%");
+                var sellMaxRate_td=$("<td></td>");
+                if(sum_max_sell==0){
+                    sellMaxRate_td.append(0 );
+                }else{
+                    sellMaxRate_td.append(sellMaxRate );    
+                }
+                
+                tr.append(sellMaxRate_td);*/
+                //上架率 最小
+               /* var sum_min_sell= data.sum_min_sell;
+                var sum_min_all_count=data.sum_min_all_count;
+                if(sum_min_all_count==0){
+                    sum_min_all_count=1;
+                }
+                var sellMInRate= (Math.round(sum_min_sell/sum_min_all_count * 10000) / 100.00);
+                //var sellMInRate= data.minRate;
+                var sellMInRate_td=$("<td></td>");
+                if(sellMInRate&&sellMInRate!=0){
+                   sellMInRate_td.append(sellMInRate);
+                }else{
+                    sellMInRate_td.append(0);
+                }
+                
+                tr.append(sellMInRate_td);*/
+                //出租率  日均出租率   每日至少生成一个正常行驶订单（超过200米）的车辆数/运营车辆数的一周平均值；
+                //正常行驶车辆数
+                var nomalOrderNum=data.sum_effective_order_car;
+                if(!nomalOrderNum){
+                    nomalOrderNum=0;
+                }
+                //运营车辆数
+                var operateCarNum=data.sum_avg_week_num;
+                //
+                if(operateCarNum==0){
+                  operateCarNum=1;
+                }
+                var day_rent_rate=(Math.round(nomalOrderNum/operateCarNum * 10000) / 100.00 + "%");
+                /*var dayRentRate_td=$("<td></td>");
+                if(nomalOrderNum==0){
+                    dayRentRate_td.append(0);
+                }else{
+                    dayRentRate_td.append(day_rent_rate); 
+                }
+                
+                tr.append(dayRentRate_td);*/
+                
+
+                //日车均订单数 =每日生成正常行驶订单（超过200米）数/当日有出租纪录的车辆数
+                var effectiveOrderNum= data.sum_over_two_num;
+                var everDayOrderNum  =(Math.round(effectiveOrderNum/nomalOrderNum)); 
+                var effectiveOrderNumTd= $("<td> </td>");
+                var effectiveOrderNum_span=$("<span></span>");
+                if(effectiveOrderNum==0||nomalOrderNum==0){
+                    effectiveOrderNum_span.append(0);
+                }else{
+                   effectiveOrderNum_span.append(everDayOrderNum);     
+                }
+                effectiveOrderNumTd.append(effectiveOrderNum_span);
+                tr.append(effectiveOrderNumTd);
+                //日车均收入（出租）=每日生成非0计数订单的费用的总和/当日成非0计费订单的车辆数
+                var overZeroOrderFee= data.sum_fee;
+                if(!overZeroOrderFee){
+                overZeroOrderFee=0;
+                }
+                var overZeroOrderCarNum= data.sum_fee_car_num;
+                if(!overZeroOrderCarNum){
+                    overZeroOrderCarNum=0;
+                }
+                var everyDayIncome=(Math.round(overZeroOrderFee/overZeroOrderCarNum * 100)/100.00 ); 
+                var overZeroOrderFee_td= $("<td> </td>");
+                var overZeroOrderFee_span=$("<span></span>");
+                if(overZeroOrderFee==0||overZeroOrderCarNum==0){
+                    overZeroOrderFee_span.append(0);
+                }else{
+                   overZeroOrderFee_span.append(everyDayIncome); 
+                }
+                overZeroOrderFee_td.append(overZeroOrderFee_span);
+                tr.append(overZeroOrderFee_td);
+                //日车均收入运营 =每日生成非0计费订单的费用总和/当日运营车辆数
+                /*var sellNewCarNum= data.sum_avg_week_num;
+                if(sellNewCarNum==0){
+                    sellNewCarNum=1;
+                }
+                var everyDayNewCarIncome=(Math.round(overZeroOrderFee/sellNewCarNum * 100)/100.00 ); 
+                var everyDayNewCarIncome_td= $("<td></td>");
+                if(overZeroOrderFee==0){
+                    everyDayNewCarIncome_td.append(0);
+                }else{
+                    everyDayNewCarIncome_td.append(everyDayNewCarIncome);    
+                }
+
+                tr.append(everyDayNewCarIncome_td);*/
+
+                $("#data_table_body").append(tr);
+            }
+  }
+
+
+
+</script>
+<script>
+$(document).ready(function() {
+    //时间插件  
+    $('#reportrange span').html("请选择日期");
+    $('#reportrange').daterangepicker({
+        startDate: moment(),
+        endDate: moment().subtract('days', 1),
+        minDate: '2013/01/01',
+        maxDate: '2022/12/31',
+        dateLimit: { days: 60 },
+        showDropdowns: true,
+        showWeekNumbers: false,
+        timePicker: false,
+        timePickerIncrement: 1,
+        timePicker12Hour: true,
+        buttonClasses: ['btn btn-default'],
+        applyClass: 'btn-small btn-primary',
+        cancelClass: 'btn-small',
+        format: 'YYYY-MM-DD',
+        separator: ' to ',
+        ranges: {
+            '今天': [moment(), moment()],
+            '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
+            '最近7天': [moment().subtract('days', 6), moment()],
+            '最近30天': [moment().subtract('days', 29), moment()],
+            '本月': [moment().startOf('month'), moment().endOf('month')],
+            '上月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+        },
+        locale: {
+            applyLabel: '确定',
+            cancelLabel: '取消',
+            fromLabel: '开始',
+            toLabel: '结束',
+            customRangeLabel: '自定义',
+            daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+            monthNames: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+            firstDay: 1
+        }
+      },
+      function(start, end, label) {
+            $('#reportrange span').html(start.format('YYYY-MM-DD') + ' ~ ' + end.format('YYYY-MM-DD'));
+            /*$('#dateSelect').append("<i class='icon-ok-sign'></i>");*/
+            $('#dateSelect').append(start.format('YYYY-MM-DD') + ' ~ ' + end.format('YYYY-MM-DD'))
+            if(start.format('YYYY-MM-DD')!=null&&end.format('YYYY-MM-DD')!=null){
+                window.beginTime=start.format('YYYY-MM-DD');
+                window.endTime= end.format('YYYY-MM-DD');
+                queryDataInfo();
+           }
+      }
+    );
+   
+})
+</script>
+</html>

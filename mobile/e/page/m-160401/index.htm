@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>车辆详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="服务条款，租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/Swiper/3.2.7/css/swiper.css">
+    <!-- <link rel="stylesheet" href="http://css.baojia.com/s4/e/css/m-160401/style.css"> -->
+    <link rel="stylesheet" href="../../css/m-160401/style.css">
+</head>
+<body>
+	<div class="cardetail">
+		<div class="top">
+			<dl>
+				<dt><img src="http://css.baojia.com/s4/e/images/m-160401/logo.png" alt=""></dt>
+				<dd>
+					<p>宝驾租车，快捷租车神器</p>
+					<a href="javascript:void(0);">打开看看</a>
+				</dd>
+			</dl>			
+		</div>
+		<div class="ban">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                	<a href="javascript:void(0);"><img src="http://css.baojia.com/s4/e/images/m-160401/pic.png" /></a>
+                </li>
+                <li class="swiper-slide">
+					<a href="javascript:void(0);"><img src="http://css.baojia.com/s4/e/images/m-160401/pic.png" /></a>
+                </li>
+                <li class="swiper-slide">
+                	<a href="javascript:void(0);"><img src="http://css.baojia.com/s4/e/images/m-160401/pic.png" /></a>
+                </li>
+                <li class="swiper-slide">
+                	<a href="javascript:void(0);"><img src="http://css.baojia.com/s4/e/images/m-160401/pic.png" /></a>
+                </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+		</div>
+		<div class="testdrive">
+			<div>
+				<p>40人一体验<br>附近有8辆车</p>
+				<p><a href="javascript:void(0);">¥<span>25</span></a><span class="spc">?</span></p>
+				<p>试驾</p>
+			</div>
+		</div>
+		<div class="testdrive detail">
+			<div>
+				<p><span>18.4-27.3万元</span><br><span>指导价</span></p>
+				<p><span>7.3-5.9升</span><br><span>油耗</span></p>
+				<p><span>紧凑车型</span><br><span>级别</span></p>
+			</div>
+		</div>
+		<!-- <div class="description">
+			<div>
+				<div class="title">车辆描述<br><span>(京A****45)</span></div>
+				<div class="count">
+					<div>
+						<p>自动挡</p>
+						<p>天窗</p>
+						<p>GPS导航</p>
+					</div>
+					<div>
+						<p>倒车影像</p>
+						<p>真皮座椅</p>
+						<p>电热座椅</p>
+					</div>
+					<div>
+						<p>DVD播放</p>
+						<p>音响接口</p>
+						<p>GPS导航</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="foot">
+			<div>
+				车主描述:宽敞舒适，7座，2.7排量动力强，百公里油耗:高速9.0城市9.7。谢绝车内吸烟。真皮座椅害怕宠物。北京市内请加92号汽油。.....
+			</div>			
+		</div> -->
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js" type="text/javascript"></script>
+<script src="http://cdn.bootcss.com/Swiper/3.2.7/js/swiper.jquery.min.js"></script>
+<script>
+	var swiper = new Swiper(".ban",{
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplayDisableOnInteraction:false,
+        loop:true
+    });
+</script>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>发布座驾</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/pinj.css">
+</head>
+<body>
+	<div class="O_releasecar">
+		<div class="header">                       
+            <div class="jt"></div>
+            <div class="title">跨域车主路线</div>
+            <div class="explain">?</div>
+        </div>
+        <div class="p_input">
+            <div class="P_pai">
+                京
+                <div class="jt"></div>
+            </div>
+            <input type="text" class="input">
+        </div>
+        <div class="P_list">
+            <div class="P_list_div">
+                <div>
+                    <a href="javascript:;"><span class="span1"></span>车辆品牌</a>
+                    <div>
+                        <p>请选择</p>
+                        <div class="jt jt135"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="P_list_div">
+                <div>
+                    <a href="javascript:;"><span class="span2"></span>注册年份</a>
+                    <div>
+                        <p>请选择</p>
+                        <div class="jt jt135"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="P_list_div">
+                <div>
+                    <a href="javascript:;"><span class="span3"></span>出租价格</a>
+                    <div>
+                        <p>请选择</p>
+                        <div class="jt jt135"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="P_list_div">
+                <div>
+                    <a href="javascript:;"><span class="span4"></span>车辆位置</a>
+                    <div>
+                        <p>请选择</p>
+                        <div class="jt jt135"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="P_list_div">
+                <div>
+                    <a href="javascript:;"><span class="span5"></span>行驶里程</a>
+                    <div>
+                        <p>请选择</p>
+                        <div class="jt jt135"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="P_agreement checked">
+            <span></span>同意<a href="javascript:;">车东协议</a>及<a href="javascript:;">出租风险提示</a>
+        </div>
+        <div class="sub">
+            <a href="javascript:;" class="btn">提交</a>
+        </div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".P_agreement span").click(function(){
+            if($(this).parent().hasClass('checked')){
+                $(this).parent().removeClass('checked')
+            }else{
+                $(this).parent().addClass('checked')
+            }
+        })
+    })
+</script>
+</html>

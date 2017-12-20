@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="http://css.baojia.com/s4/favicon.ico">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="http://css.baojia.com/s4/app-icon72x72@2x.png">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">   
+    <link rel="apple-touch-icon-precomposed" href="http://css.baojia.com/s4/app-icon72x72@2x.png">
+    <meta name="msapplication-TileImage" content="http://css.baojia.com/s4/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/e/css/m-170504/style.css">
+</head>
+<body>
+	<div class="p_div">
+        <div class="banner"><img src="http://css.baojia.com/s4/e/images/m-170504/banner.jpg" alt=""></div>
+        <div class="content">
+            <div class="title">请填写信息</div>
+            <div class="input_div">
+                <input type="text" readonly placeholder="请选择车型" class="carModel">
+                <span class="car"><img src="http://css.baojia.com/s4/e/images/m-170504/car.png" alt=""></span>
+            </div>
+            <div class="input_div">
+                <input type="tel" placeholder="请输入您的手机号" maxlength="11">
+                <span class="tel"><img src="http://css.baojia.com/s4/e/images/m-170504/tel.png" alt=""></span>
+            </div>
+            <a href="javascript:;" class="sub">提交</a>
+        </div>
+         <div class="footer">
+            <img src="http://css.baojia.com/s4/e/images/m-170504/bott.png" alt="">
+        </div>
+        <div class="mask mask1">
+            <div class="pop">
+                <dl>
+                    <dt><img src="http://css.baojia.com/s4/e/images/m-170504/success.png" alt=""></dt>
+                    <dd>
+                        <h1>您的信息已提交成功！</h1>
+                        <p>请您保持手机畅通！我们的客户经理将会在工作时间48小时内联系您，为您提供专人服务！</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="mask mask2">
+            <ul>
+                <li>别克凯越</li>
+                <li>大众朗逸</li>
+                <li>丰田威驰</li>
+                <li>帕萨特</li>
+                <li>日产天籁</li>
+                <li>本田雅阁</li>
+                <li>奔驰C级</li>
+                <li>宝马3系</li>
+                <li>奥迪A4L</li>
+                <li>奥迪A6L</li>
+                <li>宝马5系</li>
+                <li>奔驰E级</li>
+                <li>奥迪A8L</li>
+                <li>宝马7系</li>
+                <li>奔驰S级</li>
+                <li>玛莎拉蒂总裁</li>
+                <li>劳斯莱斯</li>
+                <li>宾利飞驰</li>
+                <li>保时捷macan</li>
+                <li>奔驰glc</li>
+                <li>路虎极光</li>
+                <li>丰田埃尔法</li>
+                <li>GMC商务之星</li>
+                <li>别克GL8</li>
+                <li>GTR</li>
+                <li>玛沙ghibli</li>
+                <li>保时捷911</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        function error(){
+            $(".mask1").show();
+            setTimeout(function(){
+                $(".mask1").hide();
+            },4000)
+        };
+        $(".sub").click(function(){
+            error();
+        });
+        $(".carModel").click(function(){
+            $(".mask2").show();
+        });
+        $(".mask2 li").click(function(){
+            var txt=$(this).text();
+            $(".carModel").val(txt);
+            $(".mask2").hide();
+        });
+        $(document).on('focus', 'input[readonly]', function () {
+            this.blur();
+         });
+    })
+</script>
+</html>

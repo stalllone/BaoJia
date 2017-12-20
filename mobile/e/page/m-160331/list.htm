@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>2周年庆</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="服务条款，租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <!-- <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css"> -->
+    <link rel="stylesheet" href="../../../c/css/reset.css">
+    <link rel="stylesheet" href="../../css/m-160331/main.css">
+    <style type="text/css">
+        /*.pos_f_c{position:fixed;top:50%;left:50%;-webkit-transform:tanslate(-50%,-50%);-moz-transform:tanslate(-50%,-50%);-ms-transform:tanslate(-50%,-50%);transform:translate(-50%,-50%);}*/
+        /*#turnplatewrapper{width:13rem;height: 13rem;position:fixed;top:50%;left:50%;-webkit-transform:tanslate(-50%,-50%);}*/
+    </style>
+
+</head>
+
+<body>
+    <div id="turnplatewrapper" class="pos_f_c" >
+        <div id="turnplatemain">
+            <div id="awards">
+                <div id="turnplate">
+                </div>
+            </div>
+        </div> 
+    </div>
+        <div class="import">
+        <div>
+            <input type="tel" class="tel" placeholder="请输入手机号">
+        </div>
+        <div>
+            <input type="tel" class="code" placeholder="请输短信验证码">
+            <p class="code1">获取验证码</p>
+        </div>
+        <div class="btn"><a href="javascript:void(0);">立即抽奖</a>
+            <p class="code1 btnguize">抽奖规则</p>
+        </div>
+    </div>
+    <div class="mask">
+         <div id="guize"  class="pos_f_c">
+             <p>活动时间：<br>2016年3月31日9:00-6月22日24:00</p>
+                <p>活动规则：<br>
+                    1.本活动适用于宝驾租车所有用户；<br>
+                    2.每位用户每天1次抽奖机会，中奖后请登录APP查看奖品；<br>
+                    3.本次活动宝哥保证每位用户皆有奖品，宝哥就是这么壕性，请宝亲们多多分享，奔走相告！</p>
+                <div class="foot"><span>活动解释权归宝驾公司所有</span></div>
+                <a href="javascript:void(0);" class="close">×</a>
+         </div>
+     </div>
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://css.baojia.com/s4/c/js/jquery.bj.help.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script type="text/javascript">
+    $(function() {
+      $(".btnguize").click(function(event) {
+        $(".mask").show();
+      });
+      $(".close").click(function(){
+        $(".mask").hide();
+      })
+       $(".btn a").click(function(event) {
+           /* Act on the event */
+           turnplate.click();
+       });
+    })
+     var height = $("#awards").height();
+     var turnplate = {
+            height: height, //帧高度
+            turnplateBox: $('#turnplate'),
+            turnplateBtn: $('#platebtn'),
+            errorIndex: 7, //默认中奖异常时的奖品指针
+            lotteryIndex: undefined, //奖品index 
+            maxTime: undefined, //最大抽奖次数
+            lotteryTime: 0, //抽奖次数     
+            lightSwitch: 0, //闪灯切换开关. 0 和 1间切换
+            minResistance: 5, //基本阻力
+            Cx: 0.01, //阻力系数 阻力公式：  totalResistance = minResistance + curSpeed * Cx;    
+            accSpeed: 15, //加速度
+            accFrameLen: 40, //加速度持续帧数
+            maxSpeed: 250, //最大速度 
+            minSpeed: 20, //最小速度 
+            frameLen: 10, //帧总数
+            totalFrame: 0, //累计帧数,每切换一帧次数加1
+            curFrame: 0, //当前帧
+            curSpeed: 20, //上帧的速度     
+            initFreshInterval: 500, //进度条刷新间隔
+            virtualDistance: 10000, //虚拟路程,固定值，速度越快，切换到下帧的时间越快: 切换到下帧的时间 = virtualDistance/curSpeed
+            isLocked: true, //抽奖锁,为true时，不允许下一轮抽奖
+            timer2: undefined, //计时器2
+            initTimer: undefined, //计时器
+            showMsgTime: 2000, //消息显示时间
+            //初始化
+            init: function() {
+                this.initAnimate()
+                this.freshLottery();
+                this.turnplateBtn.click($.proxy(function() {
+                    this.click();
+                }, this));
+            },
+            //初始化动画
+            initAnimate: function() {
+                this.showTip();
+                clearTimeout(this.initTimer);
+                this.initTimer = setTimeout($.proxy(this.initAnimate, this), this.initFreshInterval);
+            },
+            //停止初始化动画
+            stopInitAnimate: function() {
+                clearTimeout(this.initTimer);
+                this.showTip(false);
+            },
+            //更新当前速度
+            freshSpeed: function() {
+                var totalResistance = this.minResistance + this.curSpeed * this.Cx;
+                var accSpeed = this.accSpeed;
+                var curSpeed = this.curSpeed;
+                if (this.totalFrame >= this.accFrameLen) {
+                    accSpeed = 0;
+                }
+                curSpeed = curSpeed - totalResistance + accSpeed;
+
+                if (curSpeed < this.minSpeed) {
+                    curSpeed = this.minSpeed;
+                } else if (curSpeed > this.maxSpeed) {
+                    curSpeed = this.maxSpeed;
+                }
+                this.curSpeed = curSpeed;
+            },
+            //闪灯,切换到下一张时调用
+            switchLight: function() {
+                this.lightSwitch = this.lightSwitch === 0 ? 1 : 0;
+                var lightHeight = -this.lightSwitch * this.height;
+                // this.lightDom.css('backgroundPosition', '0 ' + lightHeight.toString() + 'px');
+            },
+            //旋转,trunAround,changeNext循环调用
+            turnAround: function() {
+                //加锁
+                this.isLocked = true;
+                var intervalTime = parseInt(this.virtualDistance / this.curSpeed);
+                this.timer = window.setTimeout('turnplate.changeNext()', intervalTime);
+            },
+            //切换到下帧
+            changeNext: function() {
+                //判断是否应该停止
+                if (this.lotteryIndex !== undefined && this.curFrame == this.lotteryIndex && this.curSpeed <= this.minSpeed + 10 && this.totalFrame > this.accFrameLen) {
+                    this.isLocked = false;
+                    this.showAwards();
+                    return;
+                }
+
+                var nextFrame = this.curFrame + 1 < this.frameLen ? this.curFrame + 1 : 0;
+                var bgTop = -nextFrame * this.height;
+                this.turnplateBox.css('backgroundPosition', '0 ' + bgTop.toString() + 'px');
+                this.switchLight();
+                this.curFrame = nextFrame;
+                this.totalFrame++;
+                this.freshSpeed();
+                this.turnAround();
+            },           
+            lotteryList: [500, 1000, 10, 500, 20, 500, 1000,5],
+            //弹出奖品
+            showAwards: function(msg, isFresh) {
+                var str="";
+                if(this.lotteryIndex>=0 && this.lotteryIndex < 8)str ="恭喜你获得"+this.lotteryList[this.lotteryIndex]+"元租车券";
+                this.showMsg(str)
+            },
+            //显示剩余次数
+            freshLotteryTime: function() {
+                //$('#top-menu').find('.lottery-times').html(this.lotteryTime);
+            },
+            //更新抽奖次数
+            freshLottery: function() {
+                this.stopInitAnimate();
+                this.setBtnHover();
+                this.isLocked = false;
+                this.lotteryTime = 1;
+                this.freshLotteryTime();
+            },
+            //设置按钮三态
+            setBtnHover: function() {
+                //按钮三态
+            },
+            //点击抽奖
+            click: function() {
+                // this.lotteryIndex = undefined;
+                //加锁时
+                if (this.isLocked == true) {
+                    this.showMsg('正在抽奖！请耐心等待...');
+                    return;
+                }
+                this.turnAround();
+                var _that = this;
+                $.ajax({
+                    async: false,
+                    url: "http://api.baojia.com/test/api/list/area",
+                    type: "GET",
+                    dataType: 'jsonp',
+                    timeout: 5000,
+                    success: function(json) {
+                        var index = parseInt(Math.random() * 8)
+                        var data = {
+                            index: index, //中奖值
+                            currtime: 3 // 抽奖次数
+                        }
+                        if (!data.currtime && !_that.maxTime && data.currtime >= _that.maxTime) {
+                            _that.showMsg('今天已经抽过奖了，明天再来吧');
+                        } else {
+                            _that.lottery(data.index);
+                        }
+                    },
+                    error: function(xhr) {
+                        //_that.lottery()
+                    }
+                });
+            },
+            //获取奖品
+            lottery: function(index) {
+                this.lotteryIndex = undefined;
+                this.lotteryTime--;
+                this.freshLotteryTime();
+                this.totalFrame = 0;
+                this.curSpeed = this.minSpeed;
+                this.lotteryIndex = (index && index >= 0 && index < 100) ? index : this.errorIndex;
+            },
+            //显示提示信息
+            showMsg: function(msg) {
+               if (msg && msg!="") viewError(msg);
+            },
+            //显示提示信息
+            showTip: function(show) {
+                popMaskLoad(show);
+            }
+        }
+    turnplate.init();
+    </script>
+</body>
+
+</html>

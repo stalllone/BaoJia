@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/m1.css">
+</head>
+<body>
+<div class="popup">
+	<div class="mask">
+		<div class="pop">
+			<div class="title">租金计价</div>
+			<div class="cont">
+				<div class="price">租金计价：13.31元</div>
+				<div>
+					<p>白天计费：0.23元/分钟*42</p>
+					<p>9.66元</p>
+				</div>
+				<div>
+					<p>公里计费：0.73元/分钟*5</p>
+					<p>3.65元</p>
+				</div>
+				<a href="javascript:;" class="btn">确定</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(function() {
+	
+	$(".btn").click(function(){
+		$(".mask").css("display", "none");
+	});
+	
+});
+
+</script>
+</html>

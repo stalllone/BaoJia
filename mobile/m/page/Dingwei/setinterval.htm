@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>设置上报间隔</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/dingwei.css">
+</head>
+<body>
+	<div class="setinterval">
+		<div class="header">
+			<div class="jt"></div>
+			<p>设置上报间隔</p>
+			<span>保存</span>
+		</div>
+		<div class="list">
+			<div class="list_div">
+				<p>10秒</p>				
+			</div>
+			<div class="list_div">
+				<p>20秒</p>				
+			</div>
+			<div class="list_div list_div1">
+				<p>30秒</p>				
+			</div>
+		</div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$(".list_div").click(function(){
+			$(this).addClass('on').siblings().removeClass('on');
+		})
+	})
+</script>
+</html>

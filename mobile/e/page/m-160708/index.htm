@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>分时租赁</title>
+    <meta name="keywords" content="拼驾,租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application" />
+    <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/js/swiper/swiper.animate.min.css">
+    <style>
+        *{margin:0;padding:0;}
+        html,body{height:100%;}
+        .swiper-container{width:100%;height:100%;background:#000;}
+        img{display:block;width:100%;height:100%}
+        .swiper-pagination-bullet{width:6px;height:6px;background:#fff;opacity:.4;}
+        .swiper-pagination-bullet-active{opacity:1;}
+        .ani{position:absolute;}
+        .tips{width:77%;z-index:3;}
+        .share{width:100%;font-weight:600;border-radius:5px;line-height:2rem;text-align:center;color:#fff;z-index:3;}
+        .arrow{width:20px;height:15px;position:fixed;z-index:999;bottom:5%;left:50%;-webkit-transform:translate(-50%,-50%);-webkit-animation:start 1.5s infinite ease-in-out;}
+        .play{width:2rem;height:2rem;position:fixed;z-index:999;right:1rem;top:1rem;}
+        .playing{-webkit-animation:rotate 1.5s infinite linear;}
+        @-webkit-keyframes start{
+            0%,30%{opacity:0;-webkit-transform:translate(0,10px);}
+            60%{opacity:1;-webkit-transform:translate(0,0);}
+            100%{opacity:0;-webkit-transform:translate(0,-8px);}
+        }
+         @keyframes start{
+            0%,30%{opacity:0;-webkit-transform:translate(0,10px);}
+            60%{opacity:1;-webkit-transform:translate(0,0);}
+            100%{opacity:0;-webkit-transform:translate(0,-8px);}
+        }
+        @-webkit-keyframes  rotate{            
+        from{-webkit-transform:rotate(0deg)}
+        to{-webkit-transform:rotate(360deg)}
+        }
+        @keyframes rotate{            
+        from{-webkit-transform:rotate(0deg)}
+        to{-webkit-transform:rotate(360deg)}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+           <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/home.jpg">
+            </section>
+            <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/1.jpg">
+                <div class="ani tips" style="left:18%;bottom:3%;width:64%"; swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="http://css.baojia.com/s4/e/images/m-160708/1.png"></div>
+            </section>
+            <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/2.jpg">
+                <div class="ani tips" style="left:13%;bottom:3%;width:74%"; swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="http://css.baojia.com/s4/e/images/m-160708/2.png"></div>
+            </section>
+            <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/3.jpg">
+                <div class="ani tips" style="left:24%;bottom:3%; width:51%" ; swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="http://css.baojia.com/s4/e/images/m-160708/3.png"></div>
+            </section>
+            <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/4.jpg">
+                <div class="ani tips" style="left:19%;bottom:3%;width:60%"; swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="http://css.baojia.com/s4/e/images/m-160708/4.png"></div>
+            </section>
+            <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/5.jpg">
+                <div class="ani share" style="left:12%;bottom:3%;width:75%"; swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0s"><img src="http://css.baojia.com/s4/e/images/m-160708/5.png"></div>
+            </section>
+            <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/6.jpg">
+                <div class="ani share" style="left:29%;bottom:3%;width:42%"; swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0s"><img src="http://css.baojia.com/s4/e/images/m-160708/6.png"></div>
+            </section>
+            <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/7.jpg">
+                <div class="ani share" style="left:10%;bottom:3%;width:80%"; swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s"><img src="http://css.baojia.com/s4/e/images/m-160708/7.png"></div>
+            </section>
+            <section class="swiper-slide">
+                <img src="http://css.baojia.com/s4/e/images/m-160708/code.jpg">
+            </section>
+        </div>       
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="arrow"><img src="http://css.baojia.com/s4/e/images/m-160708/arrow.png"></div>
+    <div class="play playing">
+        <img src="http://css.baojia.com/s4/e/images/m-160708/normalmusic.svg">
+        <div class="video">
+            <audio autoplay loop><source src="http://css.baojia.com/s4/e/video/160116.mp3" /></audio>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdn.bootcss.com/Swiper/3.2.7/js/swiper.jquery.min.js"></script>
+    <script src="http://css.baojia.com/s4/c/js/swiper/swiper.animate.min.js"></script>
+    <script>
+
+    // var scaleW = window.innerWidth / 320,
+    // scaleH = window.innerHeight / 480,
+    // resizes = document.querySelectorAll('.tips');
+    // $.each($(".tips img"),function(index, el) {
+    //     el = $(el);
+    //     el.css({width: el.width() * scaleW,height:el.height() * scaleH});
+    //     console.log(el.width() +"----"+el.height() )
+    // });
+   
+
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        pagination: '.swiper-pagination',
+        mousewheelControl: true,
+        watchSlidesProgress: true,
+        onInit: function(swiper) {
+            swiperAnimateCache(swiper);
+            swiperAnimate(swiper);
+        },
+        onSlideChangeEnd: function(swiper) {
+            swiperAnimate(swiper);
+        },
+        onTransitionEnd: function(swiper) {
+            swiperAnimate(swiper);
+        },
+    })
+
+
+    $(function() {
+        /*var str = '<audio autoplay loop><source src="http://css.baojia.com/s4/e/video/160115.mp3" /></audio>';*/
+        //$(".video").html(str);
+        $(".play").bind("click", function() {            
+            /*if($(".video").html() == ""){
+                $(".video").html(str);
+                $(this).addClass('playing');
+            }else{
+                $(".video").html("");
+                $(this).removeClass('playing');
+            }*/
+            var music = $(this).find("audio")[0];
+            $(this).toggleClass("playing");
+            if( $(this).hasClass("playing") ){
+                    music.play()
+                }else{
+                    music.pause()
+                }
+        })
+    })
+    </script>
+</body>
+
+</html>

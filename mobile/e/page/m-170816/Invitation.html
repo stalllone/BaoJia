@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>好友邀请你一起骑小蜜单车</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application" />
+    <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <!-- <link rel="stylesheet" href="../../css/m-170816/style.css"> -->
+    <link rel="stylesheet" href="http://css.baojia.com/s4/e/css/m-170816/style.css">
+</head>
+<body>
+	<div class="invite">
+		<div class="logo">
+			<img src="http://css.baojia.com/s4/e/images/m-170816/logo.png" alt="">
+		</div>
+		<div class="txt">
+			注册即可获得<span>5张</span>骑行优惠券
+		</div>
+		<div class="backimg">
+			<img src="http://css.baojia.com/s4/e/images/m-170816/imageH5.png" alt="">
+		</div>
+		<div class="input_box">
+			<input type="tel" placeholder="请输入手机号" class="tel" maxlength="11" style="color:red;">
+		</div>
+		<a href="javascript:;" class="btn subbtn">下一步</a>
+		<div class="mask">
+			<div class="pop">
+				<div class="pop_tit">
+					<h1>手机号已注册</h1>
+					<p>您的手机号已注册，请直接下载小蜜单车APP使用</p>
+				</div>
+				<a href="javascript:;" class="download">下载小蜜单车App</a>
+			</div>
+		</div>
+	</div>
+	
+		
+</body>
+<script src="http://css.baojia.com/s4/e/js/m-170816/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://css.baojia.com/s4/e/js/m-170816/jquery.bj.help.js"></script>
+<script>
+	$(function(){
+		$(".subbtn").click(function(){
+			var telval=$(".tel").val();
+			if(telval==""){
+				viewError('请输入手机号！');
+			}else if(telval.length<11){
+				viewError('请输入正确的手机号！');
+			}else{
+				$(".mask").css("display","block");
+			}
+		});
+		$(".input_box").click(function(){
+			$(".tel").focus();
+		})
+	})
+</script>
+</html>

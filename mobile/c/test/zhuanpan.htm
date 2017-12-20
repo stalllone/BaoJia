@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jquery圆盘抽奖特效</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <style type="text/css">
+		#header{width:960px;margin:0 auto;position:relative;}		
+		
+		#awards{position:absolute;background:url('http://css.baojia.com/s4/e/images/m-160331/awards.png') top left no-repeat;}
+		#awards #turnplate{position:relative;height:431px;width:431px;background:url('http://css.baojia.com/s4/e/images/m-160331/turntable.png') top left no-repeat;}
+		#awards #platebtn{position:absolute;top:140px;left:140px;background:url('http://www.jq22.com/demo/jquery-zhuan20151119/img/turnplate/plate_04.png') top left no-repeat;height:155px;width:155px;cursor:pointer;}
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <!--   <div id="awards">
+            <div id="turnplate" ></div>
+            <div id="platebtn"></div>
+        </div> -->
+              <div id="awards">
+            <div id="turnplate" ></div>
+            <div id="platebtn"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.bj.help.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script type="text/javascript">
+    var turnplate = {
+        height: '431', //帧高度
+        // turnplateBox: $('#platebtn2'),
+        // turnplateBtn: $('#turnplate2'),
+        turnplateBox: $('#turnplate'),
+        turnplateBtn: $('#platebtn'),
+        //lightDom: $('#turnplatewrapper'), 
+        // initProgressContent: '~~~^_^~~~', //初始化进度条的内容
+        // progressEle: $('#turnplate #init span'),    
+        errorIndex: 6, //默认中奖异常时的奖品指针
+        lotteryIndex: undefined, //奖品index 
+        maxTime: undefined, //最大抽奖次数
+        lotteryTime: 0, //抽奖次数     
+        lightSwitch: 0, //闪灯切换开关. 0 和 1间切换
+        minResistance: 5, //基本阻力
+        Cx: 0.01, //阻力系数 阻力公式：  totalResistance = minResistance + curSpeed * Cx;	
+        accSpeed: 15, //加速度
+        accFrameLen: 40, //加速度持续帧数
+        maxSpeed: 250, //最大速度 
+        minSpeed: 20, //最小速度 
+        frameLen: 10, //帧总数
+        totalFrame: 0, //累计帧数,每切换一帧次数加1
+        curFrame: 0, //当前帧
+        curSpeed: 20, //上帧的速度     
+        initFreshInterval: 500, //进度条刷新间隔
+        virtualDistance: 10000, //虚拟路程,固定值，速度越快，切换到下帧的时间越快: 切换到下帧的时间 = virtualDistance/curSpeed
+        isLocked: true, //抽奖锁,为true时，不允许下一轮抽奖
+        timer2: undefined, //计时器2
+        initTimer: undefined, //计时器
+        showMsgTime: 2000, //消息显示时间
+        //初始化
+        init: function() {
+            this.initAnimate()
+            this.freshLottery();
+            this.turnplateBtn.click($.proxy(function() {
+                this.click();
+            }, this));
+        },
+        //初始化动画
+        initAnimate: function() {
+            this.showTip();
+            clearTimeout(this.initTimer);
+            this.initTimer = setTimeout($.proxy(this.initAnimate, this), this.initFreshInterval);
+        },
+        //停止初始化动画
+        stopInitAnimate: function() {
+            clearTimeout(this.initTimer);
+            this.showTip(false);
+        },
+        //更新当前速度
+        freshSpeed: function() {
+            var totalResistance = this.minResistance + this.curSpeed * this.Cx;
+            var accSpeed = this.accSpeed;
+            var curSpeed = this.curSpeed;
+            if (this.totalFrame >= this.accFrameLen) {
+                accSpeed = 0;
+            }
+            curSpeed = curSpeed - totalResistance + accSpeed;
+
+            if (curSpeed < this.minSpeed) {
+                curSpeed = this.minSpeed;
+            } else if (curSpeed > this.maxSpeed) {
+                curSpeed = this.maxSpeed;
+            }
+            this.curSpeed = curSpeed;
+        },
+        //闪灯,切换到下一张时调用
+        switchLight: function() {
+            this.lightSwitch = this.lightSwitch === 0 ? 1 : 0;
+            var lightHeight = -this.lightSwitch * this.height;
+            // this.lightDom.css('backgroundPosition', '0 ' + lightHeight.toString() + 'px');
+        },
+        //旋转,trunAround,changeNext循环调用
+        turnAround: function() {
+            //加锁
+            this.isLocked = true;
+            var intervalTime = parseInt(this.virtualDistance / this.curSpeed);
+            this.timer = window.setTimeout('turnplate.changeNext()', intervalTime);
+        },
+        //切换到下帧
+        changeNext: function() {
+            //判断是否应该停止
+            if (this.lotteryIndex !== undefined && this.curFrame == this.lotteryIndex && this.curSpeed <= this.minSpeed + 10 && this.totalFrame > this.accFrameLen) {
+                this.isLocked = false;
+                this.showAwards();
+                return;
+            }
+
+            var nextFrame = this.curFrame + 1 < this.frameLen ? this.curFrame + 1 : 0;
+            var bgTop = -nextFrame * this.height;
+            this.turnplateBox.css('backgroundPosition', '0 ' + bgTop.toString() + 'px');
+            this.switchLight();
+            this.curFrame = nextFrame;
+            this.totalFrame++;
+            this.freshSpeed();
+            this.turnAround();
+        },
+        lotteryType: {
+            '5': 0,
+            '500': 1,
+            '1000': 2,
+            '10': 3,
+            '500': 4,
+            '20': 5,
+            '500': 6,
+            '1000': 7,
+        },
+        lotteryList: [5,500,1000,10,500,20,500,1000],        
+        //弹出奖品
+        showAwards: function(msg, isFresh) {
+            this.showMsg()
+        },
+        //显示剩余次数
+        freshLotteryTime: function() {
+            //$('#top-menu').find('.lottery-times').html(this.lotteryTime);
+        },
+        //更新抽奖次数
+        freshLottery: function() {
+            this.stopInitAnimate();
+            this.setBtnHover();
+            this.isLocked = false;
+            this.lotteryTime = 1;
+            this.freshLotteryTime();
+        },
+        //设置按钮三态
+        setBtnHover: function() {
+            //按钮三态
+        },
+        //点击抽奖
+        click: function() {
+            //加锁时
+            if (this.isLocked == true) {
+                this.showMsg('现在还不能抽奖哦');
+                return;
+            }
+            this.turnAround();
+            var _that = this;
+             _that.lottery(2);
+            // $.ajax({
+            //     async: false,
+            //     url: "http://api.baojia.com/test/api/list/area",
+            //     type: "GET",
+            //     dataType: 'jsonp',
+            //     timeout: 5000,
+            //     success: function(json) {
+            //         var index = parseInt(Math.random() * 8)
+            //         var data = {
+            //             index: index, //中奖值
+            //             currtime: 3 // 抽奖次数
+            //         }
+            //         if (!data.currtime && !_that.maxTime && data.currtime >= _that.maxTime) {
+            //             _that.showMsg('今天已经抽过奖了，明天再来吧');
+            //         } else {
+            //             _that.lottery(data.index);
+            //         }
+            //     },
+            //     error: function(xhr) {
+            //         _that.lottery()
+            //     }
+            // });
+        },
+        //获取奖品
+        lottery: function(index) {
+            this.lotteryIndex = undefined;
+            this.lotteryTime--;
+            this.freshLotteryTime();
+            this.totalFrame = 0;
+            this.curSpeed = this.minSpeed;
+            this.lotteryIndex = (!index && index >= 0 && index < 100) ? index : this.errorIndex;
+        },
+        //显示提示信息
+        showMsg: function(msg) {
+            viewError(msg);
+        },
+        //显示提示信息
+        showTip: function(show) {
+            popMaskLoad(show);
+        }
+    }
+    turnplate.init();
+    </script>
+</body>
+
+</html>

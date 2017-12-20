@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>乘客选择</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/pinj.css">
+</head>
+<body class="p_body">
+	<div class="M_passenger">
+		<div class="header">                       
+            <div class="jt"></div>
+            <div class="title">宝驾租车</div>
+        </div>
+        <div class="p_title">	拼驾就是可以开的顺风车，车辆可由搭车者驾驶，或由车主驾驶，选择更加灵活多样。
+        </div>
+        <div class="p_chose">
+        	<p>累得不想开车。去拼驾接单找个“免费代驾”还能赚钱！</p>
+        	<p>正要买这款车,试驾回家两不误，比顺风车还便宜20%！</p>
+        </div>
+        <div class="p_img">
+        	<img src="http://css.baojia.com/s4/m/images/pinj/p_img.png" alt="">
+        </div>
+        <div class="M_btn">
+        	<p><a href="O_mydrive.htm" class="btn on">车主</a><span>点此进入</span></p>
+        	<p><a href="O_mydrive.htm" class="btn">乘客</a><span>点此进入</span></p>
+        </div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".M_btn a").click(function(){
+            $(".M_btn a").removeClass('on');
+            $(this).addClass('on');
+        })
+    })
+</script>
+</html>

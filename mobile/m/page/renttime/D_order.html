@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="服务条款，租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/js/mobiscroll/ms.android.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/renttime.css"/>
+    <!-- <link rel="stylesheet" href="../../css/renttime.css"/> -->
+</head>
+<body>
+    <div class="D_order">
+        <div class="header">
+            <div class="jt"></div>
+            <p>订单详情</p>
+        </div>
+        <div class="l_div">
+            <div class="d_div">
+                <div>
+                    <p>郑州日产 <span>自动挡</span></p>
+                    <p>悦行民族园南门站</p>
+                </div>
+            </div>
+            <div class="d_div">
+                <div>
+                    <p>取车时间</p>
+                    <p><input type="text"readonly class="regtime"/></p>
+                </div>
+            </div>
+            <div class="d_div">
+                <div>
+                    <p>交车位置</p>
+                    <p>北京朝阳区北土城</p>
+                </div>
+            </div>
+            <div class="d_div">
+                <div>
+                    <p>优惠券 <span>0张可用</span></p>
+                    <p>请选择<span class="jt"></span></p>
+                </div>
+            </div>
+            <div class="d_div">
+                <div>
+                    <p>优惠券 <span class="qmark">?</span></p>
+                    <p>2.03/小时</p>
+                </div>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="c_div">
+                <p>押金合计<br><span>350.00<i>元</i></span></p>
+                <p>（车押2000元+违押1500元）<br>还车结算时，实际租金及保险将从车押中扣除</p>
+            </div>
+            <div class="c_div">
+                支付订金后，向车东发送用车请求，若车东拒绝接单或超过5分钟响应，订金将原路返还。车东接单后，请在10分钟内支付押金，以免给您的用车造成不便。
+            </div>
+        </div>
+        <div class="foot">
+            <a href="javascript:;" class="btn">下一步</a>
+        </div>
+    </div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://css.baojia.com/s4/c/js/jquery.mobiscroll.js"></script>
+<script src="http://css.baojia.com/s4/c/js/mobiscroll/ms.datetime.js"></script>
+<script>
+    $.extend({
+        log: function() {
+            function checktime1(i){
+                if(i<10){
+                    i="0"+i
+                }
+                return i;
+            }
+            var now = new Date(),
+                y = now.getFullYear(),
+                m = now.getMonth() + 1,
+                d = now.getDate(),
+                h = now.getHours(),
+                min = now.getMinutes(),
+                s = now.getSeconds(),
+                wee=now.getDay();
+                var week=new Array();
+                m=checktime1(m);
+                s=checktime1(s);
+                d=checktime1(d);
+                min=checktime1(min);
+                time = y + '-' + m + '-' + d + ' '+ h + ':' + min;
+                $(".regtime").val(time);
+            }
+        })
+        $.log();
+    var opttime={
+        theme: 'android-ics light', //皮肤样式  (android-ics) / (android-ics light)
+        display: 'modal', //显示方式  (modal)(bottom) /(top)/(bubble)
+        mode: 'scroller', //日期选择模式
+        dateFormat: ' yy-mm-dd',
+        lang: 'zh',
+        showNow: true,
+        nowText: "今天",
+        startYear: 2005, //开始年份
+        endYear: 2026, //结束年份
+        preset:"datetime",
+        minDate:new Date()
+    }
+    $(".regtime").mobiscroll(opttime);
+
+</script>
+</html>

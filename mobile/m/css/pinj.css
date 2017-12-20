@@ -1,0 +1,246 @@
+body{background: #f0f0f0;}
+a:hover{text-decoration: none;}
+/*common*/
+.jt{display:inline-block; width: .5rem;height: .5rem;color: #fff;border: 2px solid #fff;border-top: none;border-right: none;-webkit-transform:rotate(45deg);}
+.jt135{-webkit-transform:rotate(-135deg);position: absolute;right:0;top: 50%;margin-top: -.3rem;}
+.header{width: 100%;background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#1cc3de), to(#20a5d9));color: #fff;line-height: 2.5rem ;height: 2.5rem;display: -webkit-box;position: relative;padding-left:4%;}
+.header .jt{width: .7rem;height: .7rem;}
+.header .title{font-size:0.8rem; text-align: center;width: 100%;position: absolute;left: 0;top: 0;}
+.header .explain{position: absolute;right:4%;top: 0;font-size:0.7rem;}
+.btn{width: 100%;text-align: center;padding: 3% 0;}
+.M_btn{width: 100%;display: -webkit-box;margin-top: 4%;}
+.M_btn p{width:50%;}
+.M_btn p .btn{display: block;width: 75%;margin: 0 auto;text-align: center;font-size: 0.8rem;color: #fc7722;border:1px solid #fc7722;border-radius: 4px;}
+.M_btn p .on{background: #fc7722;color: #fff;}
+/*layout css*/
+/*O_C_owner.htm 车主*/
+.C_owner{width: 100%;overflow: hidden;}
+.C_top{width: 100%;background: #fff;}
+.C_top1{width: 92%;margin: 0 auto;padding: 3% 0;}
+.C_top1 dl{display: -webkit-box;}
+.C_top1 dl dt{width: 6%;margin-right: 2%;}
+.C_top1 dl dt img{display: block;width: 100%;}
+.C_top1 dl dd{width: 92%;display: -webkit-box;font-size: 0.7rem;-webkit-box-align:center;position: relative;}
+.C_top1 dl dd .jt{border-color: #999999;}
+.C_top2{width: 100%;border-top:1px solid #dcdcdc;padding: 3% 0;display: -webkit-box;}
+.C_top2 a{display: block;width: 25%;font-size: 0.7rem;text-align: center;border-right: 1px solid #dcdcdc;color: #333;}
+.C_top2 a:nth-last-child(1){border: none;}
+.C_top2 a img{width: 1rem;height:1rem;margin-left: 0.2rem;}
+.C_top2 a.on{color: #40b9d3;}
+.C_cont{margin-top: 3%;}
+.C_cont_one{width: 100%;background: #fff;}
+.C_cont_title{width: 96%;margin-left: 4%;font-size: 0.675rem;background: url(http://css.baojia.com/s4/m/images/pinj/time.png) no-repeat;background-size:0.8rem 0.8rem;background-position:left center;text-indent: 0.9rem;border-bottom: 1px solid #ebebeb;padding: 2% 0;}
+.C_cont_title .input{border: none;}
+.C_cont_one dl{width: 96%;margin: 4% 0 0 4%;display: -webkit-box;padding-bottom: 3%;padding-right: 4%;border-bottom: 1px solid #ebebeb;}
+.C_cont_one dl dt{width: 17%;}
+.C_cont_one dl dt img{width: 100%;display: block;}
+.C_cont_one dl dd{width: 83%;padding-left: 3%;}
+.C_cont_one dl dd h1{font-size: 0.7rem;font-weight: normal;margin-top: -2%;}
+.C_cont_one dl dd h1 img{width: 11%;}
+.C_cont_one dl dd h1 img:nth-of-type(1){width: 8%;}
+.C_cont_one dl dd div{font-size: 0.7rem;position: relative;}
+.C_cont_one dl dd div p{margin-top: 0.2rem;color: #333333;}
+.C_cont_one dl dd div p:before{content: "";width: 0.5rem;height: 0.5rem;border-radius:0.5rem;display: inline-block;margin-right: 0.1rem;}
+.C_cont_one dl dd div p:nth-of-type(1):before{border:0.1rem solid #3fd0ef;}
+.C_cont_one dl dd div p:nth-of-type(2):before{border:0.1rem solid #f45151;}
+.C_cont_one dl dd div .jt{position: absolute;right: 0;top: 50%;margin-top: -0.3rem;border-color: #888888;-webkit-transform:rotate(-135deg);}
+.C_bot{width: 96%;margin-left: 4%;display: -webkit-box;-webkit-box-pack:justify;padding: 2% 4% 2% 0;}
+.C_left{font-size: 0.7rem;display: -webkit-box;-webkit-box-align:center;}
+.C_left a{display: block;color: #999999;border-right: 1px solid #ccc;padding:0 0.3rem;}
+.C_left a:nth-last-child(1){border: none;}
+.C_left a.on{color: #fc7722;}
+.C_bot p{font-size: 0.7rem;color: #666666;}
+.C_bot p span{font-size: 1rem;}
+.C_cont_two{margin-top: 3%;}
+/*查看路线详情O_Routedetail.htm*/
+.Rdetail .C_cont_one dl{margin: 0;padding-top: 4%;width: 100%;padding-left: 4%;}
+.Rdetail .C_cont_one dl dd{position: relative;}
+.Rdetail .C_cont_one dl dd .img{width: 13%;position: absolute;right: 0;top: 50%;margin-top: -0.3rem;-webkit-transform:translate(0,-50%);}
+.R_bot{width: 94%;margin: 0 auto;padding-bottom: 3%;}
+.R_bot_t .C_cont_title{width: 100%;background: none;margin-left: 0;text-indent: 0;border: none;padding: 2% 0 0 0;}
+.R_bot_b{width: 100%;display: -webkit-box;font-size: 0.7rem;-webkit-box-pack:justify;}
+.R_bot_b p{color: #333;display: -webkit-box;-webkit-box-align:center;}
+.R_bot_b p:nth-of-type(1):before{content:"从";width: 1rem;height: 1rem;text-align: center;line-height: 1rem;font-size: 0.5rem;background: #17bede;color: #fff;border-radius: 0.5rem;display: inline-block;}
+.R_bot_b p:nth-of-type(1) span{margin-left: 0.5rem;}
+.R_bot_b p:nth-of-type(2) span{font-size: 1rem;}
+.R_bot_b1 p:nth-of-type(1):before{content: "到";background: #f9752b;}
+.map{width: 100%;border-bottom:1px solid #dcdcdc;}
+.map img{width: 100%;display: block;}
+.botom{width: 100%;padding: 0.5rem 0;display: -webkit-box;position: relative;background: #fff;}
+.botom dl{width: 70%;display: -webkit-box;margin-left:2%;}
+.botom dl dt{width: 19%;}
+.botom dl dt img{width: 100%;display: block;}
+.botom dl dd{width: 81%;margin-left:2%;}
+.botom dl dd h1{font-size: 0.7rem;font-weight: normal;line-height: 0.9rem;}
+.botom dl dd p{font-size: 0.6rem;color: #999999;display: -webkit-box;line-height: 0.9rem;}
+.botom dl dd p img{width: 6%;}
+.botom dl dd p span{margin-left: 0.3rem;margin-top: 0.1rem;}
+.open{width: 15%;background: #00bce0;display: block;margin-top: 0.8rem;position: absolute;right: 2%;font-size: 0.875rem;text-align: center;color: #fff;padding: 0.2rem 0;border-radius: 1rem;}
+/*我的拼驾 O_mydrive.htm*/
+.M_top{width: 100%;display: -webkit-box;background: #fff;}
+.M_top p{-webkit-box-flex:1;}
+.M_top p a{display: block;font-size: 0.7rem;color: #333333;width: 56%;text-align: center;margin: 0 auto;padding: 3% 0;}
+.M_top p a.on{color: #28bcdc;border-bottom: 2px solid #28bcdc;}
+.M_top1{padding: 3% 0;margin-top: 3%;}
+.M_top1 a{-webkit-box-flex:1;display: block;font-size: 0.7rem;color: #333333;text-align: center;border-right:1px solid #dfdfdf;}
+.M_top1 a:nth-last-child(1){border: none;}
+.M_top1 a img{width: 0.8rem;height: 0.8rem;margin-right: 0.2rem;vertical-align:middle;margin-top: -0.1rem;}
+.M_top1 a:nth-of-type(2) img{width: 0.9rem;height: 0.9rem;}
+.M_top1 a:nth-of-type(3) img{width: 0.7rem;height: 0.8rem;}
+.M_center{width: 100%;background: #fff;margin-top: 3%;}
+.M_center .C_cont_title{background: none;text-indent: 0;color: #494949;font-size: 0.7rem;}
+.M_center .C_cont_title span{font-size: 0.7rem;color: #999999;}
+.M_foot{width: 83%;margin: 0 auto;margin-top: 6%;}
+.M_foot dl{width: 100%;display: -webkit-box;}
+.M_foot dl dt{width: 41%;margin-right: 6%;}
+.M_foot dl dt img{width: 100%;display: block;}
+.M_foot dl dd{width: 47%;font-size: 0.7rem;display: -webkit-box;-webkit-box-align:center;}
+/*发布路线O_Releaseroute.htm*/
+.M_div{width: 100%;background: #fff;margin-top: 4%;}
+.M_div .C_cont_title{width: 100%;margin-left: 0;background: none;}
+.M_div .C_cont_title span{color: #999;}
+.M_title{width: 96%;margin-left: 4%;border-bottom: 1px solid #ebebeb;font-size: 0.8rem;padding: 2% 4% 2% 0;display: -webkit-box;-webkit-box-pack:justify;}
+.M_title p:before{content: "始";width:1rem;height:1rem;text-align: center;line-height: 1rem;border: 1px solid #f08519;border-radius: 3px;font-size: 0.7rem;color:#f08519;display:inline-block;margin-right: 0.2rem;}
+.M_title p span{border:1px solid #ebebeb;border-radius: 10px;font-size: 0.75rem;padding: 0.1rem 0.3rem;color: #999999;margin-left: 0.3rem;}
+/*.M_title p:after{content: "可乘坐一人";border:1px solid #ebebeb;border-radius: 10px;font-size: 0.75rem;padding: 0.1rem 0.3rem;color: #999999;margin-left: 0.3rem;}*/
+.checked_wrap{width:2rem;height:1rem;position:relative;display:block;}
+.checked_box{width:2rem;height:1rem;background:#ccc;border-radius:1rem;-webkit-transition:all .2s ease;}
+.btn_radius{position:absolute;background:#fff;left:0;right:1rem;top:0;bottom:0;border-radius:100%;box-shadow:0 0 5px #818080;-webkit-transition-property:left,right;-webkit-transition-duration:.2s;-webkit-transition-timing-function:ease;-webkit-transition-delay:0s,0.02s;}
+input:checked + label .checked_box{-webkit-transition-property:left,right;-webkit-transition-duration:.2s;-webkit-transition-timing-function:ease;-webkit-transition-delay:0.02s,0s;background:#28bcdc;}
+input:checked + label .btn_radius{left:1rem;right:0;}
+.M_locat{display: block;position: relative;}
+.M_locat a{display: block;font-size: 0.75rem;color: #333333;overflow: hidden;text-indent: 0.2rem;}
+.M_locat a input{width: 80%;display: block;border: none;color: #333;font-size: 0.7rem;text-indent: 0.3rem;}
+.M_locat a span{width: 0.6rem;height: 1.3rem;background: url(http://css.baojia.com/s4/m/images/pinj/location.png)no-repeat;display:block;float: left;}
+.M_locat a span.locat1{background-position: 0 0.1rem;background-size: 100%}
+.M_locat a span.locat2{background-position: 0 -1.2rem;background-size:100%}
+.M_locat .jt{right:4%;border-color: #cccccc;}
+.M_bot a{color: #999999;}
+.line{color: #999;}
+/*乘客选择 O_passenger.htm*/
+.p_body{background:#fff;}
+.M_passenger{width: 100%;overflow: hid}
+.p_title{width: 80%;margin: 0 auto;margin-top: 8%;color: #121212;font-size: 1rem;}
+.p_chose{width: 90%;margin: 0 auto;margin-top: 5%;display: -webkit-box;-webkit-box-pack:justify;}
+.p_chose p{width:8rem;height:8rem;border:0.5rem solid #ffb155;border-radius: 100%;font-size: 0.7rem;padding: 1.2rem 0.8rem 0 1.2rem;text-align: left;}
+.p_img{width: 75%;margin: 0 auto;margin-top: 2%;}
+.M_passenger .M_btn p{text-align: center;font-size: 0.7rem;}
+.M_passenger .M_btn p span{margin-top: 0.5rem;display: block;color: #999999;}
+.M_passenger .btn{border-color: #bfbfbf !important;color: #222222 !important;}
+.M_passenger .on{border-color: #fc7722 !important;color: #fff !important;}
+/*发布座驾 O_Releasecar.htm*/
+.O_releasecar{width: 100%;overflow: hidden;}
+.O_releasecar .explain{border:1px solid #fff;border-radius: 100%;width: 1rem;height: 1rem;top: 50%;margin-top: -0.5rem;line-height: 1rem;text-align: center;}
+.p_input{width: 96%;margin: 0 auto;border:1px solid #e4e4e4;border-radius: 4px;display: -webkit-box;background: #fff;margin-top: 4%;}
+.P_pai{width: 22%;background: #f0f0f0;padding:2% 0;text-align: center;border-right:1px solid #e4e4e4;font-size: 0.75rem;}
+.P_pai .jt{border-color: #cccccc;-webkit-transform:rotate(-45deg);position: relative;top: -0.1rem;}
+.O_releasecar .input{display:block;padding:2% 0;font-size: 0.75rem;border: none;width: 78%;text-indent: 5%;border-radius: 0 4px 4px 0;}
+.P_list{width: 100%;background: #fff;margin-top: 4%;}
+.P_list_div{width: 96%;margin-left: 4%;border-bottom: 1px solid #ebebeb;padding: 3% 0;}
+.P_list_div>div{width: 96%;margin: 0 auto;display: -webkit-box;-webkit-box-pack:justify;font-size: 0.8rem;}
+.P_list_div>div a{display: block;color: #333333;text-indent: 0.2rem;}
+.P_list_div>div a span{background: url(http://css.baojia.com/s4/m/images/pinj/list.png)no-repeat left center;width:1rem;height:1.2rem;display: block;float: left; }
+.P_list_div>div a span.span1{background-position: 0 0.1rem;background-size: 100%;}
+.P_list_div>div a span.span2{background-position: 0.1rem -1.8rem;background-size: 100%;}
+.P_list_div>div a span.span3{background-position: 0 -3.7rem;background-size: 100%;}
+.P_list_div>div a span.span4{background-position: 0 -5.6rem;background-size: 100%;}
+.P_list_div>div a span.span5{background-position: 0 -7.6rem;background-size: 100%;}
+.P_list_div>div>div{position: relative;padding-right: 8%;}
+.P_list_div>div>div p{color: #adadad}
+.P_list_div>div>div .jt{right: 15%;border-color: #cccccc;}
+.P_agreement{width: 90%;margin: 0 auto;margin-top: 4%;font-size: 0.8rem;color: #878787;text-indent: 1.2rem;}
+.P_agreement span{width: 1rem;height:1rem;background: url(http://css.baojia.com/s4/m/images/pinj/nochose.png)no-repeat left center;background-size:1rem 1rem;display: inline-block;position: relative;top: 0.3rem;margin-right: 0.3rem;}
+.P_agreement a{color: #28bcdc;text-decoration: underline;}
+.checked span{background: url(http://css.baojia.com/s4/m/images/pinj/checked.png)no-repeat left center;background-size:1rem 1rem;text-indent: 1.2rem;}
+.sub{width: 90%;margin: 0 auto;margin-top: 4%;}
+.sub .btn{display: block;background: #28bcdc;color: #fff;font-size: 0.875rem;border-radius: 5px;}
+/*路线详情O_Routedetail1.htm*/
+.Rdetail1 .Rd_top{width: 100%;background: #fff;margin-top: 4%;}
+.Rdetail1 .Rd_top .M_locat{padding-top: 0;padding: 0 0 2% 0;}
+.Rdetail1 .Rd_top .M_locat a{padding-top: 2%;}
+.Rdetail1 .Rd_top .M_locat a input{width: 90%;display: block;font-size: 0.7rem;color: #333;border: none;text-indent: 0.3rem;}
+.Rdetail1 .Rd_top .M_locat a:nth-of-type(1){border-bottom:1px solid #ebebeb;}
+.Rdetail1 .P_list_div1>div{margin: 0;}
+.Rdetail1 .P_list_div1>div>div{padding-right: 0;}
+.Rdetail1 .P_list_div1>div>div p{display: -webkit-box;}
+.Rdetail1 .P_list_div1>div>div span{margin-right: 0.3rem;font-size: 0.8rem;display: block;}
+.Rdetail1 .P_list_div1>div>div span:nth-of-type(2){color: #fb7517;}
+.Rdetail1 .P_list_div_one{padding: 1% 0;}
+.Rdetail1 .P_list_div_one a{display: -webkit-box;-webkit-box-align:center;}
+.Rdetail1 .P_list_div_one>div>div span{font-size: 1.2rem;}
+.Rdetail1 .P_list_div2>div{margin: 0;}
+.Rdetail1 .P_list_div3>div{margin: 0;}
+.Rdetail1 .P_list_div3>div>div{padding-right: 0;display: -webkit-box;}
+.Rdetail1 .P_list_div3>div>div a{text-indent: 0;margin-right: 0.3rem;}
+.Rdetail1 .P_list_div3>div>div a.on{color: #28bcdc;}
+.choosecity{width: 100%;background: #fff;margin-top: 4%;}
+.choosecity>div{width: 92%;margin: 0 auto;overflow: hidden;padding-bottom: 3%;}
+.choosecity ul li{float: left;width:22%;text-align: center;border:1px solid #c8c8c8;border-radius: 5px;color: #666666;margin-right: 3%;font-size: 0.8rem;margin-top: 3%;}
+.choosecity ul li input{display: block;width: 100%;border: none;text-align: center;padding: 0.2rem 0;background: transparent;}
+.choosecity ul li.accur{border-color: #fc7722;color: #fc7722;}
+.choosecity>div p{clear: both;font-size: 0.65rem;color: #666666;padding-top:3%;}
+.choosecity ul li .jt{border-color: #888888;position: inherit;}
+.choosecity>div p span{color: #333333;font-size: 0.8rem;}
+.Rd_price{width: 100%;background: #fff;text-align: center;margin-top: 4%;padding: 3% 0;}
+.Rd_price>div{font-size: 0.8rem;color: #888888;}
+.Rd_price>div a{color: #fb7517;}
+.Rd_price>div a span{font-size: 1.2rem;}
+.Rd_price>div .jt{border-color: #888888;position: inherit;}
+.Rd_price p{font-size: 0.7rem;color: #999999;}
+.Rd_foot{width: 100%;background: #fff;padding: 3%;text-align: center;margin-top: 3%;}
+.Rd_foot p{font-size: 0.7rem;color: #333;}
+.Rd_foot p a{color: #1bb0e7;}
+.Rd_foot p input{display: inline-block;width: 0.8rem;height: 0.8rem;position: relative;top: -0.1rem;}
+.Rd_foot .btn{background: #fb7517;display: block;color: #fff;border-radius: 5px;font-size: 0.875rem;margin-top: 2%;}
+/*驾客D_drivingoff.htm*/
+.D_top{text-align: center;-webkit-box-pack:center;}
+.D_top a{width: 33% !important;position: relative;}
+/*.D_top a:after{content:"";position:absolute; right:-0.8rem; top:0.5rem; border:5px solid transparent; border-top-color:#666666; border-bottom:0; height:0; width:0; display:inline-block;}*/
+/*驾客 路线详情 D_Routedetail.htm*/
+.D_cont_one dl dd span{display: block;color: #8c8c8c;font-size: 0.7rem;}
+.D_Rd_foot{margin-top: 15%;}
+/*驾客 拼驾 D_pinjia.htm*/
+.D_img{width: 100%;}
+.D_img img{width: 100%;display: block;}
+.D_div{width: 92%;margin: 0 auto;margin-top: 4%;}
+.D_title{width: 100%;display: -webkit-box;}
+.D_title p{width: 50%;font-size: 0.8rem;color: #222222;}
+.D_title p span{font-size: 1rem;color: #fc7722;}
+.D_int{width: 100%;border:1px solid #dfdfdf;background: #f5f5f5;border-radius: 5px;margin-top: 4%;}
+.D_int input{display: block;width: 100%;border: none;padding: 3% 0;border-radius: 5px;text-indent: 3%;background: transparent;}
+.D_int1{display: -webkit-box;}
+.D_int1 input{width: 70%;}
+.D_int1 a{display:-webkit-box;width: 30%;font-size: 0.7rem;-webkit-box-align:center;color: #222222;text-decoration: underline;}
+.D_int2{border: none;background: none;padding-bottom: 3%;}
+.D_int2 .btn{background: #fc7722;display: block;color: #fff;font-size: 0.8rem;border-radius: 5px;}
+.D_drive .D_top1{padding: 0;}
+.D_drive .D_top1 p{color: #999;font-size: 0.7rem;}
+.D_drive .D_top1 p span{color: #333;font-size: 0.75rem;}
+.D_jt{position: absolute;top: 50%;right: 4%;color: #fc7722;margin-top: -0.7rem;}
+.M_bot a.on{color: #fc7722;}
+.D_btn .btn{background: #cccccc;border-color: #ccc !important;color: #fff !important;}
+.D_btn .on{border-color: #fc7722 !important;}
+/*遮罩*/
+.bj_mask{background:rgba(0,0,0,0.5);opacity: 1;display: none;}
+.pop{position: absolute;top: 50%;left: 50%;-webkit-transform:translate(-50%,-50%);min-height: 1rem;width: 90%;background: #fff;padding: 1rem 0;}
+.pop input{width: 80%;margin: 0 auto;padding: 0.3rem;color: #333;display: block;border-radius: 4px;border:1px solid #ccc;}
+.pop .confirm{width: 80%;margin: 0 auto;margin-top: 0.5rem;display: -webkit-box;-webkit-box-pack:justify;}
+.pop .confirm a{display: block;width: 30%;background: #cccccc;text-align: center;color: #fff;border-radius: 4px;padding: 0.3rem 0;font-size: 0.8rem;}
+.pop .confirm a.on{background: #fc7722;}
+
+
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}

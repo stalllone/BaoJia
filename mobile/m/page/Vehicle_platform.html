@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>小蜜车管平台</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/m1.css">
+    <!-- <link rel="stylesheet" href="../css/m1.css"> -->
+</head>
+<body class="Mi_body">
+	<div class="Miplatform">
+		<div class="header">
+			小蜜单车车管平台
+		</div>
+		<div class="BicycleNumber">
+			<p><span>单车编号</span>DD911321</p>
+		</div>
+		<div class="content">
+			<div class="cont">
+				<div class="cont1">
+					<div class="c_left c_left1">
+						
+					</div>
+					<div class="c_center">
+						<div class="title">换电池</div>
+						<p>请在电池更换完成后进行本操作</p>
+						<p>车辆不会被下线</p>
+						<p>将会充值电池电量为100%</p>
+					</div>
+					<div class="c_right ">
+						<label class="checked">
+			                <input type="radio" class="hidden-input" name="1">
+			                <span class="your style about checkbox"></span>
+			            </label>
+					</div>
+				</div>
+			</div>
+			<div class="cont">
+				<div class="cont1 cont2">
+					<div class="c_left c_left2">
+						
+					</div>
+					<div class="c_center">
+						<div class="title">下线维修</div>
+						<p>操作后车辆将会临时下线</p>
+						<p>在操作完成后，再操作本页面进行上线</p>
+					</div>
+					<div class="c_right">
+						<label class="checked">
+			                <input type="radio" class="hidden-input" name="1">
+			                <span class="your style about checkbox"></span>
+			            </label>
+					</div>
+				</div>
+			</div>
+			<div class="cont">
+				<div class="cont1 cont2">
+					<div class="c_left c_left3">
+						
+					</div>
+					<div class="c_center">
+						<div class="title">维修完成</div>
+						<p>针对维修完成的车辆</p>
+						<p>未上线车辆将会自动上线</p>
+					</div>
+					<div class="c_right">
+						<label class="checked">
+			                <input type="radio" class="hidden-input" name="1">
+			                <span class="your style about checkbox"></span>
+			            </label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<a href="javascript:;">确认</a>
+		</div>
+		<div class="mask">
+			<div class="pop">
+				<div class="pop_cont">
+					<p>对车辆DD911321</p>
+					<p>进行“换电池”</p>
+					<p>操作成功</p>
+					<div class="btn">
+						<a href="javascript:;">返回首页</a>
+						<a href="javascript:;">继续操作</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+	$(function(){
+		$(".footer a").click(function(){
+			$(".mask").css("display","block");
+		})
+	})
+</script>
+</html>

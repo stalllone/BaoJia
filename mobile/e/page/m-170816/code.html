@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>好友邀请你一起骑小蜜单车</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="browsermode" content="application" />
+    <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <!-- <link rel="stylesheet" href="../../css/m-170816/style.css"> -->
+    <link rel="stylesheet" href="http://css.baojia.com/s4/e/css/m-170816/style.css">
+    <style>
+		.code_box{
+			width: 4rem;
+			height:0.8rem;
+			border: 1px solid rgb(153,153,153);
+			border-radius: 8px;
+			margin:50px auto;
+			display:-webkit-box;
+			-webkit-box-pack:justify; 
+			position: relative;
+		}
+		.code_box span{
+			width:25%;
+			text-align: center;
+			height: 100%;
+			line-height: 0.8rem;
+			display:block;
+			border-left: 1px solid rgb(153,153,153);
+			font-size: 0.4rem;
+		}
+		.code_box span:nth-of-type(1){
+			border-left:none;
+		}
+		.code_inp{
+			position:absolute;
+			top: 50%;
+			left: 0;
+			transform:translateY(-50%);
+			border: none;
+		}
+		.code_inp input{
+			display: block;
+			width:0.8rem;
+			height:0.8rem;
+			margin: 0 auto;
+			border: 0;
+			text-align: center;
+			background: transparent;
+			text-indent: 12px;
+			font-size: 0.4rem;
+		}
+		.subBtn{
+			width:200px;
+			display:block;
+			margin: 0 auto;
+			text-align: center;
+			text-decoration:none;
+			color: #fff;
+			background: #fc7722;
+			border-radius: 8px;
+			padding: 10px 0;
+			margin-top: 20px;
+		}
+	</style>		
+</head>
+<body>
+	<div class="invite code">
+		<div class="txt">
+			注册即可获得<span>5张</span>骑行优惠券
+		</div>
+		<div class="backimg">
+			<img src="http://css.baojia.com/s4/e/images/m-170816/imageH5.png" alt="">
+		</div>
+		<div class="codetxt">
+			<p>验证码已发送至<span>152 6365 9969</span></p>
+			<p>输入4位短信验证码</p>
+		</div>
+		<!-- <div class="input_box code_input">
+			<input type="tel" placeholder="请输入验证码"  maxlength="4">
+		</div> -->
+		<div class="code_box">
+			<div class="code_inp">
+				<input type="tel" maxlength="1">
+			</div>
+			<span class="spannum1"></span>
+			<span class="spannum2"></span>
+			<span class="spannum3"></span>
+			<span class="spannum4"></span>
+		</div>
+		<a href="javascript:;" class="btn codebtn">注册领取优惠券</a>
+	</div>		
+</body>
+<script src="http://css.baojia.com/s4/e/js/m-170816/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://css.baojia.com/s4/e/js/m-170816/jquery.bj.help.js"></script>
+<!-- <script>
+	$(function(){
+		$(".codebtn").click(function(){
+			var inpval=$(".code_input input").val();
+			if(inpval==""){
+				viewError('请输入验证码！');
+			}else if(inpval.length<4){
+				viewError('请输入正确的验证码！');
+			}else{
+				window.location.href="coupon.html"
+			}
+		});
+		$(".code_input").click(function(){
+			$(".code_input input").focus();
+		});
+		$(".code_input input").focus(function(){
+			$(this).css({"text-align":"left"});
+		});
+		$(".code_input input").blur(function(){
+			$(this).css({"text-align":"center"});
+		});
+	})
+</script> -->
+<script>
+	$(function(){
+		var codenum=[];
+		var inputCodeNum=0;//输入框位置
+		var width=$(".code_box span").width();
+		$(".code_inp").width(width);
+		var len=$(".code_box span").length;
+		$(".code_inp input").keyup(function(e){
+			//填写验证码
+			if(e.keyCode>=48&&e.keyCode<=57){
+				var val=$(this).val();
+				if(codenum.length<len-1){
+					inputCodeNum++;
+					codenum.push(val);
+					$(this).parent().css("left",inputCodeNum*width);
+					if(inputCodeNum==1){
+						$(".spannum1").text(codenum[codenum.length-1])
+					}else if(inputCodeNum==2){
+						$(".spannum2").text(codenum[codenum.length-1])
+					}else if(inputCodeNum==3){
+						$(".spannum3").text(codenum[codenum.length-1])
+					}
+				}else{
+					if(codenum.length===len-1){
+						inputCodeNum++;
+						codenum.push(val);
+						if(inputCodeNum==len){
+							$(".spannum4").text(codenum[codenum.length-1]);
+							//自动弹出验证码
+							// var strnum=codenum.join("");
+							// swal("验证码是"+strnum);
+						}
+					}
+				}
+
+				console.log(codenum)
+				$(this).val("");
+			}
+			//删除
+			if(e.keyCode==8){
+				if(inputCodeNum>0&&inputCodeNum<=len){
+					inputCodeNum--;
+					codenum.pop();
+					$(this).parent().css("left",inputCodeNum*width);
+					// console.log(inputCodeNum);
+					if(inputCodeNum===len-1){
+						$(".spannum4").text("")
+					}else if(inputCodeNum===len-2){
+						$(".spannum3").text("")
+					}else if(inputCodeNum===len-3){
+						$(".spannum2").text("")
+					}else if(inputCodeNum===len-4){
+						$(".spannum1").text("")
+					}
+				}
+			}
+		});
+		$(".code_box").click(function(){
+			$(".code_inp input").focus();
+		});
+		//点击弹出验证码
+		$(".codebtn").click(function(){
+			if(codenum.length>=0&&codenum.length<4){
+				viewError('请输入验证码！');
+			}else{
+				var strnum=codenum.join("");
+				viewError("验证码是"+strnum);
+			}
+		})
+
+	})
+</script>
+</html>

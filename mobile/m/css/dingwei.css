@@ -1,0 +1,163 @@
+body{background: #f0f0f0;width: 100%;overflow: hidden;}
+.header{width: 100%;height:40px;background: #28bcdc;color: #fff;font-size: 0.875rem;text-align: center;line-height: 40px;position: relative;display: -webkit-box;position: relative;}
+.jt{display:inline-block; width: .7rem;height: .7rem;color: #fff;border: 2px solid #fff;border-top: none;border-right: none;-webkit-transform:rotate(45deg);}
+.header p{text-align: center;width: 100%;}
+.header .jt{position: absolute;top: 50%;margin-top: -0.4rem;left: 4%;z-index: 1;}
+.btn{width: 100%;background: #fff;height: 2.375rem;margin-top: 1rem;line-height: 2.375rem;}
+.mask{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.3);display: none;}
+.pop{width: 100%;height: 7.5rem;position: absolute;bottom:-7.5rem;}
+.pop .p_top{width: 100%;height: 4.8rem;background: #fff;position: absolute;top: 0;}
+.pop .p_top p{height: 2.375rem;font-size: 0.75rem;color: #a4a4a4;text-align: center;line-height: 2.375rem;}
+.pop .p_top .btn{margin-top: 0;border-top: 1px solid #f4f4f4;}
+.pop .p_top .btn a{color: #fc7722;}
+.pop .cancel{height: 2rem;background: #fff;position: absolute;bottom: 0;width: 100%;font-size: 0.75rem;text-align: center;color: #333;line-height: 2rem;}
+
+.list{width: 100%;background: #fff;padding-left: 4%;}
+.list .list_div{width: 100%;height: 2.18rem;border-bottom: 1px solid #ebebeb;line-height: 2.18rem;color: #333;position: relative;}
+.list .list_div p{font-size: 0.75rem;}
+.list .list_div .jt{position: absolute;right: 4%;top: 50%;margin-top: -0.3rem;border-color: #ccc;-webkit-transform:rotate(-135deg);}
+
+/*查询经纬度 latitude.htm*/
+.latitude{width: 100%;overflow: hidden;}
+.latitude .t_div{width: 100%;background: #fff;height: 2.3rem;line-height: 2.3rem;font-size: 0.75rem;display: -webkit-box;}
+.latitude .t_div p{color: #333;}
+.latitude .t_div>span{color: #acacac;display: block;width: 30%;margin-left: 4%;}
+.latitude .t_div1{height: 6.875rem;margin-top: 0.5rem;padding: 1rem 0;}
+.latitude .t_div1 p span{display: block;line-height: normal;}
+.latitude .t_div1>span{line-height: normal;}
+.latitude .btn a{font-size: 0.75rem;color: #333;text-decoration: none;display: block;text-align: center;}
+.latitude .mask{display: none;}
+/*登录login.htm*/
+.login{width: 100%;overflow: hidden;}
+.logo{width: 44%;margin: 0 auto;margin-top: 1.625rem;}
+.login .inp_div{width: 100%;height: 4.68rem;background: #fff;margin-top: 1rem;padding-left: 4%;}
+.login .input_div{width: 100%;display: -webkit-box;position: relative;border-bottom: 1px solid #ebebeb;}
+.login .input_div p{width: 5%;position: absolute;top: 50%;left: 0;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);}
+.login .input_div input{width: 100%;display: block;padding: 0.625rem 0;-webkit-box-flex:1;text-indent: 9%;border: none;background: transparent;font-size: 0.75rem;color: #ccc;}
+.login .input_div1{border: none;}
+.login .btn{width: 92%;margin: 0 auto;background: #28bcdc;margin-top: 1rem;border-radius: 5px;}
+.login .btn a{color: #fff;text-align: center;display: block;text-decoration: none;font-size: 0.75rem;}
+.login .back_pwd{width: 92%;margin: 0 auto;color: #28bcdc;text-align: right;font-size: 0.75rem;margin-top: 0.875rem;}
+.login .error p{width: 36%;height: 1.25rem;background: #666666;color: #fff;margin: 0 auto;font-size: 0.625rem;text-align: center;line-height: 1.25rem;border-radius: 5px;margin-top: 0.5rem;}
+/*发送指令sendins.htm*/
+.send{width: 100%;overflow: hidden;}
+.send .list_div1{border: none;}
+.send .btn a{text-align: center;font-size: 0.75rem;color: #333;display: block;text-decoration: none;}
+.send .mask{display: none;}
+/*设置上报间隔 setinterval.htm*/
+.setinterval{width: 100%;overflow: hidden;}
+.setinterval .header span{position: absolute;top:0;left:0;width: 100%;text-align: right;display: block;padding-right: 4%;font-size: 0.75rem;color: #fff;}
+.setinterval .list_div1{border: none;}
+.setinterval .list_div.on{background: url(../images/Dingwei/right.jpg) no-repeat 96% center;background-size:0.8rem 0.625rem;}
+/*设备详情equipdetail.htm*/
+.detail{width: 100%;overflow: hidden;}
+.detail .list_div{display: -webkit-box;line-height: normal;height: 2.31rem;padding-top: 0.625rem;}
+.detail .dis div{margin-top: -0.35rem;}
+.detail .list_div>p{width: 26%;color: #333;}
+.detail .list_div>div{width: 74%;font-size: 0.625rem;color: #666;padding-right: 4%;position: relative;}
+.detail .list_div>div .instal{position: absolute;right:4%;top:0;padding-right: 4%;color: #fc873c;}
+.detail .list_div>div .instal:after{position:absolute;top:50%;right:0;margin-top:-4px;width:8px;height:8px;border:#ccc solid;border-width:1px 1px 0 0;content:"";-webkit-transform:rotate(45deg);}
+.detail .foot{width: 100%;height: 2.8rem;background: #fff;margin-top: 1rem;display: -webkit-box;padding-top: 0.4rem;}
+.detail .foot p{width: 28%;height: 2rem;margin-left: 4%;border:1px solid #e2e2e2;text-align: center;line-height: 2rem;font-size: 0.75rem;color: #36c0de;border-radius: 5px;}
+.detail .foot p.on{background: #28bcdc;color: #fff;border-color:#28bcdc;}
+/*首页homepage.htm*/
+.home{width: 100%;overflow: hidden;position: absolute;top: 0;left: 0;}
+.home .menu{width: 1rem;height: 1rem;position: absolute;top: 50%;left: 4%;-webkit-transform:translate(0,-50%);}
+.home .menu img{display: block;width: 100%;}
+.home .search{left: 92%}
+.home .nav{width: 100%;height: 1.875rem;background: #fff;display: -webkit-box;font-size: 0.75rem;line-height: 1.875rem;}
+.home .nav div{width:25%;text-align: center;}
+.home .nav div>p{position: relative;}
+.home .nav div>p:after{content:"";position:absolute; right:1rem; top:50%; border:5px solid transparent; border-top-color:#ccc; border-bottom:0; height:0; width:0;-webkit-transform:translate(0,-50%);}
+.home .nav div>p.on{color: #45c5e1;}
+.home .nav div>p.on:after{content:"";position:absolute; right:1rem; top:50%; border:5px solid transparent; border-bottom-color:#28bcdc; border-top:0; height:0; width:0;-webkit-transform:translate(0,-50%);}
+.home .list{margin-top: 0.5rem;}
+.home .list .list_div{height: 4rem;background: url(../images/Dingwei/icon-car.jpg)no-repeat left center;background-size:1.125rem 0.94rem;line-height: normal;}
+.home .list .list_div>div{margin-left: 1.5rem;padding-top: 0.7rem;}
+.home .list .list_div>div>p{font-size: 0.75rem;color: #333;margin-bottom: 0.3rem;}
+.home .list .list_div>div>div{display: -webkit-box;}
+.home .list .list_div>div>div p{border: 1px solid #ebebeb;border-radius: 4px;font-size: 0.625rem;padding: 0.1rem 0.45rem;color: #adadad;}
+.home .list .list_div>div>div .cur{margin-left: 0.45rem;}
+.home .list .list_div>div>div .rent{color: #45c5e1;border-color: #c4eff8;}
+.home .list .list_div>div>div .police{color: #fc7722;border-color: #f7dbc9;}
+.home .list .list_div>div>div .offline{color: #e61a1a;border-color: #fcdbdb;}
+.mask1{-webkit-transform:translateX(0);}
+.mask2 ul{width: 100%;background: #fff;}
+.mask2 ul li{font-size: 0.75rem;color: #5c5c5c;padding: 0.5rem 0;border-top:1px solid #ebebeb;padding-left: 8%;}
+.mask2 ul li.on{color:#53c9e3;background: url(../images/Dingwei/right.jpg) no-repeat 96% center;background-size:0.8rem 0.625rem;}
+.aside{width: 80%;position: absolute;top: 0;left:-80%;bottom:0;background: #fff;}
+.aside .title{font-size: 0.875rem;color: #696969;margin-top: 40px;border-bottom: 1px solid #ebebeb;padding-bottom: 40px;padding-left: 8%;}
+.aside .title span{font-size: 0.75rem;}
+.aside ul li{width:100%;margin-left:10%;font-size: 0.875rem;color: #696969;margin-top: 8%;text-indent: 10%}
+.aside ul li:nth-of-type(1){background: url(../images/Dingwei/icon-allcar.jpg)no-repeat left center;background-size:1rem 1rem;}
+.aside ul li:nth-of-type(2){background: url(../images/Dingwei/icon-one.jpg)no-repeat left center;background-size:1rem 1rem;}
+.aside ul li:nth-of-type(3){background: url(../images/Dingwei/monitor.jpg)no-repeat left center;background-size:1rem 1rem;}
+.aside ul li:nth-of-type(4){background: url(../images/Dingwei/out.jpg)no-repeat left center;background-size:1rem 1rem;}
+/*网点netpoint.htm*/
+.net{width: 100%;overflow: hidden;position: absolute;top: 0;left: 100%;display: none;}
+.net .header{height: 50px;}
+.net .header p{display: -webkit-box;position: absolute;top: 50%;-webkit-transform:translate(0,-50%);}
+.net .header input{width: 75%;margin-left:2rem;display: block;height: 1.68rem;border-radius: 5px 0 0 5px;border:none;font-size:0.75rem;color: #707070;text-indent: 0.75rem;}
+.net .header p span{width: 10%;height: 1.68rem;display: block;background:#fff url(../images/Dingwei/sea.jpg)no-repeat center center;border-radius: 0 5px 5px 0;background-size:0.875rem 0.93rem;}
+.net .list_div{height: 3.4rem;line-height: normal;}
+.net .list_div dl{display: -webkit-box;padding-top: 0.75rem;}
+.net .list_div dt{width: 12%;position: relative;}
+.net .list_div dt span{position: absolute;width: 0.94rem;height: 0.94rem;border-radius: 100%;background: #28bcdc;text-align: center;line-height: 0.94rem;color: #fff;top: 0.1rem;right: -0.2rem;font-size: 0.5rem}
+.net .list_div dd{font-size: 0.75rem;margin-left: 0.8rem;}
+.net .list_div dd h1{font-weight: normal;color: #333;}
+.net .list_div dd span{display: block;font-size: 0.625rem;color: #666;}
+/*地图监控Monit.htm*/
+.Map{width: 100%;overflow: hidden;}
+.Map .menu{width: 1rem;height: 1rem;position: absolute;top: 50%;left: 4%;-webkit-transform:translate(0,-50%);}
+.Map .menu img{display: block;width: 100%;}
+.Map .radius{left: 92%;width: 1rem;height: auto;}
+.Map .cont{width: 100%;position:relative;}
+.Map .cont>img{width: 100%;display: block;}
+.Map .cont .top{width: 100%;height: 2.5rem;background: rgba(0,0,0,0.5);position: absolute;top: 0;left: 0;display: -webkit-box;-webkit-box-pack:justify;line-height: 2.5rem;color: #fff;font-size: 0.75rem;padding: 0 4%}
+/*.Map .cont .car1{width: 1.5rem;height: 1.5rem;position: absolute;top: 40%;left: 40%;}*/
+.Map .cont .car1 ul{width: 15rem;height: 8rem;background: rgba(0,0,0,0.5);/*position: absolute;top:-8.5rem;left: -6rem;*/border-radius: 5px;padding: 0.5rem 0;display: none;}
+.Map .cont .car1 ul:after{content:"";position:absolute; right:50%; bottom:-7px; border:5px solid transparent; border-top-color:rgba(0,0,0,0.5); border-bottom:0; height:0; width:0;-webkit-transform:translate(0,-50%);}
+.Map .cont .car1 ul li{display: -webkit-box;-webkit-box-pack:justify;font-size: 0.75rem;color: #fff;padding: 0 0.5rem;}
+.Map .cont .car1 ul li span{display: block;width: 1rem;height: 1rem;border: 1px solid #fff;border-radius: 100%;text-align: center;line-height: 1rem;}
+.Map .cont .car2{top: 80%;left: 40%;}
+/*轨迹回放playback.htm*/
+.playback .header{z-index: 1}
+.playback .radius ul{width: 6.4rem;background: #fff;position:absolute;top:2rem;right: 4%;color: #333;border-radius: 5px;line-height: normal;display: none;}
+.playback .radius ul:after{content:"";position:absolute; right:10%; top:-3px; border:5px solid transparent; border-bottom-color:#fff; border-top:0; height:0; width:0;-webkit-transform:translate(0,-50%);}
+.playback .radius ul li{font-size: 0.75rem;padding: 0.4rem 0;border-bottom: 1px solid #ebebeb;text-indent: 0.5rem;}
+.playback .radius ul li.modify{border: none;}
+.playback .cont .top{height: 4rem;display: inline;line-height: normal;padding: 0 3%;}
+.playback .cont .top p{margin-top: 0.5rem;}
+.playback .time{width: 16rem;height: 10rem;position: absolute;top: 50%;left: 50%;-webkit-transform:translate(-50%,-50%);background: #fff;border-radius: 5px;padding-top: 0.5rem;display: none;}
+.playback .time .title{font-size: 0.875rem;text-align: center;color: #333;}
+.playback .time .time_div{width: 13rem;margin: 0 auto;height: 2rem;border-radius:1rem;border:1px solid #f3f3f3;margin-top: 0.5rem;display: -webkit-box;font-size: 0.75rem;line-height: 2rem;color: #bfbfbf;padding: 0 0.5rem;position: relative;}
+.playback .time .time_div:after{position:absolute;top:50%;right:7%;margin-top:-4px;margin-left:30px;width:8px;height:8px;border:#d8d8d8 solid;border-width:1px 1px 0 0;content:"";-webkit-transform:rotate(45deg);}
+.playback .time .time_div span{display: block;}
+.playback .time .time_div input{margin-left: 0.5rem;border: none;font-size: 0.75rem;margin-top: -0.2rem;}
+.playback .time .time_btn{width: 12rem;margin: 0 auto;height: 2rem;display: -webkit-box;margin-top: 0.5rem;-webkit-box-pack:justify;}
+.playback .time .time_btn a{width: 5rem;display: block;text-decoration: none;line-height: 2rem;color: #adadad;font-size: 0.875rem;text-align: center;border: 1px solid #e5e5e5;border-radius: 5px;}
+.playback .time .time_btn a.on{background: #fc7722;border-color: #fc7722;color: #fff;}
+/*实时追踪realtrack.htm*/
+.real .header{z-index: 2;}
+.real .radius ul{width: 6.4rem;background: #fff;position:absolute;top:2rem;right: 4%;color: #333;border-radius: 5px;line-height: normal;display: none;}
+.real .radius ul:after{content:"";position:absolute; right:10%; top:-3px; border:5px solid transparent; border-bottom-color:#fff; border-top:0; height:0; width:0;-webkit-transform:translate(0,-50%);}
+.real .radius ul li{font-size: 0.75rem;padding: 0.4rem 0;border-bottom: 1px solid #ebebeb;text-indent: 0.5rem;}
+.real .store{display: none;}
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}
+@media (min-device-width:768px) and (max-device-height:1024px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:20px;width:900px;margin:0 auto}
+}

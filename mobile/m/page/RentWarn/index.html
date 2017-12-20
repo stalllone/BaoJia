@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wran">
+		<div class="header">宝 驾 分 时 租 赁 实 时 监 控 告 警</div>
+		<div class="content">
+			<div class="title">
+				<div id="mescroll">
+					<table>
+						<thead>
+							<tr>
+								<td>
+									<div>全部车辆（<span>22</span>）</div>
+								</td>
+								<td>
+									<div>已租车辆（<span>11</span>）</div>
+								</td>
+								<td>
+									<div>可用车辆（<span class="colorgreen">10</span>）</div>
+								</td>
+								<td>
+									<div>任务中（<span>0</span>）</div>
+								</td>
+								<td>
+									<div>维修中（<span>0</span>）</div>
+								</td>
+								<td>
+									<div>已禁用（<span class="colored">1</span>）</div>
+								</td>
+							</tr>
+						</thead>
+					</table>
+				</div>	
+			</div>
+			<div class="aside">
+				<div class="title1">一般警告<span>（3）</span></div>
+				<div class="state cl">
+					<div class="state_left">
+						<p>0</p>
+						<span>两日无单</span>
+					</div>
+					<div class="state_right">
+						<p>0</p>
+						<span>22小时未还车</span>
+					</div>
+				</div>
+				<div class="state cl">
+					<div class="state_left">
+						<p>0</p>
+						<span>押金临界值</span>
+					</div>
+					<div class="state_right">
+						<p class="active">1</p>
+						<span>频繁取消订单</span>
+					</div>
+				</div>
+				<div class="state cl">
+					<div class="state_left">
+						<p class="active">1</p>
+						<span>缺油</span>
+					</div>
+					<div class="state_right">
+						<p>0</p>
+						<span>缺电</span>
+					</div>
+				</div>
+				<div class="state cl">
+					<div class="state_left">
+						<p>0</p>
+						<span>年检到期</span>
+					</div>
+					<div class="state_right">
+						<p>0</p>
+						<span>保险到期</span>
+					</div>
+				</div>
+				<div class="state cl">
+					<div class="state_left">
+						<p class="active">1</p>
+						<span>小电压</span>
+					</div>
+					<div class="state_right">
+						<p>0</p>
+						<span>超时停车</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom_aside">
+				<div>
+					<div class="bottitle cl">
+						<p>一般警告（<span>3</span>）</p>
+						<a href="javascript:;" class="switchbtn"><img src="switch.jpg" alt=""></a>
+					</div>
+					<div class="switchShow">
+						<ul>
+							<li>
+								<p class="on">1</p>
+								<span>盒子异常</span>
+							</li>
+							<li>
+								<p class="on">1</p>
+								<span>无单移动</span>
+							</li>
+							<li>
+								<p>0</p>
+								<span>无单打火</span>
+							</li>
+							<li>
+								<p>0</p>
+								<span>无单未锁门</span>
+							</li>
+							<li>
+								<p class="on">0</p>
+								<span>越界</span>
+							</li>
+						</ul>
+					</div>
+					<div class="switchHide" style="display:none;" id="scroller">
+						<table cellpadding="0" cellspacing="0">
+							<thead>
+								<tr>
+									<td><div style="width:94px;">编号</div></td>
+									<td><div style="width:185px;">告警时间</div></td>
+									<td><div style="width:90px;">告警类型</div></td>
+									<td><div style="width:88px;">告警级别</div></td>
+									<td><div style="width:83px;">车型</div></td>
+									<td><div style="width:89px;">车牌号</div></td>
+									<td><div style="width:458px;">警告内容</div></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10001</td>
+									<td>2017-05-22 12:00:00</td>
+									<td>盒子异常</td>
+									<td><span></span></td>
+									<td>EV200</td>
+									<td>京A91211</td>
+									<td>2017-05-22 12:00:00 服务城市:北京,车牌号:京B11111，车机类型:电车</td>
+								</tr>
+								<tr>
+									<td>10002</td>
+									<td>2017-05-22 12:00:00</td>
+									<td>无单移动</td>
+									<td><span></span></td>
+									<td>EV200</td>
+									<td>京A91211</td>
+									<td>2017-05-22 12:00:00 服务城市:北京,车牌号:京B11111，车机类型:</td>
+								</tr>
+								<tr>
+									<td>10003</td>
+									<td>2017-05-22 12:00:00</td>
+									<td>越界</td>
+									<td><span></span></td>
+									<td>EV200</td>
+									<td>京A91211</td>
+									<td>2017-05-22 12:00:00 服务城市:北京,车牌号:京B11111，车机类型:</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://css.baojia.com/s4/c/js/iscroll.js"></script>
+<script src="http://css.baojia.com/s4/c/js/iscroll-probe.js"></script>
+<script>
+	$(function(){
+		$(".switchbtn").click(function(){
+			if($(".switchShow").is(":visible")){
+				$(".switchShow").css("display","none");
+				$(".switchHide").css("display","block");
+				myScroll.refresh();
+			}else{
+				$(".switchShow").css("display","block");
+				$(".switchHide").css("display","none");
+			}
+		});
+		
+	})
+</script>
+<script>
+	window.onload=function(){
+		myScroll.refresh();
+	}
+	var myScroll = new IScroll('#scroller', {
+		    scrollbars: true,
+		    fadeScrollbars: true,
+		    //        probeType:2,
+		    //        bounce:true,
+		    //        eventPassthrough: true,
+		    scrollX: true,
+		    scrollY: false,
+		    shrinkScrollbars: "scale",
+		    resizeScrollbars: true,
+		    mouseWheel: true,
+		    interactiveScrollbars: true,
+		    preventDefault: false
+		});
+	var mescroll = new IScroll('#mescroll', {
+		    scrollbars: true,
+		    fadeScrollbars: true,
+		    //        probeType:2,
+		    //        bounce:true,
+		    //        eventPassthrough: true,
+		    scrollX: true,
+		    scrollY: false,
+		    shrinkScrollbars: "scale",
+		    resizeScrollbars: true,
+		    mouseWheel: true,
+		    interactiveScrollbars: true,
+		    preventDefault: false
+		});
+</script>
+</html>

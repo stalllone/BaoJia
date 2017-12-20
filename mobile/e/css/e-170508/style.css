@@ -1,0 +1,34 @@
+body{padding-bottom: 50px;}
+.certificate{width: 1200px;margin: 0 auto;}
+.certificate .top{width: 100%;height: 80px;background-color: #5ea1e8;}
+.certificate .top dl{height:80px;line-height: 80px;}
+.certificate .top dt{margin-left: 48px;margin-right: 210px;float: left;}
+.certificate .top dd{font-size: 24px;color: #fff;float: left;}
+.certificate .title{width: 100%;height: 61px;text-align: center;line-height: 61px;font-size: 20px;color: #333;background-color: #eaf4fe;margin-top: 30px;font-weight: 600;}
+.certificate .content{width: 884px;margin: 0 auto;font-size: 20px;margin-top: 30px;padding: 10px 0;}
+.certificate .content p{width: 113px;height: 113px;}
+.certificate .content ul{width: 394px;}
+.certificate .content ul li{margin-top:8px;font-size: 17px;font-weight: 600;}
+.certificate .content ul li.Blacklist{color: #00b4db}
+.certificate .content ul li .headcertifi{color: #51c05f}
+.certificate .content dl{margin-top: 8px;font-size:17px;font-weight: 600;}
+.certificate .content dt img{width: 363px;display: inline-block;margin-left: 45px;margin-top: 20px;}
+.certificate .content1 ul{float: left;}
+.certificate .content1 dl{float: right;}
+.certificate .content1 dl img{margin-left: 0}
+.certificate .content ul li .upload{color: #ff0000}
+.certificate .cont{width: 100%;padding: 10px 0;}
+.certificate .cont p{font-size: 16px;margin-top: 10px;}
+.certificate .cont table{border-top: 1px solid #999999;border-left: 1px solid #999999;border-collapse: collapse;width: 100%;margin-top: 15px;}
+.certificate .cont table td{border-bottom: 1px solid #999999;border-right: 1px solid #999999;font-size: 16px;padding: 10px 15px;}
+.certificate .cont table td.first{text-align: center;}
+.certificate .cont table td.nobor{border-right: none;}
+
+
+
+
+
+
+
+
+

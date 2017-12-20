@@ -1,0 +1,59 @@
+.newyear{width: 100%;overflow: hidden;}
+.top{width: 100%;}
+.top>img{width: 100%;display: block;}
+.title{width: 100%;display: -webkit-box;border-top: 1px solid #ffa200;border-bottom:1px solid #ffa200;background: #c30808;}
+.title>div{-webkit-box-flex: 1;text-align: center;color: #f1b245;position: relative;padding: 2%; }
+.title>div>p{font-size: 0.875rem;}
+.title>div>h1{border-right: 1px solid #f88b03;position: absolute;top:0;right: 0;height: 100%;-webkit-transform: rotate(35deg);}
+.cont{width: 100%;background: #bb0404;padding-bottom: 17%;}
+.nav{width: 100%;border-bottom: 1px dashed #ffd553;display: -webkit-box;background: #bc0404;z-index: 999;}
+.nav>div{width: 50%;color: #ffd553;position: relative;text-align: center;padding:2% 0;font-size: 0.875rem;}
+.nav .am-fl{margin-top: 2%;}
+.nav .jt{position: absolute;top: 15%;right: 10%;}
+.nav .div-input{font-size: 0.625rem;}
+.choseCity>.input1{width: 100%;display: block;background: transparent;padding:2% 0;outline:0;border: none;text-align: center;font-size: 0.875rem;color: #ffd553;}
+
+.cont1{width: 96%;margin: 0 auto;display: -webkit-box;margin-top: 3%;}
+.left1{width:49%;background: white;padding-top: 2%;}
+.left1>div{width: 100%;overflow: hidden;}
+.left1>div>dt{width: 95%;margin: 0 auto;position: relative;}
+.left1>div>dt>img{width: 100%;display: block;}
+.left1>div>dt>p{position: absolute;bottom:0;display: -webkit-box;font-size: 0.75rem;}
+
+.left1>div>dt>p>span{display: block;background: black;opacity: 0.5;color: white;margin-left: 3%;}
+.left1>dd{width: 95%;margin: 0 auto;margin-top: 3%;margin-bottom: 3%;}
+.left1>dd>h1{font-weight: normal;color: #333333;font-size: 0.9rem;}
+.left1>dd>div{display: -webkit-box;-webkit-box-pack: justify;margin-top: 1%;}
+.left1>dd>div>h2{display: -webkit-box;font-weight: normal;}
+.left1>dd>div>h2>span{display: block;}
+.left1>dd>div>h2>span:nth-of-type(1){background: #f70707;color: white;border-radius: 1px;font-size: 0.75rem;}
+.left1>dd>div>h2>span:nth-of-type(2){text-decoration: line-through;margin-left: 3%;color: #6e6e6e;font-size: 0.75rem;}
+.left1>dd>div>h3{color:#f60808;font-weight: normal;font-size: 0.75rem;}
+.left1>dd>p{display: -webkit-box;width: 100%;margin-top: 3%;}
+.left1>dd>p>span{display: block;}
+.left1>dd>p>span:nth-of-type(1){background: url(http://css.baojia.com/s4/e/images/m-160108/dis.png)no-repeat right center;background-size:8px 12px;font-size: 0.8rem;color: #6e6e6e}
+.left1>dd>p>span:nth-of-type(2){width: 68%;overflow: hidden;white-space:nowrap; text-overflow:ellipsis;font-size: 0.75rem;color: #6e6e6e}
+.right1{margin-left: 2%;}
+
+.more{width: 97%;text-align: center;background: #ffbb00;margin: 0 auto;padding: 2% 0;border-radius: 3px;}
+.footer{width: 95%;margin: 0 auto;margin-top: 3%;overflow: hidden;position: fixed;bottom: 2%;left: 2.5%;display: none;}
+.footer_l{display: block;width: 49%;background: #ffbb00;color: #703d10;text-align: center;padding: 2% 0;border-radius: 3px;float: left;}
+.footer_r{margin-left: 2%;tex}
+/* city page START */
+.city-box{padding:1em;font-size:12px;}
+.city-box p{padding:.5em 0;}
+.city-box .city-bd{border:1px solid #ddd;background:#fff;line-height:3em;padding:0 1em;border-radius:3px;}
+.city-box .no-padding{padding:0;}
+.city-box .table-bd{position:relative;overflow:hidden;min-height:2em;z-index:2;}
+.city-box .table-bd:before{position:absolute;left:25%;width:25%;height:100%;border-left:1px solid #ddd;box-sizing:border-box;border-right:1px solid #ddd;content:"";z-index:1;}
+.city-box .table-bd:after{position:absolute;left:75%;width:25%;height:100%;border-left:1px solid #ddd;box-sizing:border-box;content:"";z-index:1;}
+.city-box .table-bd li{float:left;width:25%;text-align:center;box-sizing:border-box;border-bottom:1px solid #ddd;margin-bottom:-1px;position:relative;z-index:3;height:3em;}
+.city-box .table-bd li a{color:#333;display:block;}
+.city-box .table-bd h2{font-size:3em;color:#ddd;height:4.41rem;margin-bottom:-1px;line-height:4rem;float:left;width:25%;box-sizing:border-box;text-align:center;border-bottom:1px solid #ddd;}
+.city-box .city-all{}
+.city-box .city-all li{width:20%;line-height:3em;float:left;text-align:center;font-size:14px;}
+.city-box .city-all li a{color:#28bcdc;display:block;font-weight:700;}
+.city-box .bd-top .table-bd{border-top:1px solid #ddd;}
+.city-box a:active{background:#ccc;}
+/* city page END */
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>实时追踪</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/m/css/dingwei.css">
+</head>
+<body>
+	<div class="Map real">
+		<div class="header">
+			<div class="jt"></div>
+			<p>实时追踪</p>
+			<div class="menu radius">
+				<img src="http://css.baojia.com/s4/m/images/Dingwei/yuan.png" alt="">
+				<ul>
+					<li>显示门店图标</li>
+				</ul>				
+			</div>
+		</div>
+		<div class="cont">
+			<img src="http://css.baojia.com/s4/m/images/Dingwei/map.jpg" alt="">
+			<div class="top">
+				<p>最后定位时间：2016-05-04 05:00:05</p>
+				<p>3秒后刷新</p>
+			</div>
+			<div class="car">
+				<div class="car1">
+					<img src="http://css.baojia.com/s4/m/images/Dingwei/icon-m-car1.png" alt="" class="img">
+					<img src="http://css.baojia.com/s4/m/images/Dingwei/store.png" alt="" class="store">
+					<ul>
+						<li><p>京NA0U10-日产郑州NV200</p><span>i</span></li>
+						<li>悦行民族园月福店站</li>
+						<li>状态: 离线</li>
+						<li>地址: 四川省成都市武侯区天仁路</li>
+						<li>离中国农业银行(成都凯德天府支行)约77米</li>
+					</ul>
+				</div>
+				<div class="car1 car2">
+					<img src="http://css.baojia.com/s4/m/images/Dingwei/icon-m-car2.png" alt="" class="img">
+					<img src="http://css.baojia.com/s4/m/images/Dingwei/store.png" alt="" class="store">
+					<ul>
+						<li><p>京NA0U10-日产郑州NV200</p><span>i</span></li>
+						<li>悦行民族园月福店站</li>
+						<li>状态: 离线</li>
+						<li>地址: 四川省成都市武侯区天仁路</li>
+						<li>离中国农业银行(成都凯德天府支行)约77米</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		var height=$(document).height()-$(".header").height();
+		$(".cont,.cont>img").height(height);
+		$(".car1").click(function(){
+			$(".car1 ul").css("display","none");
+			$(this).find('ul').css("display","block");
+		});
+		
+		$(".radius img").click(function(){
+			$(this).parent().find("ul").css("display","block")
+		});
+		$(".radius ul li").click(function(){
+			$(this).parent().css("display","none");
+				$(".car1").find('.img').css("display","none");
+				$(".car1").find('.store').css("display","block");
+		});
+		$(document).on("touchstart",function(event){
+			if($(event.target).parents(".car1,.radius").length==0)
+			$(".car1 ul,.radius ul").css("display","none");
+		});
+	})
+</script>
+</html>

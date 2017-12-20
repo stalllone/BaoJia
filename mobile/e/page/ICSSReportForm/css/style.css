@@ -1,0 +1,142 @@
+.container {
+    width: 1170px;
+    min-width: 1170;
+    margin: 50px auto;
+    min-height: 500px;
+}
+
+.container .title {
+    line-height: 40px;
+    background: #f5f5f5;
+    padding: 0 15px;
+}
+
+.container .title .glyphicon-tasks {
+    color: #d1d4d7;
+}
+.container .searchCondition .search-wrap{
+	text-align: center;
+    padding: 40px 0;
+}
+.container .searchCondition .search-wrap .inptxt{
+	width:280px;
+	font-size:13px;
+}
+.container .searchCondition .search-wrap .more{
+	color:#aaa;
+}
+.container .searchCondition .selectCondtion{
+	
+}
+// .container .searchCondition .sele>div{
+// 	float: left;
+// 	padding: 8px 2em;
+// 	border-top: 1px solid #eee;
+// }
+// .container .searchCondition .sele>div ul{
+// 	margin-bottom: 0;
+// }
+// .container .searchCondition .sele>div li{
+// 	float:left;
+// 	margin-left: 10px;
+// 	cursor: pointer;
+// }
+// .container .searchCondition .sele>div li.on{
+// 	background: #4DBD74;
+// 	color:#fff;
+// 	padding:0 2px;
+// 	border-radius: 2px;
+
+// }
+// .container .searchCondition .sele .seleft{
+// 	width: 12%;
+// 	border-right: 1px solid #eee;
+// 	background: #f0f0f0;
+// }
+// .container .searchCondition .sele .selright{
+// 	width: 88%;
+// }
+// .container .searchCondition .sele:last-of-type(1){
+// 	border-top: 1px solid #eee;
+// }
+// .container .searchCondition .sele .selright .delAll{
+// 	float:right;
+// 	cursor:pointer;
+// }
+.container .searchCondition .selectCondtion table{
+	width:100%;
+	border-top: 1px solid #eee;
+	border-right:1px solid #eee;
+}
+.container .searchCondition .selectCondtion table td{
+	border-bottom: 1px solid #eee;
+	border-left:1px solid #eee;
+}
+.container .searchCondition .selectCondtion table td:nth-of-type(1){
+	width: 12%;
+	padding: 8px 2em;
+}
+.container .searchCondition .selectCondtion table ul{
+	margin-bottom:0;
+}
+.container .searchCondition .selectCondtion table ul.seled{
+	float: left;
+}
+.container .searchCondition .selectCondtion table li{
+	float:left;
+	margin-left:10px;
+	cursor:pointer;
+}
+.container .searchCondition .selectCondtion table li .row-fluid{
+	margin-top:0 !important;
+}
+.container .searchCondition .selectCondtion table li .select{
+	min-width:150px;
+	cursor:pointer;
+	padding-left: 8px;
+	border-radius:3px;
+	-webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: #f8f9fa url(http://css.baojia.com/s4/e/css/icssForm/reservion/image/select.png) no-repeat;
+    background-size: 24px 20px;
+    background-position: right center;
+}
+.container .searchCondition .selectCondtion table span.on{
+	display: block;
+	background: #4DBD74;
+	color:#fff;
+	padding:0 2px;
+	border-radius: 2px;
+}
+.container .searchCondition .selectCondtion table td .delAll{
+	float:right;
+	cursor:pointer;
+	margin-right:15px;
+}
+.container .tab td{
+	padding:10px 15px;
+}
+.container .tab td.sort{
+	background: url(http://css.baojia.com/s4/e/css/icssForm/reservion/image/sort_both.png) no-repeat center right;
+	cursor:pointer;
+	text-align:center;
+}
+.container .exportForm{
+	margin-top: 50px;
+}
+.container .exportForm button{
+	margin-left:25px;
+	margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+

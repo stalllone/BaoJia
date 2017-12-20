@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>新年活动</title>
+    <meta name="keywords" content="服务条款，租车,租车网,宝驾租车,宝驾,宝驾网" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="../../css/m-160108/style.css" />
+    <link rel="stylesheet" href="http://css.baojia.com/s4/e/css/m-160108/bj-datetime.css" />
+    <style>
+    @media (device-width:320px) and (-webkit-min-device-pixel-ratio:2) {
+        body,
+        html {
+            font-size: 12px;
+        }
+    }
+    
+    ::-webkit-input-placeholder {
+        color: #ffd553;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="newyear">
+            <div class="top">
+                <img src="http://css.baojia.com/s4/e/images/m-160108/top.png" alt="" />
+            </div>
+            <div class="title">
+                <div>
+                    <p>比市场价</p>
+                    <p>便宜30%</p>
+                    <h1></h1></div>
+                <div>
+                    <p>专业服务</p>
+                    <p>P2P租车领导品牌</p>
+                    <h1></h1></div>
+                <div>
+                    <p>保险保障</p>
+                    <p>多种保险可选</p>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="nav">
+                    <div class="data-time clearfix">
+                        <div class="am-fl" id="chooseStartTime" onclick="chooseStartTime();">
+                            <input size="16" type="hidden" value="" class="am-form-field" readonly="" id="startDate">
+                            <input size="16" type="hidden" value="" class="am-form-field" readonly="" id="endDate">
+                            <span class="color-gray">选择租期</span>
+                            <div class="add-on">
+                                <div class="div-input" id="startTime"></div>
+                                <div class="div-input" id="endTime"></div>
+                            </div>                            
+                        </div>
+                        
+                        <div class="jt">＞</div>
+                    </div>
+                    <div class="choseCity" id="choseCity">
+                        <input class="input1" id="city" type="text" placeholder="请选择城市">
+                        <div class="jt">＞</div>
+                    </div>
+                </div>
+                <div class="cont1">
+                    
+                        <dl class="left1 left2">
+                            <div>
+                                <dt>
+                                    <img src="http://pic.baojia.com/s/2015/1210/644957_201512101326.jpg" alt="" />
+                                    <p>
+                                        <span>周一限行</span>
+                                        <span>40%接单</span>
+                                        <span>好评2</span>
+                                    </p>
+                                </dt>
+                            </div>
+                            
+                            <dd>
+                                <h1>丰田凯美瑞&nbsp;2013</h1>
+                                <div>
+                                    <h2>
+    									<span>自动</span>
+    									<span>¥300元/日</span>
+    								</h2>
+                                    <h3>¥299元</h3>
+                                </div>
+                                <p>
+                                    <span>0.18km&nbsp;&nbsp;&nbsp;</span>
+                                    <span>北京市朝阳区地铁5号线</span>
+                                </p>
+                            </dd>
+                        </dl>
+                   
+                        <dl class="left1 right1">
+                        <div>
+                            <dt>
+                                <img src="../../images/m-160108/pic.png" alt="" />
+                                <p>
+                                    <span>周一限行</span>
+                                    <span> %接单</span>
+                                    <span>好评2</span>
+                                </p>
+                            </dt>
+                        </div>
+                            <dd>
+                                <h1>丰田凯美瑞&nbsp;2013</h1>
+                                <div>
+                                    <h2>
+    									<span>自动</span>
+    									<span>¥300元/日</span>
+    								</h2>
+                                    <h3>¥299元</h3>
+                                </div>
+                                <p>
+                                    <span>0.18km&nbsp;&nbsp;&nbsp;</span>
+                                    <span>北京市朝阳区地铁5号线</span>
+                                </p>
+                            </dd>
+                        </dl>
+                    
+                </div>
+
+                 <div class="cont1">
+                   
+                        <dl class="left1">
+                            <div>
+                                <dt>
+                                    <img src="http://pic.baojia.com/s/2015/1210/644957_201512101326.jpg" alt="" />
+                                    <p>
+                                        <span>周一限行</span>
+                                        <span>40%接单</span>
+                                        <span>好评2</span>
+                                    </p>
+                                </dt>
+                            </div>
+                            
+                            <dd>
+                                <h1>丰田凯美瑞&nbsp;2013</h1>
+                                <div>
+                                    <h2>
+                                        <span>自动</span>
+                                        <span>¥300元/日</span>
+                                    </h2>
+                                    <h3>¥299元</h3>
+                                </div>
+                                <p>
+                                    <span>0.18km&nbsp;&nbsp;&nbsp;</span>
+                                    <span>北京市朝阳区地铁5号线</span>
+                                </p>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="left1 right1">
+                        <div>
+                            <dt>
+                                <img src="../../images/m-160108/top.png" alt="" />
+                                <p>
+                                    <span>周一限行</span>
+                                    <span>40%接单</span>
+                                    <span>好评2</span>
+                                </p>
+                            </dt>
+                        </div>
+                            <dd>
+                                <h1>丰田凯美瑞&nbsp;2013</h1>
+                                <div>
+                                    <h2>
+                                        <span>自动</span>
+                                        <span>¥300元/日</span>
+                                    </h2>
+                                    <h3>¥299元</h3>
+                                </div>
+                                <p>
+                                    <span>0.18km&nbsp;&nbsp;&nbsp;</span>
+                                    <span>北京市朝阳区地铁5号线</span>
+                                </p>
+                            </dd>
+                        </dl>
+                   
+                </div>
+                 <div class="cont1">
+                   
+                        <dl class="left1">
+                            <div>
+                                <dt>
+                                    <img src="http://pic.baojia.com/s/2015/1210/644957_201512101326.jpg" alt="" />
+                                    <p>
+                                        <span>周一限行</span>
+                                        <span>40%接单</span>
+                                        <span>好评2</span>
+                                    </p>
+                                </dt>
+                            </div>
+                            
+                            <dd>
+                                <h1>丰田凯美瑞&nbsp;2013</h1>
+                                <div>
+                                    <h2>
+                                        <span>自动</span>
+                                        <span>¥300元/日</span>
+                                    </h2>
+                                    <h3>¥299元</h3>
+                                </div>
+                                <p>
+                                    <span>0.18km&nbsp;&nbsp;&nbsp;</span>
+                                    <span>北京市朝阳区地铁5号线</span>
+                                </p>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="left1 right1">
+                        <div>
+                            <dt>
+                                <img src="../../images/m-160108/top.png" alt="" />
+                                <p>
+                                    <span>周一限行</span>
+                                    <span>40%接单</span>
+                                    <span>好评2</span>
+                                </p>
+                            </dt>
+                        </div>
+                            <dd>
+                                <h1>丰田凯美瑞&nbsp;2013</h1>
+                                <div>
+                                    <h2>
+                                        <span>自动</span>
+                                        <span>¥300元/日</span>
+                                    </h2>
+                                    <h3>¥299元</h3>
+                                </div>
+                                <p>
+                                    <span>0.18km&nbsp;&nbsp;&nbsp;</span>
+                                    <span>北京市朝阳区地铁5号线</span>
+                                </p>
+                            </dd>
+                        </dl>
+                    </a>
+                </div>
+                <div class="cont1">
+                  
+                        <dl class="left1">
+                            <div>
+                                <dt>
+                                    <img src="http://pic.baojia.com/s/2015/1210/644957_201512101326.jpg" alt="" />
+                                    <p>
+                                        <span>周一限行</span>
+                                        <span>40%接单</span>
+                                        <span>好评2</span>
+                                    </p>
+                                </dt>
+                            </div>
+                            
+                            <dd>
+                                <h1>丰田凯美瑞&nbsp;2013</h1>
+                                <div>
+                                    <h2>
+                                        <span>自动</span>
+                                        <span>¥300元/日</span>
+                                    </h2>
+                                    <h3>¥299元</h3>
+                                </div>
+                                <p>
+                                    <span>0.18km&nbsp;&nbsp;&nbsp;</span>
+                                    <span>北京市朝阳区地铁5号线</span>
+                                </p>
+                            </dd>
+                        </dl>
+                   
+                        <dl class="left1 right1">
+                        <div>
+                            <dt>
+                                <img src="../../images/m-160108/top.png" alt="" />
+                                <p>
+                                    <span>周一限行</span>
+                                    <span>40%接单</span>
+                                    <span>好评2</span>
+                                </p>
+                            </dt>
+                        </div>
+                            <dd>
+                                <h1>丰田凯美瑞&nbsp;2013</h1>
+                                <div>
+                                    <h2>
+                                        <span>自动</span>
+                                        <span>¥300元/日</span>
+                                    </h2>
+                                    <h3>¥299元</h3>
+                                </div>
+                                <p>
+                                    <span>0.18km&nbsp;&nbsp;&nbsp;</span>
+                                    <span>北京市朝阳区地铁5号线</span>
+                                </p>
+                            </dd>
+                        </dl>
+                    
+                </div>
+                <div class="more">滑动显示更多</div>
+                <div class="footer">
+                    <a href="javasript:void(0);" class="footer_l">没有找到合适的车</a>
+                    <a href="javasript:void(0);" class="footer_l footer_r">我有车可租</a>
+                </div>
+            </div>
+        </div>
+        <!--新版时间html  start-->
+        <input type="hidden" class="hidden-result" id="pikeupResultHidden" value="2016-1-11 18:45">
+        <input type="hidden" class="hidden-result" id="returnResultHidden" value="2016-1-12 18:45">
+        <input type="hidden" id="initialType" value="">
+        <div class="window-body"></div>
+    </div>
+    <div class="page window-time" hidden="hidden" style="">
+        <div class="w640">
+	        <div class="topbar-title text_center">
+	            <span id="gobackSpan"></span>
+	            <span id="topBarInfo">选择用车时间</span>
+	            <span id="pickerdoneSpan"  onclick="submitDateTimeValues()">完成</span>
+	        </div>
+	        <div class="topbar header-section bgwhite">
+	            <section class="result-display pickupResultDisplay selected-result">
+	                <div class="result-title-div ">取车时间</div>
+	                <div class="result-detail-div "></div>
+	            </section>
+	            <section class="result-display returnResultDisplay">
+	                <div class="result-title-div ">还车时间</div>
+	                <div class="result-detail-div"></div>
+	            </section>
+	        </div>
+	        <div class="selector_main">
+	            <section class="year_and_month_selector selector-section">
+	                <div class="year-picker text_center ">
+	                    <table>
+	                        <colgroup>
+	                            <col style="width:10%">
+	                            <col>
+	                            <col style="width:10%">
+	                        </colgroup>
+	                        <tbody>
+	                        <tr>
+	                            <td>
+	                                <span class="minus-button year-span disabled-button" onclick="yearMinus()" style="font-size:2em;">-</span>
+	                            </td>
+	                            <td><span class="year-span year-content" data-value="" style="font-size:2em;"></span></td>
+	                            <td>
+	                                <span class="add-button year-span" onclick="yearAdd()" style="font-size:2em;">+</span>
+	                            </td>
+	                        </tr>
+	                        </tbody>
+	                    </table>
+	                </div>
+	                <div class="month-picker text_center">
+	                    <table>
+	                        <colgroup>
+	                            <col style="width:10%">
+	                            <col>
+	                            <col style="width:10%">
+	                        </colgroup>
+	                        <tbody>
+	                        <tr>
+	                            <td><span class="minus-button month-span disabled-button" onclick="monthMinus()" style="font-size:2em;">-</span></td>
+	                            <td><span class="month-content month-span" data-value="" style="font-size:2em;"></span></td>
+	                            <td><span class="add-button month-span" onclick="monthAdd()" style="font-size:2em;">+</span></td>
+	                        </tr>
+	                        </tbody>
+	                    </table>
+	                </div>
+	            </section>
+	            <section class="date_selector selector-section"></section>
+	            <section class="time_selector selector-section">
+	                <table>
+	                    <tr>
+	                        <td class="hour_picker time_picker_div">
+	                            <span class="add-button hour-span" onclick="hourAdd()">+</span>
+	                            <span class="hour-content time-content hour-span" data-value=""></span>
+	                            <span class="minus-button hour-span  disabled-button" onclick="hourMinus()">-</span>
+	                        </td>
+	                        <td class="time_separator time_picker_div">:</td>
+	                        <td class="minute_picker time_picker_div">
+	                            <span class="add-button minute-span" onclick="minuteAdd()">+</span>
+	                            <span class="minute-content time-content minute-span" data-value=""></span>
+	                            <span class="minus-button minute-span" onclick="minuteMinus()">-</span>
+	                        </td>
+	                    <tr>
+	                </table>
+	            </section>
+	        </div>
+	    </div>      
+    </div>
+ 	<div id="citys" style="display:none;">
+            <div class="city-box">
+                <p>已开通城市</p>
+                <div class="city-bd no-padding">
+                    <ul class="table-bd" style="padding: 0;margin: 0;">
+                        <li><a id="1" class="_city">北京</a></li>
+                        <li><a id="2" class="_city">上海</a></li>
+                        <li><a id="3" class="_city">天津</a></li>
+                        <li><a id="4" class="_city">重庆</a></li>
+                        <li><a id="5" class="_city">广州</a></li>
+                        <li><a id="6" class="_city">深圳</a></li>
+                        <li><a id="26" class="_city">杭州</a></li>
+                        <li><a id="38" class="_city">合肥</a></li>
+                        <li><a id="103" class="_city">石家庄</a></li>
+                        <li><a id="115" class="_city">郑州</a></li>
+                        <li><a id="145" class="_city">武汉</a></li>
+                        <li><a id="158" class="_city">长沙</a></li>
+                        <li><a id="181" class="_city">南京</a></li>
+                        <li><a id="271" class="_city">西安</a></li>
+                        <li><a id="281" class="_city">成都</a></li>
+                        <li><a id="323" class="_city">昆明</a></li>
+                    </ul>
+                </div>
+                <p>全部城市</p>
+                <div class="city-bd no-padding bd-top">
+                    <ul class="clearfix city-all" style="padding: 0;margin: 0;">
+                        <li><a href="#A">A</a></li>
+                        <li><a href="#B">B</a></li>
+                        <li><a href="#C">C</a></li>
+                        <li><a href="#D">D</a></li>
+                        <li><a href="#E">E</a></li>
+                        <li><a href="#F">F</a></li>
+                        <li><a href="#G">G</a></li>
+                        <li><a href="#H">H</a></li>
+                        <li><a href="#J">J</a></li>
+                        <li><a href="#K">K</a></li>
+                        <li><a href="#L">L</a></li>
+                        <li><a href="#M">M</a></li>
+                        <li><a href="#N">N</a></li>
+                        <li><a href="#P">P</a></li>
+                        <li><a href="#Q">Q</a></li>
+                        <li><a href="#R">R</a></li>
+                        <li><a href="#S">S</a></li>
+                        <li><a href="#T">T</a></li>
+                        <li><a href="#W">W</a></li>
+                        <li><a href="#X">X</a></li>
+                        <li><a href="#Y">Y</a></li>
+                        <li><a href="#Z">Z</a></li>
+                    </ul>
+                    <ul class="table-bd" id="A" style="padding: 0;margin: 0;">
+                        <h2>A</h2>
+                        <li><a id="45" class="_city">安庆</a></li>
+                        <li><a id="95" class="_city">安顺</a></li>
+                        <li><a id="122" class="_city">安阳</a></li>
+                        <li><a id="207" class="_city">鞍山</a></li>
+                        <li><a id="230" class="_city">阿拉善</a></li>
+                        <li><a id="279" class="_city">安康</a></li>
+                        <li><a id="299" class="_city">阿坝</a></li>
+                        <li><a id="307" class="_city">阿里</a></li>
+                        <li><a id="314" class="_city">阿克苏</a></li>
+                        <li><a id="321" class="_city">阿勒泰</a></li>
+                        <li><a id="341" class="_city">澳门</a></li>
+                    </ul>
+                    <ul class="table-bd" id="B" style="padding: 0;margin: 0;">
+                        <h2>B</h2>
+                        <li><a id="40" class="_city">蚌埠</a></li>
+                        <li><a id="67" class="_city">白银</a></li>
+                        <li><a id="84" class="_city">北海</a></li>
+                        <li><a id="87" class="_city">百色</a></li>
+                        <li><a id="99" class="_city">毕节</a></li>
+                        <li><a id="108" class="_city">保定</a></li>
+                        <li><a id="177" class="_city">白山</a></li>
+                        <li><a id="179" class="_city">白城</a></li>
+                        <li><a id="209" class="_city">本溪</a></li>
+                        <li><a id="220" class="_city">包头</a></li>
+                        <li><a id="226" class="_city">巴彦淖尔</a></li>
+                        <li><a id="258" class="_city">滨州</a></li>
+                        <li><a id="273" class="_city">宝鸡</a></li>
+                        <li><a id="294" class="_city">巴中</a></li>
+                        <li><a id="316" class="_city">巴音郭楞</a></li>
+                        <li><a id="318" class="_city">博尔塔拉</a></li>
+                        <li><a id="326" class="_city">保山</a></li>
+                    </ul>
+                    <ul class="table-bd" id="C" style="padding: 0;margin: 0;">
+                        <h2>C</h2>
+                        <li><a id="23" class="_city">潮州</a></li>
+                        <li><a id="47" class="_city">滁州</a></li>
+                        <li><a id="49" class="_city">巢湖</a></li>
+                        <li><a id="52" class="_city">池州</a></li>
+                        <li><a id="86" class="_city">崇左</a></li>
+                        <li><a id="104" class="_city">沧州</a></li>
+                        <li><a id="110" class="_city">承德</a></li>
+                        <li><a id="164" class="_city">常德</a></li>
+                        <li><a id="167" class="_city">郴州</a></li>
+                        <li><a id="172" class="_city">长春</a></li>
+                        <li><a id="184" class="_city">常州</a></li>
+                        <li><a id="217" class="_city">朝阳</a></li>
+                        <li><a id="222" class="_city">赤峰</a></li>
+                        <li><a id="263" class="_city">长治</a></li>
+                        <li><a id="303" class="_city">昌都</a></li>
+                        <li><a id="317" class="_city">昌吉</a></li>
+                        <li><a id="333" class="_city">楚雄</a></li>
+                    </ul>
+                    <ul class="table-bd" id="D" style="padding: 0;margin: 0;">
+                        <h2>D</h2>
+                        <li><a id="21" class="_city">东莞</a></li>
+                        <li><a id="74" class="_city">定西</a></li>
+                        <li><a id="137" class="_city">大庆</a></li>
+                        <li><a id="144" class="_city">大兴安岭</a></li>
+                        <li><a id="206" class="_city">大连</a></li>
+                        <li><a id="210" class="_city">丹东</a></li>
+                        <li><a id="247" class="_city">东营</a></li>
+                        <li><a id="256" class="_city">德州</a></li>
+                        <li><a id="261" class="_city">大同</a></li>
+                        <li><a id="284" class="_city">德阳</a></li>
+                        <li><a id="295" class="_city">达州</a></li>
+                        <li><a id="334" class="_city">大理</a></li>
+                        <li><a id="335" class="_city">德宏</a></li>
+                        <li><a id="337" class="_city">迪庆</a></li>
+                    </ul>
+                    <ul class="table-bd" id="E" style="padding: 0;margin: 0;">
+                        <h2>E</h2>
+                        <li><a id="153" class="_city">鄂州</a></li>
+                        <li><a id="157" class="_city">恩施</a></li>
+                        <li><a id="224" class="_city">鄂尔多斯</a></li>
+                    </ul>
+                    <ul class="table-bd" id="F" style="padding: 0;margin: 0;">
+                        <h2>F</h2>
+                        <li><a id="10" class="_city">佛山</a></li>
+                        <li><a id="48" class="_city">阜阳</a></li>
+                        <li><a id="55" class="_city">福州</a></li>
+                        <li><a id="85" class="_city">防城港</a></li>
+                        <li><a id="204" class="_city">抚州</a></li>
+                        <li><a id="208" class="_city">抚顺</a></li>
+                        <li><a id="213" class="_city">阜新</a></li>
+                    </ul>
+                    <ul class="table-bd" id="G" style="padding: 0;margin: 0;">
+                        <h2>G</h2>
+                        <li><a id="77" class="_city">甘南</a></li>
+                        <li><a id="80" class="_city">桂林</a></li>
+                        <li><a id="82" class="_city">贵港</a></li>
+                        <li><a id="92" class="_city">贵阳</a></li>
+                        <li><a id="200" class="_city">赣州</a></li>
+                        <li><a id="234" class="_city">固原</a></li>
+                        <li><a id="240" class="_city">果洛</a></li>
+                        <li><a id="286" class="_city">广安</a></li>
+                        <li><a id="291" class="_city">广元</a></li>
+                        <li><a id="300" class="_city">甘孜</a></li>
+                    </ul>
+                    <ul class="table-bd" id="H" style="padding: 0;margin: 0;">
+                        <h2>H</h2>
+                        <li><a id="15" class="_city">惠州</a></li>
+                        <li><a id="18" class="_city">河源</a></li>
+                        <li><a id="29" class="_city">湖州</a></li>
+                        <li><a id="41" class="_city">淮南</a></li>
+                        <li><a id="43" class="_city">淮北</a></li>
+                        <li><a id="46" class="_city">黄山</a></li>
+                        <li><a id="88" class="_city">河池</a></li>
+                        <li><a id="90" class="_city">贺州</a></li>
+                        <li><a id="101" class="_city">海口</a></li>
+                        <li><a id="106" class="_city">邯郸</a></li>
+                        <li><a id="113" class="_city">衡水</a></li>
+                        <li><a id="120" class="_city">鹤壁</a></li>
+                        <li><a id="132" class="_city">哈尔滨</a></li>
+                        <li><a id="135" class="_city">鹤岗</a></li>
+                        <li><a id="142" class="_city">黑河</a></li>
+                        <li><a id="147" class="_city">黄石</a></li>
+                        <li><a id="154" class="_city">黄冈</a></li>
+                        <li><a id="161" class="_city">衡阳</a></li>
+                        <li><a id="169" class="_city">怀化</a></li>
+                        <li><a id="188" class="_city">淮安</a></li>
+                        <li><a id="218" class="_city">葫芦岛</a></li>
+                        <li><a id="219" class="_city">呼和浩特</a></li>
+                        <li><a id="221" class="_city">呼伦贝尔</a></li>
+                        <li><a id="237" class="_city">海东</a></li>
+                        <li><a id="238" class="_city">海北</a></li>
+                        <li><a id="239" class="_city">黄南</a></li>
+                        <li><a id="242" class="_city">海西</a></li>
+                        <li><a id="259" class="_city">菏泽</a></li>
+                        <li><a id="277" class="_city">汉中</a></li>
+                        <li><a id="312" class="_city">哈密</a></li>
+                        <li><a id="313" class="_city">和田</a></li>
+                        <li><a id="331" class="_city">红河</a></li>
+                    </ul>
+                    <ul class="table-bd" id="I" style="padding: 0;margin: 0;">
+                        <h2>I</h2>
+                    </ul>
+                    <ul class="table-bd" id="J" style="padding: 0;margin: 0;">
+                        <h2>J</h2>
+                        <li><a id="11" class="_city">江门</a></li>
+                        <li><a id="24" class="_city">揭阳</a></li>
+                        <li><a id="27" class="_city">嘉兴</a></li>
+                        <li><a id="31" class="_city">金华</a></li>
+                        <li><a id="65" class="_city">嘉峪关</a></li>
+                        <li><a id="66" class="_city">金昌</a></li>
+                        <li><a id="72" class="_city">酒泉</a></li>
+                        <li><a id="116" class="_city">焦作</a></li>
+                        <li><a id="134" class="_city">鸡西</a></li>
+                        <li><a id="139" class="_city">佳木斯</a></li>
+                        <li><a id="151" class="_city">荆州</a></li>
+                        <li><a id="156" class="_city">荆门</a></li>
+                        <li><a id="173" class="_city">吉林</a></li>
+                        <li><a id="195" class="_city">景德镇</a></li>
+                        <li><a id="197" class="_city">九江</a></li>
+                        <li><a id="201" class="_city">吉安</a></li>
+                        <li><a id="211" class="_city">锦州</a></li>
+                        <li><a id="243" class="_city">济南</a></li>
+                        <li><a id="244" class="_city">济宁</a></li>
+                        <li><a id="264" class="_city">晋城</a></li>
+                        <li><a id="266" class="_city">晋中</a></li>
+                        <li><a id="354" class="_city">晋城</a></li>
+                    </ul>
+                    <ul class="table-bd" id="K" style="padding: 0;margin: 0;">
+                        <h2>K</h2>
+                        <li><a id="131" class="_city">开封</a></li>
+                        <li><a id="310" class="_city">克拉玛依</a></li>
+                        <li><a id="315" class="_city">喀什</a></li>
+                        <li><a id="340" class="_city">昆山</a></li>
+                    </ul>
+                    <ul class="table-bd" id="L" style="padding: 0;margin: 0;">
+                        <h2>L</h2>
+                        <li><a id="35" class="_city">丽水</a></li>
+                        <li><a id="50" class="_city">六安</a></li>
+                        <li><a id="62" class="_city">龙岩</a></li>
+                        <li><a id="64" class="_city">兰州</a></li>
+                        <li><a id="75" class="_city">陇南</a></li>
+                        <li><a id="76" class="_city">临夏</a></li>
+                        <li><a id="79" class="_city">柳州</a></li>
+                        <li><a id="89" class="_city">来宾</a></li>
+                        <li><a id="93" class="_city">六盘水</a></li>
+                        <li><a id="112" class="_city">廊坊</a></li>
+                        <li><a id="117" class="_city">洛阳</a></li>
+                        <li><a id="125" class="_city">漯河</a></li>
+                        <li><a id="170" class="_city">娄底</a></li>
+                        <li><a id="175" class="_city">辽源</a></li>
+                        <li><a id="187" class="_city">连云港</a></li>
+                        <li><a id="214" class="_city">辽阳</a></li>
+                        <li><a id="254" class="_city">莱芜</a></li>
+                        <li><a id="255" class="_city">临沂</a></li>
+                        <li><a id="257" class="_city">聊城</a></li>
+                        <li><a id="269" class="_city">临汾</a></li>
+                        <li><a id="270" class="_city">吕梁</a></li>
+                        <li><a id="289" class="_city">乐山</a></li>
+                        <li><a id="301" class="_city">凉山</a></li>
+                        <li><a id="302" class="_city">拉萨</a></li>
+                        <li><a id="308" class="_city">林芝</a></li>
+                        <li><a id="328" class="_city">丽江</a></li>
+                        <li><a id="329" class="_city">临沧</a></li>
+                    </ul>
+                    <ul class="table-bd" id="M" style="padding: 0;margin: 0;">
+                        <h2>M</h2>
+                        <li><a id="13" class="_city">茂名</a></li>
+                        <li><a id="16" class="_city">梅州</a></li>
+                        <li><a id="42" class="_city">马鞍山</a></li>
+                        <li><a id="141" class="_city">牡丹江</a></li>
+                        <li><a id="283" class="_city">绵阳</a></li>
+                        <li><a id="297" class="_city">眉山</a></li>
+                    </ul>
+                    <ul class="table-bd" id="N" style="padding: 0;margin: 0;">
+                        <h2>N</h2>
+                        <li><a id="28" class="_city">宁波</a></li>
+                        <li><a id="61" class="_city">南平</a></li>
+                        <li><a id="63" class="_city">宁德</a></li>
+                        <li><a id="78" class="_city">南宁</a></li>
+                        <li><a id="127" class="_city">南阳</a></li>
+                        <li><a id="186" class="_city">南通</a></li>
+                        <li><a id="194" class="_city">南昌</a></li>
+                        <li><a id="285" class="_city">南充</a></li>
+                        <li><a id="288" class="_city">内江</a></li>
+                        <li><a id="306" class="_city">那曲</a></li>
+                        <li><a id="336" class="_city">怒江</a></li>
+                    </ul>
+                    <ul class="table-bd" id="O" style="padding: 0;margin: 0;">
+                        <h2>O</h2>
+                    </ul>
+                    <ul class="table-bd" id="P" style="padding: 0;margin: 0;">
+                        <h2>P</h2>
+                        <li><a id="57" class="_city">莆田</a></li>
+                        <li><a id="71" class="_city">平凉</a></li>
+                        <li><a id="123" class="_city">濮阳</a></li>
+                        <li><a id="129" class="_city">平顶山</a></li>
+                        <li><a id="196" class="_city">萍乡</a></li>
+                        <li><a id="215" class="_city">盘锦</a></li>
+                        <li><a id="293" class="_city">攀枝花</a></li>
+                    </ul>
+                    <ul class="table-bd" id="Q" style="padding: 0;margin: 0;">
+                        <h2>Q</h2>
+                        <li><a id="20" class="_city">清远</a></li>
+                        <li><a id="59" class="_city">泉州</a></li>
+                        <li><a id="73" class="_city">庆阳</a></li>
+                        <li><a id="83" class="_city">钦州</a></li>
+                        <li><a id="96" class="_city">黔南</a></li>
+                        <li><a id="97" class="_city">黔东南</a></li>
+                        <li><a id="98" class="_city">黔西南</a></li>
+                        <li><a id="105" class="_city">迁安</a></li>
+                        <li><a id="114" class="_city">秦皇岛</a></li>
+                        <li><a id="133" class="_city">齐齐哈尔</a></li>
+                        <li><a id="140" class="_city">七台河</a></li>
+                        <li><a id="251" class="_city">青岛</a></li>
+                        <li><a id="324" class="_city">曲靖</a></li>
+                        <li><a id="339" class="_city">全国</a></li>
+                        <li><a id="351" class="_city">潜江市</a></li>
+                    </ul>
+                    <ul class="table-bd" id="R" style="padding: 0;margin: 0;">
+                        <h2>R</h2>
+                        <li><a id="253" class="_city">日照</a></li>
+                        <li><a id="305" class="_city">日喀则</a></li>
+                    </ul>
+                    <ul class="table-bd" id="S" style="padding: 0;margin: 0;">
+                        <h2>S</h2>
+                        <li><a id="8" class="_city">汕头</a></li>
+                        <li><a id="9" class="_city">韶关</a></li>
+                        <li><a id="17" class="_city">汕尾</a></li>
+                        <li><a id="30" class="_city">绍兴</a></li>
+                        <li><a id="54" class="_city">宿州市</a></li>
+                        <li><a id="58" class="_city">三明</a></li>
+                        <li><a id="102" class="_city">三亚</a></li>
+                        <li><a id="126" class="_city">三门峡</a></li>
+                        <li><a id="128" class="_city">商丘</a></li>
+                        <li><a id="136" class="_city">双鸭山</a></li>
+                        <li><a id="143" class="_city">绥化</a></li>
+                        <li><a id="148" class="_city">十堰</a></li>
+                        <li><a id="149" class="_city">随州</a></li>
+                        <li><a id="162" class="_city">邵阳</a></li>
+                        <li><a id="174" class="_city">四平</a></li>
+                        <li><a id="178" class="_city">松原</a></li>
+                        <li><a id="190" class="_city">苏州</a></li>
+                        <li><a id="192" class="_city">宿迁</a></li>
+                        <li><a id="202" class="_city">上饶</a></li>
+                        <li><a id="205" class="_city">沈阳</a></li>
+                        <li><a id="232" class="_city">石嘴山</a></li>
+                        <li><a id="265" class="_city">朔州</a></li>
+                        <li><a id="280" class="_city">商洛</a></li>
+                        <li><a id="287" class="_city">遂宁</a></li>
+                        <li><a id="304" class="_city">山南</a></li>
+                        <li><a id="322" class="_city">石河子</a></li>
+                        <li><a id="338" class="_city">思茅</a></li>
+                    </ul>
+                    <ul class="table-bd" id="T" style="padding: 0;margin: 0;">
+                        <h2>T</h2>
+                        <li><a id="34" class="_city">台州</a></li>
+                        <li><a id="44" class="_city">铜陵</a></li>
+                        <li><a id="68" class="_city">天水</a></li>
+                        <li><a id="100" class="_city">铜仁</a></li>
+                        <li><a id="111" class="_city">唐山</a></li>
+                        <li><a id="176" class="_city">通化</a></li>
+                        <li><a id="193" class="_city">泰州</a></li>
+                        <li><a id="216" class="_city">铁岭</a></li>
+                        <li><a id="223" class="_city">通辽</a></li>
+                        <li><a id="252" class="_city">泰安</a></li>
+                        <li><a id="260" class="_city">太原</a></li>
+                        <li><a id="272" class="_city">铜川</a></li>
+                        <li><a id="311" class="_city">吐鲁番</a></li>
+                        <li><a id="320" class="_city">塔城</a></li>
+                        <li><a id="342" class="_city">台北</a></li>
+                    </ul>
+                    <ul class="table-bd" id="U" style="padding: 0;margin: 0;">
+                        <h2>U</h2>
+                    </ul>
+                    <ul class="table-bd" id="V" style="padding: 0;margin: 0;">
+                        <h2>V</h2>
+                    </ul>
+                    <ul class="table-bd" id="W" style="padding: 0;margin: 0;">
+                        <h2>W</h2>
+                        <li><a id="37" class="_city">温州</a></li>
+                        <li><a id="39" class="_city">芜湖</a></li>
+                        <li><a id="69" class="_city">武威</a></li>
+                        <li><a id="81" class="_city">梧州</a></li>
+                        <li><a id="182" class="_city">无锡</a></li>
+                        <li><a id="225" class="_city">乌海</a></li>
+                        <li><a id="227" class="_city">乌兰察布</a></li>
+                        <li><a id="233" class="_city">吴忠</a></li>
+                        <li><a id="249" class="_city">潍坊</a></li>
+                        <li><a id="250" class="_city">威海</a></li>
+                        <li><a id="275" class="_city">渭南</a></li>
+                        <li><a id="309" class="_city">乌鲁木齐</a></li>
+                        <li><a id="330" class="_city">文山</a></li>
+                    </ul>
+                    <ul class="table-bd" id="X" style="padding: 0;margin: 0;">
+                        <h2>X</h2>
+                        <li><a id="53" class="_city">宣城</a></li>
+                        <li><a id="56" class="_city">厦门</a></li>
+                        <li><a id="107" class="_city">邢台</a></li>
+                        <li><a id="118" class="_city">信阳</a></li>
+                        <li><a id="121" class="_city">新乡</a></li>
+                        <li><a id="124" class="_city">许昌</a></li>
+                        <li><a id="146" class="_city">襄樊</a></li>
+                        <li><a id="152" class="_city">咸宁</a></li>
+                        <li><a id="155" class="_city">孝感</a></li>
+                        <li><a id="160" class="_city">湘潭</a></li>
+                        <li><a id="171" class="_city">湘西</a></li>
+                        <li><a id="183" class="_city">徐州</a></li>
+                        <li><a id="198" class="_city">新余</a></li>
+                        <li><a id="228" class="_city">兴安盟</a></li>
+                        <li><a id="229" class="_city">锡林郭勒</a></li>
+                        <li><a id="236" class="_city">西宁</a></li>
+                        <li><a id="268" class="_city">忻州</a></li>
+                        <li><a id="274" class="_city">咸阳</a></li>
+                        <li><a id="332" class="_city">西双版纳</a></li>
+                        <li><a id="343" class="_city">香港</a></li>
+                    </ul>
+                    <ul class="table-bd" id="Y" style="padding: 0;margin: 0;">
+                        <h2>Y</h2>
+                        <li><a id="19" class="_city">阳江</a></li>
+                        <li><a id="25" class="_city">云浮</a></li>
+                        <li><a id="36" class="_city">义乌</a></li>
+                        <li><a id="91" class="_city">玉林</a></li>
+                        <li><a id="138" class="_city">伊春</a></li>
+                        <li><a id="150" class="_city">宜昌</a></li>
+                        <li><a id="163" class="_city">岳阳</a></li>
+                        <li><a id="166" class="_city">益阳</a></li>
+                        <li><a id="168" class="_city">永州</a></li>
+                        <li><a id="180" class="_city">延边</a></li>
+                        <li><a id="185" class="_city">扬州</a></li>
+                        <li><a id="189" class="_city">盐城</a></li>
+                        <li><a id="199" class="_city">鹰潭</a></li>
+                        <li><a id="203" class="_city">宜春</a></li>
+                        <li><a id="212" class="_city">营口</a></li>
+                        <li><a id="231" class="_city">银川</a></li>
+                        <li><a id="241" class="_city">玉树</a></li>
+                        <li><a id="248" class="_city">烟台</a></li>
+                        <li><a id="262" class="_city">阳泉</a></li>
+                        <li><a id="267" class="_city">运城</a></li>
+                        <li><a id="276" class="_city">延安</a></li>
+                        <li><a id="278" class="_city">榆林</a></li>
+                        <li><a id="292" class="_city">宜宾</a></li>
+                        <li><a id="298" class="_city">雅安</a></li>
+                        <li><a id="319" class="_city">伊犁</a></li>
+                        <li><a id="325" class="_city">玉溪</a></li>
+                    </ul>
+                    <ul class="table-bd" id="Z" style="padding: 0;margin: 0;">
+                        <h2>Z</h2>
+                        <li><a id="7" class="_city">珠海</a></li>
+                        <li><a id="12" class="_city">湛江</a></li>
+                        <li><a id="14" class="_city">肇庆</a></li>
+                        <li><a id="22" class="_city">中山</a></li>
+                        <li><a id="32" class="_city">衢州</a></li>
+                        <li><a id="33" class="_city">舟山</a></li>
+                        <li><a id="51" class="_city">亳州</a></li>
+                        <li><a id="60" class="_city">漳州</a></li>
+                        <li><a id="70" class="_city">张掖</a></li>
+                        <li><a id="94" class="_city">遵义</a></li>
+                        <li><a id="109" class="_city">张家口</a></li>
+                        <li><a id="119" class="_city">驻马店</a></li>
+                        <li><a id="130" class="_city">周口</a></li>
+                        <li><a id="159" class="_city">株洲</a></li>
+                        <li><a id="165" class="_city">张家界</a></li>
+                        <li><a id="191" class="_city">镇江</a></li>
+                        <li><a id="235" class="_city">中卫</a></li>
+                        <li><a id="245" class="_city">淄博</a></li>
+                        <li><a id="246" class="_city">枣庄</a></li>
+                        <li><a id="282" class="_city">泸州</a></li>
+                        <li><a id="290" class="_city">自贡</a></li>
+                        <li><a id="296" class="_city">资阳</a></li>
+                        <li><a id="327" class="_city">昭通</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+	<script src="http://css.baojia.com/s4/c/js/jquery.2.1.1.min.js"></script>
+	<script src="http://css.baojia.com/s4/c/js/jquery.bj.help.js"></script>
+    <script src="../../js/m-160108/bj-datetime.js"></script>
+    <script src="../../js/m-160108/main.js"></script> 
+    <script>
+        function height(){
+            var hei=$(".left2>div").height();
+            
+           $(".right1>div").height(hei);
+        }
+        height();
+    </script>      
+</body>
+
+</html>

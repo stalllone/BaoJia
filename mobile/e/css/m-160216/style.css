@@ -1,0 +1,16 @@
+body{background: #F8CB00;padding-bottom: 2rem;}
+.luckdraw{width: 100%;}
+.header{width: 100%;text-align: center;color: #FF3311;font-size: 1.2rem;font-weight:bold;margin-top: 1.5rem;}
+.cont{width: 90%;margin: 0 auto;margin-top: 1rem;}
+.tit{font-size: 0.875rem;color: #FF3311;}
+.redpackets{display: -webkit-box;-webkit-box-pack:justify;margin-top: 0.8rem;background: url(http://css.baojia.com/s4/e/images/m-160216/bg.jpg) no-repeat;background-size: 100% 100%;padding: 0.3rem 0;}
+.left{color: white;font-size: 2rem;margin-left: 0.875rem;}
+.left span{font-size: 0.875rem;}
+.right{color: white;margin-right: 0.875rem;margin-top: 0.1rem;}
+.right p{font-size: 0.875rem;}
+.right a{display: block;color: #FF3311;background: #F9C900;border-radius: 6px;text-align: center;}
+.footer{width: 90%;margin: 0 auto;margin-top: 1rem;display: -webkit-box;-webkit-box-pack:justify;}
+.footer a{font-size: 0.9rem;}
+.footer>a:nth-of-type(1){display: block;color: #FCC802;background: #E20002;border-radius: 5px;text-align: center;padding:0 0.8rem;}
+.footer div a{color: #FE0500;}
+

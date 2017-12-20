@@ -1,0 +1,60 @@
+table{  border-spacing: 0px;width:100%;}
+td,span{background-color: rgba(0,0,0,0);cursor: pointer;}
+tbody{background-color: rgba(0,0,0,0);width: 100%;}
+td:link, td:visited, td:hover, td:active {
+		text-decoration: none;
+        outline: none;
+        -webkit-outline: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+ div:link, div:visited, div:hover, div:active {
+		text-decoration: none;
+        outline: none;
+        -webkit-outline: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+i{color:#cccccc;}
+.page { margin:0 auto;overflow-y: scroll;}
+.text_center{text-align: center;}
+.text_right{text-align: right;}
+.text_left{text-align: left;}
+.clear{clear: both;}
+.bgwhite{background-color: #ffffff;}
+.f2{font-size: 2em;}
+
+.topbar-title{height: 50px;background-color: #ffffff;position: relative;}
+#gobackSpan{display: inline-block;background:url(http://css.baojia.com/s4/e/images/m-160108/back.png) no-repeat;height: 35px;width: 20px;position: absolute;top:9px;left: 11px;}
+#pickerdoneSpan{font-size: 1.8em;color:#28bccc;display: inline-block;float: right;line-height: 50px;position: absolute;right: 11px;}
+#topBarInfo{font-size: 1.8em;line-height: 50px;color:#666666;}
+.header-section{border-top:solid 1px #eeeeee;display:table;width: 100%}
+.selected-result {background-color:#28bcdc;color: #ffffff;}
+.result-display{width:50%;text-align: center;display: table-cell;color:#3d3f42;}
+
+.result-title-div{font-size: 1.3em;color: #a6a6a6;padding-top: 10px;}
+.result-detail-div{font-size: 1.3em;padding:10px;}
+.result-detail-div,.hr-display-span{margin-left:5px;}
+.selected-result .result-title-div{color:#efefef;}
+.selected-result .result-detail-div{color:#fff;}
+.selector_main{background-color: #ffffff;padding: 0px 10px 10px 10px;margin-top: 15px;}
+.year_and_month_selector{width:100%;display: table;font-size: 1.3em;border-bottom:solid 1px #eeeeee;}
+.year-picker,.month-picker{width: 50%;display:table-cell;padding:7px;color:#999;font-size: 1.5em;padding:15px;}
+.year-picker{border-right:solid 1px #eeeeee}
+.year-content,.month-content{color:#3d3f42;}
+.datetablehead{color:#3d3f42;text-align:center;}
+.date_selector{width: 100%;padding-top: 10px;font-size: 1.3em;}
+.time_selector{border-top:solid 1px #eeeeee;width: 100%;padding:10px 0;}
+.time_picker_div span{display: block; text-align: center;color:#28bcdc;font-size: 2em;height: 35px;line-height: 35px;}
+.hour_picker,.minute_picker{;width: 49%}
+.time_separator{display: table-cell;color: #28bcdc;font-size: 2em;}
+.datetablebody{text-align: center;}
+.unclickabledays{color: #cccccc;}
+.unclickabledays,.availabledays{  display: inline-block;width: 2.5em;height: 2.5em;line-height: 2.5em;}
+.availabledays{color:#3d3f42;}
+.selecteddate{display: inline-block;background-color:#53c9e3 ;color: #f6f6f6;border-radius: 50%;width: 2.5em;height: 2.5em;text-align: center;line-height: 2.5em}
+
+
+.col_light{
+    color: #cccccc;
+}
+
+.window-time{ position: fixed; top: 0;left: 0;z-index: 5000; width: 100%; height: 100%; display: none; background: #fff; font-size: 12px;overflow-y: scroll;}

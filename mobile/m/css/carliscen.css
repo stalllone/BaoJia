@@ -1,0 +1,88 @@
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}
+@media (min-device-width:768px) and (max-device-height:1024px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:20px; width: 900px; margin: 0 auto}  
+}
+body{background: #f0f0f0;}
+.input{width: 100%;display: block;outline: none;border: none;background: transparent;}
+.btn{width: 100%;background: #ffc600;display: block;text-align: center;height: 2rem;line-height: 2rem;}
+a:hover{text-decoration: none;}
+.top{width: 100%;padding: 0.5rem 0;display: -webkit-box;position: relative;}
+.close{width:1.5rem;height: 1.5rem;line-height: 1.5rem;background: #909090;border-radius: 100%;text-align: center;color: #fff;display: block;margin-left: 4%;}
+.top dl{width: 70%;display: -webkit-box;margin-left:2%;}
+.top dl dt{width: 19%;}
+.top dl dt img{width: 100%;display: block;}
+.top dl dd{width: 81%;margin-left:2%;}
+.top dl dd h1{font-size: 0.7rem;font-weight: normal;line-height: 0.9rem;}
+.top dl dd p{font-size: 0.6rem;color: #999999;display: -webkit-box;line-height: 0.9rem;}
+.top dl dd p img{width: 6%;}
+.top dl dd p span{margin-left: 0.3rem;margin-top: 0.1rem;}
+.open{width: 15%;background: #00bce0;display: block;margin-top: 0.8rem;position: absolute;right: 2%;font-size: 0.875rem;text-align: center;color: #fff;padding: 0.2rem 0;border-radius: 1rem;}
+.title{background: #00bce0;display: -webkit-box;position: relative;padding: 0.5rem 0;}
+.jt{display: inline-block;width: .8rem;height: .8rem;color: #fff;border: 2px solid #fff;border-top: none;border-right: none;-webkit-transform: rotate(45deg);}
+.title .jt{position: absolute;left: 4%;top: 50%;margin-top: -0.4rem;}
+.title p{width: 100%;text-align: center;font-size: 0.875rem;color: #fff;}
+.title img{width: 1.5rem;position: absolute;right: 0.5rem;top: 50%;display: block;margin-top: -0.6rem;}
+.foot{width: 90%;margin: 0 auto;margin-top: 1.5rem;}
+.foot .btn{background: #fc7722;color: #fff;border-radius: 0.3rem;}
+.error{font-size: 0.7rem;display: -webkit-box;-webkit-box-pack:center;color: #f00;padding: 4% 0;background: #fff;}
+.mask{position: fixed;top: 0;left: 0;bottom: 0;right: 0;background: #000;}
+.pop{width: 100%;position: absolute;left: 0;bottom: 0;background: #f5f5f5;}
+/*login.htm 登陆页面*/
+.login{width: 100%;overflow: hidden;position: relative;}
+.login .header{width: 100%;}
+.login .header img{width: 100%;display: block;}
+.l_div{position: absolute;top: 56%;left:9%;width: 83%;}
+.l_div .error{display: none;text-align: center;}
+.l_top{width: 100%;display: -webkit-box;background: #fff;}
+.l_top p{width: 19%;color: #d2d3d3;font-size: 0.875rem;position: relative;border-right: 1px solid #c9caca;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;}
+.l_top p:after{content:""; position:absolute; right:0.1rem; bottom:0; border:8px solid transparent; border-left-color:#ffe27f; border-right:0; height:0; width:0; display:inline-block;-webkit-transform:rotate(45deg);}
+.l_top span{color: #c9caca;}
+.l_top .input{width: 80%;text-indent: 3%;color:#d2d3d3;font-size: 0.8rem;padding: 4% 0;}
+.l_div .btn{margin-top: 0.5rem;color: #fff;font-size: 0.875rem;}
+.l_div h1{font-size: 0.75rem;font-weight: normal;color: #fff;text-align: center;margin-top: 0.2rem;}
+
+.login .mask{display: none;}
+.login .pop ul{width: 100%;overflow: hidden;padding-bottom: 0.5rem;}
+.login .pop ul li{float: left;width: 11%;text-align: center;padding: 0.2rem 0;border:1px solid #cfcfcf;background: #eee;border-radius: 0.2rem;margin-left: 0.55rem;margin-top: 0.5rem;color: #424242;font-size: 0.875rem;}
+/*hourrent.htm 时租详情*/
+.h_count{width: 88%;background: #fff;margin: 0 auto;margin-top: 1rem;padding:5% 0;}
+.h_count dl{width: 90%;margin: 0 auto;text-align: center;}
+.h_count dl dt{width: 100%;}
+.h_count dl dt img{width: 100%;display: block;}
+.h_count dl dd p{display: -webkit-box;-webkit-box-pack:center;margin-top: 0.5rem;}
+.h_count dl dd p:nth-of-type(1){font-size: 0.9rem;color: #333;}
+.h_count dl dd p:nth-of-type(1) span:nth-of-type(2){border:1px solid #63a22d;color: #63a22d;padding: 0 0.2rem;border-radius: 0.3rem;margin-left: 0.5rem;}
+.h_count dl dd p:nth-of-type(2){font-size: 0.875rem;color: #a9a9a9;}
+.h_count dl dd p:nth-of-type(3){font-size: 0.875rem;color: #a9a9a9;}
+.h_count dl dd p:nth-of-type(3) span{font-size: 1.2rem;color: #fd9865;}
+.help{border: 1px solid #9d9d9d;border-radius: 100%;display: inline-block;width: 1.2rem;height: 1.2rem;line-height: 1.2rem;text-align: center;color: #9d9d9d;margin-left: 0.3rem;}
+
+/*carinfo.htm登记车辆信息*/
+.carinfo{padding-bottom: 2rem;}
+.c_count{width: 90%;margin: 0 auto;margin-top: 2rem;}
+.div{width: 100%;background: #fff;padding:0 0 0 4%;display: -webkit-box;border-radius: 0.3rem;margin-top: 0.8rem;position: relative;}
+.div p{font-size: 0.875rem;color: #333;padding-top: 3.5%;}
+.div .input{width: 76%;font-size: 0.875rem;text-indent: 5%;color: #999;padding: 4% 0;}
+.div .jt{border-color: #afafaf;-webkit-transform:rotate(-135deg);position: absolute;top: 50%;margin-top: -0.4rem;right: 0.8rem;}
+.c_count .error{background: none;padding: 0.8rem 0 0 0;}
+.carinfo .mask{background: rgba(0,0,0,0.5);}
+.carinfo .mask .pop{bottom:40%;background: #fff;width: 80%;left: 10%;border-radius: 0.4rem;padding-bottom: 0.5rem;}
+.carinfo .mask .pop_t{text-align: center;font-size: 0.875rem;color: #6b6b6b;margin-top: 0.8rem;}
+.carinfo .mask .pop_b{margin-top: 0.3rem;}
+.carinfo .mask .pop_b a{display: inline-block;width: 41%;text-align: center;margin-left: 5%;font-size: 0.875rem;padding: 0.2rem 0;}
+.carinfo .mask .pop_b a:nth-of-type(1){border:1px solid #dfdfdf;border-radius: 0.4rem;color: #999;}
+.carinfo .mask .pop_b a:nth-of-type(2){border-radius: 0.4rem;color: #fff;background: #fc7722;}

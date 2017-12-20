@@ -1,0 +1,60 @@
+.Q_body{padding-top:132px;}
+.content{width: 1200px;min-width: 1200px;margin: 0 auto;height: 100%;}
+.title{text-align: center;font-size: 35px;color: #333;height: 143px;line-height: 143px;}
+.top{width: 1200px;min-width: 1200px;width: 100%;height: 132px;line-height: 132px;border-bottom:1px solid #ddd;background: #fff;z-index: 20;position: fixed;top: 0;}
+.top .nav{width: 100%;height: 100%;}
+.top .nav .left{float: left;}
+.top .nav .left a{display: block;}
+.top .nav .right{float: right;}
+.top .nav .right li{float: left;font-size: 17px;}
+.top .nav .right li a{color: #2a2b32;text-decoration: none;padding: 0 30px;display: block;font-weight: 500;}
+.banner{width: 100%;height: 471px;}
+.banner .content{background: url(http://css.baojia.com/s4/e/images/m-170517/banner.jpg) no-repeat left center;}
+.about{padding-bottom: 70px;}
+.about .cont_about{width: 1064px;margin-left: 135px;}
+.about .cont_about>div{float: left;font-size: 15px;color: #666;}
+.about .cont_about>div span{display: block;font-weight: bold;color: #333;}
+.about .cont_about .about_left{width: 434px;}
+.about .cont_about .about_left span{text-align: right;}
+.about .cont_about .about_left .p_first{margin-top: 98px;}
+.about .cont_about .about_left .p_second{margin-top: 98px;}
+.about .cont_about .about_center{width: 23px;height: 415px;position: relative;margin: 0 10px;}
+.about .cont_about .about_right{width:569px;}
+.about .cont_about .about_right .p_four{margin-top: 150px;}
+.about .cont_about .about_center:after{content: "";border:1px solid #999;position: absolute;top: 0;left: 50%;height: 100%;}
+.about .cont_about .about_center em{width: 23px;height: 23px;border-radius: 23px;border:1px solid #383838;display: block;background: #fff;position: relative;z-index: 10;margin-top: 75px;}
+.about .cont_about .about_center em.first{margin-top: 0;}
+.about .about_txt{width: 735px;margin: 0 auto;font-size: 15px;color: #666;margin-top: 24px;}
+
+.Q_team{background: #f2f2f2;padding-bottom: 75px;}
+.Q_team .content{background: #f2f2f2;}
+.Q_team .team_cont{width: 893px;height: 407px;margin: 0 auto;}
+.Q_team .team_cont>div{width: 293px;height: 100%;float: left;padding-top: 83px;text-align: center;}
+.Q_team .team_cont>div span{font-size: 29px;color:#333;}
+.Q_team .team_cont>div p{margin-top: 30px;font-size: 15px;}
+.Q_team .team_left{background: #79c4dc;}
+.Q_team .team_center{background: #add8d7;margin-left: 7px;}
+.Q_team .team_right{background: #abc2f0;float:right !important;}
+
+.Q_idea{padding-bottom: 85px;}
+.idea_cont>div{float: left;}
+.idea_cont .idea_right{float: right !important;width: 458px;font-size: 22px;color: #666666;}
+
+.operate{background: #f2f2f2;padding-bottom: 80px;}
+.operate .operate_cont{width: 944px;margin: 0 auto;height: 423px;}
+.operate .operate_cont div{width: 439px;height: 100%;float: left;padding: 43px 47px 0 47px;background: #e4e4e4;border-radius: 8px;-moz-box-shadow:0px 0px 20px #cdcdcd;top:0px;-webkit-box-shadow:0px 0px 20px #cdcdcd;box-shadow:0px 0px 20px #cdcdcd;}
+.operate .operate_cont div span{display: block;font-size: 28px;color: #333;text-align: center;}
+.operate .operate_cont div ul{margin-top: 35px;font-size: 16px;}
+.operate .operate_cont .operate_right{float: right !important;}
+
+.operate_mode{padding-bottom: 75px;}
+.operate_mode .mode_cont{width: 1059px;margin: 0 auto;}
+
+.footer{background: #37383e;}
+.footer .content{background: #37383e;padding-bottom: 75px;}
+.footer .content .title{color: #fff;}
+.footer ul{color: #fff;font-size: 20px;text-align: center;}
+.footer ul .code{width: 185px;margin: 0 auto;margin-bottom: 55px;}
+
+
+

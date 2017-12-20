@@ -1,0 +1,49 @@
+.Patacara{width: 100%;overflow: hidden;}
+.top{width: 100%;padding: 1rem 0 1rem 0;}
+.top img{width: 87%;margin:0 auto;display: block;}
+.cont{width: 100%;}
+.c_div{width: 100%;background: #eee;padding-bottom: 1.5rem;}
+.c_div>img{width: 100%;display: block;}
+.c_div .code{width: 76%;margin: 0 auto;display: -webkit-box;margin-top: 1rem;}
+.c_div .code p:nth-of-type(1){width: 36%;}
+.c_div .code p:nth-of-type(2){width: 29%;margin-left: 0.5rem;}
+.c_div .code .client{width: 29%;margin-left: 0.5rem;}
+.c_div .code .client img{width: 100%;display: block;margin-top: 0.3rem;}
+.c_div1{background: none;padding-bottom: 0}
+.c_div2{background: #f2fafe;}
+.icon{width: 83%;margin:0 auto;padding-bottom: 1rem;}
+.icon>div{width: 100%;display: -webkit-box;}
+.icon>div dl{width: 22%;font-size: 0.625rem;margin-left: 0.6rem;text-align: center;color: #949494;margin-top: 0.8rem;}
+.icon>div dl:nth-of-type(1){margin-left: 0;}
+.icon>div dl dd{margin-top: 0.3rem;}
+.c_div3{background: #535353;padding: 1rem 0;}
+.coninform{width: 87%;margin: 0 auto;}
+.coninform>div{width: 100%;display: -webkit-box;-webkit-box-pack:justify;}
+.coninform>div:nth-of-type(2){margin-top: 0.8rem;}
+.coninform>div dl{display: -webkit-box;font-size: 0.625rem;color: #c9caca;}
+.coninform>div dl dt{margin-right: 0.3rem;}
+.coninform>div dl dd{margin-top: 0.2rem;}
+.coninform>div dl:nth-of-type(1){width: 40%;}
+.coninform>div dl:nth-of-type(2){width: 54%;}
+.coninform>div dl:nth-of-type(1) dt{width:34%;}
+.coninform>div dl:nth-of-type(2) dt{width:25%;}
+.c_div4{background: #313131;padding: 1.3rem 0;}
+.foot{width: 55%;margin: 0 auto;display: -webkit-box;-webkit-box-pack:justify;}
+.foot dl{width: 47%;text-align: center;font-size: 0.75rem;color: #9fa0a0;}
+.foot dl dd{margin-top: 0.5rem;}
+
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}

@@ -1,0 +1,16 @@
+.drivingfloor{width: 100%;background: #8f0008;padding-bottom:15%;}
+.top{width: 100%;}
+.top img{width: 100%;display: block;}
+.footer{width: 92%;margin: 0 auto;background: #fffeee;border-radius: 20px;margin-top: -1%;padding-top: 8%;padding-bottom: 5%;}
+.footer img{width: 92%;margin: 0 auto;display: block;}
+.form{width: 92%;margin: 0 auto;margin-top: 5%;}
+.form div{width: 100%;border:1px solid #e0781a;border-radius: 5px;position: relative;background: #fff;margin-top: 3%;}
+.tel{display: block;width: 100%;border: none;outline: 0;padding: 4% 0;border-radius: 5px;font-size: 0.9rem;text-indent: 3%;}
+.code{display: block;width: 72%;border: none;outline: 0;padding: 4% 0;border-radius: 5px 0 0 5px;font-size: 0.9rem;text-indent: 3%;}
+.code1{width: 25%;background: #fdedd9;border-radius: 3px;text-align: center;padding: 2% 0;position: absolute;top: 8%;right: 3%;color: #f08300;font-size: 0.9rem;}
+.btn{background: #f8cb00 !important;text-align: center !important;padding: 2% 0 !important;font-size: 1rem !important;color: #8f0008 !important;border: none !important;font-weight: bold;}
+.agreement{text-align: center;color: #f7bf8b;font-size: 0.9rem;font-weight: bold;margin-top: 3%;}
+.bottom{width: 92%;margin: 0 auto;margin-top: 3%;}
+.bottom h1{font-size: 0.9rem;color: #ababa6;font-weight: normal;}
+.bottom ul li{font-size: 0.9rem;color: #ababa6;}
+.floating{width: 100%;background: #eb3641;text-align: center;font-size: 1rem;color: white;padding: 2% 0;position: fixed;bottom: 0;}

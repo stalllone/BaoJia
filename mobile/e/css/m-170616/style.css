@@ -1,0 +1,121 @@
+// @font-face { font-family: 'MyFont';
+// 			src: url( 'PingFangBold.ttf' ) format("truetype");
+// 		}
+// 		@font-face { font-family: 'MyFont1'; 
+// 			src: url( 'PingFangExtraLight.ttf' ) format("truetype");
+// 		}
+// 		@font-face { font-family: 'MyFont2'; 
+// 			src: url( 'PingFangHeavy.ttf' ) format("truetype");
+// 		}
+// 		@font-face { font-family: 'MyFont3'; 
+// 			src: url( 'PingFangLight.ttf' ) format("truetype");
+// 		}
+// 		@font-face { font-family: 'MyFont4'; 
+// 			src: url( 'PingFangMedium.ttf' ) format("truetype");
+// 		}
+// 		@font-face { font-family: 'MyFont5'; 
+// 			src: url( 'PingFangRegular.ttf' ) format("truetype");
+// 		}
+
+body{font-family:" Microsoft Yahei, Avenir, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif";}
+.M_body{width:100%;overflow:hidden;}
+.cantainer{width:1200px;max-width:1200px;width:100%;margin:0 auto;}
+.title{width: 732px;max-width:732px;width:100%;height:115px;margin:0 auto;font-size:30px;text-align: center;position:relative;}
+.title img{display:block;position: absolute;bottom: 0;width: auto;left: 50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);}
+.top{width:100%;position:fixed;top:0;background:rgba(255,255,255,0.3);z-index: 23;}
+.top.active{background: #fff;}
+.top nav{width:1200px;max-width:1200px;width:100%;margin:0 auto;border:none;border-radius:0px;background: none;}
+.top .navbar-nav>li>a{padding-top:30px;padding-bottom:30px;font-size: 16px;color: #000;font-weight: 500;}
+.top .navbar-nav>li>a:hover{color:#e85a41;}
+.top .navbar-nav>li>a.on{color:#e85a41;}
+.top .logo{width:120px;position: relative;padding: 0;display: block;}
+.top .logo img{position:absolute;top:50%;}
+.banner{width:100%;height: 900px;background-image: url(http://css.baojia.com/s4/e/images/m-170616/banner.jpg);background-size: cover;background-repeat:no-repeat;background-position: 50%;}
+.content{padding-top:89px;padding-bottom:105px;}
+
+.content .txt{width:910px;max-width: 910px;width: 100%;text-align:center;font-size: 14px;color:#202020;margin: 0 auto;margin-top: 85px;line-height: 30px;}
+.content .cont-img1{width:832px;max-width: 832px;width: 100%;margin: 0 auto;margin-top: 105px;}
+.content1{background:#eeeeee;}
+.content1 .cantainer{position:relative;}
+.content1 .cantainer div{position: relative;z-index: 22}
+.content1 .row{width:888px;max-width: 888px;width:100%;margin:0 auto;margin-top:70px;position:}
+.content1 .row div{width: 381px;padding:0;max-width: 381px;width:100%;margin:0 auto;}
+.content1 .row .right{float: right;}
+.content1 .row div dd{height: 270px;background: #fff;padding-top:30px;}
+.content1 .row div dd h1{margin:0;text-align:center;font-size:16px;color:#000;margin-bottom:35px;}
+.content1 .row1 p{width:170px;max-width: 170px;width:100%;margin: 0 auto;font-size: 14px;color:#333;position:relative;text-indent: 15px;line-height:30px;}
+.content1 .row2 p{width:326px;max-width: 326px;width:100%;margin: 0 auto;font-size: 14px;color:#333;position:relative;padding-left: 15px;line-height:30px;}
+.content1 .row p:after{content:"";width:6px;height: 6px;border-radius:100%;background: #e85a41;position:absolute;display:block;left: 0;top:50%;margin-top:-3px;}
+.content1 .row2 p:after{top: 15px;}
+.content1 .cantainer>img{display: block;position: absolute;top:140px;}
+.content  .contbox{width:1078px;max-width:1078px;width: 100%;margin: 0 auto;margin-top: 144px;}
+.content  .contbox img{display:block;width: 100%;}
+.content  .contbox p{width: 280px;max-width: 280px;width:100%;margin: 0 auto;font-size: 14px;color:#333;position: relative;text-indent: 15px;}
+.content  .contbox p:after{content:"";width:6px;height: 6px;border-radius:100%;background: #e85a41;position:absolute;display:block;left: 0;top:50%;margin-top:-3px;}
+
+.content  .contbox .firstP{margin-top:100px;}
+.content  .contbox .bookbot{margin-top: 65px;}
+.footer{width:100%;height: 958px;background-image: url(http://css.baojia.com/s4/e/images/m-170616/f_back.jpg);background-size: cover;background-repeat:no-repeat;background-position: 50%;}
+.footer .title{color: #fff;}
+.footer .f_txt1{width: 192px;margin: 0 auto;color: #fff;font-size: 18px;margin-top:60px;text-align: center;position: relative;}
+.footer .f_txt1:after{content:"";width: 3px;height:76px;background-color: #fff;display: block;position: absolute;left: 50%;bottom:-108px;}
+.footer .f_list{width: 260px;max-width: 260px;width: 100%;margin: 0 auto;margin-top: 150px;}
+.footer .f_list li{margin-top:30px;}
+.footer .f_list a{color: #fff;display:block;font-size: 18px;text-decoration:none;background-image: url(http://css.baojia.com/s4/e/images/m-170616/f_list.png);background-repeat: no-repeat;background-size: 28px 110px;text-indent:35px;}
+.footer .f_list .concat{background-position: 0 0;}
+.footer .f_list .tel{background-position: 0 -46px;}
+.footer .f_list .email{background-position: 0 -90px;}
+.footer .code{width: 160px;margin: 0 auto;margin-top: 150px;position: relative}
+.footer .code:after{content:"";width: 3px;height:76px;background-color: #fff;display: block;position: absolute;left: 50%;top:-110px;}
+
+
+
+@media (max-width:1200px){
+	.banner{height:750px;}
+	
+}
+
+@media (max-width:960px){
+	.banner{height:450px;}
+	
+	.content1 .row2 div dd{height: 290px;}
+}
+
+@media (max-width:768px){
+
+	.top nav{background:#fff;}
+	.top .logo{width:95px;}
+	.top .logo img{transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);left: 15px;}
+	.top .navbar-nav>li>a{padding-top:15px;padding-bottom:15px;font-size:15px;}
+	.content .txt{margin-top: 40px;}
+	.content .cont-img1{margin-top: 45px;padding: 0 15px}
+	.content1 .row2{margin-top: 0;}
+	.content1 .row div{float: none;}
+	.content1 .row .right{float: none;}
+}
+
+@media (max-width:640px){
+	
+	.title{font-size:20px;height:70px;width: 50%;}
+	.title img{width:100%;}
+	.title1{font-size:20px;height:70px;width:80%;}
+	.banner{height:255px;}
+	.content{padding-top:45px;}
+	.content1{padding-bottom:0;}
+	.content1 .row p{text-indent:16px;}
+	.content1 .row2 p{text-indent:0px;width: 88%;}
+	.content1 .row div dd{height: 270px;padding-top:30px;background: none;}
+	.content  .contbox{margin-top: 60px;}
+	.footer{height: 686px;}
+	.footer .f_txt1{margin-top: 35px;font-size: 16px}
+	.footer .f_txt1:after{height: 0;}
+	.footer .f_list{width: 210px;max-width: 210px;width: 100%;}
+	.footer .f_list{margin-top: 35px;}
+	.footer .f_list a{font-size: 14px;background-size:20px 78px;}
+	.footer .f_list .concat{background-position: 0 0;}
+	.footer .f_list .tel{background-position: 0 -30px;}
+	.footer .f_list .email{background-position: 0 -62px;}
+}
+
+
+

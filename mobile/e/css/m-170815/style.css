@@ -1,0 +1,37 @@
+body{font-family: "PingFangSC-Regular", "微软雅黑";}
+.P_div {padding-bottom: 0.3rem;}
+.P_div div{padding:0 0.3rem;padding-top: 0.3rem;}
+.P_div h1{font-size:0.4rem;margin-bottom: 0.2rem;color:#4a90e2;margin-top:0.5rem;}
+.P_div img{width: 100%;display: block;}
+.P_div li{margin-top: 0.2rem;font-size: 0.36rem;}
+
+.down{max-width: 640px;margin: 0 auto;padding-top:100px;}
+.down .title{width: 284px;margin: 0 auto;font-size: 32px;text-align: center;}
+.down .title dt{width: 100px;margin: 0 auto;}
+.down .title dd{margin-top:20px;color: #797979;}
+.down .downway{width:100%;margin-top: 70px;}
+.down .downway div{width:250px;height:250px;background: #f0f0f0;border-radius: 8px;padding-top:15px;text-align: center;font-size: 25px;color:#797979;}
+.down .downway div dt{width: 100px;margin: 0 auto;margin-bottom:10px;}
+.downway div a{display: block;width: 150px;background: #13b8d6;color: #fff;text-decoration: none;margin: 0 auto;padding: 5px;border-radius: 20px;margin-top: 10px;font-size:20px;}
+.down .downway .left{float: left;}
+.down .downway .right{float:right;} 
+
+@media screen and (max-width: 640px){
+    .down .title{font-size: 18px;}
+    .down .downway{padding: 0 25px;}
+    .down .downway div{width: 150px;height: 150px;font-size: 18px;}
+    .down .downway div dt{width: 45px;font-size: 18px;margin-bottom:5px;}
+    .down .downway div a{width: 100px;font-size: 18px;padding: 3px 0;margin-top:5px;}
+
+}
+
+
+
+@media screen and (max-width: 320px){
+	// .down .title{font-size: 18px;}
+    .down .downway{padding: 0 25px;}
+    .down .downway div{width: 120px;height: 120px;font-size: 13px;}
+    .down .downway div dt{width: 35px;margin-bottom:5px;}
+    .down .downway div a{width: 80px;font-size: 13px;padding: 3px 0;margin-top:5px;}
+}
+

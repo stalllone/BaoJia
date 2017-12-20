@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>前端静态文件引用说明-宝驾租车</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <style type="text/css">
+        html,body{height:100%;width:100%;}
+        header{position:fixed;width:100%;height:40px;color:#28BCDC;text-align:center;border-bottom:1px solid #ccc;font-size:1.5rem;background-color:#fff;z-index:9}
+        .pbody{width:80%;margin:0 auto;padding-top:45px;font-size:18px;display:-webkit-flex;}
+        .pbody>aside{-webkit-box-sizing:border-box;box-sizing:border-box;}
+        .pleft{position:fixed;width:16%;font-size:.9rem;}
+        .pleft ul{}
+        .pleft li{height:40px;line-height:40px;}
+        .pleft li:hover{background-color:#3e98c5;}
+        .pleft li:hover a{text-decoration:none;color:#fff;}
+        .pleft a{display:block;text-indent:.5rem;color:#3e98c5;}
+        .pright{width:80%;margin-left:21%;}
+        .pright ul{}
+        .pright li{margin-bottom:1rem}
+        .pright p{border-bottom:1px solid #ccc;padding:.2rem 0}
+        .pright p span{font-size:.8rem;font-weight:normal;margin-left:2rem}
+        .pright .info{font-size:.8rem;padding-bottom:.2rem}
+        .pright .info:hover{background-color:#e0e0e0;}
+        .pright dt{text-indent:1rem;margin-top:.2rem}
+        .pright dd{text-indent:2rem}
+        .pright b{width:5rem;font-size:.8rem;font-weight:400px;}
+        .pright span{text-indent:20px;display:inline-block;}
+        footer{background:#3d3f42;color:#fff}
+        footer .fbody{display:block;font-size:24px;height:210px;padding-top:10px}
+        footer .info{display:-webkit-flex;width:80%;margin:0 auto;}
+        footer .web{width:30%}
+        footer .tech{width:50%}
+        footer .link{width:20%}
+        footer li{width:100px;display:inline;text-align:left;float:left;padding:5px 10px;}
+        footer a{line-height:22px;color:#cccccc;font-size:14px;font-weight:normal;}
+        footer .copyright{display:block;background:#2b2c31;height:30px;line-height:30px;text-align:center;}
+
+        /*footer*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- <div><a href="http://www.baojia.com"><img src="http://css.baojia.com/s4/c/img/logo.png"></a></div> -->
+        <h2>宝驾租车前端静态文件-使用指南</h2>
+    </header>
+    <section class="pbody">
+        <aside class="pleft" id="jsName">
+            <ul>
+                <li>
+                    <a href="#reset">修复样式</a>
+                </li>
+                <li>
+                    <a href="#base">各项目基本样式</a>
+                </li>
+                <li>
+                    <a href="#jquery">jquery</a>
+                </li>
+                <li>
+                    <a href="#jqueryui">jqueryUI</a>
+                </li>
+                <li>
+                    <a href="#jqlazyload">jquery 懒加载</a>
+                </li>
+                <li>
+                    <a href="#jqtouchSlider">jquery.touchSlider 滑屏</a>
+                </li>
+                <li>
+                    <a href="#jqmobiscroll">jquery.mobiscroll 滑动</a>
+                </li>
+                <li>
+                    <a href="#jqswiper">jquery.swiper 滑屏</a>
+                </li>
+                <li>
+                    <a href="#swiper">swiper 滑屏</a>
+                </li>
+            </ul>
+        </aside>
+        <aside class="pright">
+            <ul class="slides">
+                <li>
+                    <p name="reset">修复样式</p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾路径 </dt>
+                            <dd><b>版本号：1</b><span>http://css.baojia.com/s4/c/css/reset.css</span></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <p name="base">各项目基本样式</p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾M站 </dt>
+                            <dd><b>版本号：1</b><span>http://css.baojia.com/s4/m/css/base.css</span></dd>
+                            <dt>活动推广</dt>
+                            <dd><b>版本号：1</b><span>http://css.baojia.com/s4/e/css/base.css</span></dd>
+                            <dt>APP内嵌 </dt>
+                            <dd><b>版本号：1</b><span>http://css.baojia.com/s4/a/css/base.css</span></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <p name="jquery">jquery</p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾路径 </dt>
+                            <dd><b>版本号：1.10.2</b><span>http://css.baojia.com/js/1.0/common/jquery-1.10.2.min.js</span></dd>
+                            <dd><b>版本号：2.1.1</b><span>http://css.baojia.com/s4/c/js/jquery.2.1.1.min.js</span></dd>
+                            <dt>CDN路径 </dt>
+                            <dd><b>官网  版本：2.1.1</b><span>http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js</span></dd>
+                            <dd><b>新浪  版本：1.9.1</b><span>http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js</span></dd>
+                            <dd><b>百度  版本：1.10.2</b><span>http://css.baojia.com/js/1.0/common/jquery-1.10.2.min.js</span></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li id="jqueryui">
+                    <p name="jqueryui">jqueryUI <span>依赖:(<a href="#jquery">jquery</a>)</span></p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾路径 </dt>
+                            <dd><b>版本号：1.11.4</b><span>//code.jquery.com/ui/1.11.4/jquery-ui.js </span></dd>
+                            <dd><b>对应样式:</b><span>//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css</span></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <p name="jqlazyload">jquery 懒加载 <span>依赖:(<a href="#jquery">jquery</a>)</span></p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾路径 </dt>
+                            <dd><b>版本号：1.9.5</b><span>http://css.baojia.com/s4/c/js/jquery.lazyload.js</span><span>示例：<a href="http://css.baojia.com/s4/m/page/edod.htm" target="_brank">年租宝</a></span></dd>
+                            <dt>CDN路径 </dt>
+                            <dd><b>版本号：1.9.1</b><span>//cdn.bootcss.com/jquery.lazyload/1.9.1/jquery.lazyload.min.js</span></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <p name="jqtouchSlider">jquery.touchSlider 滑屏<span>可以兼容到IE8，需要自己手写代码。 依赖:(<a href="#jquery">jquery</a>)</span></p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾路径 </dt>
+                            <dd><b>版本号：1.9.5</b><span>http://css.baojia.com/s4/c/js/jquery.touchSlider.js</span><span>示例：<a href="http://css.baojia.com/s4/e/page/m-151118/index.htm" target="_brank">500元券</a></span></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <p name="jqmobiscroll">jquery.mobiscroll 滑动</p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾路径 </dt>
+                            <dd><b>版本号：2.5.2</b><span>http://css.baojia.com/s4/c/js/jquery.mobiscroll.js</span></dd>
+                            <dd><b>对应样式:</b><span>http://css.baojia.com/s4/c/js/mobiscroll/ms.android.css</span></dd>
+                            <dd><b>扩展时间插件</b><span>http://css.baojia.com/s4/c/js/mobiscroll/ms.datetime.js </span><span>示例：<a href="http://css.baojia.com/s4/c/js/mobiscroll/index.htm" target="_brank">mobiscroll时间示例</a></span></dd>
+                            <dd><b>扩展城市选择插件</b><span>http://css.baojia.com/s4/c/js/mobiscroll/ms.list.city.js </span><span>示例：<a href="http://css.baojia.com/s4/c/js/mobiscroll/region.htm" target="_brank">mobiscroll城市选择示例</a></span></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <p name="jqswiper">jquery.swiper 滑屏 <span>依赖<a href="#jquery">jquery</a></span></p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾路径 </dt>
+                            <dd><b>版本号：3.2.7</b><span>http://css.baojia.com/s4/c/jquery.swiper.min.js</span>
+                            </dd>
+                            <dd><b>对应样式:</b><span>http://css.baojia.com/s4/c/js/swiper/swiper.min.css</span></dd>
+                            <dt>CDN 路径</dt>
+                            <dd><b>版本号：3.2.7</b><span>//cdn.bootcss.com/Swiper/3.2.7/js/swiper.jquery.min.js</span>
+                            </dd>
+                            <dd><b>对应样式:</b><span>//cdn.bootcss.com/Swiper/3.2.7/css/swiper.css</span></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <p name="swiper">swiper 滑屏 <span>主要用于手机端,兼容不到IE9。无依赖</span></p>
+                    <div class="info">
+                        <dl>
+                            <dt>宝驾路径 </dt>
+                            <dd><b>版本号：3.2.7</b><span>http://css.baojia.com/s4/c/js/swiper/swiper.min.js</span>
+                            </dd>
+                            <dd><b>对应样式:</b><span>http://css.baojia.com/s4/c/js/swiper/swiper.min.css</span></dd>
+                            <dt>CDN 路径</dt>
+                            <dd><b>版本号：3.2.7</b><span>//cdn.bootcss.com/Swiper/3.2.7/js/swiper.js</span>
+                            </dd>
+                            <dd><b>对应样式:</b><span>//cdn.bootcss.com/Swiper/3.2.7/css/swiper.css</span></dd>
+                        </dl>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <footer>
+        <section class="fbody">
+            <div class="info">
+                <div class="web">
+                    <label>现有网站</label>
+                    <ul class="links">
+                        <li><a title="" href="http://www.baojia.com/" target="_blank">宝驾官网</a></li>
+                        <li><a title="" href="http://m.baojia.com/" target="_blank">宝驾M站</a></li>
+                        <li><a title="" href="http://icss.baojia.com/" target="_blank">宝驾后台</a></li>
+                        <li><a title="" href="http://icss911.baojia.com/admin-memberlist-index/" target="_blank">旧宝驾后台</a></li>
+                        <li><a title="" href="http://www.zhengchi.org/" target="_blank">车立信</a></li>
+                    </ul>
+                </div>
+                <div class="tech">
+                    <label>相关技术</label>
+                    <ul class="links">
+                        <li><a title="" href="http://www.baojia.com/" target="_blank">Seajs</a></li>
+                        <li><a title="" href="http://m.baojia.com/" target="_blank">Avalon</a></li>
+                        <li><a title="" href="http://icss.baojia.com/" target="_blank">ameziUI</a></li>
+                        <li><a title="" href="http://www.zhengchi.org/" target="_blank">Swiper</a></li>
+                    </ul>
+                </div>
+                <div class="ques">
+                    <label>问题反馈</label>
+                </div>
+                <div>
+        </section>
+        <div class="copyright">
+            <p>CopyRight © 2015 版权所有&nbsp;宝驾 baojia.com&nbsp;京ICP证140667号&nbsp;京ICP备14020297号-1&nbsp;京公网安备11010802016850号</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="http://css.baojia.com/s4/c/js/jquery.2.1.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var jsName = document.getElementById('jsName');
+
+        function _scroll() {
+            var navHeight = jsName.offsetHeight;
+            var headH = $("header").height();
+            var viewHeight = document.documentElement.clientHeight;
+            var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
+            var offsetHeight = document.body.offsetHeight;
+            var footHole = offsetHeight - scrollHeight - viewHeight;
+            var maxHeight = viewHeight - (headH - footHole);
+            // if (maxHeight < navHeight) {
+            //     // 见footer
+            //     //jsName.style.marginTop = footHole - 150 + 'px';
+            //     jsName.style.marginTop = maxHeight - navHeight + 'px';
+            // } else {
+            //     // 未见footer
+            //     jsName.style.marginTop = 'auto';
+            // }
+
+            // var len = offsetList.length;
+            // if (scrollHeight > offsetList[len - 3].offsetTop) {
+            //     navDom[len - 2].style.backgroundColor = '#3E98C5';
+            //     $(navDom[len - 2]).children('a')[0].style.color = '#fff';
+            // } else {
+            //     for (var i = 0; i < len - 1; i++) {
+            //         if (Math.abs(scrollHeight - offsetList[i].offsetTop) < 280 && navDom[i]) {
+            //             navDom[i].style.backgroundColor = '#3E98C5';
+            //             $(navDom[i]).children('a')[0].style.color = '#fff';
+            //         } else {
+            //             navDom[i].style.backgroundColor = 'transparent';
+            //             $(navDom[i]).children('a')[0].style.color = '#3E98C5';
+            //         }
+            //     }
+            // }
+        }
+        var offsetList = [];
+        var navDom = $('#jsName>ul>li');
+
+        function _resize() {
+            offsetList = [];
+            $('.pright p').each(function(idx, dom) {
+                offsetList[idx] = {
+                    name: $(dom).attr("name"),
+                    offsetTop: dom.offsetTop
+                };
+            });
+            offsetList.push({
+                name: 'topic',
+                offsetTop: 100000
+            })
+            setTimeout(_scroll, 500);
+        }
+
+        function scroll2Pos(idx) {
+            return function() {
+                $("body,html").animate({
+                    scrollTop: offsetList[idx].offsetTop - 40
+                }, 500);
+                return false;
+            }
+        }
+        $('#jsName>ul>li>a').each(function(idx, dom) {
+            $(dom).on('click', scroll2Pos(idx));
+        })
+        $(window).on('scroll', _scroll);
+        $(window).on('resize', _resize);
+        _resize();
+    });
+    </script>
+</body>
+
+</html>

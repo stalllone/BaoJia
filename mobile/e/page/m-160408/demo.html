@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <style>
+        .cover {
+
+            position:fixed; top: 0px; right:0px; bottom:0px;filter: alpha(opacity=60); background-color: #777;
+
+            z-index: 1002; left: 0px; display:none;
+
+            opacity:0.5; -moz-opacity:0.5;
+
+        } </style>
+</head>
+<body>
+<div class="container" style="height:2000px;">
+
+    　　　　<div style="height:1000px;"></div>
+
+    　　　　<a href="javascript:;" onclick="showMask()" >点我显示遮罩层</a><br />
+
+    　　</div>
+
+　　<div id="cover" class="cover"></div>
+</body>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    function showMask(){
+
+        $('body').css("overflow","hidden")
+
+        $("#cover").show();
+
+    }
+</script>
+</html>

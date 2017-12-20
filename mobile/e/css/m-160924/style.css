@@ -1,0 +1,34 @@
+body,html{width: 100%;height: 100%;position: relative;}
+.down{width: 100%;overflow: hidden;}
+.top{width: 100%;height: 2.375rem;background: #fff;padding-top: 0.625rem;}
+.top img{width: 24%;margin: 0 auto;display: block;}
+.ban{width: 100%;-webkit-box-flex:1;position: relative;overflow: hidden;}
+.ban img{width: 100%;display: block;}
+.ban a{width: 90%;margin: 0 auto;height: 2.5rem;background: #fc7722;color: #fff;text-align: center;line-height: 2.5rem;font-size: 0.9rem;display: block;border-radius: 5px;text-decoration: none;margin-top: -2.5rem;position: relative;font-weight: bold;}
+.foot{width: 90%;margin: 0 auto;margin-top: 1.3rem;}
+.foot .title{width: 100%;font-size: 0.675rem;color: #666;margin-bottom: 1rem;}
+.foot .d_div{width: 95%;margin: 0 auto;display: -webkit-box;-webkit-box-pack:justify;}
+.foot .d_div a{width:18%;display: block;text-decoration: none;}
+.foot .d_div a dl{width: 100%;text-align: center;font-size: 0.55rem;color: #666;}
+.foot .d_div a dl dd{margin-top: 0.2rem;}
+.r_num{width: 100%;text-align: center;font-size: 0.625rem;color: #e1e1e1;margin: 0.5rem 0;}
+
+
+
+
+
+@media{
+	html,body{font-size:16px}
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:16px}
+}
+@media (min-device-width:375px) and (max-device-height:667px) and (-webkit-min-device-pixel-ratio:2){
+	html,body{font-size:18.75px}
+}
+@media (min-device-width:414px) and (max-device-height:736px) and (-webkit-min-device-pixel-ratio:3){
+	html,body{font-size:21.2px}
+}
