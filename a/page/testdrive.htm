@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>试驾</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/css/reset.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/a/css/a.css">
+    <link rel="stylesheet" href="http://css.baojia.com/s4/c/js/swiper/swiper.min.css">
+    <style> 
+    .swiper-pagination-white .swiper-pagination-bullet {
+    background: #000;opacity: 0.5;
+}
+    .swiper-pagination-white .swiper-pagination-bullet-active {
+    background: blue;
+}
+		@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){
+			body,html{font-size:13px;}
+		}
+    </style>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">					
+						<div class="tit_img">
+							<img data-src="http://css.baojia.com/s4/a/images/shijia/pic1.png" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+						</div>
+
+						</div>
+						<div class="tit_bot">
+							<p>1.试驾前请出示驾照</p>
+							<p>没带驾照，车主可以拒绝让您试驾哦！</p>
+						</div>
+		        </div>
+		        <div class="swiper-slide">					
+						<div class="tit_img">
+							<img data-src="http://css.baojia.com/s4/a/images/shijia/pic2.png" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+						</div>
+						</div>
+						<div class="tit_bot">
+							<p>2.听车主介绍车辆启动、挡位操作方式</p>
+							<p>没带驾照，车主可以拒绝让您试驾哦！</p>
+						</div>					
+		        </div>
+		        <div class="swiper-slide">				
+						<div class="tit_img">
+							<img data-src="http://css.baojia.com/s4/a/images/shijia/pic3.png" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+						</div>
+						</div>
+						<div class="tit_bot">
+							<p>3.开始试驾，请遵守交通规则</p>
+							<p>未经车主允许车速不超过80km/h，禁止上高速、急转弯，否则车主有权终止试驾</p>
+						</div>		
+		        </div>
+		        <div class="swiper-slide">					
+						<div class="tit_img">
+							<img data-src="http://css.baojia.com/s4/a/images/shijia/pic4.png" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+						</div>	
+						</div>
+						<div class="tit_bot">
+							<p>4.完成试驾，确认费用</p>
+							<p>试驾30分钟10公里内只收取套餐费用，超过30分钟或10公里会进行套餐外计费</p>
+						</div>					
+		        </div>
+		    </div>
+		     <div class="swiper-pagination swiper-pagination-white"></div>
+		</div>
+	</div>
+</body>
+<script src="http://css.baojia.com/s4/c/js/swiper/swiper.min.js"></script>
+<script language="javascript"> 
+var swiper = new Swiper('.swiper-container', {   
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        // Disable preloading of all images
+        preloadImages: false,
+        // Enable lazy loading
+        lazyLoading: true
+    });
+</script>
+</html>
